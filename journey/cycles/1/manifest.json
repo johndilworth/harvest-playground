@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-02T23:12:00Z",
+  "entries": [
+    {
+      "stepKey": "01-home",
+      "flow": "home",
+      "flowName": "Home (the whole page)",
+      "cycle": 1,
+      "index": 1,
+      "url": "https://harvest-playground.netlify.app/",
+      "route": "/",
+      "h1": "WELCOME TO OUR SUPER COOL ZONE!!!",
+      "screenshot": "out/c1/01-home.png",
+      "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png",
+      "commit": "6dc68a6c46546b24724a69b9d2256ccc5049e4f7",
+      "deployUrl": "https://harvest-playground.netlify.app",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "fullPage": false
+    },
+    {
+      "stepKey": "01-dinosaur",
+      "flow": "dinosaur",
+      "flowName": "Dinosaur sculpture page",
+      "cycle": 1,
+      "index": 1,
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "route": "/dinosaur.html",
+      "h1": "THE GIANT DINO OF DINOSAUR, CO",
+      "screenshot": "out/c1/03-dinosaur.png",
+      "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-dinosaur/01-dinosaur.png",
+      "commit": "6dc68a6c46546b24724a69b9d2256ccc5049e4f7",
+      "deployUrl": "https://harvest-playground.netlify.app",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "fullPage": false
+    },
+    {
+      "stepKey": "01-random",
+      "flow": "random",
+      "flowName": "Totally random page",
+      "cycle": 1,
+      "index": 1,
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "route": "/random.html",
+      "h1": "THE GREAT SOCK VANISHING",
+      "screenshot": "out/c1/04-random.png",
+      "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-random/01-random.png",
+      "commit": "6dc68a6c46546b24724a69b9d2256ccc5049e4f7",
+      "deployUrl": "https://harvest-playground.netlify.app",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "fullPage": false
+    }
+  ]
+}

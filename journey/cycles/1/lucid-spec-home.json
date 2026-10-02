@@ -1,0 +1,240 @@
+{
+ "version": 1,
+ "pages": [
+  {
+   "id": "home",
+   "title": "Cycle 1 \u00b7 Home",
+   "shapes": [
+    {
+     "id": "doc-title-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -860,
+      "w": 4400,
+      "h": 200
+     },
+     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground \u2014 Cycle 1</b><br><span style='font-size:20pt'>Home \u00b7 / \u00b7 Desktop 1440\u00d71024 \u00b7 commit 6dc68a6 \u00b7 https://harvest-playground.netlify.app</span></p>"
+    },
+    {
+     "id": "legend-box-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 360
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE the grey frame below and write whatever you want to see on the page. Stickies are harvested at 5pm MT daily; safe requests are applied automatically and merged. Start with <b>Do:</b>, <b>Try:</b> or <b>Consider:</b> to set priority (the words win over the colour); otherwise the colour counts.</p>"
+    },
+    {
+     "id": "legend-must-home",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FF8A80"
+      },
+      "stroke": {
+       "color": "#C62828",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Red</b><br>Do / Must do</p>"
+    },
+    {
+     "id": "legend-try-home",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FFE066"
+      },
+      "stroke": {
+       "color": "#9A7B00",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Yellow</b><br>Try</p>"
+    },
+    {
+     "id": "legend-maybe-home",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#A3E4FF"
+      },
+      "stroke": {
+       "color": "#1565C0",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Blue</b><br>Consider</p>"
+    },
+    {
+     "id": "legend-board-home",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3660,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#BA23F6"
+      },
+      "stroke": {
+       "color": "#7B1FA2",
+       "width": 2,
+       "style": "solid"
+      },
+      "textColor": "#FFFFFF"
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Purple</b><br>Board format</p>"
+    },
+    {
+     "id": "frame-home-01",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 0,
+      "y": 0,
+      "w": 2240,
+      "h": 3456
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "01 \u00b7 Home \u00b7 / \u00b7 Leave stickies anywhere in this frame",
+     "customData": [
+      {
+       "key": "stepKey",
+       "value": "01-home"
+      },
+      {
+       "key": "route",
+       "value": "/"
+      },
+      {
+       "key": "cycle",
+       "value": "1"
+      },
+      {
+       "key": "flow",
+       "value": "home"
+      }
+     ]
+    },
+    {
+     "id": "shot-home-01",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://harvest-playground.netlify.app",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "caption-home-01",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 1784,
+      "w": 1440,
+      "h": 240
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>01 \u00b7 Home</b>  \u00b7  /<br><span style='font-size:16pt'>Childish 90s playground: Monoton headline, turtle block, couch corners, spiral. Footer Cycle 1.</span><br><span style='font-size:16pt'>Live: <a href=\"https://harvest-playground.netlify.app\">https://harvest-playground.netlify.app</a></span></p>"
+    },
+    {
+     "id": "changes-home-01",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 2064,
+      "w": 1440,
+      "h": 400
+     },
+     "text": "<p style='font-size:18pt;text-align:left'><b>Changes in this cycle</b><br><span style='font-size:15pt'>\u2022 Childish-genius + 90s GeoCities/MySpace look (not corporate)<br>\u2022 Headline \u2192 Monoton + \u201cWELCOME TO OUR SUPER COOL ZONE!!!\u201d<br>\u2022 Turtle longevity paragraph + turtle-with-cap illustration<br>\u2022 Awkward couch-corner ideas + hand-sketched examples<br>\u2022 Neat spiral from the board doodle<br>\u2022 New pages: Dinosaur CO sculpture \u00b7 Totally random (socks)</span></p>"
+    },
+    {
+     "id": "before-label-home-01",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 2484,
+      "w": 1440,
+      "h": 48
+     },
+     "text": "<p style='font-size:16pt;text-align:left'><b>Cycle 0 (before)</b> \u00b7 reference only</p>"
+    },
+    {
+     "id": "before-img-home-01",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 2544,
+      "w": 720,
+      "h": 512
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 1,
+      "style": "solid"
+     }
+    }
+   ]
+  }
+ ]
+}

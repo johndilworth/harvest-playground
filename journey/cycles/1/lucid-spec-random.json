@@ -1,0 +1,210 @@
+{
+ "version": 1,
+ "pages": [
+  {
+   "id": "random",
+   "title": "Cycle 1 \u00b7 Random",
+   "shapes": [
+    {
+     "id": "doc-title-random",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -860,
+      "w": 4400,
+      "h": 200
+     },
+     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground \u2014 Cycle 1</b><br><span style='font-size:20pt'>Random \u00b7 /random.html \u00b7 Desktop 1440\u00d71024 \u00b7 commit 6dc68a6 \u00b7 https://harvest-playground.netlify.app</span></p>"
+    },
+    {
+     "id": "legend-box-random",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 360
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE the grey frame below and write whatever you want to see on the page. Stickies are harvested at 5pm MT daily; safe requests are applied automatically and merged. Start with <b>Do:</b>, <b>Try:</b> or <b>Consider:</b> to set priority (the words win over the colour); otherwise the colour counts.</p>"
+    },
+    {
+     "id": "legend-must-random",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FF8A80"
+      },
+      "stroke": {
+       "color": "#C62828",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Red</b><br>Do / Must do</p>"
+    },
+    {
+     "id": "legend-try-random",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FFE066"
+      },
+      "stroke": {
+       "color": "#9A7B00",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Yellow</b><br>Try</p>"
+    },
+    {
+     "id": "legend-maybe-random",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#A3E4FF"
+      },
+      "stroke": {
+       "color": "#1565C0",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Blue</b><br>Consider</p>"
+    },
+    {
+     "id": "legend-board-random",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3660,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#BA23F6"
+      },
+      "stroke": {
+       "color": "#7B1FA2",
+       "width": 2,
+       "style": "solid"
+      },
+      "textColor": "#FFFFFF"
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Purple</b><br>Board format</p>"
+    },
+    {
+     "id": "frame-random-01",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 0,
+      "y": 0,
+      "w": 2240,
+      "h": 2724
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "01 \u00b7 Random \u00b7 /random.html \u00b7 Leave stickies anywhere in this frame",
+     "customData": [
+      {
+       "key": "stepKey",
+       "value": "01-random"
+      },
+      {
+       "key": "route",
+       "value": "/random.html"
+      },
+      {
+       "key": "cycle",
+       "value": "1"
+      },
+      {
+       "key": "flow",
+       "value": "random"
+      }
+     ]
+    },
+    {
+     "id": "shot-random-01",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-random/01-random.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://harvest-playground.netlify.app/random.html",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "caption-random-01",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 1784,
+      "w": 1440,
+      "h": 220
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>01 \u00b7 Random</b>  \u00b7  /random.html<br><span style='font-size:16pt'>Totally random page: The Great Sock Vanishing (scientific, kinda).</span><br><span style='font-size:16pt'>Live: <a href=\"https://harvest-playground.netlify.app/random.html\">https://harvest-playground.netlify.app/random.html</a></span></p>"
+    },
+    {
+     "id": "changes-random-01",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 2044,
+      "w": 1440,
+      "h": 200
+     },
+     "text": "<p style='font-size:18pt;text-align:left'><b>Changes in this cycle</b><br><span style='font-size:15pt'>New this cycle (no previous capture).</span></p>"
+    }
+   ]
+  }
+ ]
+}

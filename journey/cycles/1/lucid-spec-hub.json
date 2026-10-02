@@ -1,0 +1,320 @@
+{
+ "version": 1,
+ "pages": [
+  {
+   "id": "hub",
+   "title": "Cycle 1 hub \u00b7 3 flow boards",
+   "shapes": [
+    {
+     "id": "doc-title-hub",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -900,
+      "w": 7000,
+      "h": 200
+     },
+     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground \u2014 Cycle 1 \u00b7 Hub</b><br><span style='font-size:20pt'>3 flow boards \u00b7 Desktop 1440\u00d71024 \u00b7 commit 6dc68a6 \u00b7 https://harvest-playground.netlify.app</span></p>"
+    },
+    {
+     "id": "legend-box-hub",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 400
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>How it works</b><br>Anyone can add anything. Stickies inside a flow-board frame are harvested at 5pm MT daily; safe requests are applied automatically and merged; a new board appears by morning. Stickies go on the flow boards, not this hub. Red/yellow/blue set priority; purple = board feedback.<br><br><a href=\"https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit\">Open History board (every cycle L\u2192R) \u2192</a></p>"
+    },
+    {
+     "id": "legend-must-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FF8A80"
+      },
+      "stroke": {
+       "color": "#C62828",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Red</b><br>Do / Must do</p>"
+    },
+    {
+     "id": "legend-try-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FFE066"
+      },
+      "stroke": {
+       "color": "#9A7B00",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Yellow</b><br>Try</p>"
+    },
+    {
+     "id": "legend-maybe-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#A3E4FF"
+      },
+      "stroke": {
+       "color": "#1565C0",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Blue</b><br>Consider</p>"
+    },
+    {
+     "id": "legend-board-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3660,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#BA23F6"
+      },
+      "stroke": {
+       "color": "#7B1FA2",
+       "width": 2,
+       "style": "solid"
+      },
+      "textColor": "#FFFFFF"
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Purple</b><br>Board format</p>"
+    },
+    {
+     "id": "frame-hub-home",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 0,
+      "y": 0,
+      "w": 2240,
+      "h": 2600
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "home \u00b7 / \u00b7 1 screen"
+    },
+    {
+     "id": "thumb-hub-home",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/73045fe0-c76b-4823-a6cf-105303b7b61a/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "text-hub-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 1784,
+      "w": 1440,
+      "h": 416
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b><a href=\"https://lucid.app/lucidspark/73045fe0-c76b-4823-a6cf-105303b7b61a/edit\">1. Home</a></b>  \u00b7  /<br><span style='font-size:16pt'>1 screen \u00b7 the whole playground page</span><br><br><span style='font-size:18pt'><a href=\"https://lucid.app/lucidspark/73045fe0-c76b-4823-a6cf-105303b7b61a/edit\">Open the Cycle 1 \u00b7 Home board and add stickies \u2192</a></span></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/73045fe0-c76b-4823-a6cf-105303b7b61a/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "frame-hub-dinosaur",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 2720,
+      "y": 0,
+      "w": 2240,
+      "h": 2600
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "dinosaur \u00b7 /dinosaur.html \u00b7 1 screen"
+    },
+    {
+     "id": "thumb-hub-dinosaur",
+     "type": "image",
+     "boundingBox": {
+      "x": 3120,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-dinosaur/01-dinosaur.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/d20497d0-4de6-4546-ae1c-0b8519911f0b/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "text-hub-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 3120,
+      "y": 1784,
+      "w": 1440,
+      "h": 416
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b><a href=\"https://lucid.app/lucidspark/d20497d0-4de6-4546-ae1c-0b8519911f0b/edit\">2. Dinosaur</a></b>  \u00b7  /dinosaur.html<br><span style='font-size:16pt'>1 screen \u00b7 Dinosaur CO sculpture story</span><br><br><span style='font-size:18pt'><a href=\"https://lucid.app/lucidspark/d20497d0-4de6-4546-ae1c-0b8519911f0b/edit\">Open the Cycle 1 \u00b7 Dinosaur board and add stickies \u2192</a></span></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/d20497d0-4de6-4546-ae1c-0b8519911f0b/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "frame-hub-random",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 5440,
+      "y": 0,
+      "w": 2240,
+      "h": 2600
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "random \u00b7 /random.html \u00b7 1 screen"
+    },
+    {
+     "id": "thumb-hub-random",
+     "type": "image",
+     "boundingBox": {
+      "x": 5840,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-random/01-random.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/32384a35-da3c-463c-a2c2-7c204d6e2a27/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "text-hub-random",
+     "type": "text",
+     "boundingBox": {
+      "x": 5840,
+      "y": 1784,
+      "w": 1440,
+      "h": 416
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b><a href=\"https://lucid.app/lucidspark/32384a35-da3c-463c-a2c2-7c204d6e2a27/edit\">3. Random</a></b>  \u00b7  /random.html<br><span style='font-size:16pt'>1 screen \u00b7 totally random sock page</span><br><br><span style='font-size:18pt'><a href=\"https://lucid.app/lucidspark/32384a35-da3c-463c-a2c2-7c204d6e2a27/edit\">Open the Cycle 1 \u00b7 Random board and add stickies \u2192</a></span></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/32384a35-da3c-463c-a2c2-7c204d6e2a27/edit",
+       "newWindow": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

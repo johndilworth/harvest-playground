@@ -1,0 +1,8 @@
+{
+  "name": "harvest-playground-journey",
+  "private": true,
+  "type": "module",
+  "description": "Capture tooling for Harvest Playground cycles (kept out of the site root so Netlify does not npm install).",
+  "scripts": { "capture": "node capture.mjs" },
+  "devDependencies": { "playwright": "1.47" }
+}

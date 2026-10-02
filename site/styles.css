@@ -1,0 +1,15 @@
+/* Harvest Playground base styles. Keep this small; cycles append section styles at the end. */
+*,*::before,*::after{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:#1f2328;background:#fff;line-height:1.5}
+.intro{max-width:960px;width:100%;margin:0 auto;padding:72px 32px 0}
+.intro h1{font-size:20px;font-weight:600;letter-spacing:.01em;margin:0 0 8px}
+.intro p{font-size:16px;color:#57606a;margin:0}
+/* Lots of empty space: sections grow here. */
+main#sections{flex:1;max-width:960px;width:100%;margin:0 auto;padding:48px 32px;min-height:640px}
+.block{margin:0 0 48px}
+.footer{max-width:960px;width:100%;margin:0 auto;padding:24px 32px 32px;font-size:12px;color:#8c959f}
+
+/* ---- cycle styles below ---- */

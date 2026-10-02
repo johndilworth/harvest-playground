@@ -1,0 +1,9 @@
+# Static site, no build step: publish site/ as-is. Production = main.
+[build]
+  publish = "site"
+  command = "echo static site, no build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

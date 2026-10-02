@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-02T22:01:50.786Z",
+  "entries": [
+    {
+      "stepKey": "01-home",
+      "flow": "home",
+      "flowName": "Home (the whole page)",
+      "cycle": 0,
+      "index": 1,
+      "url": "https://harvest-playground.netlify.app/",
+      "route": "/",
+      "h1": "Harvest Playground",
+      "screenshot": "out/c0/01-home.png",
+      "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png",
+      "timestamp": "2026-10-02T22:01:50.786Z",
+      "commit": "d6be9dc56347220d0fa6593ec78db4e24a848288",
+      "deployUrl": "https://harvest-playground.netlify.app",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "fullPage": false
+    }
+  ]
+}

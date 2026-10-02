@@ -1,0 +1,72 @@
+{
+  "project": "harvest-playground",
+  "cycle": 0,
+  "createdAt": "2026-10-02T16:04:00-06:00",
+  "repo": "https://github.com/johndilworth/harvest-playground",
+  "commit": "d6be9dc56347220d0fa6593ec78db4e24a848288",
+  "site": {
+    "url": "https://harvest-playground.netlify.app",
+    "netlifySiteId": "4702dcbf-e724-4e32-b35c-739e1fdf7ae5",
+    "productionBranch": "main",
+    "continuousDeploy": true,
+    "publishDir": "site"
+  },
+  "assets": {
+    "site": "journey-assets-ai-xform",
+    "siteId": "072e8f44-b0a5-4b41-a9bb-bcbc8dd4eb92",
+    "folder": "/harvest-playground-c0-home/",
+    "images": [
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png"
+    ]
+  },
+  "harvestSchedule": "daily 17:00 America/Denver",
+  "hub": {
+    "docId": "4ea33e03-7a76-45a5-8d7e-442dd1f54831",
+    "title": "Harvest Playground — Cycle 0 · Hub",
+    "editUrl": "https://lucid.app/lucidspark/4ea33e03-7a76-45a5-8d7e-442dd1f54831/edit",
+    "viewUrl": "https://lucid.app/lucidspark/4ea33e03-7a76-45a5-8d7e-442dd1f54831/view",
+    "role": "hub",
+    "spec": "journey/cycles/0/lucid-spec-hub.json",
+    "harvest": false,
+    "renderCheck": {
+      "exported": true,
+      "path": "/workspace/harvest-playground/report/c0-hub.png",
+      "ok": true
+    }
+  },
+  "boards": [
+    {
+      "docId": "de6b75aa-0b51-49a1-a9e9-561e4b77d675",
+      "title": "Harvest Playground — Cycle 0",
+      "editUrl": "https://lucid.app/lucidspark/de6b75aa-0b51-49a1-a9e9-561e4b77d675/edit",
+      "viewUrl": "https://lucid.app/lucidspark/de6b75aa-0b51-49a1-a9e9-561e4b77d675/view",
+      "role": "flow",
+      "flow": "home",
+      "harvest": true,
+      "spec": "journey/cycles/0/lucid-spec-home.json",
+      "pages": 1,
+      "frames": [
+        {
+          "id": "frame-home-01",
+          "stepKey": "01-home",
+          "route": "/",
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "w": 4400,
+            "h": 3800
+          },
+          "image": "shot-home-01",
+          "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png"
+        }
+      ],
+      "renderCheck": {
+        "exported": true,
+        "path": "/workspace/harvest-playground/report/c0-board-home.png",
+        "ok": true
+      }
+    }
+  ],
+  "manifest": "journey/cycles/0/manifest.json",
+  "capture": "journey/out/c0 (gitignored)"
+}

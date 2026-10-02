@@ -1,0 +1,202 @@
+{
+ "version": 1,
+ "pages": [
+  {
+   "id": "hub",
+   "title": "Cycle 0 hub \u00b7 1 flow board",
+   "shapes": [
+    {
+     "id": "doc-title-hub",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -860,
+      "w": 4400,
+      "h": 200
+     },
+     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground \u2014 Cycle 0 \u00b7 Hub</b><br><span style='font-size:20pt'>1 flow board, 1 screen \u00b7 Desktop 1440\u00d71024 \u00b7 commit d6be9dc \u00b7 https://harvest-playground.netlify.app</span></p>"
+    },
+    {
+     "id": "legend-box-hub",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 360
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>How it works</b><br>Anyone can add anything. Stickies inside the frame are harvested at 5pm MT daily; safe requests are applied automatically and merged; a new board appears by morning. Red/yellow/blue still set priority; purple = board feedback.</p>"
+    },
+    {
+     "id": "legend-must-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FF8A80"
+      },
+      "stroke": {
+       "color": "#C62828",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Red</b><br>Do / Must do</p>"
+    },
+    {
+     "id": "legend-try-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FFE066"
+      },
+      "stroke": {
+       "color": "#9A7B00",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Yellow</b><br>Try</p>"
+    },
+    {
+     "id": "legend-maybe-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#A3E4FF"
+      },
+      "stroke": {
+       "color": "#1565C0",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Blue</b><br>Consider</p>"
+    },
+    {
+     "id": "legend-board-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3660,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#BA23F6"
+      },
+      "stroke": {
+       "color": "#7B1FA2",
+       "width": 2,
+       "style": "solid"
+      },
+      "textColor": "#FFFFFF"
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Purple</b><br>Board format</p>"
+    },
+    {
+     "id": "frame-hub-home",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 0,
+      "y": 0,
+      "w": 2240,
+      "h": 2600
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "home \u00b7 / \u00b7 1 screen",
+     "customData": [
+      {
+       "key": "flow",
+       "value": "home"
+      },
+      {
+       "key": "cycle",
+       "value": "0"
+      },
+      {
+       "key": "docId",
+       "value": "de6b75aa-0b51-49a1-a9e9-561e4b77d675"
+      }
+     ]
+    },
+    {
+     "id": "thumb-hub-home",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/de6b75aa-0b51-49a1-a9e9-561e4b77d675/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "text-hub-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 1784,
+      "w": 1440,
+      "h": 416
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b><a href=\"https://lucid.app/lucidspark/de6b75aa-0b51-49a1-a9e9-561e4b77d675/edit\">1. Home</a></b>  \u00b7  /<br><span style='font-size:16pt'>1 screen \u00b7 the whole playground page</span><br><br><span style='font-size:18pt'><a href=\"https://lucid.app/lucidspark/de6b75aa-0b51-49a1-a9e9-561e4b77d675/edit\">Open the Cycle 0 board and add stickies \u2192</a></span></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/de6b75aa-0b51-49a1-a9e9-561e4b77d675/edit",
+       "newWindow": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

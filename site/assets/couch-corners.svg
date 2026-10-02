@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280">
+  <style>
+    .sk{fill:none;stroke:#222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .fill-soft{fill:#fff8e7;stroke:#222;stroke-width:2}
+    .label{font-family:Comic Sans MS, Chalkboard SE, cursive;font-size:14px;fill:#333}
+    .title{font-family:Comic Sans MS, Chalkboard SE, cursive;font-size:16px;font-weight:bold;fill:#5b2d8e}
+  </style>
+  <!-- panel 1: plant tower -->
+  <rect class="fill-soft" x="10" y="20" width="220" height="240" rx="8"/>
+  <text class="title" x="30" y="48">1. Jungle Tower</text>
+  <!-- couches as L -->
+  <path class="sk" d="M40 200 h90 v-50 h40"/>
+  <path class="sk" d="M40 200 v-40 h70 v40"/>
+  <path class="sk" d="M100 150 h50 v50"/>
+  <!-- plant -->
+  <path class="sk" d="M115 150 v-55"/>
+  <ellipse cx="115" cy="90" rx="28" ry="22" fill="#8fd67a" stroke="#222" stroke-width="2"/>
+  <ellipse cx="95" cy="100" rx="16" ry="12" fill="#6bb85a" stroke="#222" stroke-width="2"/>
+  <ellipse cx="135" cy="98" rx="16" ry="12" fill="#6bb85a" stroke="#222" stroke-width="2"/>
+  <text class="label" x="40" y="240">tall plant + fairy lights</text>
+
+  <!-- panel 2: reading nook -->
+  <rect class="fill-soft" x="250" y="20" width="220" height="240" rx="8"/>
+  <text class="title" x="270" y="48">2. Reading Nook</text>
+  <path class="sk" d="M280 200 h90 v-50 h40"/>
+  <path class="sk" d="M280 200 v-40 h70 v40"/>
+  <path class="sk" d="M340 150 h50 v50"/>
+  <!-- cushion + book -->
+  <ellipse cx="355" cy="175" rx="32" ry="18" fill="#ffb4d9" stroke="#222" stroke-width="2"/>
+  <rect x="340" y="130" width="28" height="22" fill="#7ec8ff" stroke="#222" stroke-width="2" transform="rotate(-12 354 141)"/>
+  <circle cx="390" cy="120" r="14" fill="#ffe066" stroke="#222" stroke-width="2"/>
+  <line class="sk" x1="390" y1="134" x2="390" y2="150"/>
+  <text class="label" x="270" y="240">cushions + lamp + books</text>
+
+  <!-- panel 3: pet palace -->
+  <rect class="fill-soft" x="490" y="20" width="220" height="240" rx="8"/>
+  <text class="title" x="510" y="48">3. Pet Palace</text>
+  <path class="sk" d="M520 200 h90 v-50 h40"/>
+  <path class="sk" d="M520 200 v-40 h70 v40"/>
+  <path class="sk" d="M580 150 h50 v50"/>
+  <!-- pet bed -->
+  <ellipse cx="595" cy="185" rx="36" ry="20" fill="#c9b6ff" stroke="#222" stroke-width="2"/>
+  <circle cx="580" cy="160" r="10" fill="#ff9f43" stroke="#222" stroke-width="2"/>
+  <path class="sk" d="M575 155 q5 -8 12 0"/>
+  <circle cx="620" cy="155" r="8" fill="#fff" stroke="#222" stroke-width="2"/>
+  <text class="label" x="510" y="240">soft bed + toys = bliss</text>
+</svg>

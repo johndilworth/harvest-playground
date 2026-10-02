@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" width="320" height="280">
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7ec850"/>
+      <stop offset="100%" stop-color="#3d8b2e"/>
+    </linearGradient>
+  </defs>
+  <!-- shadow -->
+  <ellipse cx="160" cy="250" rx="90" ry="12" fill="#000" opacity=".12"/>
+  <!-- feet -->
+  <ellipse cx="95" cy="220" rx="28" ry="16" fill="#c4e87a" stroke="#2d6a1f" stroke-width="3"/>
+  <ellipse cx="225" cy="220" rx="28" ry="16" fill="#c4e87a" stroke="#2d6a1f" stroke-width="3"/>
+  <ellipse cx="110" cy="195" rx="22" ry="14" fill="#c4e87a" stroke="#2d6a1f" stroke-width="3"/>
+  <ellipse cx="210" cy="195" rx="22" ry="14" fill="#c4e87a" stroke="#2d6a1f" stroke-width="3"/>
+  <!-- shell -->
+  <ellipse cx="160" cy="165" rx="95" ry="70" fill="url(#shell)" stroke="#2d6a1f" stroke-width="4"/>
+  <path d="M90 165 Q160 95 230 165" fill="none" stroke="#2d6a1f" stroke-width="3" opacity=".5"/>
+  <path d="M100 145 Q160 175 220 145" fill="none" stroke="#2d6a1f" stroke-width="2.5" opacity=".45"/>
+  <circle cx="130" cy="150" r="14" fill="#5aa83a" stroke="#2d6a1f" stroke-width="2"/>
+  <circle cx="190" cy="150" r="14" fill="#5aa83a" stroke="#2d6a1f" stroke-width="2"/>
+  <circle cx="160" cy="175" r="16" fill="#5aa83a" stroke="#2d6a1f" stroke-width="2"/>
+  <!-- head -->
+  <ellipse cx="160" cy="95" rx="38" ry="32" fill="#c4e87a" stroke="#2d6a1f" stroke-width="3"/>
+  <circle cx="148" cy="92" r="5" fill="#1a1a1a"/>
+  <circle cx="172" cy="92" r="5" fill="#1a1a1a"/>
+  <circle cx="149.5" cy="90.5" r="1.8" fill="#fff"/>
+  <circle cx="173.5" cy="90.5" r="1.8" fill="#fff"/>
+  <path d="M150 108 Q160 114 170 108" fill="none" stroke="#2d6a1f" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- baseball cap -->
+  <path d="M122 78 Q160 48 198 78 L198 88 Q160 78 122 88 Z" fill="#ff4d6d" stroke="#b01030" stroke-width="3"/>
+  <ellipse cx="160" cy="78" rx="42" ry="14" fill="#ff6b81" stroke="#b01030" stroke-width="3"/>
+  <path d="M198 82 Q230 88 228 98 Q200 94 198 88" fill="#ff4d6d" stroke="#b01030" stroke-width="2.5"/>
+  <text x="148" y="82" font-family="Comic Sans MS, Chalkboard, cursive" font-size="14" font-weight="bold" fill="#fff">T</text>
+</svg>

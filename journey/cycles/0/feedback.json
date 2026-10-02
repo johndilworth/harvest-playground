@@ -1,0 +1,260 @@
+{
+  "cycle": 0,
+  "docId": "de6b75aa-0b51-49a1-a9e9-561e4b77d675",
+  "harvestedAt": "2026-10-02T17:05:00-06:00",
+  "frames": [
+    {
+      "stepKey": "01-home",
+      "frameId": "frame-home-01",
+      "feedback": [
+        {
+          "id": "atMzXdIYiu-b",
+          "text": "Put a medium length paragraph with facts about longevity of turtles on this page.",
+          "fill": "#e81313",
+          "bbox": {
+            "x": 572.76,
+            "y": 669.34,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": null,
+          "colorPriority": "must",
+          "priority": "must",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "TBMzYX5Dffu5",
+          "text": "Do: Show examples in a hand sketched style of these awkward corner ideas.",
+          "fill": "#ffe342",
+          "bbox": {
+            "x": 1513.1,
+            "y": 714.79,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": "must",
+          "colorPriority": "try",
+          "priority": "must",
+          "priorityConflict": true,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "BuMzQfP1rXeK",
+          "text": "Change the headline font to Monoton",
+          "fill": "#e81313",
+          "bbox": {
+            "x": 465.38,
+            "y": 425.36,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": null,
+          "colorPriority": "must",
+          "priority": "must",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "2tMzTl8Cke8~",
+          "text": "A picture of a turtle wearing a cap would be fantastic also.",
+          "fill": "#e81313",
+          "bbox": {
+            "x": 713.08,
+            "y": 778.96,
+            "w": 124.85,
+            "h": 124.85
+          },
+          "textPriority": null,
+          "colorPriority": "must",
+          "priority": "must",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "HxMzYTMMa~O-",
+          "text": "Add a second page that's totally random about something else",
+          "fill": "#e81313",
+          "bbox": {
+            "x": 1066.62,
+            "y": 1169.95,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": null,
+          "colorPriority": "must",
+          "priority": "must",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "CDMzuUSh.M02",
+          "text": "Do: Resist the urge to make this look like a corporate website - it should not be boring.",
+          "fill": "#e81313",
+          "bbox": {
+            "x": 1458.26,
+            "y": 1609.26,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": "must",
+          "colorPriority": "must",
+          "priority": "must",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "x3Mz_L~DswFp",
+          "text": "Add new page with the history and origin of this dinosaur sculpture in Dinosaur Colorado.",
+          "fill": "#ffe342",
+          "bbox": {
+            "x": 1995.76,
+            "y": 163.79,
+            "w": 160,
+            "h": 160
+          },
+          "author": null,
+          "textPriority": null,
+          "colorPriority": "try",
+          "priority": "try",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "puMz6sWPoOTR",
+          "text": "give me ideas about what to do with the awkward corner where two couches meet",
+          "fill": "#ffe342",
+          "bbox": {
+            "x": 1343.89,
+            "y": 642.9,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": null,
+          "colorPriority": "try",
+          "priority": "try",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "8vMzUIQ7aNz~",
+          "text": "Make this page look a little like something designed by 10 year old children who happen to be also very good at design, but the childish themes come through.",
+          "fill": "#ffe342",
+          "bbox": {
+            "x": 1105.41,
+            "y": 301.35,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": null,
+          "colorPriority": "try",
+          "priority": "try",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "3CMzLFZ7NTA7",
+          "text": "Be inspired by 90's website design, including myspace, geocities, etc. Don't shy away from using blink tags and other cool features in the HTML",
+          "fill": "#ffe342",
+          "bbox": {
+            "x": 1627.24,
+            "y": 1562.65,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": null,
+          "colorPriority": "try",
+          "priority": "try",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "~wMz-wyWHBun",
+          "text": "Change the headline to something that matches the childish nature of the site's fake creators (10 year olds)",
+          "fill": "#ffe342",
+          "bbox": {
+            "x": 906.62,
+            "y": 283.53,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": null,
+          "colorPriority": "try",
+          "priority": "try",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        },
+        {
+          "id": "syMz2e1_7NY4",
+          "text": "Use this spiral shape i drew, but design it really neat somewhere in the page content.",
+          "fill": "#ffe342",
+          "bbox": {
+            "x": 240,
+            "y": 1106.57,
+            "w": 160,
+            "h": 160
+          },
+          "textPriority": null,
+          "colorPriority": "try",
+          "priority": "try",
+          "priorityConflict": false,
+          "stepKey": "01-home",
+          "frameId": "frame-home-01",
+          "inFrame": true
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "priorityConflicts": [
+    {
+      "id": "TBMzYX5Dffu5",
+      "text": "Do: Show examples in a hand sketched style of these awkward corner ideas.",
+      "fill": "#ffe342",
+      "bbox": {
+        "x": 1513.1,
+        "y": 714.79,
+        "w": 160,
+        "h": 160
+      },
+      "textPriority": "must",
+      "colorPriority": "try",
+      "priority": "must",
+      "priorityConflict": true,
+      "stepKey": "01-home",
+      "frameId": "frame-home-01",
+      "inFrame": true
+    }
+  ],
+  "hubStrayStickies": [],
+  "counts": {
+    "must": 6,
+    "try": 6,
+    "maybe": 0,
+    "total": 12
+  }
+}

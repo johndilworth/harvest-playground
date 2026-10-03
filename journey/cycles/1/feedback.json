@@ -1,0 +1,128 @@
+{
+  "cycle": 1,
+  "harvestedAt": "2026-10-03T17:10:50-06:00",
+  "outcome": "no_stickies",
+  "cycle2Created": false,
+  "boards": {
+    "home": {
+      "docId": "73045fe0-c76b-4823-a6cf-105303b7b61a",
+      "feedbackFile": "journey/cycles/1/feedback-home.json",
+      "counts": {
+        "must": 0,
+        "try": 0,
+        "maybe": 0,
+        "total": 0,
+        "board": 0,
+        "needsIntent": 0,
+        "outside": 0
+      }
+    },
+    "dinosaur": {
+      "docId": "d20497d0-4de6-4546-ae1c-0b8519911f0b",
+      "feedbackFile": "journey/cycles/1/feedback-dinosaur.json",
+      "counts": {
+        "must": 0,
+        "try": 0,
+        "maybe": 0,
+        "total": 0,
+        "board": 0,
+        "needsIntent": 0,
+        "outside": 0
+      }
+    },
+    "random": {
+      "docId": "32384a35-da3c-463c-a2c2-7c204d6e2a27",
+      "feedbackFile": "journey/cycles/1/feedback-random.json",
+      "counts": {
+        "must": 0,
+        "try": 0,
+        "maybe": 0,
+        "total": 0,
+        "board": 0,
+        "needsIntent": 0,
+        "outside": 0
+      }
+    }
+  },
+  "hub": {
+    "docId": "1559dc9e-e7ef-42e9-9027-5ef5c5b2f485",
+    "strayStickies": [],
+    "threads": []
+  },
+  "frames": [
+    {
+      "frameId": "frame-home-01",
+      "pageId": "home",
+      "frameTitle": "01 \u00b7 Home \u00b7 / \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": "home",
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-dinosaur-01",
+      "pageId": "dinosaur",
+      "frameTitle": "01 \u00b7 Dinosaur \u00b7 /dinosaur.html \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": "dinosaur",
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-random-01",
+      "pageId": "random",
+      "frameTitle": "01 \u00b7 Random \u00b7 /random.html \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": "random",
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "priorityConflicts": [],
+  "hubStrayStickies": [],
+  "counts": {
+    "must": 0,
+    "try": 0,
+    "maybe": 0,
+    "total": 0
+  },
+  "applied": [],
+  "skipped": [],
+  "verification": {
+    "harvestedAt": "2026-10-03T17:08:00-06:00",
+    "verification": {
+      "method": [
+        "fetch(metadata_only) for all 4 docs",
+        "fetch(page_index=1) full page for all 4 docs",
+        "list_document_threads for all 4 docs (all empty [])",
+        "lucid_search_document for sticky keywords (Do/Try/Consider/Board/add/make/\u2026) \u2014 hits only on generated legend/caption text, zero StickiesStickyNoteBlock"
+      ],
+      "stickyCount": 0,
+      "hubStrayStickies": 0
+    }
+  }
+}

@@ -2,6 +2,9 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## 2026-10-03 harvest (no Cycle 2)
+Harvested Cycle 1 boards Home / Dinosaur / Random — **0 stickies**. Hub stray: none. No site changes. Cycle 1 remains live.
+
 ## Cycle 1 (2026-10-02)
 Harvested Cycle 0 board `de6b75aa-0b51-49a1-a9e9-561e4b77d675`. Contributors: (no Lucid attribution lines on stickies — anonymous / team).
 

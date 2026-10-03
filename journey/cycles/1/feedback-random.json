@@ -1,0 +1,34 @@
+{
+  "docId": "32384a35-da3c-463c-a2c2-7c204d6e2a27",
+  "cycle": 1,
+  "harvestedAt": "2026-10-03T23:10:36.004887+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-random-01",
+      "pageId": "random",
+      "frameTitle": "01 · Random · /random.html · Leave stickies anywhere in this frame",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

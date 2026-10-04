@@ -1,0 +1,33 @@
+{
+  "cycle": 1,
+  "harvestedAt": "2026-10-04T17:07:00-06:00",
+  "outcome": "no_stickies",
+  "cycle2Created": false,
+  "boards": {
+    "home": {"docId": "73045fe0-c76b-4823-a6cf-105303b7b61a", "stickies": 0, "threads": 0},
+    "dinosaur": {"docId": "d20497d0-4de6-4546-ae1c-0b8519911f0b", "stickies": 0, "threads": 0},
+    "random": {"docId": "32384a35-da3c-463c-a2c2-7c204d6e2a27", "stickies": 0, "threads": 0}
+  },
+  "hub": {"docId": "1559dc9e-e7ef-42e9-9027-5ef5c5b2f485", "strayStickies": [], "threads": []},
+  "counts": {"must": 0, "try": 0, "maybe": 0, "total": 0, "board": 0, "needsIntent": 0, "outside": 0},
+  "applied": [],
+  "skipped": [],
+  "conflicts": [],
+  "boardFeedback": [],
+  "contributors": [],
+  "verification": {
+    "method": [
+      "fetch(metadata_only) for all 4 docs: 1 page, 1 region each",
+      "fetch(page_index=1) full page for all 4 docs: only generated ids (frame-, shot-, caption-, changes-, before-, legend-, doc-title-, thumb-, text-hub-); zero StickiesStickyNoteBlock",
+      "list_document_threads for all 4 docs: [] each"
+    ],
+    "stickyCount": 0,
+    "hubStrayStickies": 0
+  },
+  "historyBoard": {
+    "docId": "e983d07c-47f1-4d0f-bfe6-81087a3b8ddd",
+    "updated": "in place (title, captions, frame titles; weekend frame added; loose 10-03 note replaced)",
+    "export": "/workspace/harvest-playground/report/history-2026-10-04.png",
+    "hostedExport": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-04.png"
+  }
+}

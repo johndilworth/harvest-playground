@@ -37,8 +37,10 @@
     "harvest": false,
     "renderCheck": {
       "exported": true,
-      "path": "/workspace/harvest-playground/report/c1-history.png",
-      "ok": true
+      "path": "/workspace/harvest-playground/report/history-2026-10-04.png",
+      "hostedUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-04.png",
+      "ok": true,
+      "checkedAt": "2026-10-04T17:15:00-06:00"
     }
   },
   "hub": {
@@ -122,5 +124,19 @@
   "manifest": "journey/cycles/1/manifest.json",
   "capture": "journey/out/c1 (gitignored)",
   "appliedCount": 12,
-  "skippedCount": 0
+  "skippedCount": 0,
+  "nightlyHarvests": [
+    {
+      "date": "2026-10-03",
+      "stickies": 0,
+      "newCycle": false,
+      "record": "journey/cycles/1/feedback.json"
+    },
+    {
+      "date": "2026-10-04",
+      "stickies": 0,
+      "newCycle": false,
+      "record": "journey/cycles/1/harvest-2026-10-04.json"
+    }
+  ]
 }

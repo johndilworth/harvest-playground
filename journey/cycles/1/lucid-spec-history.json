@@ -10,11 +10,18 @@
      "type": "text",
      "boundingBox": {
       "x": 0,
-      "y": -400,
-      "w": 5000,
-      "h": 160
+      "y": -500,
+      "w": 7000,
+      "h": 260
      },
-     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground \u2014 History</b><br><span style='font-size:20pt'>Every cycle, left \u2192 right \u00b7 updated nightly</span></p>"
+     "text": "<p style='font-size:30pt;text-align:left'><b>Harvest Playground \u2014 History</b><br>Every cycle, left \u2192 right \u00b7 2 cycles shipped (12 stickies applied) \u00b7 3 nightly harvests \u00b7 updated Sun 2026-10-04<br>Live site: harvest-playground.netlify.app \u00b7 Add a sticky on the current Cycle 1 boards (via the Cycle 1 Hub) \u00b7 harvested daily 5pm MT</p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/1559dc9e-e7ef-42e9-9027-5ef5c5b2f485/edit",
+       "newWindow": true
+      }
+     ]
     },
     {
      "id": "frame-c0",
@@ -36,7 +43,7 @@
        "style": "solid"
       }
      },
-     "title": "Cycle 0 \u00b7 2026-10-02"
+     "title": "Cycle 0 \u00b7 Fri 2026-10-02 \u00b7 starting point"
     },
     {
      "id": "shot-c0",
@@ -73,7 +80,7 @@
       "w": 1440,
       "h": 200
      },
-     "text": "<p style='font-size:22pt;text-align:left'><b>Cycle 0</b> \u00b7 2026-10-02<br><span style='font-size:16pt'>Cycle 0 \u2014 nearly empty playground (title + invite + space)</span></p>"
+     "text": "<p style='font-size:22pt;text-align:left'><b>Cycle 0 \u00b7 Fri 2026-10-02</b><br>The starting point: a nearly empty page (title, one-line invite, footer).</p>"
     },
     {
      "id": "frame-c1",
@@ -95,7 +102,7 @@
        "style": "solid"
       }
      },
-     "title": "Cycle 1 \u00b7 2026-10-02"
+     "title": "Cycle 1 \u00b7 Fri 2026-10-02 \u00b7 live now"
     },
     {
      "id": "shot-c1",
@@ -132,19 +139,49 @@
       "w": 1440,
       "h": 200
      },
-     "text": "<p style='font-size:22pt;text-align:left'><b>Cycle 1</b> \u00b7 2026-10-02<br><span style='font-size:16pt'>Cycle 1 \u2014 childish 90s redesign; turtles; dino page; socks; spiral</span></p>"
+     "text": "<p style='font-size:22pt;text-align:left'><b>Cycle 1 \u00b7 Fri 2026-10-02 \u00b7 12 stickies applied, 0 skipped</b><br>Childish 90s redesign: Monoton headline, turtle facts, couch-corner ideas, spiral, plus Dinosaur and Random pages.</p>"
     },
     {
-     "id": "note-2026-10-03",
-     "type": "text",
+     "id": "frame-weekend-2026-10-03",
+     "type": "sparkFrame",
      "boundingBox": {
       "x": 5440,
+      "y": 0,
+      "w": 2240,
+      "h": 2200
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "Sat 10-03 \u2013 Sun 10-04 \u00b7 quiet weekend \u00b7 no new cycle",
+     "lucidItemId": "OSmAIHe4Kiz6"
+    },
+    {
+     "id": "note-weekend-2026-10-03",
+     "type": "text",
+     "boundingBox": {
+      "x": 5840,
       "y": 400,
       "w": 1440,
-      "h": 400
+      "h": 1024
      },
-     "text": "<p style='font-size:22pt;text-align:left'><b>2026-10-03 (Sat) \u00b7 Cycle 1 harvest</b><br><span style='font-size:16pt'>No stickies on Home / Dinosaur / Random (or hub).<br>Cycle 2 not created. Site still Cycle 1.</span></p>",
-     "lucidItemId": "p66z2DSJPaqI"
+     "lucidItemId": "XSmA~c5BhwEu",
+     "text": "<p style='font-size:22pt;text-align:left'><b>Quiet weekend \u00b7 site stays on Cycle 1</b><br><br>Sat 2026-10-03 \u00b7 5pm MT harvest of the Cycle 1 boards (Home, Dinosaur, Random): 0 stickies, 0 comments. No Cycle 2.<br><br>Sun 2026-10-04 \u00b7 5pm MT harvest of the Cycle 1 boards: 0 stickies, 0 comments. No Cycle 2.<br><br>Nothing on the hub either. The Cycle 1 boards stay open: add a sticky inside any grey frame and it ships at the next 5pm MT harvest.</p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/1559dc9e-e7ef-42e9-9027-5ef5c5b2f485/edit",
+       "newWindow": true
+      }
+     ]
     }
    ]
   }

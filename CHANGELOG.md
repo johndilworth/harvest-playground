@@ -2,6 +2,11 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## 2026-10-04 harvest (no Cycle 2)
+Harvested Cycle 1 boards Home / Dinosaur / Random at 5:07 pm MT — **0 stickies, 0 comment threads**. Hub stray: none.
+No site changes; Cycle 1 remains live. Applied: none. Skipped: none. Conflicts: none. Board feedback: none.
+Record: `journey/cycles/1/harvest-2026-10-04.json`.
+
 ## 2026-10-03 harvest (no Cycle 2)
 Harvested Cycle 1 boards Home / Dinosaur / Random — **0 stickies**. Hub stray: none. No site changes. Cycle 1 remains live.
 

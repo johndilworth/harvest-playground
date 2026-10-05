@@ -1,0 +1,240 @@
+{
+ "version": 1,
+ "pages": [
+  {
+   "id": "dinosaur",
+   "title": "Cycle 2 · Dinosaur",
+   "shapes": [
+    {
+     "id": "doc-title-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -860,
+      "w": 4400,
+      "h": 200
+     },
+     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground — Cycle 2 · Dinosaur</b><br><span style='font-size:20pt'>/dinosaur.html · Desktop 1440×1024 (full page) · commit d5e4f56 · <a href=\"https://harvest-playground.netlify.app\">https://harvest-playground.netlify.app</a></span></p>"
+    },
+    {
+     "id": "legend-box-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 360
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE the grey frame below and write whatever you want to see on the page. Stickies are harvested at 5pm MT daily; safe requests are applied automatically and merged. Start with <b>Do:</b>, <b>Try:</b> or <b>Consider:</b> to set priority (the words win over the colour); otherwise the colour counts. Purple = feedback about this board.</p>"
+    },
+    {
+     "id": "legend-must-dinosaur",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FF8A80"
+      },
+      "stroke": {
+       "color": "#C62828",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Red</b><br>Do / Must do</p>"
+    },
+    {
+     "id": "legend-try-dinosaur",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FFE066"
+      },
+      "stroke": {
+       "color": "#9A7B00",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Yellow</b><br>Try</p>"
+    },
+    {
+     "id": "legend-maybe-dinosaur",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#A3E4FF"
+      },
+      "stroke": {
+       "color": "#1565C0",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Blue</b><br>Consider</p>"
+    },
+    {
+     "id": "legend-board-dinosaur",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3660,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#BA23F6"
+      },
+      "stroke": {
+       "color": "#7B1FA2",
+       "width": 2,
+       "style": "solid"
+      },
+      "textColor": "#FFFFFF"
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Purple</b><br>Board format</p>"
+    },
+    {
+     "id": "frame-01-dinosaur",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 0,
+      "y": 0,
+      "w": 2240,
+      "h": 6670
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "01-dinosaur · /dinosaur.html · Dinosaur · Leave stickies anywhere in this frame",
+     "customData": [
+      {
+       "key": "stepKey",
+       "value": "01-dinosaur"
+      },
+      {
+       "key": "route",
+       "value": "/dinosaur.html"
+      },
+      {
+       "key": "cycle",
+       "value": "2"
+      },
+      {
+       "key": "flow",
+       "value": "dinosaur"
+      }
+     ]
+    },
+    {
+     "id": "shot-01-dinosaur",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 400,
+      "w": 1440,
+      "h": 4324
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-dinosaur/02-dinosaur-full.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://harvest-playground.netlify.app/dinosaur.html",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "caption-01-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 5084,
+      "w": 1440,
+      "h": 240
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>01-dinosaur · Dinosaur</b>  ·  /dinosaur.html<br><span style='font-size:16pt'>Full page. Dinosaur, CO story plus a scattered Roadside Dino Hall of Fame: 6 roadside dinosaurs with photos, stories and creator bios.</span><br><span style='font-size:16pt'>Live: <a href=\"https://harvest-playground.netlify.app/dinosaur.html\">https://harvest-playground.netlify.app/dinosaur.html</a></span></p>"
+    },
+    {
+     "id": "changes-01-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 5364,
+      "w": 1440,
+      "h": 294
+     },
+     "text": "<p style='font-size:18pt;text-align:left'><b>Changes in this cycle</b><br><span style='font-size:15pt'>• Midnight mode + more playful, scattered and rotated layout (sticky: dark midnight mode, playful random layout)<br>• 6 roadside dinosaurs with photo, story and creator bio: Cabazon (Claude K. Bell), Rapid City Dinosaur Park and Wall Drug (Emmet Sullivan), Dinosaur Land VA (James Q. Sidwell, Mark Cline), Glen Rose T. rex and Quarry Stegosaurus (Louis Paul Jonas) (sticky: add 5 or 6 roadside dinosaurs + bios)</span></p>"
+    },
+    {
+     "id": "before-label-01-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 5698,
+      "w": 1440,
+      "h": 48
+     },
+     "text": "<p style='font-size:16pt;text-align:left'><b>Cycle 1 (before)</b> · reference only</p>"
+    },
+    {
+     "id": "before-img-01-dinosaur",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 5758,
+      "w": 720,
+      "h": 512
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-dinosaur/01-dinosaur.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 1,
+      "style": "solid"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,240 @@
+{
+ "version": 1,
+ "pages": [
+  {
+   "id": "home",
+   "title": "Cycle 2 · Home",
+   "shapes": [
+    {
+     "id": "doc-title-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -860,
+      "w": 4400,
+      "h": 200
+     },
+     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground — Cycle 2 · Home</b><br><span style='font-size:20pt'>/ · Desktop 1440×1024 (full page) · commit d5e4f56 · <a href=\"https://harvest-playground.netlify.app\">https://harvest-playground.netlify.app</a></span></p>"
+    },
+    {
+     "id": "legend-box-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 360
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE the grey frame below and write whatever you want to see on the page. Stickies are harvested at 5pm MT daily; safe requests are applied automatically and merged. Start with <b>Do:</b>, <b>Try:</b> or <b>Consider:</b> to set priority (the words win over the colour); otherwise the colour counts. Purple = feedback about this board.</p>"
+    },
+    {
+     "id": "legend-must-home",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FF8A80"
+      },
+      "stroke": {
+       "color": "#C62828",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Red</b><br>Do / Must do</p>"
+    },
+    {
+     "id": "legend-try-home",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FFE066"
+      },
+      "stroke": {
+       "color": "#9A7B00",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Yellow</b><br>Try</p>"
+    },
+    {
+     "id": "legend-maybe-home",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#A3E4FF"
+      },
+      "stroke": {
+       "color": "#1565C0",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Blue</b><br>Consider</p>"
+    },
+    {
+     "id": "legend-board-home",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3660,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#BA23F6"
+      },
+      "stroke": {
+       "color": "#7B1FA2",
+       "width": 2,
+       "style": "solid"
+      },
+      "textColor": "#FFFFFF"
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Purple</b><br>Board format</p>"
+    },
+    {
+     "id": "frame-01-home",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 0,
+      "y": 0,
+      "w": 2240,
+      "h": 4144
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "01-home · / · Home · Leave stickies anywhere in this frame",
+     "customData": [
+      {
+       "key": "stepKey",
+       "value": "01-home"
+      },
+      {
+       "key": "route",
+       "value": "/"
+      },
+      {
+       "key": "cycle",
+       "value": "2"
+      },
+      {
+       "key": "flow",
+       "value": "home"
+      }
+     ]
+    },
+    {
+     "id": "shot-01-home",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 400,
+      "w": 1440,
+      "h": 1798
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/02-home-full.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://harvest-playground.netlify.app/",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "caption-01-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 2558,
+      "w": 1440,
+      "h": 240
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>01-home · Home</b>  ·  /<br><span style='font-size:16pt'>Full page. Midnight-mode playground with free-form tilted blocks: real tortoise, couch-corner photos and a nautilus spiral. Footer Cycle 2.</span><br><span style='font-size:16pt'>Live: <a href=\"https://harvest-playground.netlify.app/\">https://harvest-playground.netlify.app/</a></span></p>"
+    },
+    {
+     "id": "changes-01-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 2838,
+      "w": 1440,
+      "h": 294
+     },
+     "text": "<p style='font-size:18pt;text-align:left'><b>Changes in this cycle</b><br><span style='font-size:15pt'>• Dark midnight-blue mode site-wide, no pinks (sticky: dark mode, midnight blue)<br>• Free-form layout: blocks anywhere, bigger rotations, floating moon/star/planet (sticky: layout too rigid)<br>• Real giant tortoise photo replaces the turtle-in-a-cap drawing (sticky: real turtle)<br>• Photos replace all SVG drawings: 3 couch-corner photos, nautilus spiral (sticky: photos instead of SVG)</span></p>"
+    },
+    {
+     "id": "before-label-01-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 3172,
+      "w": 1440,
+      "h": 48
+     },
+     "text": "<p style='font-size:16pt;text-align:left'><b>Cycle 1 (before)</b> · reference only</p>"
+    },
+    {
+     "id": "before-img-01-home",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 3232,
+      "w": 720,
+      "h": 512
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 1,
+      "style": "solid"
+     }
+    }
+   ]
+  }
+ ]
+}

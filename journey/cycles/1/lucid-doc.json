@@ -137,6 +137,17 @@
       "stickies": 0,
       "newCycle": false,
       "record": "journey/cycles/1/harvest-2026-10-04.json"
+    },
+    {
+      "date": "2026-10-05",
+      "stickies": 8,
+      "applied": 8,
+      "skipped": 0,
+      "newCycle": true,
+      "producedCycle": 2,
+      "record": "journey/cycles/1/harvest-2026-10-05.json",
+      "hubStrays": "journey/cycles/1/hub-strays-2026-10-05.json"
     }
-  ]
+  ],
+  "harvestedBy": 2
 }

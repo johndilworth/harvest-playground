@@ -1,0 +1,327 @@
+{
+ "version": 1,
+ "pages": [
+  {
+   "id": "hub",
+   "title": "Cycle 2 hub · 3 flow boards",
+   "shapes": [
+    {
+     "id": "doc-title-hub",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -900,
+      "w": 7680,
+      "h": 200
+     },
+     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground — Cycle 2 · Hub</b><br><span style='font-size:20pt'>3 flow boards · Desktop 1440×1024 · commit d5e4f56 · <a href=\"https://harvest-playground.netlify.app\">https://harvest-playground.netlify.app</a> · harvested Mon 2026-10-05</span></p>"
+    },
+    {
+     "id": "legend-box-hub",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 420
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>How it works</b><br>Anyone can add anything. Stickies inside a flow-board frame are harvested at 5pm MT daily; safe requests are applied automatically and merged; a new board appears by morning. Put stickies on the flow boards (tiles below), not on this hub. Red/yellow/blue set priority; purple = board feedback.<br><br><a href=\"https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit\">Open the History board (every cycle, left → right) →</a></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "legend-must-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FF8A80"
+      },
+      "stroke": {
+       "color": "#C62828",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Red</b><br>Do / Must do</p>"
+    },
+    {
+     "id": "legend-try-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FFE066"
+      },
+      "stroke": {
+       "color": "#9A7B00",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Yellow</b><br>Try</p>"
+    },
+    {
+     "id": "legend-maybe-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#A3E4FF"
+      },
+      "stroke": {
+       "color": "#1565C0",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Blue</b><br>Consider</p>"
+    },
+    {
+     "id": "legend-board-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3660,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#BA23F6"
+      },
+      "stroke": {
+       "color": "#7B1FA2",
+       "width": 2,
+       "style": "solid"
+      },
+      "textColor": "#FFFFFF"
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Purple</b><br>Board format</p>"
+    },
+    {
+     "id": "frame-hub-home",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 0,
+      "y": 0,
+      "w": 2240,
+      "h": 2600
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "home · / · 1 screen"
+    },
+    {
+     "id": "thumb-hub-home",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/01-home.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "text-hub-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 1784,
+      "w": 1440,
+      "h": 416
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b><a href=\"https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/edit\">1. Home</a></b>  ·  /<br><span style='font-size:16pt'>1 screen · midnight mode, free-form layout, real photos</span><br><br><span style='font-size:18pt'><a href=\"https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/edit\">Open the Cycle 2 · Home board and add stickies →</a></span></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "frame-hub-dinosaur",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 2720,
+      "y": 0,
+      "w": 2240,
+      "h": 2600
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "dinosaur · /dinosaur.html · 1 screen"
+    },
+    {
+     "id": "thumb-hub-dinosaur",
+     "type": "image",
+     "boundingBox": {
+      "x": 3120,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-dinosaur/01-dinosaur.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "text-hub-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 3120,
+      "y": 1784,
+      "w": 1440,
+      "h": 416
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b><a href=\"https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/edit\">2. Dinosaur</a></b>  ·  /dinosaur.html<br><span style='font-size:16pt'>1 screen · Dinosaur CO + Roadside Dino Hall of Fame (6 dinos + makers)</span><br><br><span style='font-size:18pt'><a href=\"https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/edit\">Open the Cycle 2 · Dinosaur board and add stickies →</a></span></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "frame-hub-random",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 5440,
+      "y": 0,
+      "w": 2240,
+      "h": 2600
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "random · /random.html · 1 screen"
+    },
+    {
+     "id": "thumb-hub-random",
+     "type": "image",
+     "boundingBox": {
+      "x": 5840,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-random/01-random.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "text-hub-random",
+     "type": "text",
+     "boundingBox": {
+      "x": 5840,
+      "y": 1784,
+      "w": 1440,
+      "h": 416
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b><a href=\"https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/edit\">3. Random</a></b>  ·  /random.html<br><span style='font-size:16pt'>1 screen · socks + NEW wombat cube fact, chaos layout</span><br><br><span style='font-size:18pt'><a href=\"https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/edit\">Open the Cycle 2 · Random board and add stickies →</a></span></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/edit",
+       "newWindow": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

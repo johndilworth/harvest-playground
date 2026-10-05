@@ -1,0 +1,160 @@
+{
+  "project": "harvest-playground",
+  "cycle": 2,
+  "createdAt": "2026-10-05T17:40:00-06:00",
+  "repo": "https://github.com/johndilworth/harvest-playground",
+  "commit": "d5e4f56dbacde3e44bd8c2a5350c3b8f81efacd0",
+  "pullRequest": "https://github.com/johndilworth/harvest-playground/pull/1",
+  "site": {
+    "url": "https://harvest-playground.netlify.app",
+    "netlifySiteId": "4702dcbf-e724-4e32-b35c-739e1fdf7ae5",
+    "productionBranch": "main",
+    "continuousDeploy": true,
+    "publishDir": "site",
+    "deployId": "6ac430ce627fd2000861b9f0",
+    "deployState": "ready"
+  },
+  "assets": {
+    "site": "journey-assets-ai-xform",
+    "siteId": "072e8f44-b0a5-4b41-a9bb-bcbc8dd4eb92",
+    "folders": [
+      "/harvest-playground-c2-home/",
+      "/harvest-playground-c2-dinosaur/",
+      "/harvest-playground-c2-random/"
+    ],
+    "images": [
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/01-home.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/02-home-full.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-dinosaur/01-dinosaur.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-dinosaur/02-dinosaur-full.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-random/01-random.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-random/02-random-full.png"
+    ]
+  },
+  "harvestSchedule": "daily 17:00 America/Denver",
+  "harvestedFrom": 1,
+  "historyBoard": {
+    "docId": "e983d07c-47f1-4d0f-bfe6-81087a3b8ddd",
+    "title": "Harvest Playground — History",
+    "editUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+    "viewUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/view",
+    "role": "history",
+    "harvest": false,
+    "updatedInPlace": "2026-10-05: added Cycle 2 tile (x8160), relabelled Cycle 1 tile, replaced title text (title no longer carries a link)",
+    "renderCheck": {
+      "exported": true,
+      "path": "/workspace/harvest-playground/report/history-2026-10-05.png",
+      "hostedUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-05.png",
+      "ok": true,
+      "checkedAt": "2026-10-05T17:45:00-06:00"
+    }
+  },
+  "hub": {
+    "docId": "29f0022f-a695-4df7-8499-3b5bd7602d53",
+    "title": "Harvest Playground — Cycle 2 · Hub",
+    "editUrl": "https://lucid.app/lucidspark/29f0022f-a695-4df7-8499-3b5bd7602d53/edit",
+    "viewUrl": "https://lucid.app/lucidspark/29f0022f-a695-4df7-8499-3b5bd7602d53/view",
+    "role": "hub",
+    "spec": "journey/cycles/2/lucid-spec-hub.json",
+    "harvest": false,
+    "renderCheck": {
+      "exported": true,
+      "path": "/workspace/harvest-playground/report/c2-hub.png",
+      "ok": true
+    }
+  },
+  "boards": [
+    {
+      "docId": "3d1704a5-0727-4aa0-9f05-d2609b1ac8fa",
+      "title": "Harvest Playground — Cycle 2 · Home",
+      "editUrl": "https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/edit",
+      "viewUrl": "https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/view",
+      "role": "flow",
+      "flow": "home",
+      "harvest": true,
+      "spec": "journey/cycles/2/lucid-spec-home.json",
+      "pages": 1,
+      "frames": [
+        {
+          "id": "frame-01-home",
+          "stepKey": "01-home",
+          "route": "/",
+          "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/02-home-full.png",
+          "thumbUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/01-home.png",
+          "beforeUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png"
+        }
+      ],
+      "renderCheck": {
+        "exported": true,
+        "path": "/workspace/harvest-playground/report/c2-board-home.png",
+        "ok": true
+      }
+    },
+    {
+      "docId": "1307df95-82cb-42ca-8fa5-0be7a2eba04b",
+      "title": "Harvest Playground — Cycle 2 · Dinosaur",
+      "editUrl": "https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/edit",
+      "viewUrl": "https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/view",
+      "role": "flow",
+      "flow": "dinosaur",
+      "harvest": true,
+      "spec": "journey/cycles/2/lucid-spec-dinosaur.json",
+      "pages": 1,
+      "frames": [
+        {
+          "id": "frame-01-dinosaur",
+          "stepKey": "01-dinosaur",
+          "route": "/dinosaur.html",
+          "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-dinosaur/02-dinosaur-full.png",
+          "thumbUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-dinosaur/01-dinosaur.png",
+          "beforeUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-dinosaur/01-dinosaur.png"
+        }
+      ],
+      "renderCheck": {
+        "exported": true,
+        "ok": true,
+        "fullExport": "failed (Lucid internal server error; very tall page)",
+        "croppedExports": [
+          "/workspace/harvest-playground/report/c2-board-dinosaur-top.png",
+          "/workspace/harvest-playground/report/c2-board-dinosaur-bottom.png"
+        ]
+      }
+    },
+    {
+      "docId": "f206b6a4-74f6-4a19-87c4-8d843307a8c5",
+      "title": "Harvest Playground — Cycle 2 · Random",
+      "editUrl": "https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/edit",
+      "viewUrl": "https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/view",
+      "role": "flow",
+      "flow": "random",
+      "harvest": true,
+      "spec": "journey/cycles/2/lucid-spec-random.json",
+      "pages": 1,
+      "frames": [
+        {
+          "id": "frame-01-random",
+          "stepKey": "01-random",
+          "route": "/random.html",
+          "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-random/02-random-full.png",
+          "thumbUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-random/01-random.png",
+          "beforeUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-random/01-random.png"
+        }
+      ],
+      "renderCheck": {
+        "exported": true,
+        "path": "/workspace/harvest-playground/report/c2-board-random.png",
+        "ok": true
+      }
+    }
+  ],
+  "manifest": "journey/cycles/2/manifest.json",
+  "boardConfig": "journey/cycles/2/board-config.json",
+  "generator": "journey/build_specs.py",
+  "capture": "journey/out/c2 (gitignored)",
+  "appliedCount": 8,
+  "skippedCount": 0,
+  "conflicts": 3,
+  "boardFeedback": 0,
+  "hubStrays": 3,
+  "nightlyHarvests": []
+}

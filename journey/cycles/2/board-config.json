@@ -1,0 +1,82 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 2,
+ "date": "Mon 2026-10-05",
+ "commit": "d5e4f56dbacde3e44bd8c2a5350c3b8f81efacd0",
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "midnight mode, free-form layout, real photos",
+   "thumb": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 1798,
+     "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/02-home-full.png",
+     "before": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png",
+     "caption": "Full page. Midnight-mode playground with free-form tilted blocks: real tortoise, couch-corner photos and a nautilus spiral. Footer Cycle 2.",
+     "changes": [
+      "Dark midnight-blue mode site-wide, no pinks (sticky: dark mode, midnight blue)",
+      "Free-form layout: blocks anywhere, bigger rotations, floating moon/star/planet (sticky: layout too rigid)",
+      "Real giant tortoise photo replaces the turtle-in-a-cap drawing (sticky: real turtle)",
+      "Photos replace all SVG drawings: 3 couch-corner photos, nautilus spiral (sticky: photos instead of SVG)"
+     ]
+    }
+   ],
+   "docId": "3d1704a5-0727-4aa0-9f05-d2609b1ac8fa",
+   "editUrl": "https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/edit"
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dinosaur",
+   "route": "/dinosaur.html",
+   "blurb": "Dinosaur CO + Roadside Dino Hall of Fame (6 dinos + makers)",
+   "thumb": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dinosaur",
+     "h": 4324,
+     "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-dinosaur/02-dinosaur-full.png",
+     "before": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-dinosaur/01-dinosaur.png",
+     "caption": "Full page. Dinosaur, CO story plus a scattered Roadside Dino Hall of Fame: 6 roadside dinosaurs with photos, stories and creator bios.",
+     "changes": [
+      "Midnight mode + more playful, scattered and rotated layout (sticky: dark midnight mode, playful random layout)",
+      "6 roadside dinosaurs with photo, story and creator bio: Cabazon (Claude K. Bell), Rapid City Dinosaur Park and Wall Drug (Emmet Sullivan), Dinosaur Land VA (James Q. Sidwell, Mark Cline), Glen Rose T. rex and Quarry Stegosaurus (Louis Paul Jonas) (sticky: add 5 or 6 roadside dinosaurs + bios)"
+     ]
+    }
+   ],
+   "docId": "1307df95-82cb-42ca-8fa5-0be7a2eba04b",
+   "editUrl": "https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/edit"
+  },
+  {
+   "slug": "random",
+   "name": "Random",
+   "route": "/random.html",
+   "blurb": "socks + NEW wombat cube fact, chaos layout",
+   "thumb": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Random",
+     "h": 1763,
+     "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-random/02-random-full.png",
+     "before": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-random/01-random.png",
+     "caption": "Full page. Sock vanishing plus a new random fact (wombats poop cubes), a randomness meter and a chaotic tilted layout.",
+     "changes": [
+      "New random fact: wombats poop cubes (2019 Ig Nobel) + randomness meter (sticky: Do a new random fact)",
+      "Even more random layout: -8 to +9 degree tilts, off-grid blocks, floating emoji (same sticky)",
+      "Midnight colour scheme like the other pages (sticky: add new color scheme)"
+     ]
+    }
+   ],
+   "docId": "f206b6a4-74f6-4a19-87c4-8d843307a8c5",
+   "editUrl": "https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/edit"
+  }
+ ]
+}

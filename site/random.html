@@ -10,21 +10,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="page-random">
-  <marquee class="top-marquee">🎲 totally random page · no socks were harmed · maybe ★</marquee>
+<body class="page-random midnight">
+  <div class="stars" aria-hidden="true"></div>
+  <marquee class="top-marquee">🎲 totally random page · no socks were harmed · maybe · now with cube-shaped poop facts ★</marquee>
   <nav class="nav-bar">
     <a href="index.html" class="nav-link">🏠 Home</a>
     <a href="dinosaur.html" class="nav-link">🦕 Dino Town</a>
     <a href="random.html" class="nav-link active">🎲 Totally Random</a>
   </nav>
 
-  <header class="intro">
+  <header class="intro random-intro">
     <h1 class="headline headline-sm">THE GREAT SOCK VANISHING</h1>
     <p class="tagline css-blink">a scientific investigation (kinda)</p>
   </header>
 
-  <main id="sections">
-    <section class="block scrapbook" id="c1-socks">
+  <main id="sections" class="freeform random-freeform">
+    <section class="block scrapbook ff rz1" id="c1-socks">
       <h2>Hypothesis time</h2>
       <p>Every laundry cycle, exactly one sock escapes. Where does it go? Leading theories from our imaginary research lab:</p>
       <ol class="idea-list">
@@ -34,11 +35,31 @@
         <li><b>Quantum Laundry</b> — observing the sock collapses the waveform into “missing.”</li>
       </ol>
       <p>Until peer review catches up, we recommend labeling both socks with matching stickers shaped like spirals. Spiral energy is strong on this website.</p>
-      <img class="spiral-hero" src="assets/spiral.svg" alt="" width="120" height="120">
       <p class="source-note">This page exists because a sticky said: “Add a second page that's totally random about something else.” Mission accomplished.</p>
     </section>
+
+    <section class="block scrapbook ff rz2" id="c2-wombat-cubes">
+      <h2>🟫 NEW RANDOM FACT: Wombats poop CUBES</h2>
+      <p>Yes, really. Bare-nosed wombats in Australia leave little <b>cube-shaped</b> droppings, around 80 to 100 of them a night. They stack them on rocks and logs to mark their territory, and cubes don't roll away. Nice one, wombats.</p>
+      <p>How do you make a cube without corners in your body? Scientists (Patricia Yang, David Hu and their team) found that the last part of a wombat's intestine has stiffer and stretchier patches. Those squeeze the poop into flat sides and edges. The discovery won the 2019 Ig Nobel Prize in Physics.</p>
+    </section>
+
+    <section class="block scrapbook ff rz3 tiny-note" id="c2-random-scoreboard">
+      <h2>📊 Randomness meter</h2>
+      <p>Socks: 🧦🧦🧦 · Wombat cubes: 🟫🟫🟫🟫 · Spirals: 🌀🌀 · Layout chaos: 11/10</p>
+    </section>
+
+    <figure class="photo-fig ff rz4">
+      <img class="photo" src="assets/photos/spiral-nautilus.jpg" alt="The inside of a nautilus shell showing a perfect spiral" width="900" height="649">
+      <figcaption>spiral energy, now in photo form · <a href="https://commons.wikimedia.org/wiki/File:A_Nautilus_macromphalus_shell_inside.jpg">photo</a> Sérgio Valle Duarte, CC BY 3.0</figcaption>
+    </figure>
+
+    <span class="floaty f1" aria-hidden="true">🧦</span>
+    <span class="floaty f2" aria-hidden="true">🎲</span>
+    <span class="floaty f3" aria-hidden="true">🟫</span>
+    <span class="floaty f4" aria-hidden="true">❓</span>
   </main>
 
-  <footer class="footer"><span id="cycle">Cycle 1</span> · <a href="index.html">back home</a></footer>
+  <footer class="footer"><span id="cycle">Cycle 2</span> · <a href="index.html">back home</a></footer>
 </body>
 </html>

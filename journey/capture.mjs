@@ -2,7 +2,8 @@
 // Capture the playground page for a Harvest cycle at 1440x1024.
 // Usage (from journey/): node capture.mjs --cycle N [--base-url URL] [--out out/cN]
 // Writes 01-home.png (viewport, first screen) and, when the page is taller than one viewport,
-// 02-home-full.png (full page). Prints a JSON summary (height, files) to stdout.
+// 02-home-full.png (full page). With --all yes it also captures the other flow pages
+// (03-dinosaur.png + 03-dinosaur-full.png, 04-random.png + 04-random-full.png). Prints a JSON summary to stdout.
 import { chromium } from 'playwright'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -21,7 +22,17 @@ await page.screenshot({ path: path.join(out, '01-home.png') }); files.push('01-h
 if (height > 1024) { await page.screenshot({ path: path.join(out, '02-home-full.png'), fullPage: true }); files.push('02-home-full.png') }
 const h1 = await page.locator('h1').first().textContent()
 const footer = await page.locator('footer').first().textContent()
+const extra = {}
+if (a.all) {
+  for (const [key, route] of [['03-dinosaur', '/dinosaur.html'], ['04-random', '/random.html']]) {
+    await page.goto(base + route, { waitUntil: 'networkidle' })
+    const hh = await page.evaluate(() => document.documentElement.scrollHeight)
+    await page.screenshot({ path: path.join(out, key + '.png') }); files.push(key + '.png')
+    if (hh > 1024) { await page.screenshot({ path: path.join(out, key + '-full.png'), fullPage: true }); files.push(key + '-full.png') }
+    extra[key] = { route, height: hh, h1: (await page.locator('h1').first().textContent())?.trim(), footer: (await page.locator('footer').first().textContent())?.trim() }
+  }
+}
 await browser.close()
-const summary = { cycle, base, height, files, h1: h1?.trim(), footer: footer?.trim(), capturedAt: new Date().toISOString() }
+const summary = { cycle, base, height, files, h1: h1?.trim(), footer: footer?.trim(), pages: extra, capturedAt: new Date().toISOString() }
 fs.writeFileSync(path.join(out, 'capture.json'), JSON.stringify(summary, null, 2) + '\n')
 console.log(JSON.stringify(summary))

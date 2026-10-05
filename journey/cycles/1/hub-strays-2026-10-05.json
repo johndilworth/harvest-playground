@@ -1,0 +1,50 @@
+{
+  "docId": "1559dc9e-e7ef-42e9-9027-5ef5c5b2f485",
+  "cycle": 1,
+  "harvestedAt": "2026-10-05T23:11:58.028884+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [
+    {
+      "itemId": "czGAvH8wUUQT",
+      "kind": "sticky",
+      "text": "background of pages should be slightly darker gray than frames",
+      "fill": "#ba23f6ff",
+      "pageId": "hub",
+      "boardSource": "color",
+      "bbox": {
+        "x": 6448.3015428369745,
+        "y": -576.1700431031572,
+        "w": 160.0,
+        "h": 160.0
+      },
+      "frameId": null,
+      "nearest": []
+    },
+    {
+      "itemId": "pzGAdkk5SHVl",
+      "kind": "sticky",
+      "text": "May be unencessary to to have this split into multilple files when it's only one page, the harvest doc can be a sile Lucidhchart doc — only split if one section has more than 5 individual flows or screens",
+      "fill": "#ba23f6ff",
+      "pageId": "hub",
+      "boardSource": "color",
+      "bbox": {
+        "x": 6795.345745704486,
+        "y": -501.0037871825043,
+        "w": 160.0,
+        "h": 160.0
+      },
+      "frameId": null,
+      "nearest": []
+    }
+  ],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

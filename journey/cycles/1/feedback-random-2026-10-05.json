@@ -1,0 +1,87 @@
+{
+  "docId": "32384a35-da3c-463c-a2c2-7c204d6e2a27",
+  "cycle": 1,
+  "harvestedAt": "2026-10-05T23:12:29.890806+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-random-01",
+      "pageId": "random",
+      "frameTitle": "01 · Random · /random.html · Leave stickies anywhere in this frame",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "NAGA1vq7N1iS",
+          "kind": "sticky",
+          "text": "add new color scheme as suggested for other layouts. ",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1768.774769297282,
+            "y": 930.9479946742367,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-random-01",
+            "via": null,
+            "bbox": "frame-random-01",
+            "bestOverlap": {
+              "frameId": "frame-random-01",
+              "ratio": 1.0
+            }
+          }
+        },
+        {
+          "itemId": "nAGANxiAAhye",
+          "kind": "sticky",
+          "text": "Do a new random fact - make the layout even more random too.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 1746.4664620677122,
+            "y": 697.5914264581929,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-random-01",
+            "via": null,
+            "bbox": "frame-random-01",
+            "bestOverlap": {
+              "frameId": "frame-random-01",
+              "ratio": 1.0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

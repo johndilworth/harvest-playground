@@ -64,9 +64,11 @@ Every item that isn't applied is logged in CHANGELOG.md (that night's publish no
 6. Host the images on journey-assets-ai-xform under `/harvest-playground-c<N+1>-home/` (copy into
    `/workspace/journey-assets-site/harvest-playground-c<N+1>-home/`, then
    `netlify deploy --prod --dir=/workspace/journey-assets-site --site 072e8f44-b0a5-4b41-a9bb-bcbc8dd4eb92`).
-7. Build the next flow board "Harvest Playground — Cycle N+1" and hub "Harvest Playground — Cycle N+1 · Hub"
-   (single-page imports, one board per flow, board rules from the prototype-to-lucid-journey-map skill, extra-roomy
-   frames). Export both to verify, and save `journey/cycles/<N+1>/` (`lucid-doc.json`, specs, manifest).
+7. Build the next cycle boards and hub "Harvest Playground — Cycle N+1 · Hub"
+   (single-page imports; keep screens on one board until a section has more than 5 flows or screens, then split;
+   hub still links every board; board rules from the prototype-to-lucid-journey-map skill including page
+   background #E8EAED with frames #F2F3F5, extra-roomy frames). Export every board to verify, and save
+   `journey/cycles/<N+1>/` (`lucid-doc.json`, specs, manifest).
 
 ## Deploys
 - **Continuous deploy:** the Netlify site `harvest-playground` (id `4702dcbf-e724-4e32-b35c-739e1fdf7ae5`) is linked

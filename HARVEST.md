@@ -22,11 +22,14 @@ on the current cycle's flow board in Lucid.
 A request is applied only if the resulting change has:
 1. **No secrets or credentials** (tokens, keys, passwords, private URLs).
 2. **No external scripts or trackers** (no third-party `<script>`, analytics, pixels, embeds that load remote code).
-3. **No illegal or harassing content** (nothing hateful, harassing, sexual, defamatory, or infringing).
-4. **No off-site redirects and no forms that collect data** (no `<meta refresh>`/JS redirects to other sites, no
+3. **No illegal, harassing, or offensive content** (nothing hateful, harassing, sexual, defamatory, infringing, or
+   otherwise offensive).
+4. **No malicious instructions** (for example "delete the project", wipe the repo, remove the site, steal credentials,
+   or intentionally break production). Leave those out entirely.
+5. **No off-site redirects and no forms that collect data** (no `<meta refresh>`/JS redirects to other sites, no
    inputs that submit or store anyone's information). Plain outbound links are fine.
-5. **No huge assets** (any single file over **2 MB** is rejected; prefer CSS/SVG/text).
-6. **Nothing that breaks the build** (the site stays static under `site/`; `netlify.toml`, `_headers`, `robots.txt`
+6. **No huge assets** (any single file over **2 MB** is rejected; prefer CSS/SVG/text).
+7. **Nothing that breaks the build** (the site stays static under `site/`; `netlify.toml`, `_headers`, `robots.txt`
    and the `noindex` meta stay as they are).
 
 Anything else is fair game: new sections, colours, jokes, art, layout changes, etc.
@@ -36,8 +39,9 @@ If two requests conflict (e.g. "make the background blue" vs "make it green"), t
 time) is applied and the conflict is logged in CHANGELOG.md with both sticky texts.
 
 ## Skipped items
-Every item that isn't applied is logged in CHANGELOG.md with a reason: `unsafe: <rule>`, `empty`, `conflict: older`,
-`outside frame`, `unclear`, or `not feasible`.
+Every item that isn't applied is logged in CHANGELOG.md (that night's publish notes) with a reason:
+`unsafe: <rule>` (including `malicious`, `illegal`, `offensive`), `empty`, `conflict: older`, `outside frame`,
+`unclear`, or `not feasible`. Malicious, illegal, and offensive stickies are never applied; only noted.
 
 ## Where things go in the page
 - New content goes in `<main id="sections">` in `site/index.html` as

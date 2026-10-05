@@ -1,0 +1,153 @@
+{
+  "cycle": 1,
+  "harvestedAt": "2026-10-05T17:12:00-06:00",
+  "outcome": "applied",
+  "cycle2Created": true,
+  "boards": {
+    "home": {
+      "docId": "73045fe0-c76b-4823-a6cf-105303b7b61a",
+      "stickies": 4,
+      "threads": 0
+    },
+    "dinosaur": {
+      "docId": "d20497d0-4de6-4546-ae1c-0b8519911f0b",
+      "stickies": 2,
+      "threads": 0
+    },
+    "random": {
+      "docId": "32384a35-da3c-463c-a2c2-7c204d6e2a27",
+      "stickies": 2,
+      "threads": 0
+    }
+  },
+  "hub": {
+    "docId": "1559dc9e-e7ef-42e9-9027-5ef5c5b2f485",
+    "strayStickies": [
+      {
+        "itemId": "czGAvH8wUUQT",
+        "text": "background of pages should be slightly darker gray than frames",
+        "fill": "#ba23f6ff",
+        "kind": "board-format (purple)"
+      },
+      {
+        "itemId": "pzGAdkk5SHVl",
+        "text": "May be unencessary to to have this split into multilple files when it's only one page, the harvest doc can be a sile Lucidhchart doc — only split if one section has more than 5 individual flows or screens",
+        "fill": "#ba23f6ff",
+        "kind": "board-format (purple)"
+      },
+      {
+        "itemId": "1yGA_.QKHkri",
+        "text": "",
+        "kind": "empty purple rectangle (not a sticky)"
+      }
+    ],
+    "threads": []
+  },
+  "counts": {
+    "must": 1,
+    "try": 7,
+    "maybe": 0,
+    "total": 8,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 3
+  },
+  "items": [
+    {
+      "board": "home",
+      "itemId": "AyGAtLkXfeOi",
+      "text": "PHotos instead of SVG drawings.",
+      "priority": "try",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied"
+    },
+    {
+      "board": "home",
+      "itemId": "PvGA7joO.ZPC",
+      "text": "Change overall design to a dark mode — midnight blue style instead of pinks.",
+      "priority": "try",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied"
+    },
+    {
+      "board": "home",
+      "itemId": "huGAJRm5b1XC",
+      "text": "Change this to a photographic image of a real turtle ",
+      "priority": "try",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied"
+    },
+    {
+      "board": "home",
+      "itemId": "owGAAuSFUeNY",
+      "text": "Layout is too rigid, implement more of a free form layout, things can be anywhere on the page and emphasize the rotations even more.",
+      "priority": "try",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied"
+    },
+    {
+      "board": "dinosaur",
+      "itemId": "4xGAC1yW9GQz",
+      "text": "Implement dark midnight mode as on on home page, and even more playful, random layout. ",
+      "priority": "try",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied"
+    },
+    {
+      "board": "dinosaur",
+      "itemId": "fxGAVfDPLNs1",
+      "text": "Add more roadside dinosaurs here — look up photos from the internet and add 5 or 6 of these with their story. \n\nGo into more depth and find out who made these dinosoaurs and give me a bio",
+      "priority": "try",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied"
+    },
+    {
+      "board": "random",
+      "itemId": "NAGA1vq7N1iS",
+      "text": "add new color scheme as suggested for other layouts. ",
+      "priority": "try",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied"
+    },
+    {
+      "board": "random",
+      "itemId": "nAGANxiAAhye",
+      "text": "Do a new random fact - make the layout even more random too.",
+      "priority": "must",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied"
+    }
+  ],
+  "skipped": [],
+  "conflicts": [
+    {
+      "older": "Cycle 0: childish 10-year-old bright/pink palette",
+      "newer": "Change overall design to a dark mode — midnight blue style instead of pinks.",
+      "applied": "newer"
+    },
+    {
+      "older": "Do: Show examples in a hand sketched style of these awkward corner ideas.",
+      "newer": "PHotos instead of SVG drawings.",
+      "applied": "newer"
+    },
+    {
+      "older": "A picture of a turtle wearing a cap would be fantastic also.",
+      "newer": "Change this to a photographic image of a real turtle",
+      "applied": "newer"
+    }
+  ],
+  "boardFeedback": [],
+  "contributors": [
+    "anonymous (no Lucid author line)"
+  ],
+  "raw": "journey/out/c1/raw-2026-10-05/ (gitignored); per-board classify output saved alongside as feedback-<flow>-2026-10-05.json"
+}

@@ -1,0 +1,139 @@
+{
+  "docId": "73045fe0-c76b-4823-a6cf-105303b7b61a",
+  "cycle": 1,
+  "harvestedAt": "2026-10-05T23:12:29.828497+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-home-01",
+      "pageId": "home",
+      "frameTitle": "01 · Home · / · Leave stickies anywhere in this frame",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "AyGAtLkXfeOi",
+          "kind": "sticky",
+          "text": "PHotos instead of SVG drawings.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1395.852291115282,
+            "y": 1336.2700438971838,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-home-01",
+            "via": null,
+            "bbox": "frame-home-01",
+            "bestOverlap": {
+              "frameId": "frame-home-01",
+              "ratio": 1.0
+            }
+          }
+        },
+        {
+          "itemId": "PvGA7joO.ZPC",
+          "kind": "sticky",
+          "text": "Change overall design to a dark mode — midnight blue style instead of pinks.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 324.75019559748097,
+            "y": 1075.744270376183,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-home-01",
+            "via": null,
+            "bbox": "frame-home-01",
+            "bestOverlap": {
+              "frameId": "frame-home-01",
+              "ratio": 1.0
+            }
+          }
+        },
+        {
+          "itemId": "huGAJRm5b1XC",
+          "kind": "sticky",
+          "text": "Change this to a photographic image of a real turtle ",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 521.1697807043544,
+            "y": 795.6910664299562,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-home-01",
+            "via": null,
+            "bbox": "frame-home-01",
+            "bestOverlap": {
+              "frameId": "frame-home-01",
+              "ratio": 1.0
+            }
+          }
+        },
+        {
+          "itemId": "owGAAuSFUeNY",
+          "kind": "sticky",
+          "text": "Layout is too rigid, implement more of a free form layout, things can be anywhere on the page and emphasize the rotations even more.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 472.78195576032283,
+            "y": 1394.8109971646563,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-home-01",
+            "via": null,
+            "bbox": "frame-home-01",
+            "bestOverlap": {
+              "frameId": "frame-home-01",
+              "ratio": 1.0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

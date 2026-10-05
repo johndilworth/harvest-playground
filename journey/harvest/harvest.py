@@ -43,7 +43,7 @@ The attribution TextArea (`ReadonlyAttributionText`) is never treated as feedbac
 """
 import argparse, json, re, sys, datetime
 
-GENERATED_PREFIXES = ('frame-', 'hdr-', 'img-', 'doc-title', 'arrow-', 'legend-', 'row-title-', 'before-', 'changes-')  # ids we create on import
+GENERATED_PREFIXES = ('frame-', 'hdr-', 'img-', 'doc-title', 'arrow-', 'legend-', 'row-title-', 'before-', 'changes-', 'caption-', 'shot-', 'thumb-', 'text-hub-', 'history-')  # ids we create on import
 FEEDBACK_CLASSES = {'StickiesStickyNoteBlock': 'sticky', 'TextBlock': 'text', 'DefaultTextBlockNew': 'text',
                     'LucidCardBlock': 'card', 'SparkCalloutSquareBlock': 'callout'}
 FRAME_CLASSES = {'SparkFrameBlock'}

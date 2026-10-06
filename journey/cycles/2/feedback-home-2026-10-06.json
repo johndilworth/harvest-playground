@@ -1,0 +1,87 @@
+{
+  "docId": "3d1704a5-0727-4aa0-9f05-d2609b1ac8fa",
+  "cycle": 2,
+  "harvestedAt": "2026-10-06T23:02:45.063308+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "home",
+      "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": null,
+      "h1": "WELCOME TO OUR SUPER COOL ZONE!!!",
+      "clicked": null,
+      "commit": "d5e4f56dbacde3e44bd8c2a5350c3b8f81efacd0",
+      "screenshot": "out/c2/02-home-full.png",
+      "feedback": [
+        {
+          "itemId": "T0SA1PGt5YIt",
+          "kind": "sticky",
+          "text": "change background to purple.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 290.7446211421415,
+            "y": 1305.412780022224,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          }
+        },
+        {
+          "itemId": "t0SArAJiWpHr",
+          "kind": "sticky",
+          "text": "change this to golden sprial found in classical artwork",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 485.5768656326916,
+            "y": 1695.5670913230442,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

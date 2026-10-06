@@ -2,6 +2,39 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 3 (2026-10-06)
+Harvested the Cycle 2 flow boards at 5:05 pm MT: Home `3d1704a5-0727-4aa0-9f05-d2609b1ac8fa` (2 stickies), Dinosaur
+`1307df95-82cb-42ca-8fa5-0be7a2eba04b` (0) and Random `f206b6a4-74f6-4a19-87c4-8d843307a8c5` (0). That's **2 stickies**, both
+inside the Home review frame, and 0 comment threads on any board. **Contributors:** neither sticky has a Lucid author line,
+so they're credited as *anonymous (team)*. Priority came from the sticky colour (no sticky starts with a keyword).
+
+### Applied (2)
+- **must** · Home · *anonymous*: “change background to purple.” → the Home page background is now a deep **midnight purple**
+  gradient (#1a0633 → #3b1170) with violet/pink glows, a purple nav bar and purple sticker cards (`body.purple-bg`). Dino Town
+  and Totally Random keep midnight blue, because the sticky was on the Home board.
+- **try** · Home · *anonymous*: “change this to golden sprial found in classical artwork” (placed on the *Official Spiral of
+  Awesome* block) → the nautilus photo became the **golden spiral over Leonardo da Vinci's Mona Lisa**
+  (`assets/photos/spiral-golden-mona-lisa.jpg`, 236 KB, Ellywa, CC BY-SA 4.0; painting public domain). The copy explains φ ≈ 1.618,
+  and the header spiral badge now uses a crop of the same image (`spiral-golden-badge.jpg`). The Random page still reuses the
+  nautilus.
+
+### Skipped
+- none (no empty, unsafe, malicious, illegal or offensive stickies)
+
+### Conflicts
+- “change background to purple.” (Cycle 2 board, newest) vs “Change overall design to a dark mode — midnight blue style
+  instead of pinks.” (Cycle 1 board) → **purple applied** on Home (newest wins). It stays dark, so the rest of the midnight
+  look (stars, gold/cyan accents) is kept.
+- “change this to golden sprial found in classical artwork” (newest) vs “Photos instead of SVG drawings.” (Cycle 1) → no real
+  clash: the golden spiral is a real image of a painting (not an SVG drawing). It replaces the Cycle 2 nautilus photo.
+
+### Board feedback (purple / Board:)
+- none on the Cycle 2 flow boards. The Cycle 3 board follows the 2026-10-05 rules: one review board (3 screens ≤ 5, so no split),
+  page background #E8EAED, frames #F2F3F5.
+
+### Hub stray stickies
+- none (Cycle 2 hub had only generated shapes, no comment threads)
+
 ## Cycle 2 (2026-10-05)
 Harvested the Cycle 1 flow boards at 5:12 pm MT: Home `73045fe0-c76b-4823-a6cf-105303b7b61a`, Dinosaur
 `d20497d0-4de6-4546-ae1c-0b8519911f0b` and Random `32384a35-da3c-463c-a2c2-7c204d6e2a27`. That's **8 stickies** (all inside

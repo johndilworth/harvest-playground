@@ -108,5 +108,25 @@
    900,
    649
   ]
+ },
+ "spiral-golden-mona-lisa.jpg": {
+  "title": "Golden spiral on Joconda.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Golden_spiral_on_Joconda.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Ellywa (overlay); Leonardo da Vinci (painting, public domain)",
+  "size": [
+   800,
+   1131
+  ]
+ },
+ "spiral-golden-badge.jpg": {
+  "title": "crop of Golden spiral on Joconda.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Golden_spiral_on_Joconda.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Ellywa (overlay); Leonardo da Vinci (painting, public domain)",
+  "size": [
+   192,
+   192
+  ]
  }
 }

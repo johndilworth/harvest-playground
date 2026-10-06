@@ -1,0 +1,70 @@
+{
+  "cycle": 2,
+  "harvestedAt": "2026-10-06T17:05:00-06:00",
+  "outcome": "applied",
+  "cycle3Created": true,
+  "boards": {
+    "home": {
+      "docId": "3d1704a5-0727-4aa0-9f05-d2609b1ac8fa",
+      "stickies": 2,
+      "threads": 0
+    },
+    "dinosaur": {
+      "docId": "1307df95-82cb-42ca-8fa5-0be7a2eba04b",
+      "stickies": 0,
+      "threads": 0
+    },
+    "random": {
+      "docId": "f206b6a4-74f6-4a19-87c4-8d843307a8c5",
+      "stickies": 0,
+      "threads": 0
+    }
+  },
+  "hub": {
+    "docId": "29f0022f-a695-4df7-8499-3b5bd7602d53",
+    "strayStickies": [],
+    "threads": []
+  },
+  "counts": {
+    "must": 1,
+    "try": 1,
+    "maybe": 0,
+    "total": 2,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 0,
+    "conflicts": 1
+  },
+  "items": [
+    {
+      "board": "home",
+      "itemId": "T0SA1PGt5YIt",
+      "text": "change background to purple.",
+      "fill": "#e81313ff",
+      "priority": "must",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied",
+      "change": "Home page midnight-purple background (body.purple-bg)",
+      "conflictsWith": "Cycle 1 sticky PvGA7joO.ZPC (midnight blue) — newest wins"
+    },
+    {
+      "board": "home",
+      "itemId": "t0SArAJiWpHr",
+      "text": "change this to golden sprial found in classical artwork",
+      "fill": "#ffe342ff",
+      "priority": "try",
+      "prioritySource": "color",
+      "author": null,
+      "status": "applied",
+      "anchor": "c1-spiral block (Official Spiral of Awesome)",
+      "change": "Golden spiral over the Mona Lisa image + badge crop"
+    }
+  ],
+  "skipped": [],
+  "boardFeedback": [],
+  "raw": "journey/out/c2/raw-2026-10-06/ (gitignored)",
+  "classifier": "journey/cycles/2/feedback-home-2026-10-06.json"
+}

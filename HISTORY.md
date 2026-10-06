@@ -6,25 +6,41 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 2**) |
-| **Add a sticky (current hub)** | [Cycle 2 · Hub](https://lucid.app/lucidspark/29f0022f-a695-4df7-8499-3b5bd7602d53/edit) → [Home](https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/edit) · [Dinosaur](https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/edit) · [Random](https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/edit) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right) · [PNG snapshot](https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-05.png) |
-| **How to ask** | Put a sticky inside a grey frame. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 3**) |
+| **Add a sticky (current hub)** | [Cycle 3 · Hub](https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/edit) → [Cycle 3 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right) · [PNG snapshot](https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-06.png) |
+| **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 ## At a glance
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Tue 2026-10-06 | Cycle 2 boards | 2 | 2 | 0 | **Cycle 3 shipped** — purple Home background, golden spiral on the Mona Lisa | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Mon 2026-10-05 | Cycle 1 boards | 8 | 8 | 0 | **Cycle 2 shipped** — midnight mode, free-form layout, real photos, Roadside Dino Hall of Fame, wombat fact | [Cycle 2](https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/01-home.png) |
 | Sun 2026-10-04 | Cycle 1 boards | 0 | 0 | 0 | No new cycle — site stays on Cycle 1 | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Sat 2026-10-03 | Cycle 1 boards | 0 | 0 | 0 | No new cycle — site stays on Cycle 1 | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 3 cycles shipped (0 → 1 → 2) · 4 nightly harvests · 20 stickies applied · 0 skipped · 3 conflicts ·
+**Totals so far:** 4 cycles shipped (0 → 1 → 2 → 3) · 5 nightly harvests · 22 stickies applied · 0 skipped · 4 conflicts ·
 0 board-format notes (3 stray stickies on hubs, not harvested).
 
 ## Day by day
+
+### Tue 2026-10-06 — Cycle 2 → Cycle 3 · 2 stickies applied
+- **Harvested:** Cycle 2 flow boards Home (2) · Dinosaur (0) · Random (0) at 5:05 pm MT — **2 stickies, 0 comment threads**
+- **Applied:** 2 · **Skipped:** 0 · **Conflicts:** 1 (newest wins) · **Board feedback:** 0 · **Hub stray stickies:** 0
+- **Contributors:** anonymous team members (the stickies had no Lucid author line)
+- **What changed:** the Home page background is now a deep midnight purple (red sticky “change background to purple.”), and
+  the Official Spiral of Awesome became the golden spiral drawn over Leonardo's *Mona Lisa*, with a matching header badge
+  (yellow sticky “change this to golden spiral found in classical artwork”). Dino Town and Totally Random only got the new footer.
+- **Conflicts:** purple background (newest) replaced Cycle 1's “midnight blue” on Home
+- **Merged:** [PR #2](https://github.com/johndilworth/harvest-playground/pull/2) · merge commit `67c44ca` · Netlify production deploy ready at 5:06 pm MT, live footer shows Cycle 3
+- **Boards:** [Hub](https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/edit) · [Review board, all 3 pages](https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit). There's one review board this time instead of one per page
+  (new rule: split only past 5 screens), with a #E8EAED page background behind #F2F3F5 frames.
+- **Screenshot:** https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png · board preview: https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-review/c3-board-review.png
+- **History board:** Cycle 3 tile added. Snapshot: https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-06.png
+- **Record:** `journey/cycles/2/harvest-2026-10-06.json` · `journey/cycles/3/lucid-doc.json`
 
 ### Mon 2026-10-05 — Cycle 1 → Cycle 2 · 8 stickies applied
 - **Harvested:** Cycle 1 flow boards Home (4) · Dinosaur (2) · Random (2) at 5:12 pm MT — **8 stickies, 0 comment threads**

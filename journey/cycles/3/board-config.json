@@ -1,0 +1,84 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 3,
+ "date": "Tue 2026-10-06",
+ "commit": "67c44caa9acb4b82fce79a057229ba77cb3a4fd7",
+ "pullRequest": "https://github.com/johndilworth/harvest-playground/pull/2",
+ "prNumber": 2,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home · Dino Town · Totally Random on one board (3 screens ≤ 5, no split)",
+  "docId": "a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3",
+  "editUrl": "https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit",
+  "thumb": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "purple background, golden spiral on the Mona Lisa",
+   "thumb": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 2087,
+     "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/02-home-full.png",
+     "before": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/01-home.png",
+     "caption": "Full page. Now on a midnight-purple background; the Official Spiral of Awesome is the golden spiral drawn over the Mona Lisa. Footer Cycle 3.",
+     "changes": [
+      "Purple background on Home (deep midnight purple, purple nav and cards); newest wins over the Cycle 1 midnight-blue sticky (sticky: change background to purple)",
+      "Golden spiral over Leonardo's Mona Lisa replaces the nautilus photo, plus a matching header badge (sticky: change this to golden spiral found in classical artwork)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "no stickies this cycle",
+   "thumb": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 4324,
+     "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-dinosaur/02-dinosaur-full.png",
+     "before": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-dinosaur/01-dinosaur.png",
+     "caption": "Full page. Dinosaur, CO story and the Roadside Dino Hall of Fame (6 dinosaurs + their makers), still in midnight blue.",
+     "changes": [
+      "No stickies on this page last cycle, so nothing changed except the footer (Cycle 3)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "no stickies this cycle",
+   "thumb": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 1763,
+     "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-random/02-random-full.png",
+     "before": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-random/01-random.png",
+     "caption": "Full page. Sock vanishing, wombat cube fact, randomness meter and the chaos layout, still in midnight blue.",
+     "changes": [
+      "No stickies on this page last cycle, so nothing changed except the footer (Cycle 3)"
+     ]
+    }
+   ]
+  }
+ ],
+ "historyThumb": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-06.png",
+ "historyThumbH": 305
+}

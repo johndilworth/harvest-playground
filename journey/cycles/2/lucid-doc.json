@@ -156,5 +156,16 @@
   "conflicts": 3,
   "boardFeedback": 0,
   "hubStrays": 3,
-  "nightlyHarvests": []
+  "nightlyHarvests": [
+    {
+      "date": "2026-10-06",
+      "harvestedAt": "2026-10-06T17:05:00-06:00",
+      "stickies": 2,
+      "threads": 0,
+      "hubStrays": 0,
+      "outcome": "applied -> Cycle 3",
+      "record": "journey/cycles/2/harvest-2026-10-06.json"
+    }
+  ],
+  "supersededBy": "journey/cycles/3/lucid-doc.json"
 }

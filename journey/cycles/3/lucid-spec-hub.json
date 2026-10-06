@@ -1,0 +1,261 @@
+{
+ "version": 1,
+ "pages": [
+  {
+   "id": "hub",
+   "title": "Cycle 3 hub",
+   "shapes": [
+    {
+     "id": "doc-title-hub",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -900,
+      "w": 4960,
+      "h": 240
+     },
+     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground — Cycle 3 · Hub</b><br><span style='font-size:20pt'>1 review board (3 screens) + History · Desktop 1440×1024 · commit 67c44ca · <a href=\"https://harvest-playground.netlify.app\">https://harvest-playground.netlify.app</a> · harvested Tue 2026-10-06</span></p>"
+    },
+    {
+     "id": "legend-box-hub",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 420
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>How it works</b><br>Anyone can add anything. Stickies inside a frame on the review board are harvested at 5pm MT daily; safe requests are applied automatically and merged; a new board appears by morning. Put stickies on the review board (tile 1), not on this hub. Red/yellow/blue set priority; purple = board feedback.<br><br><a href=\"https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit\">Open the History board (every cycle, left → right) →</a></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "legend-must-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FF8A80"
+      },
+      "stroke": {
+       "color": "#C62828",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Red</b><br>Do / Must do</p>"
+    },
+    {
+     "id": "legend-try-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FFE066"
+      },
+      "stroke": {
+       "color": "#9A7B00",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Yellow</b><br>Try</p>"
+    },
+    {
+     "id": "legend-maybe-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#A3E4FF"
+      },
+      "stroke": {
+       "color": "#1565C0",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Blue</b><br>Consider</p>"
+    },
+    {
+     "id": "legend-board-hub",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3660,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#BA23F6"
+      },
+      "stroke": {
+       "color": "#7B1FA2",
+       "width": 2,
+       "style": "solid"
+      },
+      "textColor": "#FFFFFF"
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Purple</b><br>Board format</p>"
+    },
+    {
+     "id": "frame-hub-review",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 0,
+      "y": 0,
+      "w": 2240,
+      "h": 2600
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "review · 3 screens · add stickies here"
+    },
+    {
+     "id": "thumb-hub-review",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 400,
+      "w": 1440,
+      "h": 1024
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "text-hub-review",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 1784,
+      "w": 1440,
+      "h": 416
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b><a href=\"https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit\">1. Cycle 3 review board · All pages</a></b><br><span style='font-size:16pt'>3 screens: Home (/) · Dino Town (/dinosaur.html) · Totally Random (/random.html)</span><br><br><span style='font-size:18pt'><a href=\"https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit\">Open the Cycle 3 review board and add stickies →</a></span></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "frame-hub-history",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 2720,
+      "y": 0,
+      "w": 2240,
+      "h": 2600
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "history · every cycle"
+    },
+    {
+     "id": "thumb-hub-history",
+     "type": "image",
+     "boundingBox": {
+      "x": 3120,
+      "y": 400,
+      "w": 1440,
+      "h": 305
+     },
+     "image": {
+      "type": "image",
+      "url": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-06.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "text-hub-history",
+     "type": "text",
+     "boundingBox": {
+      "x": 3120,
+      "y": 1784,
+      "w": 1440,
+      "h": 416
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b><a href=\"https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit\">2. Harvest Playground — History</a></b><br><span style='font-size:16pt'>Every cycle left → right with its date and a one-line summary (read-only, not harvested)</span><br><br><span style='font-size:18pt'><a href=\"https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit\">Open the History board →</a></span></p>",
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+       "newWindow": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-06T23:16:00Z",
+  "entries": [
+    {
+      "stepKey": "01-home",
+      "flow": "home",
+      "flowName": "Home (the whole page)",
+      "cycle": 3,
+      "index": 1,
+      "url": "https://harvest-playground.netlify.app/",
+      "route": "/",
+      "h1": "WELCOME TO OUR SUPER COOL ZONE!!!",
+      "screenshot": "out/c3/02-home-full.png",
+      "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/02-home-full.png",
+      "thumbUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png",
+      "commit": "67c44caa9acb4b82fce79a057229ba77cb3a4fd7",
+      "deployUrl": "https://harvest-playground.netlify.app",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "fullPage": true,
+      "pageHeight": 2087,
+      "board": "review"
+    },
+    {
+      "stepKey": "02-dinosaur",
+      "flow": "dinosaur",
+      "flowName": "Dino Town (dinosaur sculpture page)",
+      "cycle": 3,
+      "index": 2,
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "route": "/dinosaur.html",
+      "h1": "THE GIANT DINO OF DINOSAUR, CO",
+      "screenshot": "out/c3/03-dinosaur-full.png",
+      "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-dinosaur/02-dinosaur-full.png",
+      "thumbUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-dinosaur/01-dinosaur.png",
+      "commit": "67c44caa9acb4b82fce79a057229ba77cb3a4fd7",
+      "deployUrl": "https://harvest-playground.netlify.app",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "fullPage": true,
+      "pageHeight": 4324,
+      "board": "review"
+    },
+    {
+      "stepKey": "03-random",
+      "flow": "random",
+      "flowName": "Totally Random page",
+      "cycle": 3,
+      "index": 3,
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "route": "/random.html",
+      "h1": "THE GREAT SOCK VANISHING",
+      "screenshot": "out/c3/04-random-full.png",
+      "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-random/02-random-full.png",
+      "thumbUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-random/01-random.png",
+      "commit": "67c44caa9acb4b82fce79a057229ba77cb3a4fd7",
+      "deployUrl": "https://harvest-playground.netlify.app",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "fullPage": true,
+      "pageHeight": 1763,
+      "board": "review"
+    }
+  ]
+}

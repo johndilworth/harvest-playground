@@ -45,13 +45,13 @@
     "viewUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/view",
     "role": "history",
     "harvest": false,
-    "updatedInPlace": "2026-10-06: added Cycle 3 tile (x10880, copied from the Cycle 2 tile), Cycle 2 frame title no longer says 'live now', title totals updated and widened to 13120, page background #E8EAED",
+    "updatedInPlace": "2026-10-06: added Cycle 3 tile (x10880, copied from the Cycle 2 tile), Cycle 2 frame title no longer says 'live now', title totals updated and widened to 13120, page background #E8EAED; 2026-10-07: added 'Wed 10-07 · quiet night · no new cycle' frame (x13600), title says 6 nightly harvests / updated Wed 2026-10-07, widened to 15840",
     "renderCheck": {
       "exported": true,
-      "path": "/workspace/harvest-playground/report/history-2026-10-06.png",
-      "hostedUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-06.png",
+      "path": "/workspace/harvest-playground/exports/history-2026-10-07.png",
+      "hostedUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-07.png",
       "ok": true,
-      "checkedAt": "2026-10-06T17:15:00-06:00"
+      "checkedAt": "2026-10-07T17:15:00-06:00"
     }
   },
   "hub": {
@@ -140,5 +140,15 @@
   "conflicts": 1,
   "boardFeedback": 0,
   "hubStrays": 0,
-  "nightlyHarvests": []
+  "nightlyHarvests": [
+    {
+      "date": "2026-10-07",
+      "harvestedAt": "2026-10-07T17:10:00-06:00",
+      "outcome": "no_stickies",
+      "stickies": 0,
+      "threads": 0,
+      "hubStrays": 0,
+      "record": "journey/cycles/3/harvest-2026-10-07.json"
+    }
+  ]
 }

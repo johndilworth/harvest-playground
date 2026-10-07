@@ -2,6 +2,12 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## 2026-10-07 harvest (no Cycle 4)
+Harvested the Cycle 3 review board `a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3` (Home · Dino Town · Totally Random) at 5:10 pm MT —
+**0 stickies, 0 comment threads**. Hub stray: none (Cycle 3 hub has only generated shapes, 0 threads).
+No site changes; Cycle 3 remains live. Applied: none. Skipped: none. Conflicts: none. Board feedback: none.
+Record: `journey/cycles/3/harvest-2026-10-07.json`.
+
 ## Cycle 3 (2026-10-06)
 Harvested the Cycle 2 flow boards at 5:05 pm MT: Home `3d1704a5-0727-4aa0-9f05-d2609b1ac8fa` (2 stickies), Dinosaur
 `1307df95-82cb-42ca-8fa5-0be7a2eba04b` (0) and Random `f206b6a4-74f6-4a19-87c4-8d843307a8c5` (0). That's **2 stickies**, both

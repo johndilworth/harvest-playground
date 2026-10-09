@@ -1,0 +1,71 @@
+{
+  "cycle": 3,
+  "harvestedAt": "2026-10-09T17:09:00-06:00",
+  "outcome": "no_stickies",
+  "cycle4Created": false,
+  "priorNight": {
+    "date": "2026-10-08",
+    "outcome": "routine_failed",
+    "note": "Scheduled harvest did not complete; recovered from clean Cycle 3 main with no cycle 4 present."
+  },
+  "boards": {
+    "review": {
+      "docId": "a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random"
+      ],
+      "stickies": 0,
+      "threads": 0
+    }
+  },
+  "hub": {
+    "docId": "3539baec-5553-443e-aff3-e5936b3d697f",
+    "strayStickies": [],
+    "threads": []
+  },
+  "counts": {
+    "must": 0,
+    "try": 0,
+    "maybe": 0,
+    "total": 0,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 0,
+    "conflicts": 0
+  },
+  "applied": [],
+  "skipped": [],
+  "conflicts": [],
+  "boardFeedback": [],
+  "contributors": [],
+  "verification": {
+    "method": [
+      "fetch(metadata_only) for the review board and hub: 1 page, 1 region each",
+      "fetch(page_index=1) full page for the review board and hub: only generated ids (frame-, shot-, caption-, changes-, before-, legend-, doc-title-, thumb-, text-hub-); zero StickiesStickyNoteBlock or other feedback blocks",
+      "list_document_threads for review board, hub and History board: [] each",
+      "harvest.py on reconstructed p1-review: frames=3 feedback_in_frames=0"
+    ],
+    "stickyCount": 0,
+    "hubStrayStickies": 0
+  },
+  "site": {
+    "url": "https://harvest-playground.netlify.app",
+    "http": 200,
+    "liveFooter": "Cycle 3",
+    "latestProductionDeploy": "6ac6d2304b90cc0008f3080e (ready, main d0ad23ee)"
+  },
+  "historyBoard": {
+    "docId": "e983d07c-47f1-4d0f-bfe6-81087a3b8ddd",
+    "updated": "in place: new frame 46TB9qBM~iG2 at x16320 'Thu 10-08 \u2013 Fri 10-09 \u00b7 quiet nights \u00b7 no new cycle' with note 46TBQTIIIw8Q; title totals now 7 nightly harvests, updated Fri 2026-10-09, widened to 18560; page background #E8EAED",
+    "export": "/workspace/harvest-playground/exports/history-2026-10-09.png",
+    "hostedExport": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-09.png",
+    "hostedCloseup": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-09-latest-tiles.png",
+    "showPng": "/workspace/harvest-playground/exports/history-2026-10-09-latest-tiles.png"
+  },
+  "feedback": "journey/cycles/3/feedback-2026-10-09.json",
+  "raw": "journey/out/c3/raw-2026-10-09/ (gitignored)"
+}

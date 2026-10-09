@@ -40,23 +40,25 @@
   "boardRules": "2026-10-05: one review board unless a section has >5 flows/screens (3 screens -> 1 board); page background #E8EAED set via skills.pages.setBackgroundColor; frames #F2F3F5, no border, 400 px padding",
   "historyBoard": {
     "docId": "e983d07c-47f1-4d0f-bfe6-81087a3b8ddd",
-    "title": "Harvest Playground — History",
+    "title": "Harvest Playground \u2014 History",
     "editUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
     "viewUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/view",
     "role": "history",
     "harvest": false,
-    "updatedInPlace": "2026-10-06: added Cycle 3 tile (x10880, copied from the Cycle 2 tile), Cycle 2 frame title no longer says 'live now', title totals updated and widened to 13120, page background #E8EAED; 2026-10-07: added 'Wed 10-07 · quiet night · no new cycle' frame (x13600), title says 6 nightly harvests / updated Wed 2026-10-07, widened to 15840",
+    "updatedInPlace": "2026-10-06: added Cycle 3 tile (x10880, copied from the Cycle 2 tile), Cycle 2 frame title no longer says 'live now', title totals updated and widened to 13120, page background #E8EAED; 2026-10-07: added 'Wed 10-07 \u00b7 quiet night \u00b7 no new cycle' frame (x13600), title says 6 nightly harvests / updated Wed 2026-10-07, widened to 15840; 2026-10-09: added 'Thu 10-08 \u2013 Fri 10-09 \u00b7 quiet nights \u00b7 no new cycle' frame (x16320), title says 7 nightly harvests / updated Fri 2026-10-09, widened to 18560",
     "renderCheck": {
       "exported": true,
-      "path": "/workspace/harvest-playground/exports/history-2026-10-07.png",
-      "hostedUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-07.png",
+      "path": "/workspace/harvest-playground/exports/history-2026-10-09.png",
+      "closeupPath": "/workspace/harvest-playground/exports/history-2026-10-09-latest-tiles.png",
+      "hostedUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-09.png",
+      "hostedCloseup": "https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-09-latest-tiles.png",
       "ok": true,
-      "checkedAt": "2026-10-07T17:15:00-06:00"
+      "checkedAt": "2026-10-09T17:15:00-06:00"
     }
   },
   "hub": {
     "docId": "3539baec-5553-443e-aff3-e5936b3d697f",
-    "title": "Harvest Playground — Cycle 3 · Hub",
+    "title": "Harvest Playground \u2014 Cycle 3 \u00b7 Hub",
     "editUrl": "https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/edit",
     "viewUrl": "https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/view",
     "role": "hub",
@@ -76,7 +78,7 @@
   "boards": [
     {
       "docId": "a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3",
-      "title": "Harvest Playground — Cycle 3 review (PR #2) · All pages",
+      "title": "Harvest Playground \u2014 Cycle 3 review (PR #2) \u00b7 All pages",
       "editUrl": "https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit",
       "viewUrl": "https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/view",
       "role": "flow",
@@ -149,6 +151,16 @@
       "threads": 0,
       "hubStrays": 0,
       "record": "journey/cycles/3/harvest-2026-10-07.json"
+    },
+    {
+      "date": "2026-10-09",
+      "harvestedAt": "2026-10-09T17:09:00-06:00",
+      "outcome": "no_stickies",
+      "stickies": 0,
+      "threads": 0,
+      "hubStrays": 0,
+      "record": "journey/cycles/3/harvest-2026-10-09.json",
+      "priorNightNote": "2026-10-08 routine failed; recovered clean Cycle 3"
     }
   ]
 }

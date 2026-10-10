@@ -8,13 +8,14 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 |---|---|
 | **Live site** | https://harvest-playground.netlify.app (currently **Cycle 3**) |
 | **Add a sticky (current hub)** | [Cycle 3 · Hub](https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/edit) → [Cycle 3 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right) · [PNG snapshot](https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-09.png) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right) · [PNG snapshot](https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-10.png) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 ## At a glance
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Sat 2026-10-10 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Fri 2026-10-09 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Thu 2026-10-08 | — | — | — | — | Routine failed — no harvest completed | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Wed 2026-10-07 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
@@ -25,10 +26,21 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 4 cycles shipped (0 → 1 → 2 → 3) · 7 nightly harvests · 22 stickies applied · 0 skipped · 4 conflicts ·
+**Totals so far:** 4 cycles shipped (0 → 1 → 2 → 3) · 8 nightly harvests · 22 stickies applied · 0 skipped · 4 conflicts ·
 0 board-format notes (3 stray stickies on hubs, not harvested).
 
 ## Day by day
+
+### Sat 2026-10-10 — Cycle 3 harvest · no stickies
+- **Harvested:** Cycle 3 review board (Home · Dino Town · Totally Random) at ~5:05 pm MT — **0 stickies, 0 comment threads**
+- **Applied:** 0 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Hub stray stickies:** 0
+- **Contributors:** none
+- **Cycle 4 created:** no (nothing to apply, per HARVEST.md). The [Cycle 3 review board](https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit) and [hub](https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/edit) stay open for stickies.
+- **Live:** https://harvest-playground.netlify.app (Cycle 3, HTTP 200; latest production deploy ready)
+- **Screenshot (unchanged):** https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png
+- **History board:** "Sat 10-10 · quiet night" frame added after Thu–Fri quiet nights; title totals updated (8 nightly harvests).
+  Snapshot: https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-10.png
+- **Record:** `journey/cycles/3/harvest-2026-10-10.json`
 
 ### Fri 2026-10-09 — Cycle 3 harvest · no stickies
 - **Harvested:** Cycle 3 review board (Home · Dino Town · Totally Random) at ~5:09 pm MT — **0 stickies, 0 comment threads**

@@ -8,13 +8,14 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 |---|---|
 | **Live site** | https://harvest-playground.netlify.app (currently **Cycle 3**) |
 | **Add a sticky (current hub)** | [Cycle 3 · Hub](https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/edit) → [Cycle 3 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right) · [PNG snapshot](https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-10.png) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right) · [PNG snapshot](https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-11.png) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 ## At a glance
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Sun 2026-10-11 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 · Sunday polish | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Sat 2026-10-10 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Fri 2026-10-09 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Thu 2026-10-08 | — | — | — | — | Routine failed — no harvest completed | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
@@ -26,10 +27,21 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 4 cycles shipped (0 → 1 → 2 → 3) · 8 nightly harvests · 22 stickies applied · 0 skipped · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested).
+**Totals so far:** 4 cycles shipped (0 → 1 → 2 → 3) · 9 nightly harvests · 22 stickies applied · 0 skipped · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Quiet stretch since Cycle 3 (Oct 7–11). Ready to share Monday.
 
 ## Day by day
+
+### Sun 2026-10-11 — Cycle 3 harvest · no stickies · Sunday polish
+- **Harvested:** Cycle 3 review board (Home · Dino Town · Totally Random) at ~5:02 pm MT — **0 stickies, 0 comment threads**
+- **Applied:** 0 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Hub stray stickies:** 0
+- **Contributors:** none
+- **Cycle 4 created:** no (nothing to apply, per HARVEST.md). The [Cycle 3 review board](https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit) and [hub](https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/edit) stay open for stickies.
+- **Live:** https://harvest-playground.netlify.app (Cycle 3, HTTP 200; production deploy ready)
+- **Screenshot (unchanged):** https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png
+- **History board (Sunday polish for Monday share):** "Sun 10-11 · quiet night" frame added; title totals now 9 nightly harvests / updated Sun 2026-10-11, notes quiet stretch Oct 7–11; page background #E8EAED.
+  Snapshot: https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-11.png · latest tiles: https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-11-latest-tiles.png · Sun tile: https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-11-sun-tile.png
+- **Record:** `journey/cycles/3/harvest-2026-10-11.json`
 
 ### Sat 2026-10-10 — Cycle 3 harvest · no stickies
 - **Harvested:** Cycle 3 review board (Home · Dino Town · Totally Random) at ~5:05 pm MT — **0 stickies, 0 comment threads**

@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 3,
+  "project": {
+    "name": "Harvest Playground",
+    "slug": "harvest-playground",
+    "description": "A playful page John's team grows one Harvest cycle at a time: leave a sticky on the current cycle's Lucid board, and every safe request is applied at 5 pm MT, merged to main and deployed.",
+    "repo": "https://github.com/johndilworth/harvest-playground",
+    "site": "https://harvest-playground.netlify.app",
+    "historyBoard": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+    "schedule": "daily 17:00 America/Denver",
+    "rules": "https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md",
+    "harvestMode": "nightly",
+    "trigger": true
+  },
+  "stats": {
+    "pullRequests": 2,
+    "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
+    "nightlyHarvests": 10
+  },
+  "updatedAt": "2026-10-12T12:00:00-06:00",
+  "cycles": [
+    {
+      "number": 0,
+      "title": "Cycle 0 — the blank canvas",
+      "createdAt": "2026-10-02T16:04:00-06:00",
+      "status": "superseded",
+      "harvestedFrom": null,
+      "pullRequest": null,
+      "commit": "d6be9dc",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c0-home/01-home.png",
+      "documents": [
+        {
+          "title": "Home",
+          "role": "flow",
+          "flow": "home",
+          "docId": "de6b75aa-0b51-49a1-a9e9-561e4b77d675",
+          "url": "https://lucid.app/lucidspark/de6b75aa-0b51-49a1-a9e9-561e4b77d675/edit",
+          "description": "Home page (/) — leave stickies in the review frame.",
+          "harvest": true
+        }
+      ],
+      "nightlyHarvests": [
+        {
+          "date": "2026-10-02",
+          "stickies": 12,
+          "outcome": "applied"
+        }
+      ],
+      "changes": {
+        "applied": [],
+        "skipped": [],
+        "conflicts": [],
+        "note": "Initial nearly-empty page: title, invitation line, footer 'Cycle 0'."
+      },
+      "previewUrl": "https://6ac029a3b51e1e796ca3111a--harvest-playground.netlify.app",
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 12
+        }
+      ],
+      "contributions": {
+        "red": 0,
+        "yellow": 0,
+        "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 1,
+      "title": "Cycle 1 — childish 90s playground",
+      "createdAt": "2026-10-02T17:12:00-06:00",
+      "status": "superseded",
+      "harvestedFrom": 0,
+      "pullRequest": null,
+      "commit": "6dc68a6",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c1-home/01-home.png",
+      "documents": [
+        {
+          "title": "Home",
+          "role": "flow",
+          "flow": "home",
+          "docId": "73045fe0-c76b-4823-a6cf-105303b7b61a",
+          "url": "https://lucid.app/lucidspark/73045fe0-c76b-4823-a6cf-105303b7b61a/edit",
+          "description": "Home page (/) — leave stickies in the review frame.",
+          "harvest": true
+        },
+        {
+          "title": "Dinosaur",
+          "role": "flow",
+          "flow": "dinosaur",
+          "docId": "d20497d0-4de6-4546-ae1c-0b8519911f0b",
+          "url": "https://lucid.app/lucidspark/d20497d0-4de6-4546-ae1c-0b8519911f0b/edit",
+          "description": "Dino Town (/dinosaur.html) — Dinosaur, Colorado and the roadside dino hall of fame.",
+          "harvest": true
+        },
+        {
+          "title": "Random",
+          "role": "flow",
+          "flow": "random",
+          "docId": "32384a35-da3c-463c-a2c2-7c204d6e2a27",
+          "url": "https://lucid.app/lucidspark/32384a35-da3c-463c-a2c2-7c204d6e2a27/edit",
+          "description": "Totally Random (/random.html) — random facts page.",
+          "harvest": true
+        }
+      ],
+      "nightlyHarvests": [
+        {
+          "date": "2026-10-03",
+          "stickies": 0,
+          "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-10-04",
+          "stickies": 0,
+          "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-10-05",
+          "stickies": 8,
+          "outcome": "applied"
+        }
+      ],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Paragraph with facts about longevity of turtles"
+          },
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Hand-sketched examples of awkward couch-corner ideas"
+          },
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Headline font → Monoton"
+          },
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Picture of a turtle wearing a cap"
+          },
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Second, totally random page (socks)"
+          },
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Not a boring corporate look → scrapbook / sticker layout"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "New page: Dinosaur, Colorado sculpture history"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Ideas for the awkward corner where two couches meet"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Look designed by 10-year-olds who are good at design"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "90s web design: blink + marquee"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Headline → “WELCOME TO OUR SUPER COOL ZONE!!!”"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Neat version of the hand-drawn spiral"
+          }
+        ],
+        "skipped": [],
+        "conflicts": []
+      },
+      "previewUrl": "https://6ac0394135c41b000896155e--harvest-playground.netlify.app",
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 8
+        }
+      ],
+      "contributions": {
+        "red": 6,
+        "yellow": 6,
+        "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 2,
+      "title": "Cycle 2 — midnight mode & roadside dinos",
+      "createdAt": "2026-10-05T17:40:00-06:00",
+      "status": "superseded",
+      "harvestedFrom": 1,
+      "pullRequest": "https://github.com/johndilworth/harvest-playground/pull/1",
+      "commit": "d5e4f56",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c2-home/01-home.png",
+      "documents": [
+        {
+          "title": "Home",
+          "role": "flow",
+          "flow": "home",
+          "docId": "3d1704a5-0727-4aa0-9f05-d2609b1ac8fa",
+          "url": "https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/edit",
+          "description": "Home page (/) — leave stickies in the review frame.",
+          "harvest": true
+        },
+        {
+          "title": "Dinosaur",
+          "role": "flow",
+          "flow": "dinosaur",
+          "docId": "1307df95-82cb-42ca-8fa5-0be7a2eba04b",
+          "url": "https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/edit",
+          "description": "Dino Town (/dinosaur.html) — Dinosaur, Colorado and the roadside dino hall of fame.",
+          "harvest": true
+        },
+        {
+          "title": "Random",
+          "role": "flow",
+          "flow": "random",
+          "docId": "f206b6a4-74f6-4a19-87c4-8d843307a8c5",
+          "url": "https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/edit",
+          "description": "Totally Random (/random.html) — random facts page.",
+          "harvest": true
+        }
+      ],
+      "nightlyHarvests": [
+        {
+          "date": "2026-10-06",
+          "stickies": 2,
+          "outcome": "applied"
+        }
+      ],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "random",
+            "text": "New random fact (wombats poop cubes) + even more random layout"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Site-wide dark midnight-blue mode, no pinks"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Free-form layout with bigger rotations"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Real turtle photo (Aldabra giant tortoise)"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Photos instead of SVG drawings"
+          },
+          {
+            "priority": "try",
+            "flow": "dinosaur",
+            "text": "Midnight mode + playful random layout on Dino Town"
+          },
+          {
+            "priority": "try",
+            "flow": "dinosaur",
+            "text": "Roadside Dino Hall of Fame: 6 dinosaurs with stories and maker bios"
+          },
+          {
+            "priority": "try",
+            "flow": "random",
+            "text": "Midnight colour scheme on Random page"
+          }
+        ],
+        "skipped": [],
+        "conflicts": [
+          "Midnight mode replaced Cycle 0 pink/bright palette (newest wins)",
+          "Photos replaced hand-sketched couch examples",
+          "Real tortoise photo replaced turtle in a cap"
+        ],
+        "hubStrays": [
+          "“background of pages should be slightly darker gray than frames” (later adopted as a board rule)",
+          "“only split into multiple files if a section has more than 5 flows or screens” (later adopted)",
+          "empty purple rectangle"
+        ]
+      },
+      "previewUrl": "https://6ac430ce627fd2000861b9f0--harvest-playground.netlify.app",
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 2
+        }
+      ],
+      "contributions": {
+        "red": 1,
+        "yellow": 7,
+        "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 3,
+      "title": "Cycle 3 — purple Home & golden spiral",
+      "createdAt": "2026-10-06T17:16:00-06:00",
+      "status": "superseded",
+      "harvestedFrom": 2,
+      "pullRequest": "https://github.com/johndilworth/harvest-playground/pull/2",
+      "commit": "67c44ca",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c3-home/01-home.png",
+      "documents": [
+        {
+          "title": "All pages",
+          "role": "flow",
+          "flow": "review",
+          "docId": "a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3",
+          "url": "https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit",
+          "description": "All three pages on one board: Home, Dino Town, Totally Random (split only past 5 screens).",
+          "harvest": true
+        }
+      ],
+      "nightlyHarvests": [
+        {
+          "date": "2026-10-07",
+          "stickies": 0,
+          "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-10-09",
+          "stickies": 0,
+          "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-10-10",
+          "stickies": 0,
+          "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-10-11",
+          "stickies": 0,
+          "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-10-12",
+          "stickies": 9,
+          "outcome": "applied",
+          "note": "manual dashboard harvest ~10:30 AM MT"
+        }
+      ],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Change background to purple → midnight-purple Home"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Golden spiral from classical artwork → golden spiral over the Mona Lisa"
+          }
+        ],
+        "skipped": [],
+        "conflicts": [
+          "Purple background (Cycle 2 board) beat Cycle 1 midnight blue on Home (newest wins)"
+        ]
+      },
+      "previewUrl": "https://6ac57ed1d5006e00087c0ca4--harvest-playground.netlify.app",
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 9
+        }
+      ],
+      "contributions": {
+        "red": 1,
+        "yellow": 1,
+        "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 4,
+      "title": "Cycle 4 — ENTROPY COLLECTIVE terminal aesthetic",
+      "createdAt": "2026-10-12T10:39:21-06:00",
+      "status": "current",
+      "harvestedFrom": 3,
+      "pullRequest": null,
+      "commit": "f3e1e36",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c4-home/01-home.png",
+      "documents": [
+        {
+          "title": "All pages",
+          "role": "flow",
+          "flow": "review",
+          "docId": "7e1a1751-68e6-4551-8845-64cc394e748a",
+          "url": "https://lucid.app/lucidspark/7e1a1751-68e6-4551-8845-64cc394e748a/edit",
+          "description": "All three pages on one board: Home, Dino Town, Totally Random (split only past 5 screens).",
+          "harvest": true
+        }
+      ],
+      "nightlyHarvests": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Site title → ENTROPY COLLECTIVE"
+          },
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Site-wide retro-tech terminal aesthetic + rewritten copy"
+          },
+          {
+            "priority": "must",
+            "flow": "dinosaur",
+            "text": "Apply terminal aesthetic to dino page"
+          },
+          {
+            "priority": "must",
+            "flow": "random",
+            "text": "McLuhan grave fact + four laws of media"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Share Tech Mono font"
+          },
+          {
+            "priority": "try",
+            "flow": "random",
+            "text": "Use Lucid-uploaded McLuhan grave image"
+          },
+          {
+            "priority": "try",
+            "flow": "random",
+            "text": "Square / unrotated terminal layout"
+          },
+          {
+            "priority": "try",
+            "flow": "random",
+            "text": "ASCII art backgrounds"
+          },
+          {
+            "priority": "try",
+            "flow": "dinosaur",
+            "text": "Dino extinction ↔ modern tech copy (Ancient Aliens energy)"
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "Manual harvest from Harvest Dashboard webhook at ~10:30 AM MT 2026-10-12 (not the 5pm nightly). Merged to main as commit f3e1e36 (GitHub MCP PR create returned 403)."
+      },
+      "previewUrl": "https://6acd0c6314483bd0d7c562af--harvest-playground.netlify.app",
+      "authors": [],
+      "contributions": {
+        "red": 4,
+        "yellow": 5,
+        "blue": 0,
+        "purple": 0
+      }
+    }
+  ]
+}

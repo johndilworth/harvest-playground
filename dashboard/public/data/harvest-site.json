@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 3,
+  "project": {
+    "name": "Harvest Site",
+    "slug": "harvest-site",
+    "harvestMode": "manual",
+    "trigger": false,
+    "description": "Concept marketing site for Lucid Harvest for Lucidchart (home, beta signup, how it works, pricing). Reviewed on Lucidchart boards; stickies become a PR.",
+    "repo": "https://github.com/johndilworth/harvest-for-lucid-site",
+    "site": "https://harvest-for-lucid.netlify.app",
+    "historyBoard": null,
+    "schedule": "manual (no nightly routine)",
+    "rules": "https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md"
+  },
+  "stats": {
+    "pullRequests": 1,
+    "pullRequestsSource": "GitHub API state=all 2026-10-12: PR #1 OPEN",
+    "nightlyHarvests": 0,
+    "manualHarvests": 1
+  },
+  "updatedAt": "2026-10-12T13:30:00-06:00",
+  "cycles": [
+    {
+      "number": 1,
+      "title": "Cycle 1 — Harvest for Lucidchart concept site",
+      "createdAt": "2026-10-02T02:15:16-06:00",
+      "status": "superseded",
+      "harvestedFrom": null,
+      "pullRequest": null,
+      "commit": "8cec138",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c1-home/01-home-01-hero.png",
+      "previewUrl": null,
+      "documents": [
+        {
+          "title": "Harvest site — Cycle 1 review",
+          "role": "flow",
+          "flow": "review",
+          "docId": "58ff5647-5bbd-472f-b880-d91bec0f4005",
+          "url": "https://lucid.app/lucidchart/58ff5647-5bbd-472f-b880-d91bec0f4005/edit",
+          "description": "4 pages: home (11), beta-signup (4), how-it-works (5), pricing (2)",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "authorsNote": "Not recorded — harvested before sticky attribution was read.",
+      "nightlyHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-02",
+          "stickies": 6,
+          "outcome": "applied"
+        }
+      ],
+      "screens": 22,
+      "changes": {
+        "applied": [],
+        "skipped": [],
+        "conflicts": [],
+        "note": "Initial capture of production @8cec138 (22 screens)."
+      },
+      "contributions": {
+        "red": 0,
+        "yellow": 0,
+        "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 2,
+      "title": "Cycle 2 — single Harvest header, renamed to Harvest (PR #1)",
+      "createdAt": "2026-10-02T12:48:20-06:00",
+      "status": "current",
+      "harvestedFrom": 1,
+      "pullRequest": "https://github.com/johndilworth/harvest-for-lucid-site/pull/1",
+      "commit": "7a89b64",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c2-home/01-home-01-hero.png",
+      "previewUrl": "https://deploy-preview-1--harvest-for-lucid.netlify.app",
+      "documents": [
+        {
+          "title": "Harvest site — Cycle 2 review (PR #1) · Home",
+          "role": "flow",
+          "flow": "home",
+          "docId": "94e6f74e-a6ce-43cd-a33d-73bb349db041",
+          "url": "https://lucid.app/lucidchart/94e6f74e-a6ce-43cd-a33d-73bb349db041/edit",
+          "description": "11 screens",
+          "harvest": true
+        },
+        {
+          "title": "Harvest site — Cycle 2 review (PR #1) · Beta signup",
+          "role": "flow",
+          "flow": "beta-signup",
+          "docId": "c7af9ce3-3fbe-431b-8745-aab57fa2f2c2",
+          "url": "https://lucid.app/lucidchart/c7af9ce3-3fbe-431b-8745-aab57fa2f2c2/edit",
+          "description": "4 screens",
+          "harvest": true
+        },
+        {
+          "title": "Harvest site — Cycle 2 review (PR #1) · How it works",
+          "role": "flow",
+          "flow": "how-it-works",
+          "docId": "e036d1c4-3f8b-4069-b797-b8e338bca337",
+          "url": "https://lucid.app/lucidchart/e036d1c4-3f8b-4069-b797-b8e338bca337/edit",
+          "description": "5 screens",
+          "harvest": true
+        },
+        {
+          "title": "Harvest site — Cycle 2 review (PR #1) · Pricing",
+          "role": "flow",
+          "flow": "pricing",
+          "docId": "3071b809-3d20-47e9-b24c-5e494f58d5b6",
+          "url": "https://lucid.app/lucidchart/3071b809-3d20-47e9-b24c-5e494f58d5b6/edit",
+          "description": "2 screens",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "authorsNote": "No harvest of the Cycle 2 boards yet.",
+      "nightlyHarvests": [],
+      "manualHarvests": [],
+      "screens": 22,
+      "changes": {
+        "applied": [
+          {
+            "priority": "try",
+            "flow": "home-01-hero",
+            "text": "Simplify this into a single header menu — don't need Lucid menu and Harvest menu. For now remove the \"Lucid menu\" at top, and focus on Harvest only. Remove \"for Lucidchart\" and let's just call it Harvest."
+          },
+          {
+            "priority": "must",
+            "flow": "home-01-hero",
+            "text": "Remove the get on the list banner. It's unnecessary"
+          },
+          {
+            "priority": "try",
+            "flow": "home-01-hero",
+            "text": "Don't use the all caps eyebrow titles in the design — they are unecessary — remove \"HARVEST FOR LUCIDCHART - LUCID SUITE ADD-ON (CONCEPT) here."
+          },
+          {
+            "priority": "must",
+            "flow": "home-01-hero",
+            "text": "remove caption text below buttons, also unecessary — keep focus simple."
+          },
+          {
+            "priority": "try",
+            "flow": "home-02-problem",
+            "text": "remove eyebrow titles such as \"THE PROBLEM\" wherever possible, headlines can stand on their own."
+          }
+        ],
+        "skipped": [
+          {
+            "text": "(empty sticky on pricing-01-plans)",
+            "reason": "empty"
+          }
+        ],
+        "conflicts": [],
+        "note": "Cycle 1 board stickies implemented in PR #1 (open, not merged). Cycle 2 hub ab0c1380 not listed (no hubs, v2)."
+      },
+      "contributions": {
+        "red": 2,
+        "yellow": 3,
+        "blue": 0,
+        "purple": 0
+      }
+    }
+  ]
+}

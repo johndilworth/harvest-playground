@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "description": "Every project John's team grows with Harvest: leave stickies on the current cycle's Lucidchart review board; harvests apply the safe requests and publish the next cycle. Click a project to open its dashboard.",
+  "updatedAt": "2026-10-12T13:30:00-06:00",
+  "projects": [
+    { "slug": "harvest-playground", "name": "Harvest Playground", "file": "/data/harvest-playground.json", "harvestMode": "nightly" },
+    { "slug": "design-loop", "name": "Design Loop", "file": "/data/design-loop.json", "harvestMode": "manual" },
+    { "slug": "harvest-site", "name": "Harvest Site", "file": "/data/harvest-site.json", "harvestMode": "manual" },
+    { "slug": "harvest-dashboard", "name": "Harvest Dashboard", "file": "/data/harvest-dashboard.json", "harvestMode": "manual" }
+  ]
+}

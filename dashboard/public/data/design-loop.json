@@ -1,0 +1,459 @@
+{
+  "schemaVersion": 3,
+  "project": {
+    "name": "Design Loop",
+    "slug": "design-loop",
+    "harvestMode": "manual",
+    "trigger": false,
+    "description": "Northwind AI Ops sample prototype (signup, vendor approval, add vendor). Each cycle is captured from a PR deploy preview, reviewed on a Lucidchart board, and the stickies become the next PR.",
+    "repo": "https://github.com/johndilworth/design-loop-sample-prototype",
+    "site": "https://design-loop-sample-prototype.netlify.app",
+    "historyBoard": "https://lucid.app/lucidchart/01d8c4f0-95d2-4de7-b997-d9a83df20ccb/edit",
+    "historyBoardLabel": "Evolution c1→c4 ↗",
+    "schedule": "manual (no nightly routine)",
+    "rules": "https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md"
+  },
+  "stats": {
+    "pullRequests": 4,
+    "pullRequestsSource": "GitHub API state=all 2026-10-12: PRs #1–#4 all OPEN (not merged)",
+    "nightlyHarvests": 0,
+    "manualHarvests": 5
+  },
+  "updatedAt": "2026-10-12T13:30:00-06:00",
+  "cycles": [
+    {
+      "number": 1,
+      "title": "Cycle 1 — signup + vendor approval baseline",
+      "createdAt": "2026-10-01T22:56:31-06:00",
+      "status": "superseded",
+      "harvestedFrom": null,
+      "pullRequest": null,
+      "commit": "77283a9",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/design-loop/c1r-signup/01-signup-01-create-account.png",
+      "previewUrl": "https://design-loop-sample-prototype.netlify.app",
+      "documents": [
+        {
+          "title": "Design loop — Cycle 1 review",
+          "role": "flow",
+          "flow": "review",
+          "docId": "9a9f5f0a-dfec-4dbb-8249-679a82bd0cb5",
+          "url": "https://lucid.app/lucidchart/9a9f5f0a-dfec-4dbb-8249-679a82bd0cb5/edit",
+          "description": "2 pages: signup (4), vendor-approval (4)",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "authorsNote": "Not recorded — this cycle was harvested before sticky attribution was read (2026-10-12).",
+      "nightlyHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-02",
+          "stickies": 11,
+          "outcome": "applied"
+        }
+      ],
+      "screens": 8,
+      "changes": {
+        "applied": [],
+        "skipped": [],
+        "conflicts": [],
+        "note": "Initial capture of the prototype at commit 77283a9 (no earlier board)."
+      },
+      "contributions": {
+        "red": 0,
+        "yellow": 0,
+        "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 2,
+      "title": "Cycle 2 — signup polish, square corners (PR #1)",
+      "createdAt": "2026-10-01T23:29:13-06:00",
+      "status": "superseded",
+      "harvestedFrom": 1,
+      "pullRequest": "https://github.com/johndilworth/design-loop-sample-prototype/pull/1",
+      "commit": "5461dff",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/design-loop/c2-signup/01-signup-01-create-account.png",
+      "previewUrl": "https://deploy-preview-1--design-loop-sample-prototype.netlify.app",
+      "documents": [
+        {
+          "title": "Design loop — Cycle 2 review (PR #1)",
+          "role": "flow",
+          "flow": "review",
+          "docId": "d56b0edf-53e9-4933-a64b-a2be6c500d0d",
+          "url": "https://lucid.app/lucidchart/d56b0edf-53e9-4933-a64b-a2be6c500d0d/edit",
+          "description": "2 pages: signup (4), vendor-approval (4); before/after vs cycle 1",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "authorsNote": "Not recorded — this cycle was harvested before sticky attribution was read (2026-10-12).",
+      "nightlyHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-02",
+          "stickies": 8,
+          "outcome": "applied"
+        }
+      ],
+      "screens": 8,
+      "changes": {
+        "applied": [
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "center modal in viewport"
+          },
+          {
+            "priority": "must",
+            "flow": "signup",
+            "text": "Remove the text \"It takes only a minute. probably\" headline is sufficient."
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "Step 1 text is small and doesn't meet accessibility — make larger and use black text."
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "center modal in viewport"
+          },
+          {
+            "priority": "must",
+            "flow": "signup",
+            "text": "Capitalize \"design\""
+          },
+          {
+            "priority": "must",
+            "flow": "signup",
+            "text": "Remove rounded corners on all buttons and fields — use square only. Apply to all pages."
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "center modal in viewport"
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "move \"create workspace\" to right side."
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "center modal in viewport"
+          },
+          {
+            "priority": "must",
+            "flow": "signup",
+            "text": "Make \"invite teammates\" a CTA button"
+          },
+          {
+            "priority": "must",
+            "flow": "signup",
+            "text": "remove \"Connect a data source\" and review AI vendors - Keep \"Go to vendors\" and \"invite Teammates\" but make these both buttons."
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "OGyzDpcA.Ky~ ('Move \"create workspace\" button back to right') was a no-op: already right-aligned."
+      },
+      "contributions": {
+        "red": 5,
+        "yellow": 6,
+        "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 3,
+      "title": "Cycle 3 — header + logo, tiles, ASCII background, invite step (PR #2)",
+      "createdAt": "2026-10-02T00:14:30-06:00",
+      "status": "superseded",
+      "harvestedFrom": 2,
+      "pullRequest": "https://github.com/johndilworth/design-loop-sample-prototype/pull/2",
+      "commit": "2649ac4",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/design-loop/c3-landing/01-home-00-landing.png",
+      "previewUrl": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app",
+      "documents": [
+        {
+          "title": "Design loop — Cycle 3 review (PR #2)",
+          "role": "flow",
+          "flow": "review",
+          "docId": "934e442a-203d-441c-b216-e0340808aa6b",
+          "url": "https://lucid.app/lucidchart/934e442a-203d-441c-b216-e0340808aa6b/edit",
+          "description": "3 pages: landing (1), signup (5), vendors (4)",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "authorsNote": "Not recorded — this cycle was harvested before sticky attribution was read (2026-10-12).",
+      "nightlyHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-02",
+          "stickies": 13,
+          "outcome": "applied"
+        }
+      ],
+      "screens": 10,
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "signup",
+            "text": "Increase header height — and generate a modern logo for Northwind AI ops"
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "remove checkbox for \"send me marketing emails\""
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "Add a stylistic ascii type shader animation to background gray that appears on all screens to give more life and style to the whole screen."
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "Because you can only select one option, remove the \"next\" button, and move to next screen immediately on selection."
+          },
+          {
+            "priority": "must",
+            "flow": "signup",
+            "text": "Match selection style of previous screen. No checkbox, only select to highlight"
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "Move \"create workspace\" button back to right"
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "Make back button a secondary button — gray, but still a rectangle and not text only. follow pattern on \"Go to Vendors\""
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "Add invite teammates screen to next cycle flow so it can be reviewed."
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "PR #3 (head 20c1782) maps all 13 stickies; 2 are reversals of earlier cycles (Create workspace back to the LEFT; ASCII background home-only)."
+      },
+      "contributions": {
+        "red": 2,
+        "yellow": 6,
+        "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 4,
+      "title": "Cycle 4 — dark mode, JetBrains Mono, landing page (PR #3)",
+      "createdAt": "2026-10-02T01:14:20-06:00",
+      "status": "superseded",
+      "harvestedFrom": 3,
+      "pullRequest": "https://github.com/johndilworth/design-loop-sample-prototype/pull/3",
+      "commit": "20c1782",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/design-loop/c4-landing/01-home-00-landing.png",
+      "previewUrl": "https://deploy-preview-3--design-loop-sample-prototype.netlify.app",
+      "documents": [
+        {
+          "title": "Design loop — Cycle 4 review (PR #3, final)",
+          "role": "flow",
+          "flow": "review",
+          "docId": "c95ea620-f506-4499-9d67-dc821b143297",
+          "url": "https://lucid.app/lucidchart/c95ea620-f506-4499-9d67-dc821b143297/edit",
+          "description": "3 pages: landing (1), signup (5), vendors (4)",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "authorsNote": "Not recorded — this cycle was harvested before sticky attribution was read (2026-10-12).",
+      "nightlyHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-02",
+          "stickies": 7,
+          "outcome": "applied"
+        }
+      ],
+      "screens": 10,
+      "changes": {
+        "applied": [
+          {
+            "priority": "try",
+            "flow": "landing",
+            "text": "Extend this page with more marketing copy,"
+          },
+          {
+            "priority": "try",
+            "flow": "landing",
+            "text": "Add a subtle animation on background only visible on home page"
+          },
+          {
+            "priority": "must",
+            "flow": "landing",
+            "text": "Needs to be centered on page vertically like other screens."
+          },
+          {
+            "priority": "try",
+            "flow": "landing",
+            "text": "Because this is a home page, make it more exciting — use the full page in dark mode - and use a more stylistic font, suggesting something with a bit more tech interest like JetBrains Mono"
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "update fonts with Jet Brains Mono across site."
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "convert design to dark mode"
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "Move Create Workspace button to left side"
+          },
+          {
+            "priority": "try",
+            "flow": "vendor-approval",
+            "text": "update fonts through system"
+          },
+          {
+            "priority": "must",
+            "flow": "vendor-approval",
+            "text": "Improve design of these cards, so it's not just looking like a table. Make this look like a sheet of paper, or something with a slick design Add dashboard type graphics for Annual spend and make the \"status\" a chip, or f"
+          },
+          {
+            "priority": "must",
+            "flow": "vendor-approval",
+            "text": "make the \"Approve\" button green"
+          },
+          {
+            "priority": "try",
+            "flow": "vendor-approval",
+            "text": "Add a modal after \"Reject\" that requires a second confirmation before rejection finalizes."
+          },
+          {
+            "priority": "must",
+            "flow": "vendor-approval",
+            "text": "Remove this screen - instead of landing on this page, return to vendor page, and show a Growl type button in the lower left corner."
+          },
+          {
+            "priority": "try",
+            "flow": "vendor-approval",
+            "text": "Growl message like this should have an x button to dismiss, or it should remove itself after 3 seconds."
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "Re-harvested 2026-10-02 ~10:15 MDT after review (first harvest at 01:15 MDT was pre-review, 0 items). PR #4 (head 22cbecb) implements all 7; 2 reversals (separate invite step from cycle 2 merged back; step label from cycle 1 removed). signup-05-invite retired."
+      },
+      "contributions": {
+        "red": 4,
+        "yellow": 9,
+        "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 5,
+      "title": "Cycle 5 — testimonials, combined workspace + invite, add vendor (PR #4)",
+      "createdAt": "2026-10-02T10:40:20-06:00",
+      "status": "current",
+      "harvestedFrom": 4,
+      "pullRequest": "https://github.com/johndilworth/design-loop-sample-prototype/pull/4",
+      "commit": "22cbecb",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/design-loop/c5-landing/01-home-00-landing.png",
+      "previewUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "documents": [
+        {
+          "title": "Design loop — Cycle 5 review (PR #4) v2",
+          "role": "flow",
+          "flow": "review",
+          "docId": "89d26530-417e-44f0-ae5d-afa58a59fe83",
+          "url": "https://lucid.app/lucidchart/89d26530-417e-44f0-ae5d-afa58a59fe83/edit",
+          "description": "Current review board: 4 pages (landing 1, signup 4, vendors 4, add vendor 3); board rules R1–R7",
+          "harvest": true
+        },
+        {
+          "title": "Design loop — Cycle 5 review (PR #4) v1",
+          "role": "flow",
+          "flow": "review",
+          "docId": "80e68a74-a706-4fe1-b22f-4dfc5c5eb215",
+          "url": "https://lucid.app/lucidchart/80e68a74-a706-4fe1-b22f-4dfc5c5eb215/edit",
+          "description": "Superseded by v2; holds the 8 purple board-format stickies harvested 2026-10-02",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "authorsNote": "Not recorded — this cycle was harvested before sticky attribution was read (2026-10-12).",
+      "nightlyHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-02",
+          "stickies": 8,
+          "outcome": "board_feedback_only"
+        }
+      ],
+      "screens": 12,
+      "changes": {
+        "applied": [
+          {
+            "priority": "try",
+            "flow": "landing",
+            "text": "Add testimonials section below the initial content - make up 3 - 5 customer testimonials to demonstrate the value."
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "Since there's only 2 steps, remove the \"step 1 of 2\" eybrow header."
+          },
+          {
+            "priority": "try",
+            "flow": "signup",
+            "text": "CHange text from \"What's your role?\" to \"Select your role\" - to be more direct"
+          },
+          {
+            "priority": "must",
+            "flow": "signup",
+            "text": "Combine this screen with the invite teammates (signup 05) It should be handled together, reducing the need for both screens as separate steps."
+          },
+          {
+            "priority": "must",
+            "flow": "signup",
+            "text": "Make the \"Invite teammates\" an open field that users can type directly into. Adjust messaging to \"enter email addresses separted by comma\" add an \"Invite\" button that's initially disabled. Change \"Back\" to \"Skip\" — shoul"
+          },
+          {
+            "priority": "must",
+            "flow": "vendor-approval",
+            "text": "Add option to add a new vendor. This will also include a new screen with a form to input vendor detaills"
+          },
+          {
+            "priority": "try",
+            "flow": "vendor-approval",
+            "text": "make \"Back\" an icon button with a back arrow - not a hyperlink"
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "Harvested 2026-10-02 ~11:25 MDT: 0 app stickies (no red/yellow/blue), 0 threads; 8 purple board-format stickies + direct layout edits -> board-feedback.json (7 rules for build_spec/harvest/SKILL).",
+        "boardFeedback": "Cycle 5 harvest: 0 app stickies; 8 purple board-format stickies → board rules R1–R7 applied to the tooling and the v2 board (not a site change)."
+      },
+      "contributions": {
+        "red": 3,
+        "yellow": 4,
+        "blue": 0,
+        "purple": 0
+      }
+    }
+  ]
+}

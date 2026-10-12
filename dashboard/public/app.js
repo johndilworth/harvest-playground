@@ -1,8 +1,13 @@
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "America/Denver" });
-const nav = (p) => `<header class="top"><b>${esc(p.name)} · Harvest</b><nav><a href="/">Dashboard</a><a href="/summary.html">Summary</a><a href="${p.site}">Live site ↗</a><a href="${p.historyBoard}">History board ↗</a></nav></header>`;
-async function load() { const r = await fetch("/harvest.json", { cache: "no-store" }); return r.json(); }
+const SLUG = (location.pathname.match(/^\/p\/([a-z0-9-]+)/) || [])[1] || "harvest-playground";
+const B = `/p/${SLUG}/`;
+const nav = (p) => `<header class="top"><b><a href="/" style="color:inherit">Harvest</a> · ${esc(p.name)}</b><nav><a href="/">All projects</a><a href="${B}">Dashboard</a><a href="${B}summary.html">Summary</a>${p.site ? `<a href="${p.site}">Live site ↗</a>` : ""}${p.historyBoard ? `<a href="${p.historyBoard}">${esc(p.historyBoardLabel || "History board ↗")}</a>` : ""}</nav></header>`;
+async function load(slug = SLUG) { const r = await fetch(`/data/${slug}.json`, { cache: "no-store" }); if (!r.ok) throw new Error("Unknown project " + slug); return r.json(); }
+const isNightly = (p) => p.harvestMode === "nightly";
+const runsLabel = (p) => (isNightly(p) ? "Nightly harvests" : "Manual harvests");
+const runs = (p, c) => (isNightly(p) ? c.nightlyHarvests : c.manualHarvests) || [];
 const ordered = (cs) => [...cs].sort((a, b) => (b.status === "current") - (a.status === "current") || b.number - a.number);
 
 async function dashboard() {
@@ -11,21 +16,21 @@ async function dashboard() {
   document.body.insertAdjacentHTML("afterbegin", nav(p));
   $("main").innerHTML = `<h1>${esc(p.name)}</h1><p class="muted">${esc(p.description)}</p>
   ${histogram(cs)}
-  <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${d.stats.nightlyHarvests}</b> nightly harvests</span></div>
-  <h2>Cycles</h2><div class="grid">${ordered(cs).map((c) => `<a class="card cycle-card ${c.status}" href="/cycle.html?c=${c.number}" style="color:inherit;text-decoration:none">
+  <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${isNightly(p) ? d.stats.nightlyHarvests : d.stats.manualHarvests ?? 0}</b> ${isNightly(p) ? "nightly" : "manual"} harvests</span></div>
+  <h2>Cycles</h2><div class="grid">${ordered(cs).map((c) => `<a class="card cycle-card ${c.status}" href="${B}cycle.html?c=${c.number}" style="color:inherit;text-decoration:none">
    <h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
    <div class="muted">${fmt(c.createdAt)} · ${c.documents.length} Lucid docs · ${c.changes.applied.length} applied · ${authorsTotal(c)} stickies by ${authorsCount(c)} author(s)</div><div>${esc(c.title)}</div>
    <img src="${c.screenshot}" alt="Cycle ${c.number} home screenshot" loading="lazy"></a>`).join("")}</div>
-  <p class="muted">Data: <a href="/harvest.json">harvest.json</a> · updated ${fmt(d.updatedAt)} · <a href="${p.rules}">Harvest rules</a> · ${skipped} skipped overall</p>`;
+  <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)} · <a href="${p.rules}">Harvest rules</a> · ${skipped} skipped overall</p>`;
   setupHistogram();
 }
 
 async function cycle() {
   const d = await load(), n = +new URLSearchParams(location.search).get("c"), c = d.cycles.find((x) => x.number === n) || ordered(d.cycles)[0];
-  document.body.insertAdjacentHTML("afterbegin", nav(d.project)); document.title = `Cycle ${c.number} · Harvest Playground`;
+  document.body.insertAdjacentHTML("afterbegin", nav(d.project)); document.title = `Cycle ${c.number} · ${d.project.name}`;
   const ch = c.changes;
   const curC = d.cycles.find((x) => x.status === "current");
-  $("main").innerHTML = `<h1>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>${curC ? ` <a class="small" style="font-size:14px;font-weight:normal" href="/cycle.html?c=${curC.number}">Go to current cycle (Cycle ${curC.number}) →</a>` : ""}`}</h1>
+  $("main").innerHTML = `<h1>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>${curC ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${B}cycle.html?c=${curC.number}">Go to current cycle (Cycle ${curC.number}) →</a>` : ""}`}</h1>
   <p class="muted">${esc(c.title)} · created ${fmt(c.createdAt)}${c.harvestedFrom != null ? ` · harvested from Cycle ${c.harvestedFrom}` : ""}${c.pullRequest ? ` · <a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""} · commit <code>${esc(c.commit)}</code>${c.previewUrl ? ` · <a class="preview" href="${c.previewUrl}">Preview ↗</a>` : ""}</p>
   <h2>Lucid documents</h2>${c.documents.map((x) => `<div class="card doc"><div><b><a href="${x.url}">${esc(x.title)}</a></b><span class="tag">${"flow: " + esc(x.flow)}</span>
    <div class="muted">${esc(x.description)}</div></div><div class="muted" style="white-space:nowrap">${fmt(c.createdAt)} · ${c.status === "current" ? "open for stickies" : "harvested"}</div></div>`).join("")}
@@ -34,10 +39,10 @@ async function cycle() {
    ${ch.skipped.length ? `<p><b>Skipped</b></p><ul>${ch.skipped.map((s) => `<li>${esc(s.text)} — <i>${esc(s.reason)}</i></li>`).join("")}</ul>` : "<p class='muted'>Skipped: none</p>"}
    ${ch.conflicts.length ? `<p><b>Conflicts</b></p><ul>${ch.conflicts.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}</div>
   <h2>Sticky authors</h2><div class="card">${authorsHtml(c)}</div>
-  <h2 id="nightly">Nightly harvests</h2><div class="card">${c.status === "current" ? `<p class="muted">Harvests this cycle's boards immediately and creates Cycle ${c.number + 1}. Normally runs at 5 pm MT.</p><div id="trig"><button disabled>Checking…</button></div>` : ""}${c.nightlyHarvests.length ? `<ul>${c.nightlyHarvests.map((h) => `<li>${esc(h.date)} — ${h.stickies} stickies (${esc(h.outcome)})</li>`).join("")}</ul>` : "<p class='muted'>None yet — next harvest at 5 pm MT.</p>"}</div>
+  <h2 id="nightly">${runsLabel(d.project)}</h2><div class="card">${c.status === "current" && d.project.trigger ? `<p class="muted">Harvests this cycle's boards immediately and creates Cycle ${c.number + 1}.${isNightly(d.project) ? " Normally runs at 5 pm MT." : " This project has no nightly routine; harvests run only when triggered."}</p><div id="trig"><button disabled>Checking…</button></div>` : ""}${runs(d.project, c).length ? `<ul>${runs(d.project, c).map((h) => `<li>${esc(h.date)} — ${h.stickies} stickies (${esc(h.outcome)})</li>`).join("")}</ul>` : `<p class='muted'>None yet${isNightly(d.project) ? " — next harvest at 5 pm MT" : c.status === "current" ? " — harvested manually when requested" : ""}.</p>`}</div>
   <h2>Screenshot</h2><img src="${c.screenshot}" alt="" style="max-width:100%;border:1px solid #d5d8dc">
   ${cycleNav(d.cycles, c)}`;
-  if (c.status === "current") setupTrigger(c);
+  if (c.status === "current" && d.project.trigger) setupTrigger(c);
 }
 
 async function summary() {
@@ -45,7 +50,7 @@ async function summary() {
   const li = (a, f) => a.length ? `<ul>${a.map(f).join("")}</ul>` : "<span class='muted'>none</span>";
   $("main").innerHTML = `<h1>Summary of all cycles</h1><p class="muted">Every cycle and the changes it shipped, from CHANGELOG.md / HISTORY.md.</p>
   <table><tr><th>Cycle</th><th>Date</th><th>Status</th><th>Applied</th><th>Skipped (reason)</th><th>Conflicts</th><th>Sticky authors</th></tr>
-  ${[...d.cycles].sort((a, b) => b.number - a.number).map((c) => `<tr><td><a href="/cycle.html?c=${c.number}">Cycle ${c.number}</a>${c.pullRequest ? `<br><a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""}</td>
+  ${[...d.cycles].sort((a, b) => b.number - a.number).map((c) => `<tr><td><a href="${B}cycle.html?c=${c.number}">Cycle ${c.number}</a>${c.pullRequest ? `<br><a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""}</td>
    <td style="white-space:nowrap">${fmt(c.createdAt)}</td><td>${esc(c.status)}</td>
    <td>${c.changes.note ? esc(c.changes.note) : ""}${c.changes.applied.length || !c.changes.note ? li(c.changes.applied, (a) => `<li><b>${esc(a.priority)}</b> · ${esc(a.text)}</li>`) : ""}</td>
    <td>${li(c.changes.skipped, (s) => `<li>${esc(s.text)} — <i>${esc(s.reason)}</i></li>`)}</td>
@@ -59,13 +64,13 @@ const authorsCount = (c) => (c.authors || []).length;
 function allAuthors(cs) { const m = {}; cs.forEach((c) => (c.authors || []).forEach((a) => (m[a.name] = (m[a.name] || 0) + a.stickies))); return Object.entries(m).map(([name, stickies]) => ({ name, stickies })).sort((a, b) => b.stickies - a.stickies); }
 function authorsHtml(c) {
   const a = c.authors || [];
-  if (!a.length) return "<p class='muted'>No stickies harvested from these boards yet.</p>";
+  if (!a.length) return `<p class='muted'>${esc(c.authorsNote || "No stickies harvested from these boards yet.")}</p>`;
   return `<table class="authors"><tr><th>Author</th><th>Stickies</th></tr>${a.map((x) => `<tr><td>${esc(x.name)}</td><td>${x.stickies}</td></tr>`).join("")}</table><p class="muted">“anonymous” = the sticky had no author attribution.</p>`;
 }
 function cycleNav(cs, c) {
   const prev = cs.find((x) => x.number === c.number - 1), next = cs.find((x) => x.number === c.number + 1);
   if (!prev && !next) return "";
-  return `<nav class="cyclenav">${prev ? `<a href="/cycle.html?c=${prev.number}">← Cycle ${prev.number}</a>` : "<span></span>"}${next ? `<a href="/cycle.html?c=${next.number}">Cycle ${next.number} →</a>` : "<span></span>"}</nav>`;
+  return `<nav class="cyclenav">${prev ? `<a href="${B}cycle.html?c=${prev.number}">← Cycle ${prev.number}</a>` : "<span></span>"}${next ? `<a href="${B}cycle.html?c=${next.number}">Cycle ${next.number} →</a>` : "<span></span>"}</nav>`;
 }
 async function setupTrigger(c) {
   let s;
@@ -86,7 +91,7 @@ async function setupTrigger(c) {
   $("#go").onclick = async () => {
     $("#go").disabled = true; msg.className = "msg"; msg.textContent = "Sending…";
     try {
-      const r = await fetch("/api/trigger", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ secret: $("#sec").value, confirm: $("#cf").value.trim() }) });
+      const r = await fetch("/api/trigger", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ project: SLUG, secret: $("#sec").value, confirm: $("#cf").value.trim() }) });
       const j = await r.json().catch(() => ({}));
       msg.className = "msg " + (r.ok ? "ok" : "err");
       msg.textContent = r.ok ? (j.message || "Harvest started — the new cycle will appear here when done.") : `Failed: ${j.error || "HTTP " + r.status}`;
@@ -105,7 +110,7 @@ function contrib(c) {
   return k;
 }
 const fmtMT = (d) => new Date(d).toLocaleString("en-US", { year: "numeric", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Denver" }) + " MT";
-function histogram(cs) {
+function histogram(cs, opts = {}) {
   const H = 140, BASE = 3, list = [...cs].sort((a, b) => a.number - b.number);
   const rows = list.map((c) => { const k = contrib(c); return { c, k, t: TYPES.reduce((n, [t]) => n + k[t], 0) }; });
   const max = Math.max(1, ...rows.map((r) => r.t));
@@ -118,7 +123,7 @@ function histogram(cs) {
     TYPES.forEach(([t, , col]) => { if (!r.k[t]) return; const sh = Math.max(1, Math.round(total * r.k[t] / r.t)); y -= sh; segs += `<rect x="${x}" y="${y}" width="${bw}" height="${sh}" fill="${col}"/>`; });
     const per = TYPES.map(([t, l]) => `${r.k[t]} ${l}`).join(", ");
     const tip = `<b>Cycle ${r.c.number}</b><br>${esc(fmtMT(r.c.createdAt))}<br><b>${r.t}</b> contributions${TYPES.map(([t, l, col]) => `<br><i style="background:${col}"></i>${l}: ${r.k[t]}`).join("")}`;
-    return `<g class="bar" tabindex="0" role="link" data-href="cycle.html?c=${r.c.number}" style="cursor:pointer" aria-label="Open Cycle ${r.c.number}, harvested ${esc(fmtMT(r.c.createdAt))}: ${r.t} contributions (${per})" data-tip="${esc(tip)}">
+    return `<g class="bar" tabindex="0" role="link" data-href="${B}cycle.html?c=${r.c.number}" style="cursor:pointer" aria-label="Open Cycle ${r.c.number}, harvested ${esc(fmtMT(r.c.createdAt))}: ${r.t} contributions (${per})" data-tip="${esc(tip)}">
       <rect class="hit" x="${x - gap / 2}" y="0" width="${bw + gap}" height="${H + 22}" fill="transparent"/>
       <rect x="${x}" y="${H - BASE}" width="${bw}" height="${BASE}" fill="#9aa1a9"/>${segs}
       <text x="${x + bw / 2}" y="${H + 16}" text-anchor="middle">C${r.c.number}</text></g>`;
@@ -138,4 +143,30 @@ function setupHistogram() {
     g.addEventListener("click", () => (location.href = g.dataset.href));
     g.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); location.href = g.dataset.href; } }); g.addEventListener("blur", () => (tip.hidden = true));
   });
+}
+
+// ---- Home: all projects ----
+async function home() {
+  document.body.insertAdjacentHTML("afterbegin", `<header class="top"><b>Harvest</b><nav><a href="/">All projects</a><a href="https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md">Harvest rules ↗</a></nav></header>`);
+  const idx = await (await fetch("/data/projects.json", { cache: "no-store" })).json();
+  const ds = await Promise.all(idx.projects.map((p) => load(p.slug).catch(() => null)));
+  $("main").innerHTML = `<h1>Harvest projects</h1><p class="muted">${esc(idx.description)}</p><div class="grid projects">${idx.projects.map((p, i) => {
+    const d = ds[i]; if (!d) return `<div class="card">${esc(p.name)} — data unavailable</div>`;
+    const cs = d.cycles, cur = cs.find((c) => c.status === "current") || cs[cs.length - 1];
+    const all = cs.flatMap((c) => runs(d.project, c)).map((h) => h.date).sort(); const last = all[all.length - 1];
+    return `<a class="card project-card" href="/p/${p.slug}/" style="color:inherit;text-decoration:none">
+     <h3>${esc(d.project.name)} <span class="tag">${isNightly(d.project) ? "Nightly" : "Manual"}</span></h3>
+     <p class="muted">${esc(d.project.description)}</p>${spark(cs)}
+     <div class="kv"><span><b>${cs.length}</b> cycles</span><span>current <b>Cycle ${cur.number}</b></span><span>last harvest <b>${last ? esc(fmt(last + "T12:00:00")) : "none yet"}</b></span></div>
+     ${cur.screenshot ? `<img src="${cur.screenshot}" alt="${esc(d.project.name)} Cycle ${cur.number} screenshot" loading="lazy">` : ""}</a>`; }).join("")}</div>
+  <p class="muted">Index: <a href="/data/projects.json">projects.json</a> · screen captures hosted under <code>/captures/&lt;project&gt;/&lt;flow&gt;/</code></p>`;
+}
+function spark(cs) {
+  const list = [...cs].sort((a, b) => a.number - b.number).map((c) => { const k = contrib(c); return { n: c.number, k, t: TYPES.reduce((n, [t]) => n + k[t], 0) }; });
+  const max = Math.max(1, ...list.map((r) => r.t)), H = 36, bw = 12, gap = 6;
+  const bars = list.map((r, i) => { let y = H; const x = i * (bw + gap); const th = r.t ? Math.max(3, Math.round(Math.sqrt(r.t / max) * H)) : 0;
+    let g = `<rect x="${x}" y="${H - 2}" width="${bw}" height="2" fill="#9aa1a9"/>`;
+    TYPES.forEach(([t, , col]) => { if (!r.k[t]) return; const h = Math.max(1, Math.round(th * r.k[t] / r.t)); y -= h; g += `<rect x="${x}" y="${y}" width="${bw}" height="${h}" fill="${col}"/>`; });
+    return `<g><title>Cycle ${r.n}: ${r.t} contributions</title>${g}</g>`; }).join("");
+  return `<svg class="spark" width="${list.length * (bw + gap)}" height="${H}" role="img" aria-label="Contributions per cycle">${bars}</svg>`;
 }

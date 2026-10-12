@@ -1,0 +1,25 @@
+// Headless captures of the dashboard. Usage: node shoot.mjs <baseUrl> <outDir> <prefix> [full|review]
+import { chromium } from "playwright";
+import fs from "node:fs";
+const [base, out, prefix, mode = "full"] = process.argv.slice(2);
+fs.mkdirSync(out, { recursive: true });
+const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1440, height: 1024 } });
+const errs = []; p.on("pageerror", (e) => errs.push(e.message)); p.on("console", (m) => m.type() === "error" && errs.push(m.text()));
+async function shot(path, name, { full = true, modal = false } = {}) {
+  await p.goto(base + path, { waitUntil: "networkidle" }); await p.waitForTimeout(600);
+  if (modal) { await p.waitForSelector("#open-run", { timeout: 8000 }); await p.click("#open-run"); await p.waitForTimeout(300); }
+  await p.screenshot({ path: `${out}/${prefix}${name}.png`, fullPage: full });
+  console.log(name, p.url(), (await p.title()));
+}
+if (mode === "review") {
+  await shot("/", "01-home"); await shot("/p/harvest-playground/", "02-project-dashboard");
+  await shot("/p/harvest-dashboard/cycle.html?c=0", "03-cycle"); await shot("/p/harvest-dashboard/cycle.html?c=0", "04-run-harvest-modal", { full: false, modal: true });
+  await shot("/p/harvest-playground/summary.html", "05-summary");
+} else {
+  await shot("/", "home");
+  for (const s of ["harvest-playground", "design-loop", "harvest-site", "harvest-dashboard"]) { await shot(`/p/${s}/`, `${s}`); }
+  for (const [s, c] of [["harvest-playground", 4], ["design-loop", 5], ["harvest-site", 2], ["harvest-dashboard", 0]]) await shot(`/p/${s}/cycle.html?c=${c}`, `${s}-cycle-${c}`);
+  await shot("/p/design-loop/summary.html", "design-loop-summary");
+  await shot("/cycle.html?c=2", "redirect-cycle-2");
+}
+console.log("errors:", JSON.stringify(errs)); await b.close();

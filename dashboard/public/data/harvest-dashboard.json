@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 3,
+  "project": {
+    "name": "Harvest Dashboard",
+    "slug": "harvest-dashboard",
+    "harvestMode": "manual",
+    "trigger": true,
+    "description": "This dashboard itself. Leave stickies on its Lucidchart review board; a manual harvest applies the safe ones to dashboard/, deploys, and publishes the next cycle.",
+    "repo": "https://github.com/johndilworth/harvest-playground/tree/main/dashboard",
+    "site": "https://harvest-dashboard.netlify.app",
+    "historyBoard": null,
+    "schedule": "manual (Run harvest now on the current cycle page; no nightly routine)",
+    "rules": "https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md#harvest-dashboard-project-manual"
+  },
+  "stats": {
+    "pullRequests": 0,
+    "pullRequestsSource": "commits go straight to main (no PRs)",
+    "nightlyHarvests": 0,
+    "manualHarvests": 0
+  },
+  "updatedAt": "2026-10-12T13:30:00-06:00",
+  "cycles": [
+    {
+      "number": 0,
+      "title": "Cycle 0 — multi-project dashboard",
+      "createdAt": "2026-10-12T13:19:27-06:00",
+      "status": "current",
+      "harvestedFrom": null,
+      "pullRequest": null,
+      "commit": "96e1f27",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c0-review/01-home.png",
+      "documents": [
+        {
+          "title": "Cycle 0 review · All pages",
+          "role": "flow",
+          "flow": "review",
+          "docId": "6337bd96-737f-4d11-8030-10b15474e71c",
+          "url": "https://lucid.app/lucidchart/6337bd96-737f-4d11-8030-10b15474e71c/edit",
+          "description": "5 screens on one Lucidchart board: home, project dashboard, cycle page, Run harvest modal, summary.",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "nightlyHarvests": [],
+      "manualHarvests": [],
+      "changes": {
+        "applied": [],
+        "skipped": [],
+        "conflicts": [],
+        "note": "Initial capture: home (all projects), a project dashboard, a cycle page, Run harvest modal, summary."
+      },
+      "contributions": {
+        "red": 0,
+        "yellow": 0,
+        "blue": 0,
+        "purple": 0
+      },
+      "previewUrl": "https://6acd329cc14d4df7244284f9--harvest-dashboard.netlify.app"
+    }
+  ]
+}

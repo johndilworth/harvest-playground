@@ -6,7 +6,41 @@
   for = "/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/captures/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Access-Control-Allow-Origin = "*"
 [[redirects]]
   from = "/api/trigger"
   to = "/.netlify/functions/trigger"
+  status = 200
+# Legacy single-project URLs -> Harvest Playground (query string ?c=N is kept by Netlify)
+[[redirects]]
+  from = "/cycle.html"
+  to = "/p/harvest-playground/cycle.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/summary.html"
+  to = "/p/harvest-playground/summary.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/harvest.json"
+  to = "/data/harvest-playground.json"
+  status = 301
+  force = true
+# Per-project pages (one set of templates, slug read from the path)
+[[redirects]]
+  from = "/p/:slug/"
+  to = "/project.html"
+  status = 200
+[[redirects]]
+  from = "/p/:slug/cycle.html"
+  to = "/project-cycle.html"
+  status = 200
+[[redirects]]
+  from = "/p/:slug/summary.html"
+  to = "/project-summary.html"
   status = 200

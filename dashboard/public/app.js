@@ -24,8 +24,8 @@ async function cycle() {
   const d = await load(), n = +new URLSearchParams(location.search).get("c"), c = d.cycles.find((x) => x.number === n) || ordered(d.cycles)[0];
   document.body.insertAdjacentHTML("afterbegin", nav(d.project)); document.title = `Cycle ${c.number} · Harvest Playground`;
   const ch = c.changes;
-  $("main").innerHTML = `<p><a href="/">← Dashboard</a></p><h1>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h1>
-  ${cycleNav(d.cycles, c)}
+  const curC = d.cycles.find((x) => x.status === "current");
+  $("main").innerHTML = `<h1>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>${curC ? ` <a class="small" style="font-size:14px;font-weight:normal" href="/cycle.html?c=${curC.number}">Go to current cycle (Cycle ${curC.number}) →</a>` : ""}`}</h1>
   <p class="muted">${esc(c.title)} · created ${fmt(c.createdAt)}${c.harvestedFrom != null ? ` · harvested from Cycle ${c.harvestedFrom}` : ""}${c.pullRequest ? ` · <a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""} · commit <code>${esc(c.commit)}</code>${c.previewUrl ? ` · <a class="preview" href="${c.previewUrl}">Preview ↗</a>` : ""}</p>
   <h2>Lucid documents</h2>${c.documents.map((x) => `<div class="card doc"><div><b><a href="${x.url}">${esc(x.title)}</a></b><span class="tag">${"flow: " + esc(x.flow)}</span>
    <div class="muted">${esc(x.description)}</div></div><div class="muted" style="white-space:nowrap">${fmt(c.createdAt)} · ${c.status === "current" ? "open for stickies" : "harvested"}</div></div>`).join("")}

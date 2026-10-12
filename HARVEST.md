@@ -1,4 +1,10 @@
-# Harvest rules (nightly)
+# Harvest rules (nightly) — Harvest Playground
+
+> **Generic rules for all Harvest projects** (loop, sticky colours/priority, board rules, sticky authors, safety skips,
+> merge policies, triggers, new project setup, captures hosting, dashboard data schema) live in
+> [`docs/HARVEST-RULES.md`](docs/HARVEST-RULES.md) (rendered at https://harvest-dashboard.netlify.app/rules.html).
+> This file keeps the Harvest Playground–specific procedure; where the two differ, the generic doc wins for shared rules.
+> After editing the generic doc, run `python3 dashboard/build_rules.py` and redeploy the dashboard.
 
 The playground grows one Harvest cycle per day. Anyone on the team can ask for anything by leaving a sticky
 on the current cycle's flow board in Lucid.

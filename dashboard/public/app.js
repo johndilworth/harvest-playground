@@ -187,7 +187,7 @@ function setupHistogram() {
 
 // ---- Home: all projects ----
 async function home() {
-  document.body.insertAdjacentHTML("afterbegin", `<header class="top"><b>Harvest</b><nav><a href="/">All projects</a><a href="https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md">Harvest rules ↗</a></nav></header>`);
+  document.body.insertAdjacentHTML("afterbegin", `<header class="top"><b>Harvest</b><nav><a href="/">All projects</a><a href="/rules.html">Harvest rules</a></nav></header>`);
   const idx = await (await fetch("/data/projects.json", { cache: "no-store" })).json();
   const ds = await Promise.all(idx.projects.map((p) => load(p.slug).catch(() => null)));
   // Description under "Harvest projects" removed (cycle 0 sticky).

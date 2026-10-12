@@ -207,4 +207,4 @@ someone presses **Run harvest now** on its current cycle page (`/p/harvest-dashb
    applied/skipped reasons, `previewUrl` = production deploy permalink `https://<deploy_id>--harvest-dashboard.netlify.app`
    of that commit); bump `stats.manualHarvests`, set `updatedAt`; commit, push, deploy.
 
-> Note (2026-10-12): `dashboard/public/captures/` is git-ignored. Captures live only on the box at /workspace/harvest-playground/repo/dashboard/public/captures and ship with each dashboard deploy from the box. Never delete that folder.
+> Note (2026-10-12): `dashboard/public/captures/` is committed to git (backed up and versioned with each cycle). Commit new captures with each harvest. If the repo grows too large, move them to Git LFS or a separate captures repo.

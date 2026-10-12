@@ -136,13 +136,20 @@ else **`anonymous`**). Include authors in the CHANGELOG entry (`… · by <autho
     "nightlyHarvests": [ { "date": "YYYY-MM-DD", "stickies": int, "outcome": "applied"|"no_stickies"|"failed" } ],
     "changes": { "applied":  [ { "priority": "must"|"try"|"consider", "flow", "text" } ],
                  "skipped":  [ { "text", "reason" } ],     // reason per § Skipped items, e.g. "empty", "unsafe: malicious"
-                 "conflicts": [ str ], "hubStrays"?: [ str ], "note"?: str }
+                 "conflicts": [ str ], "hubStrays"?: [ str ], "note"?: str },
+    "contributions": { "red": int, "yellow": int, "blue": int, "purple": int }
+        // stickies that produced THIS cycle's changes (applied + skipped), by type: red = Must do, yellow = Try,
+        // blue = Consider, purple = Board feedback (purple / `Board:` stickies on the harvested flow boards; hub strays
+        // excluded). Skipped stickies count under their colour/keyword. All four keys always present (0 if none).
   } ]
 }
 ```
 Cycle stats (count, applied, skipped, authors) are computed from `cycles`; the dashboard lists the `current` cycle first.
 Cycle pages show Previous/Next links (when those cycles exist), the Preview link, Lucid documents, changes, sticky
 authors, and Nightly harvests; the summary page shows authors per cycle and totals.
+`contributions` (added 2026-10-12, still schemaVersion 2): **every nightly or manual harvest that creates a new cycle
+must write it** for that cycle (a new cycle with no stickies gets all zeros). It drives the dashboard histogram
+(one stacked bar per cycle). If missing, the dashboard derives red/yellow/blue from `changes` priorities (purple = 0).
 v1 → v2 (2026-10-12): hub documents removed from every cycle, `previewUrl` and `authors` added.
 
 ### "Run harvest now" trigger

@@ -28,3 +28,11 @@ input{font:inherit;padding:7px 9px;border:1px solid #9aa1a9;background:#fff;marg
 .actions{display:flex;justify-content:flex-end;gap:10px;margin-top:10px}
 button.secondary{background:#fff;color:#1f2328}
 .msg.ok{color:#1f883d;font-weight:600}.msg.err{color:#cf222e;font-weight:600}
+.histo{padding:16px 20px}.histo-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.legend span{margin-left:14px;font-size:13px;color:#57606a}.legend i,.tip i{display:inline-block;width:10px;height:10px;margin-right:5px;vertical-align:-1px}
+.histo-wrap{position:relative;overflow-x:auto;overflow-y:visible}.histo svg{display:block;max-width:none}
+.histo text{font-size:12px;fill:#57606a}.histo .bar{cursor:default;outline:none}.histo .bar:hover .hit,.histo .bar:focus .hit{fill:rgba(31,35,40,.06)}
+.histo .bar:focus-visible .hit{stroke:#1a5fb4;stroke-width:2}
+.tip{position:absolute;background:#fff;border:1px solid #9aa1a9;padding:8px 10px;font-size:13px;line-height:1.45;pointer-events:none;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.12);z-index:5}
+.small{font-size:12px;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:-4px 0 8px}.chip{background:#F2F3F5;border:1px solid #d5d8dc;padding:3px 10px;font-size:13px;color:#57606a}.chip b{color:#1f2328}

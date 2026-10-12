@@ -15,7 +15,7 @@
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
     "nightlyHarvests": 10
   },
-  "updatedAt": "2026-10-12T11:45:00-06:00",
+  "updatedAt": "2026-10-12T12:00:00-06:00",
   "cycles": [
     {
       "number": 0,
@@ -56,7 +56,13 @@
           "name": "anonymous",
           "stickies": 12
         }
-      ]
+      ],
+      "contributions": {
+        "red": 0,
+        "yellow": 0,
+        "blue": 0,
+        "purple": 0
+      }
     },
     {
       "number": 1,
@@ -185,7 +191,13 @@
           "name": "anonymous",
           "stickies": 8
         }
-      ]
+      ],
+      "contributions": {
+        "red": 6,
+        "yellow": 6,
+        "blue": 0,
+        "purple": 0
+      }
     },
     {
       "number": 2,
@@ -293,7 +305,13 @@
           "name": "anonymous",
           "stickies": 2
         }
-      ]
+      ],
+      "contributions": {
+        "red": 1,
+        "yellow": 7,
+        "blue": 0,
+        "purple": 0
+      }
     },
     {
       "number": 3,
@@ -367,7 +385,13 @@
           "name": "anonymous",
           "stickies": 9
         }
-      ]
+      ],
+      "contributions": {
+        "red": 1,
+        "yellow": 1,
+        "blue": 0,
+        "purple": 0
+      }
     },
     {
       "number": 4,
@@ -443,7 +467,13 @@
         "note": "Manual harvest from Harvest Dashboard webhook at ~10:30 AM MT 2026-10-12 (not the 5pm nightly). Merged to main as commit f3e1e36 (GitHub MCP PR create returned 403)."
       },
       "previewUrl": "https://6acd0c6314483bd0d7c562af--harvest-playground.netlify.app",
-      "authors": []
+      "authors": [],
+      "contributions": {
+        "red": 4,
+        "yellow": 5,
+        "blue": 0,
+        "purple": 0
+      }
     }
   ]
 }

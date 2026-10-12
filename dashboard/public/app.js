@@ -10,16 +10,14 @@ async function dashboard() {
   const applied = cs.reduce((n, c) => n + c.changes.applied.length, 0), skipped = cs.reduce((n, c) => n + c.changes.skipped.length, 0);
   document.body.insertAdjacentHTML("afterbegin", nav(p));
   $("main").innerHTML = `<h1>${esc(p.name)}</h1><p class="muted">${esc(p.description)}</p>
-  <div class="grid">
-   <div class="card stat"><div class="n">${cs.length}</div><div class="l">Cycles</div></div>
-   <div class="card stat"><div class="n">${d.stats.pullRequests}</div><div class="l">Pull requests created</div></div>
-   <div class="card stat"><div class="n">${applied}</div><div class="l">Stickies applied</div></div>
-   <div class="card stat"><div class="n">${d.stats.nightlyHarvests}</div><div class="l">Nightly harvests</div></div></div>
+  ${histogram(cs)}
+  <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${d.stats.nightlyHarvests}</b> nightly harvests</span></div>
   <h2>Cycles</h2><div class="grid">${ordered(cs).map((c) => `<a class="card cycle-card ${c.status}" href="/cycle.html?c=${c.number}" style="color:inherit;text-decoration:none">
    <h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
    <div class="muted">${fmt(c.createdAt)} · ${c.documents.length} Lucid docs · ${c.changes.applied.length} applied · ${authorsTotal(c)} stickies by ${authorsCount(c)} author(s)</div><div>${esc(c.title)}</div>
    <img src="${c.screenshot}" alt="Cycle ${c.number} home screenshot" loading="lazy"></a>`).join("")}</div>
   <p class="muted">Data: <a href="/harvest.json">harvest.json</a> · updated ${fmt(d.updatedAt)} · <a href="${p.rules}">Harvest rules</a> · ${skipped} skipped overall</p>`;
+  setupHistogram();
 }
 
 async function cycle() {
@@ -95,4 +93,48 @@ async function setupTrigger(c) {
     } catch (e) { msg.className = "msg err"; msg.textContent = "Failed: network error"; }
     valid();
   };
+}
+
+// ---- Contributions histogram (one stacked bar per cycle, compressed sqrt scale) ----
+const TYPES = [["red", "Must do", "#d1242f"], ["yellow", "Try", "#e3b008"], ["blue", "Consider", "#2f6fdd"], ["purple", "Board feedback", "#8250df"]];
+const PRI = { must: "red", try: "yellow", consider: "blue", board: "purple" };
+function contrib(c) {
+  if (c.contributions) return { red: 0, yellow: 0, blue: 0, purple: 0, ...c.contributions };
+  const k = { red: 0, yellow: 0, blue: 0, purple: 0 };
+  [...c.changes.applied, ...c.changes.skipped].forEach((x) => { if (PRI[x.priority]) k[PRI[x.priority]]++; });
+  return k;
+}
+const fmtMT = (d) => new Date(d).toLocaleString("en-US", { year: "numeric", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Denver" }) + " MT";
+function histogram(cs) {
+  const H = 140, BASE = 3, list = [...cs].sort((a, b) => a.number - b.number);
+  const rows = list.map((c) => { const k = contrib(c); return { c, k, t: TYPES.reduce((n, [t]) => n + k[t], 0) }; });
+  const max = Math.max(1, ...rows.map((r) => r.t));
+  // sqrt scale: tallest bar = H px, small counts stay visible, hundreds never get tall
+  const h = (n) => (n <= 0 ? 0 : Math.max(4, Math.round((Math.sqrt(n) / Math.sqrt(max)) * (H - 8))));
+  const bw = 34, gap = 22, W = rows.length * (bw + gap) + gap;
+  const bars = rows.map((r, i) => {
+    const x = gap + i * (bw + gap), total = h(r.t);
+    let y = H, segs = "";
+    TYPES.forEach(([t, , col]) => { if (!r.k[t]) return; const sh = Math.max(1, Math.round(total * r.k[t] / r.t)); y -= sh; segs += `<rect x="${x}" y="${y}" width="${bw}" height="${sh}" fill="${col}"/>`; });
+    const per = TYPES.map(([t, l]) => `${r.k[t]} ${l}`).join(", ");
+    const tip = `<b>Cycle ${r.c.number}</b><br>${esc(fmtMT(r.c.createdAt))}<br><b>${r.t}</b> contributions${TYPES.map(([t, l, col]) => `<br><i style="background:${col}"></i>${l}: ${r.k[t]}`).join("")}`;
+    return `<g class="bar" tabindex="0" role="img" aria-label="Cycle ${r.c.number}, harvested ${esc(fmtMT(r.c.createdAt))}: ${r.t} contributions (${per})" data-tip="${esc(tip)}">
+      <rect class="hit" x="${x - gap / 2}" y="0" width="${bw + gap}" height="${H + 22}" fill="transparent"/>
+      <rect x="${x}" y="${H - BASE}" width="${bw}" height="${BASE}" fill="#9aa1a9"/>${segs}
+      <text x="${x + bw / 2}" y="${H + 16}" text-anchor="middle">C${r.c.number}</text></g>`;
+  }).join("");
+  return `<div class="card histo"><div class="histo-head"><b>Contributions per cycle</b><span class="legend">${TYPES.map(([, l, col]) => `<span><i style="background:${col}"></i>${l}</span>`).join("")}</span></div>
+   <div class="histo-wrap"><svg viewBox="0 0 ${W} ${H + 22}" width="${W}" height="${H + 22}" role="group" aria-label="Stickies per cycle, stacked by type (compressed square-root scale)">
+   <line x1="0" y1="${H}" x2="${W}" y2="${H}" stroke="#c8ccd1"/>${bars}</svg><div id="tip" class="tip" role="tooltip" hidden></div></div>
+   <div class="muted small">Bar height uses a compressed (square-root) scale; hover or focus a bar for exact counts.</div></div>`;
+}
+function setupHistogram() {
+  const tip = $("#tip"), wrap = $(".histo-wrap"); if (!tip) return;
+  const show = (g) => { tip.innerHTML = g.dataset.tip; tip.hidden = false; const r = g.getBoundingClientRect(), w = wrap.getBoundingClientRect();
+    let left = r.right - w.left + 4; if (left + tip.offsetWidth > w.width) left = r.left - w.left - tip.offsetWidth - 4;
+    tip.style.left = Math.max(0, left) + "px"; tip.style.top = "2px"; };
+  document.querySelectorAll(".histo .bar").forEach((g) => {
+    g.addEventListener("mouseenter", () => show(g)); g.addEventListener("focus", () => show(g));
+    g.addEventListener("mouseleave", () => (tip.hidden = true)); g.addEventListener("blur", () => (tip.hidden = true));
+  });
 }

@@ -1,0 +1,12 @@
+# Harvest dashboard (separate Netlify site "harvest-dashboard"); never touches the playground's site/.
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[redirects]]
+  from = "/api/trigger"
+  to = "/.netlify/functions/trigger"
+  status = 200

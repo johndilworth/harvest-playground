@@ -75,3 +75,41 @@ Every item that isn't applied is logged in CHANGELOG.md (that night's publish no
   to this repo; every push to `main` deploys production from `site/`.
 - **Fallback (CLI)** if the Git link ever breaks, with `NETLIFY_AUTH_TOKEN` in the environment:
   `netlify deploy --prod --dir=site --site 4702dcbf-e724-4e32-b35c-739e1fdf7ae5 --message "cycle N"`
+
+## Dashboard (replaces the Lucid "Hub")
+- **Site:** https://harvest-dashboard.netlify.app (Netlify site `harvest-dashboard`, id `6f658653-21cc-4b1a-8094-b890bd04ef18`).
+  Source lives in `dashboard/` (separate from `site/`, so stickies never touch it). Not Git-linked: deploy with
+  `cd dashboard && netlify deploy --prod --dir=public --functions=netlify/functions --site 6f658653-21cc-4b1a-8094-b890bd04ef18`.
+- Pages: `/` dashboard, `/cycle.html?c=<N>` per cycle, `/summary.html` all cycles. All render client-side from
+  `dashboard/public/harvest.json`, the single data file. Noindex (header + meta + robots.txt).
+- **Nightly step 8:** update `harvest.json` (append a `nightlyHarvests` entry to the current cycle; on a new cycle mark the
+  old one `"superseded"`, append the new cycle with `"status":"current"`, bump `stats.pullRequests` if a PR was opened,
+  bump `stats.nightlyHarvests`, set `updatedAt`), commit, then run the deploy command above.
+
+### harvest.json schema (schemaVersion 1)
+```
+{
+  "schemaVersion": 1,
+  "project": { "name", "slug", "description", "repo", "site", "historyBoard", "schedule", "rules" },   // URLs as strings
+  "stats": { "pullRequests": int, "pullRequestsSource": str, "nightlyHarvests": int },
+  "updatedAt": ISO-8601 with offset,
+  "cycles": [ {
+    "number": int, "title": str, "createdAt": ISO-8601, "status": "current" | "superseded",
+    "harvestedFrom": int|null, "pullRequest": url|null, "commit": short sha, "screenshot": url,
+    "documents": [ { "title", "role": "hub"|"flow", "flow"?: "home"|"dinosaur"|"random"|"review"|…,
+                     "docId", "url", "description", "harvest"?: bool } ],      // one per Lucid doc (one per flow possible)
+    "nightlyHarvests": [ { "date": "YYYY-MM-DD", "stickies": int, "outcome": "applied"|"no_stickies"|"failed" } ],
+    "changes": { "applied":  [ { "priority": "must"|"try"|"consider", "flow", "text" } ],
+                 "skipped":  [ { "text", "reason" } ],     // reason per § Skipped items, e.g. "empty", "unsafe: malicious"
+                 "conflicts": [ str ], "hubStrays"?: [ str ], "note"?: str }
+  } ]
+}
+```
+Cycle stats (count, applied, skipped) are computed from `cycles`; the dashboard lists the `current` cycle first.
+
+### "Run harvest now" trigger
+`dashboard/netlify/functions/trigger.mjs` (`/api/trigger`). GET returns `{configured}`; the button is disabled unless
+both env vars below are set on the harvest-dashboard site. POST needs the shared secret plus typing `RUN`, then forwards
+`POST {project, action:"harvest", source, requestedAt}` with header `x-harvest-secret` to the webhook.
+- `HARVEST_TRIGGER_URL`: webhook that starts the harvest routine (it must run the nightly procedure and create cycle N+1).
+- `HARVEST_TRIGGER_SECRET`: shared secret typed by the user and sent to the webhook for verification.

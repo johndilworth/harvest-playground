@@ -12,7 +12,7 @@ SITE = "https://harvest-dashboard.netlify.app"; CAP = f"{SITE}/captures/harvest-
 LOCAL = f"../public/captures/harvest-dashboard/c{N}-review"
 SCREENS = [("01-home", "/", "Home — all Harvest projects", "Wider grid (up to 5 tiles). Project cards: name, harvest mode, sparkline, cycle count, current cycle, last harvest, screenshot — no description blurb."),
  ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard (Harvest Playground)", "Project links (Dashboard / Summary / Live site / History) sit under the title; top header is brand + All projects only."),
- ("03-cycle", f"/p/harvest-dashboard/cycle.html?c={N}", f"Cycle page (Harvest Dashboard · Cycle {N})", "Lucid documents as embed previews; Changes / Sticky authors only when present; no large screenshot; Manual harvests with Run harvest now."),
+ ("03-cycle", f"/p/harvest-dashboard/cycle.html?c={N}", f"Cycle page (Harvest Dashboard · Cycle {N})", "Lucid documents with Open board to comment buttons (no embeds); Changes / Sticky authors only when present; no large screenshot; Manual harvests with Run harvest now."),
  ("04-run-harvest-modal", f"/p/harvest-dashboard/cycle.html?c={N}", "Run harvest modal", "Passphrase only (no Type RUN); posts project 'harvest-dashboard' to the harvest webhook."),
  ("05-summary", "/p/harvest-playground/summary.html", "Summary (all cycles of a project)", "Table of every cycle: applied, skipped with reasons, conflicts. Authors appear next to each change; no separate authors section.")]
 e = lambda s: html.escape(s, quote=False)

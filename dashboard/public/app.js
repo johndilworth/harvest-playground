@@ -41,21 +41,19 @@ function docIdFromUrl(url) {
   const m = String(url || "").match(/\/(?:lucidchart|lucidspark)\/([0-9a-f-]{36})/i);
   return m ? m[1] : null;
 }
-function lucidEmbedUrl(doc) {
-  const id = doc.docId || docIdFromUrl(doc.url);
-  return id ? `https://lucid.app/documents/embedded/${id}` : null;
-}
-function docsHtml(docs, status) {
+function docsHtml(docs, status, shot) {
   if (!docs.length) return `<p class="muted">No Lucid documents.</p>`;
-  return `<div class="doc-grid">${docs.map((x) => {
-    const emb = lucidEmbedUrl(x);
-    const open = x.url || "#";
-    return `<a class="doc-tile" href="${open}" target="_blank" rel="noopener">
-      <div class="emb">${emb
-        ? `<iframe loading="lazy" allowfullscreen title="${esc(x.title)}" src="${esc(emb)}"></iframe>`
+  return `<p class="note-signin">Sign in to Lucid with your company account to comment — your name appears on your stickies.</p>
+  <div class="doc-grid">${docs.map((x) => {
+    const comment = x.commentUrl || x.url || "#";
+    return `<div class="doc-tile">
+      <div class="emb">${shot
+        ? `<img src="${esc(shot)}" alt="Cycle screenshot (static preview)" loading="lazy">`
         : `<div class="ph"><img src="/lucidchart-logo.svg" alt="" width="134" height="22"></div>`}</div>
       <div class="meta"><b>${esc(x.title)}</b><span class="tag">${"flow: " + esc(x.flow)}</span>
-        <div class="muted">${esc(x.description || "")}${status === "current" ? " · open for stickies" : " · harvested"}</div></div></a>`;
+        <div class="muted">${esc(x.description || "")}${status === "current" ? " · open for stickies" : " · harvested"}</div>
+        <div class="doc-actions"><a class="btn-comment" href="${esc(comment)}" target="_blank" rel="noopener">Open board to comment</a>
+        ${x.url && x.commentUrl ? `<a class="small" href="${esc(x.url)}" target="_blank" rel="noopener">Edit link</a>` : ""}</div></div></div>`;
   }).join("")}</div>`;
 }
 function changesHtml(ch) {
@@ -79,7 +77,7 @@ async function cycle() {
   $("main").innerHTML = `<h1>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>${curC ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${B}cycle.html?c=${curC.number}">Go to current cycle (Cycle ${curC.number}) →</a>` : ""}`}</h1>
   ${subnav(d.project, "cycle")}
   <p class="muted">${esc(c.title)} · created ${fmt(c.createdAt)}${c.harvestedFrom != null ? ` · harvested from Cycle ${c.harvestedFrom}` : ""}${c.pullRequest ? ` · <a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""} · commit <code>${esc(c.commit)}</code>${c.previewUrl ? ` · <a class="preview" href="${c.previewUrl}">Preview ↗</a>` : ""}</p>
-  <h2>Lucid documents</h2>${docsHtml(c.documents, c.status)}
+  <h2>Lucid documents</h2>${docsHtml(c.documents, c.status, c.screenshot)}
   ${changesHtml(ch)}
   ${authorsSection(c)}
   <h2 id="nightly">${runsLabel(d.project)}</h2><div class="card">${c.status === "current" && d.project.trigger ? `<p class="muted">Harvests this cycle's boards immediately and creates Cycle ${c.number + 1}.${isNightly(d.project) ? " Normally runs at 5 pm MT." : " This project has no nightly routine; harvests run only when triggered."}</p><div id="trig"><button disabled>Checking…</button></div>` : ""}${runs(d.project, c).length ? `<ul>${runs(d.project, c).map((h) => `<li>${esc(h.date)} — ${h.stickies} stickies (${esc(h.outcome)})</li>`).join("")}</ul>` : `<p class='muted'>None yet${isNightly(d.project) ? " — next harvest at 5 pm MT" : c.status === "current" ? " — harvested manually when requested" : ""}.</p>`}</div>

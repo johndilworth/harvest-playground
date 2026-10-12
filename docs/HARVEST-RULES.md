@@ -16,7 +16,8 @@ Dashboard (the hub): https://harvest-dashboard.netlify.app · Rules page: https:
    each sticky (priority, author, frame/screen) — read-only, never recolour/move/delete stickies in Lucid.
 5. **Apply** every safe item to the project's code (§ 5), log applied/skipped/conflicts, merge per the project's merge
    policy (§ 6), deploy.
-6. **New cycle**: capture the new build, build cycle N+1 boards, update the dashboard data; the old cycle becomes `superseded`.
+6. **New cycle**: capture the new build, build cycle N+1 boards, create an org-wide comment share link per board
+   (`commentUrl`, § 4), update the dashboard data; the old cycle becomes `superseded`.
 
 ## 2. Stickies: colours and priority
 | Colour | Meaning | Stored as |
@@ -55,6 +56,7 @@ Dashboard (the hub): https://harvest-dashboard.netlify.app · Rules page: https:
 - No secrets (e.g. prototype passwords) on boards; no filenames in image notes.
 
 ## 4. Sticky authors
+- **Comment share link at creation (rule since 2026-10-12):** right after creating each review board, call `lucid_create_document_share_link` (role `comment`, `restrict_to_account: true`, `allow_anonymous: false`, no `expires`) and store the returned acceptUrl as `commentUrl` on that board's `documents[]` entry. Skip if the entry already has a `commentUrl` (no duplicates). Dashboards link boards with an **Open board to comment** button (commentUrl, falling back to `url`) — **no Lucid embed iframes/previews**; the cycle screenshot from `/captures` is the static preview. Reviewers sign in to Lucid with their company account so their name appears on their stickies.
 - Boards are shared with reviewers as **named, signed-in collaborators**; Lucid then adds a read-only attribution line
   (`ReadonlyAttributionText`, or a `"<text>;   <author>"` label suffix) to each sticky. Comment authors come from
   `list_document_thread_comments`.
@@ -98,7 +100,7 @@ validates it and posts `{action:"create-project", project, setup:{…}}` to the 
 2. Links or creates the Netlify site (optional PR deploy previews).
 3. Adds the project to `dashboard/public/data/projects.json` and creates `dashboard/public/data/<slug>.json`.
 4. Captures cycle 0 to `dashboard/public/captures/<slug>/<flow>/`.
-5. Builds Lucidchart review board(s) per § 3 (no hub) and shares them with reviewers (remind them to stay signed in).
+5. Builds Lucidchart review board(s) per § 3 (no hub), creates an org-wide comment share link for each (§ 4) stored as `commentUrl`, and shares them with reviewers (remind them to sign in with their company account).
 6. Records cycle 0 (`current`), redeploys the dashboard; adds the slug to `PROJECTS` in `trigger.mjs` for manual runs.
 7. Sets up the schedule (manual: nothing; nightly: a routine), stores the merge policy, and notifies John in Grok Bot chat.
 
@@ -124,7 +126,7 @@ validates it and posts `{action:"create-project", project, setup:{…}}` to the 
   "cycles": [ {
     "number", "title", "createdAt", "status": "current"|"superseded", "harvestedFrom": int|null,
     "pullRequest": url|null, "commit": short sha, "screenshot": url, "previewUrl"?: deploy permalink,
-    "documents": [ { "title", "role": "flow", "flow"?, "docId", "url", "description", "harvest"?: bool } ],
+    "documents": [ { "title", "role": "flow", "flow"?, "docId", "url", "commentUrl", "description", "harvest"?: bool } ],
     "authors": [ { "name", "stickies" } ],
     "nightlyHarvests" | "manualHarvests": [ { "date": "YYYY-MM-DD", "stickies", "outcome": "applied"|"no_stickies"|"failed" } ],
     "changes": { "applied": [ { "priority": "must"|"try"|"consider", "flow", "text" } ],

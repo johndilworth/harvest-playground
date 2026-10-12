@@ -58,8 +58,13 @@ a.btn{display:inline-block;align-self:center;padding:8px 16px;border:1px solid #
 .doc-tile{display:flex;flex-direction:column;background:#F2F3F5;border:1px solid #d5d8dc;overflow:hidden;color:inherit;text-decoration:none}
 .doc-tile:hover{border-color:#1a5fb4;text-decoration:none}
 .doc-tile .emb{background:#fff;border-bottom:1px solid #d5d8dc;aspect-ratio:4/3;position:relative}
-.doc-tile .emb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .doc-tile .emb .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#fafbfc}
 .doc-tile .meta{padding:12px 14px}.doc-tile .meta b{display:block;margin-bottom:2px}
 .days{display:flex;flex-wrap:wrap;gap:8px 14px;margin:8px 0}
 .days label{font-weight:400!important}
+
+.doc-tile .emb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.doc-actions{display:flex;gap:12px;align-items:center;margin-top:10px}
+.btn-comment{display:inline-block;background:#f57c00;color:#fff!important;font-weight:600;padding:9px 16px;border-radius:8px;text-decoration:none}
+.btn-comment:hover{filter:brightness(1.08)}
+.note-signin{background:#fff8e1;border:1px solid #ffe08a;border-radius:8px;padding:8px 12px;font-size:14px}

@@ -19,7 +19,8 @@ new project). Project-specific procedures (paths, page structure, routines) live
    each sticky (priority, author, frame/screen) — read-only, never recolour/move/delete stickies in Lucid.</li>
 <li><strong>Apply</strong> every safe item to the project's code (§ 5), log applied/skipped/conflicts, merge per the project's merge
    policy (§ 6), deploy.</li>
-<li><strong>New cycle</strong>: capture the new build, build cycle N+1 boards, update the dashboard data; the old cycle becomes <code>superseded</code>.</li>
+<li><strong>New cycle</strong>: capture the new build, build cycle N+1 boards, create an org-wide comment share link per board
+   (<code>commentUrl</code>, § 4), update the dashboard data; the old cycle becomes <code>superseded</code>.</li>
 </ol>
 <h2 id="2-stickies-colours-and-priority">2. Stickies: colours and priority</h2>
 <table>
@@ -85,6 +86,7 @@ new project). Project-specific procedures (paths, page structure, routines) live
 </ul>
 <h2 id="4-sticky-authors">4. Sticky authors</h2>
 <ul>
+<li><strong>Comment share link at creation (rule since 2026-10-12):</strong> right after creating each review board, call <code>lucid_create_document_share_link</code> (role <code>comment</code>, <code>restrict_to_account: true</code>, <code>allow_anonymous: false</code>, no <code>expires</code>) and store the returned acceptUrl as <code>commentUrl</code> on that board's <code>documents[]</code> entry. Skip if the entry already has a <code>commentUrl</code> (no duplicates). Dashboards link boards with an <strong>Open board to comment</strong> button (commentUrl, falling back to <code>url</code>) — <strong>no Lucid embed iframes/previews</strong>; the cycle screenshot from <code>/captures</code> is the static preview. Reviewers sign in to Lucid with their company account so their name appears on their stickies.</li>
 <li>Boards are shared with reviewers as <strong>named, signed-in collaborators</strong>; Lucid then adds a read-only attribution line
   (<code>ReadonlyAttributionText</code>, or a <code>"&lt;text&gt;;   &lt;author&gt;"</code> label suffix) to each sticky. Comment authors come from
   <code>list_document_thread_comments</code>.</li>
@@ -130,7 +132,7 @@ validates it and posts <code>{action:"create-project", project, setup:{…}}</co
 <li>Links or creates the Netlify site (optional PR deploy previews).</li>
 <li>Adds the project to <code>dashboard/public/data/projects.json</code> and creates <code>dashboard/public/data/&lt;slug&gt;.json</code>.</li>
 <li>Captures cycle 0 to <code>dashboard/public/captures/&lt;slug&gt;/&lt;flow&gt;/</code>.</li>
-<li>Builds Lucidchart review board(s) per § 3 (no hub) and shares them with reviewers (remind them to stay signed in).</li>
+<li>Builds Lucidchart review board(s) per § 3 (no hub), creates an org-wide comment share link for each (§ 4) stored as <code>commentUrl</code>, and shares them with reviewers (remind them to sign in with their company account).</li>
 <li>Records cycle 0 (<code>current</code>), redeploys the dashboard; adds the slug to <code>PROJECTS</code> in <code>trigger.mjs</code> for manual runs.</li>
 <li>Sets up the schedule (manual: nothing; nightly: a routine), stores the merge policy, and notifies John in Grok Bot chat.</li>
 </ol>
@@ -158,7 +160,7 @@ validates it and posts <code>{action:"create-project", project, setup:{…}}</co
   &quot;cycles&quot;: [ {
     &quot;number&quot;, &quot;title&quot;, &quot;createdAt&quot;, &quot;status&quot;: &quot;current&quot;|&quot;superseded&quot;, &quot;harvestedFrom&quot;: int|null,
     &quot;pullRequest&quot;: url|null, &quot;commit&quot;: short sha, &quot;screenshot&quot;: url, &quot;previewUrl&quot;?: deploy permalink,
-    &quot;documents&quot;: [ { &quot;title&quot;, &quot;role&quot;: &quot;flow&quot;, &quot;flow&quot;?, &quot;docId&quot;, &quot;url&quot;, &quot;description&quot;, &quot;harvest&quot;?: bool } ],
+    &quot;documents&quot;: [ { &quot;title&quot;, &quot;role&quot;: &quot;flow&quot;, &quot;flow&quot;?, &quot;docId&quot;, &quot;url&quot;, &quot;commentUrl&quot;, &quot;description&quot;, &quot;harvest&quot;?: bool } ],
     &quot;authors&quot;: [ { &quot;name&quot;, &quot;stickies&quot; } ],
     &quot;nightlyHarvests&quot; | &quot;manualHarvests&quot;: [ { &quot;date&quot;: &quot;YYYY-MM-DD&quot;, &quot;stickies&quot;, &quot;outcome&quot;: &quot;applied&quot;|&quot;no_stickies&quot;|&quot;failed&quot; } ],
     &quot;changes&quot;: { &quot;applied&quot;: [ { &quot;priority&quot;: &quot;must&quot;|&quot;try&quot;|&quot;consider&quot;, &quot;flow&quot;, &quot;text&quot; } ],

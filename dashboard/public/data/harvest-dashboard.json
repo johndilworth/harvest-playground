@@ -22,7 +22,7 @@
  "cycles": [
   {
    "number": 0,
-   "title": "Cycle 0 \u2014 multi-project dashboard",
+   "title": "Cycle 0 — multi-project dashboard",
    "createdAt": "2026-10-12T13:19:27-06:00",
    "status": "superseded",
    "harvestedFrom": null,
@@ -31,22 +31,24 @@
    "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c0-review/01-home.png",
    "documents": [
     {
-     "title": "Cycle 0 review \u00b7 All pages",
+     "title": "Cycle 0 review · All pages",
      "role": "flow",
      "flow": "review",
      "docId": "6337bd96-737f-4d11-8030-10b15474e71c",
      "url": "https://lucid.app/lucidchart/6337bd96-737f-4d11-8030-10b15474e71c/edit",
      "description": "5 screens on one Lucidchart board: home, project dashboard, cycle page, Run harvest modal, summary.",
-     "harvest": true
+     "harvest": true,
+     "commentUrl": "https://lucid.app/lucidchart/6337bd96-737f-4d11-8030-10b15474e71c/edit?invitationId=inv_03838dcf-411d-4d0b-a001-22e0bf3512d4"
     },
     {
-     "title": "Harvest Dashboard \u2014 Cycle 0 \u2014 New project",
+     "title": "Harvest Dashboard — Cycle 0 — New project",
      "role": "flow",
      "flow": "New project",
      "docId": "ea0758f2-6453-444d-8e7d-7c296a92fd0b",
      "url": "https://lucid.app/lucidchart/ea0758f2-6453-444d-8e7d-7c296a92fd0b/edit",
      "description": "6 screens on its own Lucidchart board: home with + New project, empty /new.html, form filled with sample data, validation errors, review & confirm modal, wrong-passphrase result.",
-     "harvest": true
+     "harvest": true,
+     "commentUrl": "https://lucid.app/lucidchart/ea0758f2-6453-444d-8e7d-7c296a92fd0b/edit?invitationId=inv_5f93966d-dfaf-4b69-9eee-10ab56c8e708"
     }
    ],
    "authors": [
@@ -84,7 +86,7 @@
   },
   {
    "number": 1,
-   "title": "Cycle 1 \u2014 wider home, Lucid embeds, schedule calendar, drop RUN confirm",
+   "title": "Cycle 1 — wider home, Lucid embeds, schedule calendar, drop RUN confirm",
    "createdAt": "2026-10-12T15:30:16-06:00",
    "status": "current",
    "harvestedFrom": 0,
@@ -94,22 +96,24 @@
    "previewUrl": "https://6acd50670401fb3f6f1deffe--harvest-dashboard.netlify.app",
    "documents": [
     {
-     "title": "Cycle 1 review \u00b7 All pages",
+     "title": "Cycle 1 review · All pages",
      "role": "flow",
      "flow": "review",
      "docId": "090db6e7-d945-43da-9eff-7d8181ab8f69",
      "url": "https://lucid.app/lucidchart/090db6e7-d945-43da-9eff-7d8181ab8f69/edit",
      "description": "5 screens: home, project dashboard, cycle page, Run harvest modal, summary.",
-     "harvest": true
+     "harvest": true,
+     "commentUrl": "https://lucid.app/lucidchart/090db6e7-d945-43da-9eff-7d8181ab8f69/edit?invitationId=inv_3081e3e2-6a61-45cb-a0cc-06a0f4fabf89"
     },
     {
-     "title": "Harvest Dashboard \u2014 Cycle 1 \u2014 New project",
+     "title": "Harvest Dashboard — Cycle 1 — New project",
      "role": "flow",
      "flow": "New project",
      "docId": "074fcea1-0c98-4909-9ae1-743624362fe9",
      "url": "https://lucid.app/lucidchart/074fcea1-0c98-4909-9ae1-743624362fe9/edit",
      "description": "6 screens: home + New project, empty form, filled, validation, confirm modal, wrong passphrase.",
-     "harvest": true
+     "harvest": true,
+     "commentUrl": "https://lucid.app/lucidchart/074fcea1-0c98-4909-9ae1-743624362fe9/edit?invitationId=inv_b4275a90-7bb6-465e-8992-0318e4f8aa1e"
     }
    ],
    "authors": [],
@@ -120,66 +124,66 @@
      {
       "priority": "must",
       "flow": "review",
-      "text": "Increase the number of projects that are displayed horizontally on the page - this could mean increasing the max width of the page, especially for large monitors. \u00b7 by John Dilworth"
+      "text": "Increase the number of projects that are displayed horizontally on the page - this could mean increasing the max width of the page, especially for large monitors. · by John Dilworth"
      },
      {
       "priority": "must",
       "flow": "review",
-      "text": "The elements in the header are actually specific to the project, so move them under the project title:\n\nDashboard (current)\nSummary\nLive site\nHistory \u00b7 by John Dilworth"
+      "text": "The elements in the header are actually specific to the project, so move them under the project title:\n\nDashboard (current)\nSummary\nLive site\nHistory · by John Dilworth"
      },
      {
       "priority": "must",
       "flow": "review",
-      "text": "Remove \"Type RUN\" to confirm. Since this is password only and not a descriptive action, the RUN confirmation isn't necessary. \n\nUser must enter passphrase and click Run harvest. \n\nThere may be other security concerns, but this only prototype now and not critical. \u00b7 by John Dilworth"
+      "text": "Remove \"Type RUN\" to confirm. Since this is password only and not a descriptive action, the RUN confirmation isn't necessary. \n\nUser must enter passphrase and click Run harvest. \n\nThere may be other security concerns, but this only prototype now and not critical. · by John Dilworth"
      },
      {
       "priority": "must",
       "flow": "New project",
-      "text": "Add options for scheduling - a calendar with daily, weekly, or pick certain days of the week. like calendar events. \n\nand manual. \u00b7 by anonymous"
+      "text": "Add options for scheduling - a calendar with daily, weekly, or pick certain days of the week. like calendar events. \n\nand manual. · by anonymous"
      },
      {
       "priority": "try",
       "flow": "review",
-      "text": "Remove description under harvest projects - it's unecessary. \u00b7 by John Dilworth"
+      "text": "Remove description under harvest projects - it's unecessary. · by John Dilworth"
      },
      {
       "priority": "try",
       "flow": "review",
-      "text": "Manual harvest should be available for all projects - it is not available on some projects \u00b7 by John Dilworth"
+      "text": "Manual harvest should be available for all projects - it is not available on some projects · by John Dilworth"
      },
      {
       "priority": "try",
       "flow": "review",
-      "text": "Don't show the changes made or sticky authors if there are none to show. \u00b7 by John Dilworth"
+      "text": "Don't show the changes made or sticky authors if there are none to show. · by John Dilworth"
      },
      {
       "priority": "try",
       "flow": "review",
-      "text": "Under the \"Lucid documents\" section make the lucid document a board preview - embed code can look like this in html - wonder if this can be automated or obtained from the MCP \u00b7 by John Dilworth"
+      "text": "Under the \"Lucid documents\" section make the lucid document a board preview - embed code can look like this in html - wonder if this can be automated or obtained from the MCP · by John Dilworth"
      },
      {
       "priority": "try",
       "flow": "review",
-      "text": "Don't include large screenshot here, only link to the cycle boards that use the Lucid embeds. \u00b7 by John Dilworth"
+      "text": "Don't include large screenshot here, only link to the cycle boards that use the Lucid embeds. · by John Dilworth"
      },
      {
       "priority": "try",
       "flow": "review",
-      "text": "Remove author section \u2014 author names appear next to summaries, and user can click into cycle board to see who left actual sticky notes. \u00b7 by John Dilworth"
+      "text": "Remove author section — author names appear next to summaries, and user can click into cycle board to see who left actual sticky notes. · by John Dilworth"
      },
      {
       "priority": "try",
       "flow": "New project",
-      "text": "Make this wider on big screens - up to 5 tiles across \u00b7 by anonymous"
+      "text": "Make this wider on big screens - up to 5 tiles across · by anonymous"
      }
     ],
     "skipped": [
      {
-      "text": "Lucid documents look like this in Lucid. Here's an SVG of the Lucidchart logo that can be used in a tile/preview \u00b7 by John Dilworth",
+      "text": "Lucid documents look like this in Lucid. Here's an SVG of the Lucidchart logo that can be used in a tile/preview · by John Dilworth",
       "reason": "outside frame"
      },
      {
-      "text": "(empty sticky) \u00b7 by anonymous",
+      "text": "(empty sticky) · by anonymous",
       "reason": "empty"
      }
     ],

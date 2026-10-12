@@ -84,7 +84,7 @@ Every item that isn't applied is logged in CHANGELOG.md (that night's publish no
 - **Never create a Lucid "Hub" board.** The dashboard is the hub: each cycle's documents are listed on its cycle page.
   Existing hub docs are left in Lucid untouched but are no longer listed anywhere.
 - **Sticky authors on:** every review board's legend says “Stickies show your name — leave yours signed in” and the
-  board is shared to reviewers as named (signed-in) collaborators, so each sticky carries Lucid's author attribution.
+  board gets an org-wide comment share link (`commentUrl`, created when the board is created; dashboard shows an "Open board to comment" button, no embeds) and is shared to reviewers as named (signed-in) collaborators, so each sticky carries Lucid's author attribution.
   See § Sticky authors for how the harvest reads it.
 
 ## Sticky authors
@@ -144,7 +144,7 @@ else **`anonymous`**). Include authors in the CHANGELOG entry (`… · by <autho
     "harvestedFrom": int|null, "pullRequest": url|null, "commit": short sha, "screenshot": url,
     "previewUrl"?: url,       // Netlify deploy permalink https://<deploy_id>--harvest-playground.netlify.app for `commit`
     "documents": [ { "title", "role": "flow", "flow"?: "home"|"dinosaur"|"random"|"review"|…,
-                     "docId", "url", "description", "harvest"?: bool } ],      // one per Lucid doc; no "hub" role (v2)
+                     "docId", "url", "commentUrl", "description", "harvest"?: bool } ],      // one per Lucid doc; no "hub" role (v2)
     "authors": [ { "name": str, "stickies": int } ],   // stickies harvested from THIS cycle's boards, per author;
                                                        // unknown author = "anonymous"; [] when none yet
     "nightlyHarvests": [ { "date": "YYYY-MM-DD", "stickies": int, "outcome": "applied"|"no_stickies"|"failed" } ],
@@ -206,10 +206,11 @@ someone presses **Run harvest now** on its current cycle page (`/p/harvest-dashb
    harvest modal, summary; add screens if the dashboard grew new pages), then redeploy so the captures are public.
 5. Build the board: `cd dashboard/board && python3 build_board.py <N+1> <sha> > c<N+1>/lucid-spec.json`; import as
    **Lucidchart** (`use_assisted_layout:false`), set the page background `#E8EAED` (`skills.pages.setBackgroundColor`),
-   export every page to verify the images render (`c<N+1>/export-p1.png`), write `c<N+1>/lucid-doc.json`. One board unless
+   export every page to verify the images render (`c<N+1>/export-p1.png`), write `c<N+1>/lucid-doc.json`. Create the org-wide
+   comment share link (`lucid_create_document_share_link`: role `comment`, `restrict_to_account:true`, `allow_anonymous:false`, no expiry) and keep its acceptUrl as `commentUrl`. One board unless
    a flow has more than 5 screens; no hub.
 6. Update `dashboard/public/data/harvest-dashboard.json`: mark cycle N `superseded`, add its `manualHarvests` entry and
-   `authors`; append cycle N+1 (`current`, `harvestedFrom` N, `commit`, `documents`, `contributions`, `changes` with
+   `authors`; append cycle N+1 (`current`, `harvestedFrom` N, `commit`, `documents`, `contributions` (each document with `commentUrl`), `changes` with
    applied/skipped reasons, `previewUrl` = production deploy permalink `https://<deploy_id>--harvest-dashboard.netlify.app`
    of that commit); bump `stats.manualHarvests`, set `updatedAt`; commit, push, deploy.
 
@@ -237,7 +238,7 @@ The setup run must:
 3. **Dashboard data** — add an entry to `dashboard/public/data/projects.json` (`slug`, `name`, `file`, `harvestMode`) and create `dashboard/public/data/<slug>.json` (project info incl. repo, site, schedule, merge policy, reviewers).
 4. **Cycle 0 captures** — capture every start URL and each flow's screens to `dashboard/public/captures/<slug>/<flow>/` (tracked in git).
 5. **Lucidchart review board(s)** — follow the board rules: one board per flow, a flow with more than 5 screens is split into separate boards, **no hub board**.
-6. **Share** the board(s) with the reviewers (edit/comment). Remind them that stickies show their author only when they are signed in to Lucid.
+6. **Share** the board(s): create an org-wide comment share link per board (`lucid_create_document_share_link`, role `comment`, restricted to account, not anonymous, no expiry) and store it as `commentUrl` in the project data file; no embeds. Also share with the reviewers (edit/comment) as needed. Remind them that stickies show their author only when they are signed in to Lucid.
 7. **Record Cycle 0** in `<slug>.json` (boards, screenshots, status `current`).
 8. **Redeploy the dashboard** (`cd dashboard && netlify deploy --prod --dir=public --functions=netlify/functions --site 6f658653-21cc-4b1a-8094-b890bd04ef18`) so the project appears on the home page; to allow "Run harvest now" on it, add the slug to `PROJECTS` in `trigger.mjs`.
 9. **Schedule** — Manual: nothing more. Nightly: a routine must be created to run the harvest at the chosen time (MT), weekdays only unless weekends is on.

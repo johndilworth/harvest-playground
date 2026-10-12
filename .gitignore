@@ -2,3 +2,4 @@ node_modules/
 journey/node_modules/
 journey/out/
 .netlify/
+dashboard/public/captures/

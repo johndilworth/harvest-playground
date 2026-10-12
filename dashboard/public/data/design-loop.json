@@ -10,8 +10,7 @@
     "site": "https://design-loop-sample-prototype.netlify.app",
     "historyBoard": "https://lucid.app/lucidchart/01d8c4f0-95d2-4de7-b997-d9a83df20ccb/edit",
     "historyBoardLabel": "Evolution c1→c4 ↗",
-    "schedule": "manual (no nightly routine)",
-    "rules": "https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md"
+    "schedule": "manual (no nightly routine)"
   },
   "stats": {
     "pullRequests": 4,

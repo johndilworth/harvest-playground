@@ -9,8 +9,7 @@
     "repo": "https://github.com/johndilworth/harvest-for-lucid-site",
     "site": "https://harvest-for-lucid.netlify.app",
     "historyBoard": null,
-    "schedule": "manual (no nightly routine)",
-    "rules": "https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md"
+    "schedule": "manual (no nightly routine)"
   },
   "stats": {
     "pullRequests": 1,

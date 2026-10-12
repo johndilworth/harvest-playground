@@ -33,7 +33,7 @@ async function dashboard() {
    <h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
    <div class="muted">${fmt(c.createdAt)} · ${c.documents.length} Lucid docs · ${c.changes.applied.length} applied · ${authorsTotal(c)} stickies by ${authorsCount(c)} author(s)</div><div>${esc(c.title)}</div>
    <img src="${c.screenshot}" alt="Cycle ${c.number} home screenshot" loading="lazy"></a>`).join("")}</div>
-  <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)} · <a href="${p.rules}">Project rules ↗</a> · ${skipped} skipped overall</p>`;
+  <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)}${p.rules ? ` · <a href="${p.rules}">Project rules ↗</a>` : ""} · ${skipped} skipped overall</p>`;
   setupHistogram();
 }
 

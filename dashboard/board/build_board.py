@@ -10,11 +10,11 @@ N, COMMIT = int(sys.argv[1]), sys.argv[2]
 PAD, GAP, HGAP, FW = 400, 360, 480, 1440
 SITE = "https://harvest-dashboard.netlify.app"; CAP = f"{SITE}/captures/harvest-dashboard/c{N}-review"
 LOCAL = f"../public/captures/harvest-dashboard/c{N}-review"
-SCREENS = [("01-home", "/", "Home — all Harvest projects", "Project cards: name, description, harvest mode, contributions sparkline, cycle count, current cycle, last harvest, current screenshot."),
- ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard (Harvest Playground)", "Stacked contributions histogram per cycle (bars open cycle pages), totals chips, cycle cards."),
- ("03-cycle", "/p/harvest-dashboard/cycle.html?c=0", "Cycle page (Harvest Dashboard · Cycle 0)", "Lucid documents, changes, sticky authors, Manual harvests with Run harvest now, screenshot, prev/next nav."),
- ("04-run-harvest-modal", "/p/harvest-dashboard/cycle.html?c=0", "Run harvest modal", "Passphrase + type RUN; posts project 'harvest-dashboard' to the harvest webhook."),
- ("05-summary", "/p/harvest-playground/summary.html", "Summary (all cycles of a project)", "Table of every cycle: applied, skipped with reasons, conflicts, sticky authors.")]
+SCREENS = [("01-home", "/", "Home — all Harvest projects", "Wider grid (up to 5 tiles). Project cards: name, harvest mode, sparkline, cycle count, current cycle, last harvest, screenshot — no description blurb."),
+ ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard (Harvest Playground)", "Project links (Dashboard / Summary / Live site / History) sit under the title; top header is brand + All projects only."),
+ ("03-cycle", f"/p/harvest-dashboard/cycle.html?c={N}", f"Cycle page (Harvest Dashboard · Cycle {N})", "Lucid documents as embed previews; Changes / Sticky authors only when present; no large screenshot; Manual harvests with Run harvest now."),
+ ("04-run-harvest-modal", f"/p/harvest-dashboard/cycle.html?c={N}", "Run harvest modal", "Passphrase only (no Type RUN); posts project 'harvest-dashboard' to the harvest webhook."),
+ ("05-summary", "/p/harvest-playground/summary.html", "Summary (all cycles of a project)", "Table of every cycle: applied, skipped with reasons, conflicts. Authors appear next to each change; no separate authors section.")]
 e = lambda s: html.escape(s, quote=False)
 def text(i, x, y, w, h, t): return {"id": i, "type": "text", "boundingBox": {"x": x, "y": y, "w": w, "h": h}, "text": t}
 shots = []

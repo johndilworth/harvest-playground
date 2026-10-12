@@ -209,6 +209,7 @@ def main():
                            if n['bbox'] and o['pageId'] == n['pageId'] and o['id'] != assigned), key=lambda t: t[0])[:3]
             board.append({'itemId': n['id'], 'kind': kind, 'text': n['text'], 'fill': n['fill'], 'pageId': n['pageId'],
                           'boardSource': 'text' if BOARD_RE.match(n['text']) else 'color', 'bbox': n['bbox'], 'frameId': assigned,
+                          'author': n.get('author'),
                           'nearest': [{'id': i, 'element': element_kind(i), 'distance': round(d, 1)} for d, i in near]})
             continue
         pr_text = text_priority(n['text'])
@@ -218,7 +219,7 @@ def main():
               'prioritySource': ('text' if pr_text else 'color' if pr_color else None),
               'textPriority': pr_text, 'colorPriority': pr_color,
               'priorityConflict': bool(pr_text and pr_color and pr_text != pr_color),
-              'fill': n['fill'], 'bbox': n['bbox'], 'containment': containment}
+              'fill': n['fill'], 'bbox': n['bbox'], 'containment': containment, 'author': n.get('author')}
         if fb['priorityConflict']:
             conflicts.append({'itemId': n['id'], 'textPriority': pr_text, 'colorPriority': pr_color, 'used': pr_text})
         on_before = [b['id'] for b in before_imgs if n['bbox'] and b['pageId'] == n['pageId']

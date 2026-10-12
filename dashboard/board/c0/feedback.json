@@ -1,0 +1,554 @@
+{
+  "cycle": 0,
+  "harvestedAt": "2026-10-12T21:22:34.954870+00:00",
+  "boards": [
+    {
+      "docId": "6337bd96-737f-4d11-8030-10b15474e71c",
+      "flow": "review"
+    },
+    {
+      "docId": "ea0758f2-6453-444d-8e7d-7c296a92fd0b",
+      "flow": "New project"
+    }
+  ],
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home — all Harvest projects",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/",
+      "url": "https://harvest-dashboard.netlify.app/",
+      "title": "Home — all Harvest projects",
+      "h1": "Home — all Harvest projects",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/01-home.png",
+      "feedback": [
+        {
+          "itemId": "mTLCWi4Usx0B",
+          "kind": "sticky",
+          "text": "Remove description under harvest projects - it's unecessary.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1685.9517961985414,
+            "y": 400.0,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        },
+        {
+          "itemId": "WRLCnZakDOw8",
+          "kind": "sticky",
+          "text": "Increase the number of projects that are displayed horizontally on the page - this could mean increasing the max width of the page, especially for large monitors.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 1882.0841338963178,
+            "y": 768.4255440530387,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-project-dashboard",
+      "pageId": "review",
+      "frameTitle": "02-project-dashboard · /p/harvest-playground/ · Project dashboard (Harvest Playground)",
+      "stepKey": "02-project-dashboard",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/",
+      "title": "Project dashboard (Harvest Playground)",
+      "h1": "Project dashboard (Harvest Playground)",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/02-project-dashboard.png",
+      "feedback": [
+        {
+          "itemId": ".TLChjaNX-Gf",
+          "kind": "sticky",
+          "text": "The elements in the header are actually specific to the project, so move them under the project title:\n\nDashboard (current)\nSummary\nLive site\nHistory",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 3779.7891924466926,
+            "y": 188.52622336028935,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-project-dashboard",
+            "via": null,
+            "bbox": "frame-02-project-dashboard",
+            "bestOverlap": {
+              "frameId": "frame-02-project-dashboard",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-cycle",
+      "pageId": "review",
+      "frameTitle": "03-cycle · /p/harvest-dashboard/cycle.html?c=0 · Cycle page (Harvest Dashboard · Cycle 0)",
+      "stepKey": "03-cycle",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=0",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=0",
+      "title": "Cycle page (Harvest Dashboard · Cycle 0)",
+      "h1": "Cycle page (Harvest Dashboard · Cycle 0)",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/03-cycle.png",
+      "feedback": [
+        {
+          "itemId": "iVLCJluHCAiX",
+          "kind": "sticky",
+          "text": "Manual harvest should be available for all projects - it is not available on some projects",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 7221.246446341394,
+            "y": 1084.355105455537,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-cycle",
+            "via": null,
+            "bbox": "frame-03-cycle",
+            "bestOverlap": {
+              "frameId": "frame-03-cycle",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        },
+        {
+          "itemId": "LrLCslTQZTfq",
+          "kind": "sticky",
+          "text": "Don't show the changes made or sticky authors if there are none to show.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 7192.389092451728,
+            "y": 857.8233546176032,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-cycle",
+            "via": null,
+            "bbox": "frame-03-cycle",
+            "bestOverlap": {
+              "frameId": "frame-03-cycle",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        },
+        {
+          "itemId": "QVLC.4sJ81FP",
+          "kind": "sticky",
+          "text": "Under the \"Lucid documents\" section make the lucid document a board preview - embed code can look like this in html - wonder if this can be automated or obtained from the MCP",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 6842.464810226777,
+            "y": 471.30006706330323,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-cycle",
+            "via": "shot-03-cycle",
+            "bbox": "frame-03-cycle",
+            "bestOverlap": {
+              "frameId": "frame-03-cycle",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        },
+        {
+          "itemId": "ZXLCUjNjTtKF",
+          "kind": "sticky",
+          "text": "Don't include large screenshot here, only link to the cycle boards that use the Lucid embeds. ",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 5941.454576855395,
+            "y": 1290.9598508469885,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-cycle",
+            "via": null,
+            "bbox": "frame-03-cycle",
+            "bestOverlap": {
+              "frameId": "frame-03-cycle",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-04-run-harvest-modal",
+      "pageId": "review",
+      "frameTitle": "04-run-harvest-modal · /p/harvest-dashboard/cycle.html?c=0 · Run harvest modal",
+      "stepKey": "04-run-harvest-modal",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=0",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=0",
+      "title": "Run harvest modal",
+      "h1": "Run harvest modal",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/04-run-harvest-modal.png",
+      "feedback": [
+        {
+          "itemId": "TYLCsUEy7bdg",
+          "kind": "sticky",
+          "text": "Remove \"Type RUN\" to confirm. Since this is password only and not a descriptive action, the RUN confirmation isn't necessary. \n\nUser must enter passphrase and click Run harvest. \n\nThere may be other security concerns, but this only prototype now and not critical.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 9934.06917968143,
+            "y": 982.3556522048307,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-04-run-harvest-modal",
+            "via": null,
+            "bbox": "frame-04-run-harvest-modal",
+            "bestOverlap": {
+              "frameId": "frame-04-run-harvest-modal",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-05-summary",
+      "pageId": "review",
+      "frameTitle": "05-summary · /p/harvest-playground/summary.html · Summary (all cycles of a project)",
+      "stepKey": "05-summary",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/summary.html",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/summary.html",
+      "title": "Summary (all cycles of a project)",
+      "h1": "Summary (all cycles of a project)",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/05-summary.png",
+      "feedback": [
+        {
+          "itemId": "WZLCVCu9Yb3e",
+          "kind": "sticky",
+          "text": "Remove author section — author names appear next to summaries, and user can click into cycle board to see who left actual sticky notes.\n",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 12608.532437452173,
+            "y": 2217.1170902487906,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-05-summary",
+            "via": null,
+            "bbox": "frame-05-summary",
+            "bestOverlap": {
+              "frameId": "frame-05-summary",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-01-home-new-button",
+      "pageId": "new-project",
+      "frameTitle": "01-home-new-button · / · Home — + New project",
+      "stepKey": "01-home-new-button",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/",
+      "url": "https://harvest-dashboard.netlify.app/",
+      "title": "Home — + New project",
+      "h1": "Home — + New project",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/01-home-new-button.png",
+      "feedback": [
+        {
+          "itemId": "SpLCeE_DetC.",
+          "kind": "sticky",
+          "text": "Make this wider on big screens - up to 5 tiles across",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1802.905304504333,
+            "y": 685.5858201467549,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home-new-button",
+            "via": null,
+            "bbox": "frame-01-home-new-button",
+            "bestOverlap": {
+              "frameId": "frame-01-home-new-button",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-new-empty",
+      "pageId": "new-project",
+      "frameTitle": "02-new-empty · /new.html · New project form — empty",
+      "stepKey": "02-new-empty",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "New project form — empty",
+      "h1": "New project form — empty",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/02-new-empty.png",
+      "feedback": [
+        {
+          "itemId": "QoLC-wKtW94R",
+          "kind": "sticky",
+          "text": "Add options for scheduling - a calendar with daily, weekly, or pick certain days of the week. like calendar events. \n\nand manual.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 4428.83400993999,
+            "y": 1625.5,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-new-empty",
+            "via": null,
+            "bbox": "frame-02-new-empty",
+            "bestOverlap": {
+              "frameId": "frame-02-new-empty",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-form-filled",
+      "pageId": "new-project",
+      "frameTitle": "03-form-filled · /new.html · Form filled with sample data",
+      "stepKey": "03-form-filled",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "Form filled with sample data",
+      "h1": "Form filled with sample data",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/03-form-filled.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-04-validation-errors",
+      "pageId": "new-project",
+      "frameTitle": "04-validation-errors · /new.html · Validation errors",
+      "stepKey": "04-validation-errors",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "Validation errors",
+      "h1": "Validation errors",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/04-validation-errors.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-05-confirm-modal",
+      "pageId": "new-project",
+      "frameTitle": "05-confirm-modal · /new.html · Review & confirm modal",
+      "stepKey": "05-confirm-modal",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "Review & confirm modal",
+      "h1": "Review & confirm modal",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/05-confirm-modal.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-06-wrong-passphrase",
+      "pageId": "new-project",
+      "frameTitle": "06-wrong-passphrase · /new.html · Wrong passphrase result",
+      "stepKey": "06-wrong-passphrase",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "Wrong passphrase result",
+      "h1": "Wrong passphrase result",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/06-wrong-passphrase.png",
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [
+    {
+      "itemId": "O2LCWuf4Q9es",
+      "kind": "sticky",
+      "text": "Lucid documents look like this in Lucid. Here's an SVG of the Lucidchart logo that can be used in a tile/preview",
+      "priority": "try",
+      "prioritySource": "color",
+      "textPriority": null,
+      "colorPriority": "try",
+      "priorityConflict": false,
+      "fill": "#ffe342ff",
+      "bbox": {
+        "x": 7727.501962559181,
+        "y": 738.9546000427898,
+        "w": 160.0,
+        "h": 160.0
+      },
+      "containment": {
+        "childrenIds": null,
+        "via": null,
+        "bbox": null,
+        "bestOverlap": null
+      },
+      "author": "John Dilworth"
+    }
+  ],
+  "boardFeedback": [],
+  "needsIntent": [
+    {
+      "itemId": "sqLCPdrW0TTo",
+      "kind": "sticky",
+      "pageId": "new-project",
+      "frameId": "frame-01-home-new-button",
+      "stepKey": "01-home-new-button",
+      "fill": "#ffe342ff",
+      "colorPriority": "try",
+      "boardColor": false,
+      "author": null,
+      "bbox": {
+        "x": 1823.9890233272345,
+        "y": 452.9620361185291,
+        "w": 160.0,
+        "h": 160.0
+      },
+      "containment": {
+        "childrenIds": "frame-01-home-new-button",
+        "via": null,
+        "bbox": "frame-01-home-new-button",
+        "bestOverlap": {
+          "frameId": "frame-01-home-new-button",
+          "ratio": 1.0
+        }
+      },
+      "note": "empty sticky (no text): ask the reviewer what they meant; no priority, not implemented"
+    }
+  ],
+  "priorityConflicts": [],
+  "containmentDisagreements": []
+}

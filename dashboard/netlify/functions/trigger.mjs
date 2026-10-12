@@ -8,7 +8,7 @@ const json = (code, body) => new Response(JSON.stringify(body), { status: code, 
 const digest = (s) => createHash("sha256").update(String(s)).digest();
 const safeEqual = (a, b) => timingSafeEqual(digest(a), digest(b)); // equal-length digests -> constant time
 // Projects whose current cycle page shows "Run harvest now" (must match data/<slug>.json project.trigger)
-const PROJECTS = new Set(["harvest-playground", "harvest-dashboard"]);
+const PROJECTS = new Set(["harvest-playground", "harvest-dashboard", "design-loop", "harvest-site"]);
 const COOLDOWN_MS = 10 * 60 * 1000;
 const MAX_BODY = 32 * 1024, MAX_PAYLOAD = 24 * 1024;
 const lastTrigger = {}; // per project; best-effort: only holds within a warm function instance
@@ -89,9 +89,17 @@ function validateSetup(project, s) {
   o.flows = fl.slice(0, 30).map((f, i) => ({ name: str(f?.name, 80, `Flow ${i + 1} name`, e, { required: true }),
     startPath: str(f?.startPath, 300, `Flow ${i + 1} start path`, e, { required: true, re: /^\/\S*$/ }), description: str(f?.description, 300, `Flow ${i + 1} description`, e) }));
   const sc = s.schedule || {};
-  if (sc.mode === "nightly") o.schedule = { mode: "nightly", time: str(sc.time, 5, "Nightly time", e, { required: true, re: /^([01]\d|2[0-3]):[0-5]\d$/ }), timezone: "America/Denver", weekends: sc.weekends === true };
-  else if (sc.mode === "manual" || sc.mode == null) o.schedule = { mode: "manual" };
-  else e.push("schedule.mode must be manual or nightly.");
+  const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
+  const DAYS = new Set(["mon","tue","wed","thu","fri","sat","sun"]);
+  if (sc.mode === "manual" || sc.mode == null) o.schedule = { mode: "manual" };
+  else if (sc.mode === "daily") o.schedule = { mode: "daily", time: str(sc.time, 5, "Daily time", e, { required: true, re: TIME_RE }), timezone: "America/Denver" };
+  else if (sc.mode === "weekly") {
+    const days = Array.isArray(sc.days) ? sc.days.map((d) => String(d).toLowerCase()).filter((d) => DAYS.has(d)) : [];
+    if (!days.length) e.push("Pick at least one day of the week.");
+    o.schedule = { mode: "weekly", time: str(sc.time, 5, "Weekly time", e, { required: true, re: TIME_RE }), days, timezone: "America/Denver" };
+  } else if (sc.mode === "nightly") // legacy alias → daily (weekdays-only kept via weekends:false)
+    o.schedule = { mode: "nightly", time: str(sc.time, 5, "Nightly time", e, { required: true, re: TIME_RE }), timezone: "America/Denver", weekends: sc.weekends === true };
+  else e.push("schedule.mode must be manual, daily, weekly, or nightly.");
   o.mergePolicy = s.mergePolicy === "pr-approval" ? "pr-approval" : s.mergePolicy == null || s.mergePolicy === "auto-merge-safe" ? "auto-merge-safe" : (e.push("Invalid mergePolicy."), "");
   const rv = Array.isArray(s.reviewers) ? s.reviewers : []; if (rv.length > 25) e.push("At most 25 reviewers.");
   o.reviewers = rv.slice(0, 25).map((m, i) => str(m, 254, `Reviewer ${i + 1}`, e, { required: true, re: EMAIL_RE }).toLowerCase());

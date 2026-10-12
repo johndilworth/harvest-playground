@@ -4,7 +4,7 @@
     "name": "Design Loop",
     "slug": "design-loop",
     "harvestMode": "manual",
-    "trigger": false,
+    "trigger": true,
     "description": "Northwind AI Ops sample prototype (signup, vendor approval, add vendor). Each cycle is captured from a PR deploy preview, reviewed on a Lucidchart board, and the stickies become the next PR.",
     "repo": "https://github.com/johndilworth/design-loop-sample-prototype",
     "site": "https://design-loop-sample-prototype.netlify.app",

@@ -1,0 +1,198 @@
+{
+  "docId": "ea0758f2-6453-444d-8e7d-7c296a92fd0b",
+  "cycle": 0,
+  "harvestedAt": "2026-10-12T21:22:34.982139+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home-new-button",
+      "pageId": "new-project",
+      "frameTitle": "01-home-new-button · / · Home — + New project",
+      "stepKey": "01-home-new-button",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/",
+      "url": "https://harvest-dashboard.netlify.app/",
+      "title": "Home — + New project",
+      "h1": "Home — + New project",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/01-home-new-button.png",
+      "feedback": [
+        {
+          "itemId": "SpLCeE_DetC.",
+          "kind": "sticky",
+          "text": "Make this wider on big screens - up to 5 tiles across",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1802.905304504333,
+            "y": 685.5858201467549,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home-new-button",
+            "via": null,
+            "bbox": "frame-01-home-new-button",
+            "bestOverlap": {
+              "frameId": "frame-01-home-new-button",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-new-empty",
+      "pageId": "new-project",
+      "frameTitle": "02-new-empty · /new.html · New project form — empty",
+      "stepKey": "02-new-empty",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "New project form — empty",
+      "h1": "New project form — empty",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/02-new-empty.png",
+      "feedback": [
+        {
+          "itemId": "QoLC-wKtW94R",
+          "kind": "sticky",
+          "text": "Add options for scheduling - a calendar with daily, weekly, or pick certain days of the week. like calendar events. \n\nand manual.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 4428.83400993999,
+            "y": 1625.5,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-new-empty",
+            "via": null,
+            "bbox": "frame-02-new-empty",
+            "bestOverlap": {
+              "frameId": "frame-02-new-empty",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-form-filled",
+      "pageId": "new-project",
+      "frameTitle": "03-form-filled · /new.html · Form filled with sample data",
+      "stepKey": "03-form-filled",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "Form filled with sample data",
+      "h1": "Form filled with sample data",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/03-form-filled.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-04-validation-errors",
+      "pageId": "new-project",
+      "frameTitle": "04-validation-errors · /new.html · Validation errors",
+      "stepKey": "04-validation-errors",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "Validation errors",
+      "h1": "Validation errors",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/04-validation-errors.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-05-confirm-modal",
+      "pageId": "new-project",
+      "frameTitle": "05-confirm-modal · /new.html · Review & confirm modal",
+      "stepKey": "05-confirm-modal",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "Review & confirm modal",
+      "h1": "Review & confirm modal",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/05-confirm-modal.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-06-wrong-passphrase",
+      "pageId": "new-project",
+      "frameTitle": "06-wrong-passphrase · /new.html · Wrong passphrase result",
+      "stepKey": "06-wrong-passphrase",
+      "matchedBy": "frame-id",
+      "flow": "New project",
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "title": "Wrong passphrase result",
+      "h1": "Wrong passphrase result",
+      "clicked": null,
+      "commit": null,
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/06-wrong-passphrase.png",
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [
+    {
+      "itemId": "sqLCPdrW0TTo",
+      "kind": "sticky",
+      "pageId": "new-project",
+      "frameId": "frame-01-home-new-button",
+      "stepKey": "01-home-new-button",
+      "fill": "#ffe342ff",
+      "colorPriority": "try",
+      "boardColor": false,
+      "author": null,
+      "bbox": {
+        "x": 1823.9890233272345,
+        "y": 452.9620361185291,
+        "w": 160.0,
+        "h": 160.0
+      },
+      "containment": {
+        "childrenIds": "frame-01-home-new-button",
+        "via": null,
+        "bbox": "frame-01-home-new-button",
+        "bestOverlap": {
+          "frameId": "frame-01-home-new-button",
+          "ratio": 1.0
+        }
+      },
+      "note": "empty sticky (no text): ask the reviewer what they meant; no priority, not implemented"
+    }
+  ],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

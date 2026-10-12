@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-12T21:20:00Z",
+  "entries": [
+    {
+      "stepKey": "01-home",
+      "flow": "review",
+      "flowName": "review",
+      "cycle": 0,
+      "index": 1,
+      "url": "https://harvest-dashboard.netlify.app/",
+      "route": "/",
+      "h1": "Home \u2014 all Harvest projects",
+      "title": "Home \u2014 all Harvest projects",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/01-home.png"
+    },
+    {
+      "stepKey": "02-project-dashboard",
+      "flow": "review",
+      "flowName": "review",
+      "cycle": 0,
+      "index": 2,
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/",
+      "route": "/p/harvest-playground/",
+      "h1": "Project dashboard (Harvest Playground)",
+      "title": "Project dashboard (Harvest Playground)",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/02-project-dashboard.png"
+    },
+    {
+      "stepKey": "03-cycle",
+      "flow": "review",
+      "flowName": "review",
+      "cycle": 0,
+      "index": 3,
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=0",
+      "route": "/p/harvest-dashboard/cycle.html?c=0",
+      "h1": "Cycle page (Harvest Dashboard \u00b7 Cycle 0)",
+      "title": "Cycle page (Harvest Dashboard \u00b7 Cycle 0)",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/03-cycle.png"
+    },
+    {
+      "stepKey": "04-run-harvest-modal",
+      "flow": "review",
+      "flowName": "review",
+      "cycle": 0,
+      "index": 4,
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=0",
+      "route": "/p/harvest-dashboard/cycle.html?c=0",
+      "h1": "Run harvest modal",
+      "title": "Run harvest modal",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/04-run-harvest-modal.png"
+    },
+    {
+      "stepKey": "05-summary",
+      "flow": "review",
+      "flowName": "review",
+      "cycle": 0,
+      "index": 5,
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/summary.html",
+      "route": "/p/harvest-playground/summary.html",
+      "h1": "Summary (all cycles of a project)",
+      "title": "Summary (all cycles of a project)",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-review/05-summary.png"
+    },
+    {
+      "stepKey": "01-home-new-button",
+      "flow": "New project",
+      "flowName": "New project",
+      "cycle": 0,
+      "index": 6,
+      "url": "https://harvest-dashboard.netlify.app/",
+      "route": "/",
+      "h1": "Home \u2014 + New project",
+      "title": "Home \u2014 + New project",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/01-home-new-button.png"
+    },
+    {
+      "stepKey": "02-new-empty",
+      "flow": "New project",
+      "flowName": "New project",
+      "cycle": 0,
+      "index": 7,
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "route": "/new.html",
+      "h1": "New project form \u2014 empty",
+      "title": "New project form \u2014 empty",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/02-new-empty.png"
+    },
+    {
+      "stepKey": "03-form-filled",
+      "flow": "New project",
+      "flowName": "New project",
+      "cycle": 0,
+      "index": 8,
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "route": "/new.html",
+      "h1": "Form filled with sample data",
+      "title": "Form filled with sample data",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/03-form-filled.png"
+    },
+    {
+      "stepKey": "04-validation-errors",
+      "flow": "New project",
+      "flowName": "New project",
+      "cycle": 0,
+      "index": 9,
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "route": "/new.html",
+      "h1": "Validation errors",
+      "title": "Validation errors",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/04-validation-errors.png"
+    },
+    {
+      "stepKey": "05-confirm-modal",
+      "flow": "New project",
+      "flowName": "New project",
+      "cycle": 0,
+      "index": 10,
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "route": "/new.html",
+      "h1": "Review & confirm modal",
+      "title": "Review & confirm modal",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/05-confirm-modal.png"
+    },
+    {
+      "stepKey": "06-wrong-passphrase",
+      "flow": "New project",
+      "flowName": "New project",
+      "cycle": 0,
+      "index": 11,
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "route": "/new.html",
+      "h1": "Wrong passphrase result",
+      "title": "Wrong passphrase result",
+      "screenshot": "dashboard/public/captures/harvest-dashboard/c0-new-project/06-wrong-passphrase.png"
+    }
+  ]
+}

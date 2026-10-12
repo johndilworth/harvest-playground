@@ -1,7 +1,8 @@
 // Headless captures of the dashboard. Usage: node shoot.mjs <baseUrl> <outDir> <prefix> [full|review]
 import { chromium } from "playwright";
 import fs from "node:fs";
-const [base, out, prefix, mode = "full"] = process.argv.slice(2);
+const [base, out, prefix, mode = "full", cycleArg] = process.argv.slice(2);
+const cycle = cycleArg != null && cycleArg !== "" ? Number(cycleArg) : 0;
 fs.mkdirSync(out, { recursive: true });
 const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1440, height: 1024 } });
 const errs = []; p.on("pageerror", (e) => errs.push(e.message)); p.on("console", (m) => m.type() === "error" && errs.push(m.text()));
@@ -13,7 +14,7 @@ async function shot(path, name, { full = true, modal = false } = {}) {
 }
 if (mode === "review") {
   await shot("/", "01-home"); await shot("/p/harvest-playground/", "02-project-dashboard");
-  await shot("/p/harvest-dashboard/cycle.html?c=0", "03-cycle"); await shot("/p/harvest-dashboard/cycle.html?c=0", "04-run-harvest-modal", { full: false, modal: true });
+  await shot(`/p/harvest-dashboard/cycle.html?c=${cycle}`, "03-cycle"); await shot(`/p/harvest-dashboard/cycle.html?c=${cycle}`, "04-run-harvest-modal", { full: false, modal: true });
   await shot("/p/harvest-playground/summary.html", "05-summary");
 } else {
   await shot("/", "home");

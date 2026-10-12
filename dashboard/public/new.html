@@ -30,8 +30,23 @@
  <p class="hint">Board rule: one Lucidchart board per flow; a flow with more than 5 screens is split into separate boards. No hub board.</p>
 </fieldset>
 <fieldset><legend>Harvest schedule</legend>
- <label class="inl"><input type="radio" name="schedule" value="manual" checked>Manual only</label><label class="inl"><input type="radio" name="schedule" value="nightly">Nightly</label>
- <div id="nightlyOpts" hidden class="row"><div><label for="time">Time (MT)</label><input type="time" id="time" value="02:00"></div><div><label class="inl" style="margin-top:34px"><input type="checkbox" id="weekends">Run on weekends</label></div></div>
+ <label class="inl"><input type="radio" name="schedule" value="manual" checked>Manual only</label>
+ <label class="inl"><input type="radio" name="schedule" value="daily">Daily</label>
+ <label class="inl"><input type="radio" name="schedule" value="weekly">Weekly (pick days)</label>
+ <div id="schedOpts" hidden>
+  <div class="row"><div><label for="time">Time (MT)</label><input type="time" id="time" value="17:00"></div></div>
+  <div id="daysOpts" hidden><p class="hint">Days of the week (America/Denver)</p>
+   <div class="days">
+    <label class="inl"><input type="checkbox" name="day" value="mon">Mon</label>
+    <label class="inl"><input type="checkbox" name="day" value="tue">Tue</label>
+    <label class="inl"><input type="checkbox" name="day" value="wed">Wed</label>
+    <label class="inl"><input type="checkbox" name="day" value="thu">Thu</label>
+    <label class="inl"><input type="checkbox" name="day" value="fri" checked>Fri</label>
+    <label class="inl"><input type="checkbox" name="day" value="sat">Sat</label>
+    <label class="inl"><input type="checkbox" name="day" value="sun">Sun</label>
+   </div>
+  </div>
+ </div>
 </fieldset>
 <fieldset><legend>Merge policy</legend>
  <label class="inl"><input type="radio" name="merge" value="auto" checked>Auto-apply &amp; merge safe items</label><label class="inl"><input type="radio" name="merge" value="pr">Open a PR for approval</label>

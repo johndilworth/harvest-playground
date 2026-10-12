@@ -220,7 +220,7 @@ Started from the dashboard's **New project** form (`/new.html`, passphrase + typ
     "branch", "baseDir", "buildCommand", "publishDir", "liveUrl",
     "netlify": {"mode":"new"|"existing","site"?:"name-or-id","deployPreviews":true},
     "startUrls": ["/", "..."], "flows": [{"name","startPath","description"}],
-    "schedule": {"mode":"manual"} | {"mode":"nightly","time":"HH:MM","timezone":"America/Denver","weekends":false},
+    "schedule": {"mode":"manual"} | {"mode":"daily","time":"HH:MM","timezone":"America/Denver"} | {"mode":"weekly","time":"HH:MM","days":["mon","tue",…],"timezone":"America/Denver"} | {"mode":"nightly","time":"HH:MM","timezone":"America/Denver","weekends":false},
     "mergePolicy": "auto-merge-safe" | "pr-approval", "reviewers": ["email"], "notify": "John via Grok Bot chat" } }
 ```
 

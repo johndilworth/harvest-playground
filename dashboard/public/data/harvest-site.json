@@ -4,7 +4,7 @@
     "name": "Harvest Site",
     "slug": "harvest-site",
     "harvestMode": "manual",
-    "trigger": false,
+    "trigger": true,
     "description": "Concept marketing site for Lucid Harvest for Lucidchart (home, beta signup, how it works, pricing). Reviewed on Lucidchart boards; stickies become a PR.",
     "repo": "https://github.com/johndilworth/harvest-for-lucid-site",
     "site": "https://harvest-for-lucid.netlify.app",

@@ -6,9 +6,9 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 4**) |
-| **Add a sticky (current hub)** | [Cycle 4 · Hub](https://lucid.app/lucidspark/bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf/edit) → [Cycle 4 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidspark/7e1a1751-68e6-4551-8845-64cc394e748a/edit) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right) · [PNG snapshot](https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-11.png) |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 5**) |
+| **Add a sticky** | [Cycle 5 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit?invitationId=inv_a7d813ff-5eab-4979-89c5-d991a6338500) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 5 tile added 2026-10-12) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 
@@ -25,6 +25,7 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 2 boar
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Mon 2026-10-12 | Cycle 4 board (nightly) | 12 | 11 | 1 | **Cycle 5 shipped** — black Home, SPIRAL.φ art gallery, 3-up dino grid + roar buttons, daytime stego, animated tetrad, meter chart · authors: Jilea Fobair 9, John Dilworth 2, Rob Witt 1 | [Cycle 5](https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-home/01-home.png) |
 | Mon 2026-10-12 | Cycle 3 board (manual dashboard) | 9 | 9 | 0 | **Cycle 4 shipped** — ENTROPY COLLECTIVE terminal aesthetic, McLuhan tetrad, dino extinction↔tech | [Cycle 4](https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/01-home.png) |
 | Sun 2026-10-11 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 · Sunday polish | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Sat 2026-10-10 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
@@ -38,10 +39,20 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 2 boar
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 5 cycles shipped (0 → 1 → 2 → 3 → 4) · 10 nightly harvests · 31 stickies applied · 0 skipped · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 4 created by a **manual dashboard harvest** at ~10:30 AM MT on Mon 2026-10-12.
+**Totals so far:** 6 cycles shipped (0 → 1 → 2 → 3 → 4 → 5) · 11 nightly harvests · 42 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 5 created by the **5pm MT nightly harvest** on Mon 2026-10-12.
 
 ## Day by day
+
+### Mon 2026-10-12 — Cycle 4 harvest · **Cycle 5 shipped** · nightly
+- **Harvested:** Cycle 4 review board (Home · Dino Town · Totally Random) at ~5:12 pm MT — **12 stickies, 0 comment threads**
+- **Applied:** 11 · **Skipped:** 1 (empty sticky) · **Conflicts:** 0 · **Board feedback:** 0 · **Malicious/illegal/offensive:** none
+- **Contributors (first board with sticky authors):** Jilea Fobair × 9 · John Dilworth × 2 · Rob Witt × 1
+- **Cycle 5 created:** yes — Home background black like the other pages; SPIRAL.φ left-aligned and turned into a 4-artwork golden-spiral gallery (Mona Lisa, Great Wave, Girl with a Pearl Earring, Les Baigneuses); Hall of Fame 3 tiles per row on wide screens with ▶ ROAR.WAV buttons (synthesized roars) and a daytime Stegosaurus photo; RANDOM.LOG header level; numbered lists aligned; METER bar chart; animated tetrad; nav tab fill slides in from the side you came from
+- **Commit:** `b07b10d` on `main` (branch `harvest/cycle-5` merged ff; no PR) · preview https://6acd6b3d4cad2bdcce665143--harvest-playground.netlify.app
+- **Live:** https://harvest-playground.netlify.app (Cycle 5, HTTP 200)
+- **Board:** [Cycle 5 review (Lucidchart)](https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit) — one board, 3 screens, no hub
+- **Record:** `journey/cycles/4/harvest-2026-10-12.json`
 
 ### Mon 2026-10-12 — Cycle 3 harvest · **Cycle 4 shipped** · manual from dashboard
 - Sticky authors: anonymous × 9 (no attribution on the Lucidspark board). Dashboard v2 now lists authors per cycle; no more Lucid hubs; Run harvest now moved to the current cycle page.

@@ -1,0 +1,89 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 5,
+ "date": "Mon 2026-10-12",
+ "commit": "b07b10dfb0244458a7f9c1d3b0b431717cc3e8c1",
+ "pullRequest": null,
+ "prNumber": null,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home · Dino Town · Totally Random on one board (3 screens ≤ 5, no split)",
+  "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "product_lucid": "lucidchart",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "black background + SPIRAL.φ gallery",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 3181,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-home/02-home-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c4-home/01-home.png",
+     "caption": "Full page. Home now has the same near-black terminal background as the other pages; SPIRAL.φ is a click-through golden-spiral gallery. Footer Cycle 5.",
+     "changes": [
+      "Background black to match other pages (sticky: Make the background black on this page… · John Dilworth)",
+      "SPIRAL.φ text left-aligned (sticky: Left align the text in this black frame · Jilea Fobair)",
+      "SPIRAL.φ gallery: Mona Lisa, Great Wave, Girl with a Pearl Earring, Les Baigneuses with Prev/Next + dots (sticky: Let's turn this into a gallery… · Rob Witt)",
+      "Nav tabs: active fill slides in from the side you came from (all pages)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "3-up Hall of Fame, roar buttons, daytime stego",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 3815,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-dinosaur/02-dinosaur-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c4-dinosaur/01-dinosaur.png",
+     "caption": "Full page. Roadside Dino Hall of Fame shows three tiles per row on wide screens, each with a ▶ ROAR.WAV button; the Stegosaurus photo is now a daytime shot.",
+     "changes": [
+      "Three tiles per row at ≥1200 px (sticky: allow three tiles to span per row on wider screens · Jilea Fobair)",
+      "▶ ROAR.WAV button on every tile — roars synthesized in the browser (sticky: Include a button on each tile… roar · Jilea Fobair)",
+      "Quarry Stegosaurus photo swapped for a daytime photo (sticky: consider updating this photo to be a daytime… · Jilea Fobair)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "unrotated header, meter chart, animated tetrad",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 3153,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-random/02-random-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c4-random/01-random.png",
+     "caption": "Full page. RANDOM.LOG header is level, METER is a bar chart, lists line up with the text, and the McLuhan tetrad animates its loop.",
+     "changes": [
+      "Header rotation removed to match other headers (sticky: fix the rotation of the text in this header… · Jilea Fobair)",
+      "METER as a bar chart per topic (sticky: change the written data in this Meter section… · Jilea Fobair)",
+      "Numbered lists aligned with the paragraph text (sticky: the numbered list needs to be indented… · Jilea Fobair)",
+      "Tetrad animates Enhance → Obsolesce → Retrieve → Reverse (sticky: Animate this \"Enhance, Obsolesce, et...\" visual · Jilea Fobair)",
+      "Top tabs: fill animates in from the left or right depending on where you came from (sticky: When top tab is clicked… · Jilea Fobair)"
+     ]
+    }
+   ]
+  }
+ ]
+}

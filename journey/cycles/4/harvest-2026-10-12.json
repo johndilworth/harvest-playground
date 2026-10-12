@@ -1,0 +1,126 @@
+{
+  "cycle": 4,
+  "harvestedAt": "2026-10-12T17:12:00-06:00",
+  "outcome": "applied",
+  "source": "nightly",
+  "cycle5Created": true,
+  "boards": {
+    "review": {
+      "docId": "7e1a1751-68e6-4551-8845-64cc394e748a",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random"
+      ],
+      "stickies": 12,
+      "threads": 0
+    }
+  },
+  "counts": {
+    "must": 3,
+    "try": 4,
+    "maybe": 4,
+    "total": 12,
+    "board": 0,
+    "needsIntent": 1,
+    "outside": 0,
+    "skipped": 1,
+    "conflicts": 0
+  },
+  "applied": [
+    {
+      "priority": "must",
+      "flow": "home",
+      "text": "Left align the text in this black frame",
+      "author": "Jilea Fobair"
+    },
+    {
+      "priority": "try",
+      "flow": "home",
+      "text": "Let's turn this into a gallery where you can cycle and click through several different artwork using the same overview and caption ",
+      "author": "Rob Witt"
+    },
+    {
+      "priority": "must",
+      "flow": "home",
+      "text": "Make the background black on this page, to match other pages on site.",
+      "author": "John Dilworth"
+    },
+    {
+      "priority": "consider",
+      "flow": "dinosaur",
+      "text": "consider updating this photo to be a daytime instead of a night time photo to match other tiles",
+      "author": "Jilea Fobair"
+    },
+    {
+      "priority": "try",
+      "flow": "dinosaur",
+      "text": "allow three tiles to span per row on wider screens",
+      "author": "Jilea Fobair"
+    },
+    {
+      "priority": "consider",
+      "flow": "dinosaur",
+      "text": "Include a button on each tile that users can click to hear an audio clip of the dinosaur’s roar",
+      "author": "Jilea Fobair"
+    },
+    {
+      "priority": "consider",
+      "flow": "random",
+      "text": "Animate this \"Enhance, Obsolesce, et...\" visual to help people understand the optimal flow",
+      "author": "Jilea Fobair"
+    },
+    {
+      "priority": "consider",
+      "flow": "random",
+      "text": "When top tab is clicked to the right of the already selected top tab, animate the fill color in from left to right.\n\nWhen top tab is clicked to the left of the selected top tab, animate the fill color in from the right to the left.",
+      "author": "Jilea Fobair"
+    },
+    {
+      "priority": "must",
+      "flow": "random",
+      "text": "fix the rotation of the text in this header section to match the other header sections ",
+      "author": "Jilea Fobair"
+    },
+    {
+      "priority": "try",
+      "flow": "random",
+      "text": "the numbered list needs to be indented to match the alignment of the other text in this section.",
+      "author": "Jilea Fobair"
+    },
+    {
+      "priority": "try",
+      "flow": "random",
+      "text": "change the written data in this Meter section to have a data visualzion per topic",
+      "author": "Jilea Fobair"
+    }
+  ],
+  "skipped": [
+    {
+      "text": "(empty sticky)",
+      "reason": "empty",
+      "flow": "home",
+      "author": "John Dilworth"
+    }
+  ],
+  "conflicts": [],
+  "boardFeedback": [],
+  "contributors": [
+    {
+      "name": "Jilea Fobair",
+      "stickies": 9
+    },
+    {
+      "name": "John Dilworth",
+      "stickies": 2
+    },
+    {
+      "name": "Rob Witt",
+      "stickies": 1
+    }
+  ],
+  "commit": "b07b10dfb0244458a7f9c1d3b0b431717cc3e8c1",
+  "deployId": "6acd6b3d4cad2bdcce665143",
+  "previewUrl": "https://6acd6b3d4cad2bdcce665143--harvest-playground.netlify.app",
+  "cycle5Board": "https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit"
+}

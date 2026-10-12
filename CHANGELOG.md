@@ -33,7 +33,8 @@ priority (red = must, yellow = try, blue = consider). Authors from Lucid sticky 
 ### Authors
 - Jilea Fobair — 9 · John Dilworth — 2 · Rob Witt — 1
 
-Record: `journey/cycles/4/feedback-2026-10-12.json` · raw board fetch in `journey/out/c4/raw/` (gitignored).
+Commit `b07b10d` · preview https://6acd6b3d4cad2bdcce665143--harvest-playground.netlify.app · Cycle 5 board: [review (Lucidchart)](https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit) · no PR (fast-forward merge)
+Record: `journey/cycles/4/feedback-2026-10-12.json` + `journey/cycles/4/harvest-2026-10-12.json` · raw board fetch in `journey/out/c4/raw/` (gitignored).
 
 ## Harvest Dashboard · Cycle 2 (2026-10-12) · manual harvest
 Manual harvest triggered from the Harvest Dashboard webhook (`action:harvest` / `project:harvest-dashboard`).

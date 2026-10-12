@@ -15,9 +15,9 @@
   "stats": {
     "pullRequests": 2,
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
-    "nightlyHarvests": 10
+    "nightlyHarvests": 11
   },
-  "updatedAt": "2026-10-12T12:00:00-06:00",
+  "updatedAt": "2026-10-12T17:30:00-06:00",
   "cycles": [
     {
       "number": 0,
@@ -407,7 +407,7 @@
       "number": 4,
       "title": "Cycle 4 — ENTROPY COLLECTIVE terminal aesthetic",
       "createdAt": "2026-10-12T10:39:21-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 3,
       "pullRequest": null,
       "commit": "f3e1e36",
@@ -424,7 +424,13 @@
           "commentUrl": "https://lucid.app/lucidspark/7e1a1751-68e6-4551-8845-64cc394e748a/edit?invitationId=inv_de57bb3b-4075-42c7-be80-86481dbe4a4a"
         }
       ],
-      "nightlyHarvests": [],
+      "nightlyHarvests": [
+        {
+          "date": "2026-10-12",
+          "stickies": 12,
+          "outcome": "applied"
+        }
+      ],
       "changes": {
         "applied": [
           {
@@ -478,11 +484,122 @@
         "note": "Manual harvest from Harvest Dashboard webhook at ~10:30 AM MT 2026-10-12 (not the 5pm nightly). Merged to main as commit f3e1e36 (GitHub MCP PR create returned 403)."
       },
       "previewUrl": "https://6acd0c6314483bd0d7c562af--harvest-playground.netlify.app",
-      "authors": [],
+      "authors": [
+        {
+          "name": "Jilea Fobair",
+          "stickies": 9
+        },
+        {
+          "name": "John Dilworth",
+          "stickies": 2
+        },
+        {
+          "name": "Rob Witt",
+          "stickies": 1
+        }
+      ],
       "contributions": {
         "red": 4,
         "yellow": 5,
         "blue": 0,
+        "purple": 0
+      }
+    },
+    {
+      "number": 5,
+      "title": "Cycle 5 — spiral art gallery, roar buttons, black Home",
+      "createdAt": "2026-10-12T17:30:00-06:00",
+      "status": "current",
+      "harvestedFrom": 4,
+      "pullRequest": null,
+      "commit": "b07b10d",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-home/01-home.png",
+      "documents": [
+        {
+          "title": "All pages",
+          "role": "flow",
+          "flow": "review",
+          "docId": "336cb099-c6d5-44da-bb6e-e883893de039",
+          "url": "https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit",
+          "commentUrl": "https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit?invitationId=inv_a7d813ff-5eab-4979-89c5-d991a6338500",
+          "description": "All three pages on one Lucidchart board: Home, Dino Town, Totally Random (split only past 5 screens).",
+          "harvest": true
+        }
+      ],
+      "nightlyHarvests": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "SPIRAL.φ panel text left-aligned · by Jilea Fobair"
+          },
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Home background black to match other pages · by John Dilworth"
+          },
+          {
+            "priority": "must",
+            "flow": "random",
+            "text": "RANDOM.LOG header no longer rotated · by Jilea Fobair"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "SPIRAL.φ becomes a click-through golden-spiral art gallery (4 artworks) · by Rob Witt"
+          },
+          {
+            "priority": "try",
+            "flow": "dinosaur",
+            "text": "Hall of Fame: three tiles per row on wide screens · by Jilea Fobair"
+          },
+          {
+            "priority": "try",
+            "flow": "random",
+            "text": "Numbered lists aligned with paragraph text · by Jilea Fobair"
+          },
+          {
+            "priority": "try",
+            "flow": "random",
+            "text": "METER shown as a bar chart per topic · by Jilea Fobair"
+          },
+          {
+            "priority": "consider",
+            "flow": "dinosaur",
+            "text": "Quarry Stegosaurus photo swapped for a daytime shot · by Jilea Fobair"
+          },
+          {
+            "priority": "consider",
+            "flow": "dinosaur",
+            "text": "▶ ROAR.WAV button on every dino tile (synthesized roars) · by Jilea Fobair"
+          },
+          {
+            "priority": "consider",
+            "flow": "random",
+            "text": "Animated McLuhan tetrad loop · by Jilea Fobair"
+          },
+          {
+            "priority": "consider",
+            "flow": "random",
+            "text": "Nav tab fill slides in from the side you came from · by Jilea Fobair"
+          }
+        ],
+        "skipped": [
+          {
+            "text": "(empty sticky) · by John Dilworth",
+            "reason": "empty"
+          }
+        ],
+        "conflicts": [],
+        "note": "Nightly 5pm MT harvest of the Cycle 4 board (12 stickies: 11 applied, 1 empty skipped). Merged to main as commit b07b10d (branch harvest/cycle-5, fast-forward; no PR). No malicious, illegal or offensive stickies."
+      },
+      "previewUrl": "https://6acd6b3d4cad2bdcce665143--harvest-playground.netlify.app",
+      "authors": [],
+      "contributions": {
+        "red": 3,
+        "yellow": 5,
+        "blue": 4,
         "purple": 0
       }
     }

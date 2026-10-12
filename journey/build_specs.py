@@ -117,11 +117,12 @@ def combined_spec(cfg):
                    f"<p style='font-size:40pt;text-align:left'><b>{esc(cfg['product'])} — Cycle {N} review{pr} · {esc(cb['name'])}</b><br>"
                    f"<span style='font-size:20pt'>{len(items)} screens, left → right · Desktop 1440×1024 (full page) · commit {cfg['commit'][:7]} · "
                    f"<a href=\"{cfg['site']}\">{cfg['site']}</a> · harvested {esc(cfg['date'])}</span></p>"),
-              text(f'legend-box-{slug}', 0, -560, 2600, 360,
+              text(f'legend-box-{slug}', 0, -600, 2600, 440,
                    "<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE a grey frame below and "
                    "write whatever you want to see on that page. Stickies are harvested at 5pm MT daily; safe requests are applied "
                    "automatically and merged. Start with <b>Do:</b>, <b>Try:</b> or <b>Consider:</b> to set priority (the words win over the "
-                   "colour); otherwise the colour counts. Purple = feedback about this board.</p>")] + legend(slug, 2700)
+                   "colour); otherwise the colour counts. Purple = feedback about this board.<br>"
+                   "<b>Stickies show your name — leave yours signed in.</b></p>")] + legend(slug, 2700)
     x = 0
     for i, (fl, sc) in enumerate(items, 1):
         sk = f"{i:02d}-{fl['slug']}"; ih = sc['h']

@@ -150,7 +150,7 @@ async function home() {
   document.body.insertAdjacentHTML("afterbegin", `<header class="top"><b>Harvest</b><nav><a href="/">All projects</a><a href="https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md">Harvest rules ↗</a></nav></header>`);
   const idx = await (await fetch("/data/projects.json", { cache: "no-store" })).json();
   const ds = await Promise.all(idx.projects.map((p) => load(p.slug).catch(() => null)));
-  $("main").innerHTML = `<h1>Harvest projects</h1><p class="muted">${esc(idx.description)}</p><div class="grid projects">${idx.projects.map((p, i) => {
+  $("main").innerHTML = `<div class="doc"><h1>Harvest projects</h1><a class="btn" id="new-project" href="/new.html">+ New project</a></div><p class="muted">${esc(idx.description)}</p><div class="grid projects">${idx.projects.map((p, i) => {
     const d = ds[i]; if (!d) return `<div class="card">${esc(p.name)} — data unavailable</div>`;
     const cs = d.cycles, cur = cs.find((c) => c.status === "current") || cs[cs.length - 1];
     const all = cs.flatMap((c) => runs(d.project, c)).map((h) => h.date).sort(); const last = all[all.length - 1];

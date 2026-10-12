@@ -208,3 +208,32 @@ someone presses **Run harvest now** on its current cycle page (`/p/harvest-dashb
    of that commit); bump `stats.manualHarvests`, set `updatedAt`; commit, push, deploy.
 
 > Note (2026-10-12): `dashboard/public/captures/` is committed to git (backed up and versioned with each cycle). Commit new captures with each harvest. If the repo grows too large, move them to Git LFS or a separate captures repo.
+
+## New project setup
+
+Started from the dashboard's **New project** form (`/new.html`, passphrase + typed `CREATE`). The `trigger` function validates the form server-side (whitelisted fields, length limits, body ≤ 32 KB) and POSTs to `HARVEST_TRIGGER_URL` (header `Authorization: HARVEST_WEBHOOK_AUTH`):
+
+```json
+{ "action": "create-project", "project": "<slug>", "source": "harvest-dashboard", "requestedAt": "<ISO>",
+  "setup": { "name", "slug", "description",
+    "repo": {"mode":"existing","fullName":"owner/name"} | {"mode":"new","name":"repo-name"},
+    "branch", "baseDir", "buildCommand", "publishDir", "liveUrl",
+    "netlify": {"mode":"new"|"existing","site"?:"name-or-id","deployPreviews":true},
+    "startUrls": ["/", "..."], "flows": [{"name","startPath","description"}],
+    "schedule": {"mode":"manual"} | {"mode":"nightly","time":"HH:MM","timezone":"America/Denver","weekends":false},
+    "mergePolicy": "auto-merge-safe" | "pr-approval", "reviewers": ["email"], "notify": "John via Grok Bot chat" } }
+```
+
+The setup run must:
+
+1. **Repo** — link the existing `owner/name` repo, or create `johndilworth/<name>` (default branch as given). Record base dir, build command and publish dir.
+2. **Netlify** — link the named site, or create a new one (default) wired to the repo/branch/base/build/publish settings; enable PR deploy previews if requested. The live URL to capture is `liveUrl` if given, else the Netlify site URL after the first deploy.
+3. **Dashboard data** — add an entry to `dashboard/public/data/projects.json` (`slug`, `name`, `file`, `harvestMode`) and create `dashboard/public/data/<slug>.json` (project info incl. repo, site, schedule, merge policy, reviewers).
+4. **Cycle 0 captures** — capture every start URL and each flow's screens to `dashboard/public/captures/<slug>/<flow>/` (tracked in git).
+5. **Lucidchart review board(s)** — follow the board rules: one board per flow, a flow with more than 5 screens is split into separate boards, **no hub board**.
+6. **Share** the board(s) with the reviewers (edit/comment). Remind them that stickies show their author only when they are signed in to Lucid.
+7. **Record Cycle 0** in `<slug>.json` (boards, screenshots, status `current`).
+8. **Redeploy the dashboard** (`cd dashboard && netlify deploy --prod --dir=public --functions=netlify/functions --site 6f658653-21cc-4b1a-8094-b890bd04ef18`) so the project appears on the home page; to allow "Run harvest now" on it, add the slug to `PROJECTS` in `trigger.mjs`.
+9. **Schedule** — Manual: nothing more. Nightly: a routine must be created to run the harvest at the chosen time (MT), weekdays only unless weekends is on.
+10. **Merge policy** — store it; harvests then either auto-apply & merge safe items or open a PR for approval.
+11. **Notify** — send the result (links to dashboard, site, boards) to John in Grok Bot chat.

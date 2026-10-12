@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Harvest · New project</title><link rel="stylesheet" href="/styles.css"></head>
+<body><header class="top"><b>Harvest</b><nav><a href="/">All projects</a><a href="https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md#new-project-setup">Setup rules ↗</a></nav></header>
+<main><h1>New Harvest project</h1><p class="muted">Describe the prototype once; a setup run links the repo and Netlify site, captures Cycle 0, builds the Lucidchart review board(s) and adds the project to the home page.</p>
+<div id="errbox" class="errbox" hidden role="alert"></div>
+<form id="f" class="form" novalidate>
+<fieldset><legend>Project</legend>
+ <label for="name">Project name *</label><input type="text" id="name" maxlength="80" required>
+ <label for="slug">Slug *</label><input type="text" id="slug" maxlength="48" pattern="[a-z0-9]+(-[a-z0-9]+)*"><p class="hint">Auto-filled from the name; lowercase letters, digits, dashes. Used in /p/&lt;slug&gt;/ and /captures/&lt;slug&gt;/.</p>
+ <label for="description">Description</label><textarea id="description" maxlength="500"></textarea>
+</fieldset>
+<fieldset><legend>Prototype source</legend>
+ <label class="inl"><input type="radio" name="repoMode" value="existing" checked>Existing GitHub repo</label><label class="inl"><input type="radio" name="repoMode" value="new">Create a new repo</label>
+ <div id="repoExisting"><label for="repo">Repository (owner/name) *</label><input type="text" id="repo" maxlength="140" placeholder="johndilworth/my-prototype"></div>
+ <div id="repoNew" hidden><label for="newRepo">New repo name *</label><input type="text" id="newRepo" maxlength="100" placeholder="my-prototype"><p class="hint">Created under johndilworth.</p></div>
+ <div class="row"><div><label for="branch">Default branch</label><input type="text" id="branch" value="main" maxlength="100"></div>
+ <div><label for="baseDir">App folder / base dir</label><input type="text" id="baseDir" maxlength="200" placeholder="(repo root)"></div>
+ <div><label for="buildCmd">Build command</label><input type="text" id="buildCmd" maxlength="300" placeholder="(none — static)"></div>
+ <div><label for="publishDir">Publish dir</label><input type="text" id="publishDir" maxlength="200" placeholder="site"></div></div>
+</fieldset>
+<fieldset><legend>Live site &amp; Netlify</legend>
+ <label for="liveUrl">Live site URL to capture (if already deployed)</label><input type="url" id="liveUrl" maxlength="300" placeholder="https://…">
+ <label>Netlify site</label><label class="inl"><input type="radio" name="netlifyMode" value="new" checked>Create a new Netlify site</label><label class="inl"><input type="radio" name="netlifyMode" value="existing">Use an existing site</label>
+ <div id="netlifyExisting" hidden><label for="netlifySite">Site name or id *</label><input type="text" id="netlifySite" maxlength="100"></div>
+ <label class="inl"><input type="checkbox" id="previews" checked>Enable PR deploy previews</label>
+</fieldset>
+<fieldset><legend>Flows / screens to capture</legend>
+ <label for="startUrls">Start URL(s) or paths *</label><textarea id="startUrls" maxlength="2000" placeholder="/ (one per line)">/</textarea>
+ <label>Flows (optional)</label><div id="flows"></div><button type="button" class="secondary" id="addFlow">+ Add flow</button>
+ <p class="hint">Board rule: one Lucidchart board per flow; a flow with more than 5 screens is split into separate boards. No hub board.</p>
+</fieldset>
+<fieldset><legend>Harvest schedule</legend>
+ <label class="inl"><input type="radio" name="schedule" value="manual" checked>Manual only</label><label class="inl"><input type="radio" name="schedule" value="nightly">Nightly</label>
+ <div id="nightlyOpts" hidden class="row"><div><label for="time">Time (MT)</label><input type="time" id="time" value="02:00"></div><div><label class="inl" style="margin-top:34px"><input type="checkbox" id="weekends">Run on weekends</label></div></div>
+</fieldset>
+<fieldset><legend>Merge policy</legend>
+ <label class="inl"><input type="radio" name="merge" value="auto" checked>Auto-apply &amp; merge safe items</label><label class="inl"><input type="radio" name="merge" value="pr">Open a PR for approval</label>
+</fieldset>
+<fieldset><legend>Reviewers &amp; notifications</legend>
+ <label for="reviewers">Reviewer emails (optional; boards are shared with them)</label><textarea id="reviewers" maxlength="2000" placeholder="one per line or comma-separated"></textarea>
+ <p class="hint">Reviewers should be signed in to Lucid when adding stickies so each sticky shows its author.</p>
+ <p class="hint"><b>Notify:</b> results are sent to John in Grok Bot chat.</p>
+</fieldset>
+<div class="actions" style="justify-content:flex-start"><button type="submit" id="review">Review &amp; create…</button><a href="/" style="align-self:center">Cancel</a></div>
+</form></main>
+<div id="cr-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="cr-title"><div class="modal-box wide">
+ <h2 id="cr-title">Create Harvest project</h2><div id="summary" class="summary card"></div>
+ <label>Passphrase<br><input id="sec" type="password" autocomplete="off"></label><label>Type <b>CREATE</b> to confirm<br><input id="cf" size="18"></label>
+ <p id="crmsg" class="msg" aria-live="polite"></p><div class="actions"><button id="cancel" class="secondary">Cancel</button><button id="go" disabled>Create project</button></div></div></div>
+<script src="/app.js"></script><script src="/new.js"></script></body></html>

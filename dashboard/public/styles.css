@@ -39,3 +39,15 @@ button.secondary{background:#fff;color:#1f2328}
 .project-card h3{margin:0 0 4px}.project-card p{margin:0 0 10px}.project-card img{width:100%;border:1px solid #d5d8dc;margin-top:10px;display:block}
 .projects{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}.kv{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:#57606a;margin-top:6px}.kv b{color:#1f2328}
 .spark{display:block;margin:4px 0}
+a.btn{display:inline-block;align-self:center;padding:8px 16px;border:1px solid #1f2328;background:#1f2328;color:#fff;font-weight:600;white-space:nowrap}a.btn:hover{text-decoration:none;background:#000}
+.form fieldset{background:#F2F3F5;border:1px solid #d5d8dc;padding:16px 22px 18px;margin:0 0 16px}.form legend{font-weight:700;padding:0 6px;font-size:16px}
+.form label{display:block;margin:10px 0 2px;font-weight:600;font-size:14px}.form label.inl{display:inline-block;font-weight:400;margin:6px 18px 0 0}
+.form input[type=text],.form input[type=url],.form input[type=time],.form textarea,.form select{font:inherit;padding:7px 9px;border:1px solid #9aa1a9;background:#fff;width:100%;max-width:640px}
+.form textarea{min-height:64px}.form input[type=radio],.form input[type=checkbox]{margin:0 6px 0 0}
+.form .hint{color:#57606a;font-size:13px;margin:2px 0 0}.form .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 18px}
+.form .invalid{border-color:#cf222e!important;background:#fff5f5!important}.form .ferr{color:#cf222e;font-size:13px;font-weight:600;margin:2px 0 0}
+.flowrow{display:grid;grid-template-columns:1fr 1fr 2fr auto;gap:8px;margin:6px 0}.flowrow input{width:100%!important}
+.errbox{border:2px solid #cf222e;background:#fff5f5;padding:10px 16px;margin-bottom:16px}.errbox ul{margin:4px 0 0}
+.summary dl{display:grid;grid-template-columns:220px 1fr;gap:4px 14px;margin:0}.summary dt{color:#57606a}.summary dd{margin:0;word-break:break-word}
+.modal-box.wide{width:min(720px,94vw);max-height:90vh;overflow:auto}
+[hidden]{display:none!important}

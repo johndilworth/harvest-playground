@@ -2,6 +2,46 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Harvest Dashboard · Cycle 1 (2026-10-12) · manual harvest
+Manual harvest triggered from the Harvest Dashboard webhook at ~3:20 PM MT (payload
+`action:harvest` / `project:harvest-dashboard` / `requestedAt:2026-10-12T21:20:19Z`).
+Harvested Cycle 0 boards: review `6337bd96-…` + New project `ea0758f2-…` —
+**13 stickies** (11 in-frame, 1 outside frame, 1 empty/needs intent), 0 comment threads.
+Priority by sticky colour (no text keywords). Authors recorded from Lucid attribution.
+
+### Applied (11)
+- **must** · review · “Increase the number of projects that are displayed horizontally on the page - this could mean increasing the max width o…” · by John Dilworth
+- **must** · review · “The elements in the header are actually specific to the project, so move them under the project title:
+
+Dashboard (curre…” · by John Dilworth
+- **must** · review · “Remove "Type RUN" to confirm. Since this is password only and not a descriptive action, the RUN confirmation isn't neces…” · by John Dilworth
+- **must** · New project · “Add options for scheduling - a calendar with daily, weekly, or pick certain days of the week. like calendar events. 
+
+an…” · by anonymous
+- **try** · review · “Remove description under harvest projects - it's unecessary.” · by John Dilworth
+- **try** · review · “Manual harvest should be available for all projects - it is not available on some projects” · by John Dilworth
+- **try** · review · “Don't show the changes made or sticky authors if there are none to show.” · by John Dilworth
+- **try** · review · “Under the "Lucid documents" section make the lucid document a board preview - embed code can look like this in html - wo…” · by John Dilworth
+- **try** · review · “Don't include large screenshot here, only link to the cycle boards that use the Lucid embeds.” · by John Dilworth
+- **try** · review · “Remove author section — author names appear next to summaries, and user can click into cycle board to see who left actua…” · by John Dilworth
+- **try** · New project · “Make this wider on big screens - up to 5 tiles across” · by anonymous
+
+### Skipped (2)
+- “Lucid documents look like this in Lucid. Here's an SVG of the Lucidchart logo that can be used in a tile/preview” — `outside frame` · by John Dilworth
+- “(empty sticky)” — `empty` · by anonymous
+
+### Conflicts
+- none
+
+### Board feedback (purple / Board:)
+- none
+
+### Authors
+- John Dilworth — 10
+- anonymous — 3
+
+Record: `dashboard/board/c0/feedback.json` · Cycle 1 boards: review `090db6e7-…`, New project `074fcea1-…`.
+
 ## Cycle 4 (2026-10-12) · manual dashboard harvest
 Manual harvest triggered from the Harvest Dashboard webhook at ~10:30 AM MT (payload
 `action:harvest` / `source:harvest-dashboard` / `requestedAt:2026-10-12T16:30:58.360Z`).

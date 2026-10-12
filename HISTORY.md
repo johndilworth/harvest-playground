@@ -11,6 +11,15 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 | **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right) · [PNG snapshot](https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-11.png) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
+
+## Harvest Dashboard (manual)
+
+| Date (MT) | Harvest | Stickies | Applied | Skipped | Result |
+|---|---|---:|---:|---:|---|
+| Mon 2026-10-12 ~3:20 PM | Cycle 0 boards (manual webhook) | 13 | 11 | 2 | **Cycle 1 shipped** — wider home (≤5 tiles), project subnav, Lucid embeds, hide empty changes/authors, no cycle screenshot, Run harvest on all projects, drop Type RUN, schedule calendar (manual/daily/weekly) |
+
+Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 1 boards: [review](https://lucid.app/lucidchart/090db6e7-d945-43da-9eff-7d8181ab8f69/edit) · [New project](https://lucid.app/lucidchart/074fcea1-0c98-4909-9ae1-743624362fe9/edit)
+
 ## At a glance
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |

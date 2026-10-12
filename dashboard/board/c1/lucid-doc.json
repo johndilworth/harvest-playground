@@ -1,0 +1,46 @@
+{
+  "project": "harvest-dashboard",
+  "cycle": 1,
+  "createdAt": "2026-10-12T15:30:16-06:00",
+  "commit": "8dd25b6",
+  "previewUrl": "https://6acd50670401fb3f6f1deffe--harvest-dashboard.netlify.app",
+  "boards": [
+    {
+      "docId": "090db6e7-d945-43da-9eff-7d8181ab8f69",
+      "title": "Harvest Dashboard \u2014 Cycle 1 review \u00b7 All pages",
+      "product": "lucidchart",
+      "editUrl": "https://lucid.app/lucidchart/090db6e7-d945-43da-9eff-7d8181ab8f69/edit",
+      "viewUrl": "https://lucid.app/lucidchart/090db6e7-d945-43da-9eff-7d8181ab8f69/view",
+      "role": "flow",
+      "flow": "review",
+      "harvest": true,
+      "pages": 1,
+      "frames": 5,
+      "pageBackground": "#E8EAED",
+      "spec": "dashboard/board/c1/lucid-spec.json",
+      "export": "dashboard/board/c1/export-p1.png",
+      "renderCheck": "exported 2026-10-12: all 5 screenshots render (recreated after captures deployed)"
+    },
+    {
+      "docId": "074fcea1-0c98-4909-9ae1-743624362fe9",
+      "title": "Harvest Dashboard \u2014 Cycle 1 \u2014 New project",
+      "product": "lucidchart",
+      "editUrl": "https://lucid.app/lucidchart/074fcea1-0c98-4909-9ae1-743624362fe9/edit",
+      "viewUrl": "https://lucid.app/lucidchart/074fcea1-0c98-4909-9ae1-743624362fe9/view",
+      "role": "flow",
+      "flow": "New project",
+      "harvest": true,
+      "pages": 1,
+      "frames": 6,
+      "pageBackground": "#E8EAED",
+      "spec": "dashboard/board/c1/lucid-spec-new-project.json",
+      "builder": "dashboard/board/build_spec_new_project.py",
+      "export": "dashboard/board/c1/export-new-project-p1.png",
+      "renderCheck": "exported 2026-10-12: all 6 screenshots render",
+      "captures": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c1-new-project/",
+      "captureScript": "journey/shoot-c1-new.mjs"
+    }
+  ],
+  "captures": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c1-review/",
+  "hub": null
+}

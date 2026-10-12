@@ -2,6 +2,39 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 5 (2026-10-12) · nightly harvest
+Nightly 5 pm MT harvest of the Cycle 4 review board `7e1a1751-68e6-4551-8845-64cc394e748a` (Home · Dino Town · Totally Random) —
+**12 stickies, 0 comment threads** (11 in-frame with text, 1 empty). No priority keywords, so sticky colour decided
+priority (red = must, yellow = try, blue = consider). Authors from Lucid sticky attribution.
+
+### Applied (11)
+- **must** · Home · “Make the background black on this page, to match other pages on site.” → `purple-bg` removed from the Home `<body>`, so Home uses the same near-black terminal background as Dino and Random. · by John Dilworth
+- **must** · Home · “Left align the text in this black frame” → SPIRAL.φ panel heading and copy left-aligned (was centred). · by Jilea Fobair
+- **must** · Random · “fix the rotation of the text in this header section to match the other header sections” → RANDOM.LOG header no longer rotated (−3° removed). · by Jilea Fobair
+- **try** · Home · “Let's turn this into a gallery where you can cycle and click through several different artwork using the same overview and caption” → SPIRAL.φ is now a 4-artwork golden-spiral gallery (Mona Lisa, Hokusai’s Great Wave, Vermeer’s Girl with a Pearl Earring, Gleizes’s Les Baigneuses) with Prev/Next, dots, arrow keys and click-to-advance; one shared overview, same caption format per slide. Spiral overlays for Hokusai and Vermeer drawn for this cycle (paintings public domain). · by Rob Witt
+- **try** · Dino · “allow three tiles to span per row on wider screens” → Hall of Fame grid is 3 columns at ≥1200 px (page widened to 1180 px there); 2 columns below, 1 on phones. · by Jilea Fobair
+- **try** · Random · “the numbered list needs to be indented to match the alignment of the other text in this section.” → numbered lists now start flush with the paragraph text (counter markers, hanging indent for wrapped lines), site-wide. · by Jilea Fobair
+- **try** · Random · “change the written data in this Meter section to have a data visualzion per topic” → METER is a bar chart (Socks 3, Wombat cubes 4, McLuhan 1, Spirals 2, Layout chaos 1; scale 0–5). · by Jilea Fobair
+- **consider** · Dino · “consider updating this photo to be a daytime instead of a night time photo to match other tiles” → Quarry Stegosaurus photo swapped for a daytime shot (Jens Lallensack, CC BY-SA 4.0, `site/assets/c5/dino-stegosaurus-dnm-day.jpg`). · by Jilea Fobair
+- **consider** · Dino · “Include a button on each tile that users can click to hear an audio clip of the dinosaur’s roar” → ▶ ROAR.WAV button on all six tiles; roars are synthesized in the browser with the Web Audio API (first-party `assets/c5/playground.js`, no audio files or third-party code). · by Jilea Fobair
+- **consider** · Random · “Animate this "Enhance, Obsolesce, et..." visual to help people understand the optimal flow” → the tetrad ASCII diagram is now an animated loop: the highlight walks Enhance → Obsolesce → Retrieve → Reverse (respects reduced-motion). · by Jilea Fobair
+- **consider** · Random (top nav) · “When top tab is clicked to the right of the already selected top tab, animate the fill color in from left to right. When … to the left …, from the right to the left.” → nav tabs on every page: the newly active tab’s green fill slides in from the side of the tab you came from. · by Jilea Fobair
+
+### Skipped (1)
+- “(empty sticky)” on Home — `empty` (needs intent) · by John Dilworth
+- No malicious, illegal or offensive stickies.
+
+### Conflicts
+- none
+
+### Board feedback (purple / Board:)
+- none
+
+### Authors
+- Jilea Fobair — 9 · John Dilworth — 2 · Rob Witt — 1
+
+Record: `journey/cycles/4/feedback-2026-10-12.json` · raw board fetch in `journey/out/c4/raw/` (gitignored).
+
 ## Harvest Dashboard · Cycle 2 (2026-10-12) · manual harvest
 Manual harvest triggered from the Harvest Dashboard webhook (`action:harvest` / `project:harvest-dashboard`).
 Harvested Cycle 1 boards: review `090db6e7-…` + New project `074fcea1-…` —

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="assets/c5/playground.js" defer></script>
 </head>
 <body class="page-random midnight terminal-mode">
   <div class="ascii-bg" aria-hidden="true"></div>
@@ -59,15 +60,29 @@
         <li><b>Reverse</b> — What happens when it is pushed to extreme?</li>
       </ol>
       <p>Example sketch for smartphones: enhance access &amp; presence; obsolesce paper maps and landlines; retrieve the village gossip network at planetary scale; reverse into distraction, surveillance, and always-on anxiety. The grave plaque’s line — <i>the truth shall make you free</i> — reads differently when the medium that delivers “truth” is the thing rewriting your nervous system.</p>
-      <pre class="ascii-block">[ ENHANCE ]──▶[ OBSOLESCE ]
-     ▲               │
-     │               ▼
-[ REVERSE ]◀──[ RETRIEVE ]</pre>
+      <div class="tetrad" role="img" aria-label="The tetrad cycle: Enhance, then Obsolesce, then Retrieve, then Reverse, and back to Enhance">
+        <span class="tetrad-node tn-1">[ ENHANCE ]</span>
+        <span class="tetrad-arrow ta-1" aria-hidden="true">──▶</span>
+        <span class="tetrad-node tn-2">[ OBSOLESCE ]</span>
+        <span class="tetrad-arrow ta-4" aria-hidden="true">▲</span>
+        <span class="tetrad-arrow ta-2" aria-hidden="true">▼</span>
+        <span class="tetrad-node tn-4">[ REVERSE ]</span>
+        <span class="tetrad-arrow ta-3" aria-hidden="true">◀──</span>
+        <span class="tetrad-node tn-3">[ RETRIEVE ]</span>
+      </div>
+      <p class="tetrad-note">// the highlight walks the loop: enhance → obsolesce → retrieve → reverse → (repeat)</p>
     </section>
 
     <section class="block scrapbook ff rz3 tiny-note" id="c2-random-scoreboard">
       <h2>&gt; METER</h2>
-      <p>Socks: 3 · Wombat cubes: 4 · McLuhan: 1 · Spirals: 2 · Layout chaos: dialed back to square (Cycle 4)</p>
+      <dl class="meter-chart" aria-label="Meter: count per topic">
+        <div class="meter-row"><dt>Socks</dt><dd><span class="meter-bar" style="--v:3"></span><span class="meter-val">3</span></dd></div>
+        <div class="meter-row"><dt>Wombat cubes</dt><dd><span class="meter-bar" style="--v:4"></span><span class="meter-val">4</span></dd></div>
+        <div class="meter-row"><dt>McLuhan</dt><dd><span class="meter-bar" style="--v:1"></span><span class="meter-val">1</span></dd></div>
+        <div class="meter-row"><dt>Spirals</dt><dd><span class="meter-bar" style="--v:2"></span><span class="meter-val">2</span></dd></div>
+        <div class="meter-row"><dt>Layout chaos</dt><dd><span class="meter-bar" style="--v:1"></span><span class="meter-val">1</span></dd></div>
+      </dl>
+      <p class="meter-note">// scale 0–5 · layout chaos dialed back to square in Cycle 4</p>
     </section>
 
     <figure class="photo-fig ff rz4">
@@ -76,6 +91,6 @@
     </figure>
   </main>
 
-  <footer class="footer"><span id="cycle">Cycle 4</span> · <a href="index.html">cd ~/</a></footer>
+  <footer class="footer"><span id="cycle">Cycle 5</span> · <a href="index.html">cd ~/</a></footer>
 </body>
 </html>

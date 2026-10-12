@@ -1,0 +1,394 @@
+{
+  "docId": "7e1a1751-68e6-4551-8845-64cc394e748a",
+  "cycle": 4,
+  "harvestedAt": "2026-10-12T23:12:55.567835+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": "home",
+      "h1": null,
+      "clicked": null,
+      "commit": "f3e1e36a01a3ed05c7671db8f8d0d442f1f7cfd0",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "mPLC4GAuTlwB",
+          "kind": "sticky",
+          "text": "Left align the text in this black frame",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 513.2986518915887,
+            "y": 2048.4804333853067,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "Jilea Fobair"
+        },
+        {
+          "itemId": "bKMCghOSTYl_",
+          "kind": "sticky",
+          "text": "Let's turn this into a gallery where you can cycle and click through several different artwork using the same overview and caption ",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 536.6484640447816,
+            "y": 2343.1649983852394,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "Rob Witt"
+        },
+        {
+          "itemId": "k_JCLC6~CMmD",
+          "kind": "sticky",
+          "text": "Make the background black on this page, to match other pages on site.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 1746.4462374542293,
+            "y": 1074.256648813643,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-dinosaur",
+      "pageId": "review",
+      "frameTitle": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
+      "stepKey": "02-dinosaur",
+      "matchedBy": "frame-id",
+      "flow": "dinosaur",
+      "route": "/dinosaur.html",
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "title": "dinosaur",
+      "h1": null,
+      "clicked": null,
+      "commit": "f3e1e36a01a3ed05c7671db8f8d0d442f1f7cfd0",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "3QLCBPUs1Xv-",
+          "kind": "sticky",
+          "text": "consider updating this photo to be a daytime instead of a night time photo to match other tiles",
+          "priority": "maybe",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "maybe",
+          "priorityConflict": false,
+          "fill": "#a3e4ffff",
+          "bbox": {
+            "x": 4251.549496640024,
+            "y": 4044.401337165734,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-dinosaur",
+            "via": null,
+            "bbox": "frame-02-dinosaur",
+            "bestOverlap": {
+              "frameId": "frame-02-dinosaur",
+              "ratio": 1.0
+            }
+          },
+          "author": "Jilea Fobair"
+        },
+        {
+          "itemId": "eQLCzb1o-vsU",
+          "kind": "sticky",
+          "text": "allow three tiles to span per row on wider screens",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 4521.762522440314,
+            "y": 2621.9359894375743,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-dinosaur",
+            "via": null,
+            "bbox": "frame-02-dinosaur",
+            "bestOverlap": {
+              "frameId": "frame-02-dinosaur",
+              "ratio": 1.0
+            }
+          },
+          "author": "Jilea Fobair"
+        },
+        {
+          "itemId": "QYLCh_MWDznz",
+          "kind": "sticky",
+          "text": "Include a button on each tile that users can click to hear an audio clip of the dinosaur’s roar",
+          "priority": "maybe",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "maybe",
+          "priorityConflict": false,
+          "fill": "#a3e4ffff",
+          "bbox": {
+            "x": 3179.49275674799,
+            "y": 2495.5538638985017,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-dinosaur",
+            "via": null,
+            "bbox": "frame-02-dinosaur",
+            "bestOverlap": {
+              "frameId": "frame-02-dinosaur",
+              "ratio": 1.0
+            }
+          },
+          "author": "Jilea Fobair"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-random",
+      "pageId": "review",
+      "frameTitle": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
+      "stepKey": "03-random",
+      "matchedBy": "frame-id",
+      "flow": "random",
+      "route": "/random.html",
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "title": "random",
+      "h1": null,
+      "clicked": null,
+      "commit": "f3e1e36a01a3ed05c7671db8f8d0d442f1f7cfd0",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "LXLCZZdTeI~d",
+          "kind": "sticky",
+          "text": "Animate this \"Enhance, Obsolesce, et...\" visual to help people understand the optimal flow",
+          "priority": "maybe",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "maybe",
+          "priorityConflict": false,
+          "fill": "#a3e4ffff",
+          "bbox": {
+            "x": 5975.325710301155,
+            "y": 3193.0,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-random",
+            "via": null,
+            "bbox": "frame-03-random",
+            "bestOverlap": {
+              "frameId": "frame-03-random",
+              "ratio": 1.0
+            }
+          },
+          "author": "Jilea Fobair"
+        },
+        {
+          "itemId": "pSLCRMBY2~gi",
+          "kind": "sticky",
+          "text": "When top tab is clicked to the right of the already selected top tab, animate the fill color in from left to right.\n\nWhen top tab is clicked to the left of the selected top tab, animate the fill color in from the right to the left.",
+          "priority": "maybe",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "maybe",
+          "priorityConflict": false,
+          "fill": "#a3e4ffff",
+          "bbox": {
+            "x": 6702.053809380456,
+            "y": 267.71843787081207,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-random",
+            "via": null,
+            "bbox": "frame-03-random",
+            "bestOverlap": {
+              "frameId": "frame-03-random",
+              "ratio": 1.0
+            }
+          },
+          "author": "Jilea Fobair"
+        },
+        {
+          "itemId": "kVLCzYC0cgt4",
+          "kind": "sticky",
+          "text": "fix the rotation of the text in this header section to match the other header sections ",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 5776.162619290175,
+            "y": 546.2748825736344,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-random",
+            "via": null,
+            "bbox": "frame-03-random",
+            "bestOverlap": {
+              "frameId": "frame-03-random",
+              "ratio": 1.0
+            }
+          },
+          "author": "Jilea Fobair"
+        },
+        {
+          "itemId": "3WLCwq1FNwmf",
+          "kind": "sticky",
+          "text": "the numbered list needs to be indented to match the alignment of the other text in this section.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 5918.959654489248,
+            "y": 2842.568731517107,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-random",
+            "via": null,
+            "bbox": "frame-03-random",
+            "bestOverlap": {
+              "frameId": "frame-03-random",
+              "ratio": 1.0
+            }
+          },
+          "author": "Jilea Fobair"
+        },
+        {
+          "itemId": "lWLCZiCN7OE_",
+          "kind": "sticky",
+          "text": "change the written data in this Meter section to have a data visualzion per topic",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 5922.710076835945,
+            "y": 1254.0507271629663,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-random",
+            "via": null,
+            "bbox": "frame-03-random",
+            "bestOverlap": {
+              "frameId": "frame-03-random",
+              "ratio": 1.0
+            }
+          },
+          "author": "Jilea Fobair"
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [
+    {
+      "itemId": "B~JC4uI4AU1s",
+      "kind": "sticky",
+      "pageId": "review",
+      "frameId": "frame-01-home",
+      "stepKey": "01-home",
+      "fill": "#ffe342ff",
+      "colorPriority": "try",
+      "boardColor": false,
+      "author": "John Dilworth",
+      "bbox": {
+        "x": 1751.5286190288086,
+        "y": 1501.2028704251397,
+        "w": 160.0,
+        "h": 160.0
+      },
+      "containment": {
+        "childrenIds": "frame-01-home",
+        "via": null,
+        "bbox": "frame-01-home",
+        "bestOverlap": {
+          "frameId": "frame-01-home",
+          "ratio": 1.0
+        }
+      },
+      "note": "empty sticky (no text): ask the reviewer what they meant; no priority, not implemented"
+    }
+  ],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

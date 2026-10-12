@@ -24,12 +24,12 @@ async function dashboard() {
   <p class="muted">Data: <a href="/harvest.json">harvest.json</a> · updated ${fmt(d.updatedAt)} · <a href="${p.rules}">Harvest rules</a> · ${skipped} skipped overall</p>`;
   try {
     const s = await (await fetch("/api/trigger", { cache: "no-store" })).json();
-    if (!s.configured) { $("#trig").innerHTML = `<button disabled>Run harvest now</button> <span class="muted">Not configured — manual trigger is disabled (HARVEST_TRIGGER_URL not set).</span>`; return; }
-    $("#trig").innerHTML = `<input id="sec" type="password" placeholder="Shared secret" autocomplete="off"><input id="cf" placeholder="Type RUN to confirm" size="18"><button id="go">Run harvest now</button>`;
+    if (!s.configured) { $("#trig").innerHTML = `<button disabled>Run harvest now</button> <span class="muted">Not configured — manual trigger is disabled (env vars not set).</span>`; return; }
+    $("#trig").innerHTML = `<input id="sec" type="password" placeholder="Dashboard passphrase" autocomplete="off"><input id="cf" placeholder="Type RUN to confirm" size="18"><button id="go">Run harvest now</button>`;
     $("#go").onclick = async () => {
       $("#go").disabled = true; $("#trigmsg").textContent = "Sending…";
       const r = await fetch("/api/trigger", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ secret: $("#sec").value, confirm: $("#cf").value.trim() }) });
-      const j = await r.json(); $("#trigmsg").textContent = r.ok ? "Harvest requested. The new cycle appears here after the run finishes." : `Failed: ${j.error || "upstream " + j.upstreamStatus}`; $("#go").disabled = false;
+      const j = await r.json(); $("#trigmsg").textContent = r.ok ? (j.message || "Harvest started — new cycle will appear here when done") : `Failed: ${j.error || "HTTP " + r.status}`; $("#go").disabled = false;
     };
   } catch { $("#trig").innerHTML = `<button disabled>Run harvest now</button> <span class="muted">Trigger endpoint unavailable.</span>`; }
 }

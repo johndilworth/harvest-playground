@@ -2,6 +2,37 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 4 (2026-10-12) · manual dashboard harvest
+Manual harvest triggered from the Harvest Dashboard webhook at ~10:30 AM MT (payload
+`action:harvest` / `source:harvest-dashboard` / `requestedAt:2026-10-12T16:30:58.360Z`).
+Harvested the Cycle 3 review board `a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3` (Home · Dino Town · Totally Random) —
+**9 stickies, 0 comment threads**. Hub stray: none. Priority: text keywords where present, else sticky colour.
+
+### Applied (9)
+- **must** · Home · “Do: Change site title to \"ENTROPY COLLECTIVE\"” → site title / `<title>` / H1 become **ENTROPY COLLECTIVE** across pages.
+- **must** · Home · “Do: Give the whole site a new visual styles that's more retro tech… terminal aesthetic…” → site-wide **terminal mode** (`body.terminal-mode`): green-on-black panels, square frames, prompt lines, MOTD banner; headlines/copy rewritten in retro-tech voice.
+- **must** · Dino · “Apply aesthteic changes to the dino page also.” → Dino Town gets the same terminal skin + square layout.
+- **must** · Random · “Add a new fact - showing Marshall McCluhan's grave… 4 Laws of media.” → new `#c4-mcluhan` section with life blurb + tetrad (enhance / obsolesce / retrieve / reverse).
+- **try** · Home · “Change heading and other fonts to use Share Tech Mono.” → Google Font **Share Tech Mono** on all pages (headings + body).
+- **try** · Random · “Use this image.” → Lucid-uploaded McLuhan grave photo saved as `site/assets/c4/mcluhan-grave.png` (≈472 KB) and shown in the McLuhan section.
+- **try** · Random · “Site pages with more terminal aesthetic won't have rotated titles, will be more square and techish.” → free-form rotations removed under `.terminal-grid`; panels are square, titles unrotated.
+- **try** · Random · “Make these background images into random ASCII art…” → fixed SVG-tile ASCII background (`.ascii-bg`) behind all pages.
+- **try** · Dino · “Keep the dino page — but change copy… dinosaurs extinction… modern tech… Ancient Aliens.” → new `#c4-extinction-tech` briefing with wild extinction↔tech analogies; Hall of Fame kept, copy tightened to terminal voice.
+
+### Skipped
+- none (no empty, unsafe, malicious, illegal or offensive stickies)
+
+### Conflicts
+- none (the terminal aesthetic stickies reinforce each other; newest-wins not needed)
+
+### Board feedback (purple / Board:)
+- none
+
+### Hub stray stickies
+- none (Cycle 3 hub: generated shapes only, 0 threads)
+
+Record: `journey/cycles/3/feedback-2026-10-12-manual.json` · harvest summary written with Cycle 4 docs.
+
 ## 2026-10-11 harvest (no Cycle 4) · Sunday polish
 Harvested the Cycle 3 review board `a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3` (Home · Dino Town · Totally Random) at ~5:02 pm MT —
 **0 stickies, 0 comment threads**. Hub stray: none (Cycle 3 hub has only generated shapes, 0 threads).

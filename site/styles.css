@@ -180,3 +180,119 @@ body.midnight.purple-bg{
 /* Sticky (Home, yellow/try): "change this to golden spiral found in classical artwork" — Mona Lisa golden spiral. */
 .golden-fig{max-width:360px}
 .golden-fig .spiral-hero{width:100%;height:auto}
+
+/* ===== Cycle 4 (2026-10-12 manual harvest) ===== */
+/* Stickies: ENTROPY COLLECTIVE title; Share Tech Mono; retro-tech terminal aesthetic (site-wide + dino);
+   square / unrotated panels; ASCII backgrounds; McLuhan grave fact + image; dino extinction↔tech copy. */
+body.terminal-mode{
+  font-family:"Share Tech Mono", ui-monospace, Menlo, Consolas, monospace;
+  color:#b8f5c2;
+  border:4px solid #1aff80;
+  outline:4px solid #0a3d22;
+  outline-offset:-8px;
+  background:
+    linear-gradient(180deg,#020805 0%,#04140c 40%,#062018 100%);
+}
+.terminal-mode .ascii-bg{
+  position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.14;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='140'><text x='4' y='14' fill='%231aff80' font-family='monospace' font-size='10'>01001110 01 1101</text><text x='4' y='32' fill='%231aff80' font-family='monospace' font-size='10'>ENTROPY·COLLECTIVE</text><text x='4' y='50' fill='%231aff80' font-family='monospace' font-size='10'>#$@&amp;%*+=~^|/\\\\</text><text x='4' y='68' fill='%231aff80' font-family='monospace' font-size='10'>media·laws·φ·extinct</text><text x='4' y='86' fill='%231aff80' font-family='monospace' font-size='10'>01101001 01101110</text><text x='4' y='104' fill='%231aff80' font-family='monospace' font-size='10'>&gt;_ sticky harvest</text><text x='4' y='122' fill='%231aff80' font-family='monospace' font-size='10'>░░░░▒▒▒▓▓▓███</text></svg>");
+  background-size:220px 140px;
+}
+.terminal-mode .stars{opacity:.35;z-index:0}
+.terminal-mode > *:not(.ascii-bg):not(.stars){position:relative;z-index:1}
+.terminal-mode .top-marquee{
+  background:#031a10;color:#1aff80;font-family:inherit;font-size:13px;
+  padding:8px 12px;border-bottom:1px solid #1aff80;text-shadow:none;
+  white-space:nowrap;overflow:hidden;
+}
+.terminal-mode .nav-bar{
+  background:rgba(2,12,8,.92);border-bottom:1px solid #1aff80;gap:8px;padding:12px;
+}
+.terminal-mode .nav-link{
+  border-radius:0;border:1px solid #1aff80;background:#020805;color:#1aff80;
+  box-shadow:none;font-family:inherit;letter-spacing:.04em;
+}
+.terminal-mode .nav-link:hover{background:#0a3d22;transform:none;box-shadow:none}
+.terminal-mode .nav-link.active{background:#1aff80;color:#020805}
+.terminal-mode .headline{
+  font-family:"Share Tech Mono", monospace;font-weight:400;
+  background:none;-webkit-background-clip:unset;background-clip:unset;
+  color:#1aff80;filter:none;text-shadow:0 0 12px rgba(26,255,128,.35);
+  letter-spacing:.12em;
+}
+.terminal-mode .tagline{color:#7dffa8}
+.terminal-mode .under-tag,.terminal-mode .footer,.terminal-mode .source-note{color:#5fa87a}
+.terminal-mode .footer a,.terminal-mode a{color:#9dffc0}
+.terminal-mode .scrapbook{
+  background:#04140c;border:1px solid #1aff80;border-radius:0;color:#b8f5c2;
+  box-shadow:6px 6px 0 #0a3d22;transform:none !important;
+}
+.terminal-mode .scrapbook:nth-child(even){box-shadow:6px 6px 0 #145c32;transform:none !important}
+.terminal-mode .scrapbook h2,.terminal-mode .scrapbook h3{color:#1aff80;font-family:inherit}
+.terminal-mode .dino-photo{border:1px solid #1aff80;border-radius:0;box-shadow:4px 4px 0 #0a3d22}
+.terminal-mode .photo-fig{
+  background:#020805;padding:8px;border-radius:0;box-shadow:none;color:#7dffa8;
+  border:1px solid #145c32;transform:none !important;
+}
+.terminal-mode .photo-fig figcaption{color:#5fa87a}
+.terminal-mode .photo-fig figcaption a{color:#9dffc0}
+.terminal-mode .photo-badge,.terminal-mode .terminal-badge{
+  border-radius:0;border:1px solid #1aff80;box-shadow:none;transform:none !important;
+}
+.terminal-badge{
+  position:absolute;right:12px;top:8px;width:64px;height:64px;display:flex;align-items:center;justify-content:center;
+  font-size:28px;color:#1aff80;background:#020805;
+}
+.prompt-line{font-size:13px;color:#5fa87a;margin:0 0 8px;text-align:left}
+.terminal-mode .intro{text-align:left}
+.terminal-mode .intro .headline{text-align:left}
+.ascii-block{
+  background:#020805;border:1px solid #145c32;color:#1aff80;padding:12px 14px;
+  overflow:auto;font-size:12px;line-height:1.35;margin:12px 0 0;
+}
+.terminal-mode .wobble-title{
+  font-family:"Share Tech Mono", monospace;transform:none;color:#1aff80;
+  text-shadow:0 0 10px rgba(26,255,128,.35);margin:24px 0 8px;text-align:left;
+}
+.terminal-mode .hof-intro{text-align:left;color:#7dffa8}
+.terminal-mode .dino-card .bio{background:rgba(26,255,128,.08);border-left:3px solid #1aff80;border-radius:0}
+.terminal-mode .css-blink{color:#1aff80}
+/* square terminal grid — kill freeform rotations from Cycle 2 */
+.terminal-mode main#sections.freeform.terminal-grid{
+  display:flex;flex-direction:column;gap:28px;max-width:960px;
+}
+.terminal-mode .terminal-grid .ff,
+.terminal-mode .terminal-grid .dino-card,
+.terminal-mode .terminal-grid .rz1,
+.terminal-mode .terminal-grid .rz2,
+.terminal-mode .terminal-grid .rz3,
+.terminal-mode .terminal-grid .rz4,
+.terminal-mode .terminal-grid .ff-a,
+.terminal-mode .terminal-grid .ff-b,
+.terminal-mode .terminal-grid .ff-c,
+.terminal-mode .terminal-grid .ff-d{
+  grid-column:auto;margin:0 !important;transform:none !important;width:100%;
+}
+.terminal-mode .dino-scatter{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.terminal-mode .dino-scatter .r1,
+.terminal-mode .dino-scatter .r2,
+.terminal-mode .dino-scatter .r3,
+.terminal-mode .dino-scatter .r4,
+.terminal-mode .dino-scatter .r5,
+.terminal-mode .dino-scatter .r6{grid-column:auto;margin:0;transform:none}
+.terminal-mode .photo-strip{gap:12px}
+.terminal-mode .photo-strip .photo-fig{width:calc(33.33% - 8px)}
+.terminal-mode .floaty{display:none}
+.terminal-mode.purple-bg{
+  background:linear-gradient(180deg,#050812 0%,#0a1020 40%,#0d1a18 100%);
+  border-color:#1aff80;
+}
+.terminal-mode.purple-bg .nav-bar{background:rgba(2,8,16,.92);border-bottom-color:#1aff80}
+.terminal-mode.purple-bg .scrapbook{background:#061018;border-color:#1aff80}
+.mcluhan-fig{max-width:680px;width:100%}
+.rz-mcluhan{order:3}
+@media (max-width:820px){
+  .terminal-mode .dino-scatter{grid-template-columns:1fr}
+  .terminal-mode .photo-strip .photo-fig{width:100%}
+  .terminal-badge{position:static;margin:0 0 10px}
+}

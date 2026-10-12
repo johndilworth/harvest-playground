@@ -28,6 +28,9 @@ Harvested the Cycle 3 review board `a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3` (Home 
 ### Board feedback (purple / Board:)
 - none
 
+### Authors
+- anonymous — 9 (the Cycle 3 board was Lucidspark without sticky attribution; from Cycle 5 boards are Lucidchart with authors shown)
+
 ### Hub stray stickies
 - none (Cycle 3 hub: generated shapes only, 0 threads)
 

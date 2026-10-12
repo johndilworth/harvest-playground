@@ -19,3 +19,12 @@ button{font:inherit;padding:8px 16px;border:1px solid #1f2328;background:#1f2328
 button:disabled{background:#c8ccd1;border-color:#c8ccd1;color:#6e7781;cursor:not-allowed}
 input{font:inherit;padding:7px 9px;border:1px solid #9aa1a9;background:#fff;margin-right:8px}
 .doc{display:flex;justify-content:space-between;gap:16px}
+.cyclenav{display:flex;justify-content:space-between;margin:12px 0 18px}
+.authors{width:auto;min-width:280px}
+.modal{position:fixed;inset:0;background:rgba(31,35,40,.45);display:flex;align-items:center;justify-content:center;z-index:10}
+.modal[hidden]{display:none}
+.modal-box{background:#F2F3F5;border:1px solid #9aa1a9;padding:22px 26px;width:min(460px,92vw)}
+.modal-box h2{margin-top:0}.modal-box label{display:block;margin:8px 0}.modal-box input{width:100%;margin:4px 0 0}
+.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:10px}
+button.secondary{background:#fff;color:#1f2328}
+.msg.ok{color:#1f883d;font-weight:600}.msg.err{color:#cf222e;font-weight:600}

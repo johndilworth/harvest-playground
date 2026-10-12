@@ -34,7 +34,7 @@ summ = {0:"Cycle 0 — the blank canvas",1:"Cycle 1 — childish 90s playground"
 cycles=[]
 for c in range(4):
     d=json.load(open(f"journey/cycles/{c}/lucid-doc.json"))
-    docs=[{"title":"Hub","role":"hub","docId":d["hub"]["docId"],"url":L(d["hub"]["docId"]),"description":"Index board linking every flow board for this cycle (never harvested)."}]
+    docs=[]  # no Lucid hub: the dashboard is the hub (HARVEST.md). One-time bootstrap; harvest.json is now maintained directly.
     for b in d["boards"]:
         docs.append({"title":b["title"].split("· ")[-1] if "·" in b["title"] else "Home","role":"flow","flow":b["flow"],
                      "docId":b["docId"],"url":L(b["docId"]),"description":FLOWDESC.get(b["flow"],""),

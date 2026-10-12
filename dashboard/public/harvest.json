@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "project": {
     "name": "Harvest Playground",
     "slug": "harvest-playground",
@@ -15,7 +15,7 @@
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
     "nightlyHarvests": 10
   },
-  "updatedAt": "2026-10-12T10:39:21-06:00",
+  "updatedAt": "2026-10-12T11:45:00-06:00",
   "cycles": [
     {
       "number": 0,
@@ -27,13 +27,6 @@
       "commit": "d6be9dc",
       "screenshot": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png",
       "documents": [
-        {
-          "title": "Hub",
-          "role": "hub",
-          "docId": "4ea33e03-7a76-45a5-8d7e-442dd1f54831",
-          "url": "https://lucid.app/lucidspark/4ea33e03-7a76-45a5-8d7e-442dd1f54831/edit",
-          "description": "Index board linking every flow board for this cycle (never harvested)."
-        },
         {
           "title": "Home",
           "role": "flow",
@@ -56,7 +49,14 @@
         "skipped": [],
         "conflicts": [],
         "note": "Initial nearly-empty page: title, invitation line, footer 'Cycle 0'."
-      }
+      },
+      "previewUrl": "https://6ac029a3b51e1e796ca3111a--harvest-playground.netlify.app",
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 12
+        }
+      ]
     },
     {
       "number": 1,
@@ -68,13 +68,6 @@
       "commit": "6dc68a6",
       "screenshot": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png",
       "documents": [
-        {
-          "title": "Hub",
-          "role": "hub",
-          "docId": "1559dc9e-e7ef-42e9-9027-5ef5c5b2f485",
-          "url": "https://lucid.app/lucidspark/1559dc9e-e7ef-42e9-9027-5ef5c5b2f485/edit",
-          "description": "Index board linking every flow board for this cycle (never harvested)."
-        },
         {
           "title": "Home",
           "role": "flow",
@@ -185,7 +178,14 @@
         ],
         "skipped": [],
         "conflicts": []
-      }
+      },
+      "previewUrl": "https://6ac0394135c41b000896155e--harvest-playground.netlify.app",
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 8
+        }
+      ]
     },
     {
       "number": 2,
@@ -197,13 +197,6 @@
       "commit": "d5e4f56",
       "screenshot": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c2-home/01-home.png",
       "documents": [
-        {
-          "title": "Hub",
-          "role": "hub",
-          "docId": "29f0022f-a695-4df7-8499-3b5bd7602d53",
-          "url": "https://lucid.app/lucidspark/29f0022f-a695-4df7-8499-3b5bd7602d53/edit",
-          "description": "Index board linking every flow board for this cycle (never harvested)."
-        },
         {
           "title": "Home",
           "role": "flow",
@@ -293,7 +286,14 @@
           "\u201conly split into multiple files if a section has more than 5 flows or screens\u201d (later adopted)",
           "empty purple rectangle"
         ]
-      }
+      },
+      "previewUrl": "https://6ac430ce627fd2000861b9f0--harvest-playground.netlify.app",
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 2
+        }
+      ]
     },
     {
       "number": 3,
@@ -305,13 +305,6 @@
       "commit": "67c44ca",
       "screenshot": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png",
       "documents": [
-        {
-          "title": "Hub",
-          "role": "hub",
-          "docId": "3539baec-5553-443e-aff3-e5936b3d697f",
-          "url": "https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/edit",
-          "description": "Index board linking every flow board for this cycle (never harvested)."
-        },
         {
           "title": "All pages",
           "role": "flow",
@@ -367,7 +360,14 @@
         "conflicts": [
           "Purple background (Cycle 2 board) beat Cycle 1 midnight blue on Home (newest wins)"
         ]
-      }
+      },
+      "previewUrl": "https://6ac57ed1d5006e00087c0ca4--harvest-playground.netlify.app",
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 9
+        }
+      ]
     },
     {
       "number": 4,
@@ -379,13 +379,6 @@
       "commit": "f3e1e36",
       "screenshot": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/01-home.png",
       "documents": [
-        {
-          "title": "Hub",
-          "role": "hub",
-          "docId": "bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf",
-          "url": "https://lucid.app/lucidspark/bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf/edit",
-          "description": "Index board linking the Cycle 4 review board + History (never harvested)."
-        },
         {
           "title": "All pages",
           "role": "flow",
@@ -448,7 +441,9 @@
         "skipped": [],
         "conflicts": [],
         "note": "Manual harvest from Harvest Dashboard webhook at ~10:30 AM MT 2026-10-12 (not the 5pm nightly). Merged to main as commit f3e1e36 (GitHub MCP PR create returned 403)."
-      }
+      },
+      "previewUrl": "https://6acd0c6314483bd0d7c562af--harvest-playground.netlify.app",
+      "authors": []
     }
   ]
 }

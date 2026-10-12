@@ -34,6 +34,7 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 ## Day by day
 
 ### Mon 2026-10-12 — Cycle 3 harvest · **Cycle 4 shipped** · manual from dashboard
+- Sticky authors: anonymous × 9 (no attribution on the Lucidspark board). Dashboard v2 now lists authors per cycle; no more Lucid hubs; Run harvest now moved to the current cycle page.
 - **Harvested:** Cycle 3 review board (Home · Dino Town · Totally Random) — **manual** run triggered from the Harvest Dashboard webhook at ~10:30 AM MT (payload `action:harvest` / `source:harvest-dashboard` / `requestedAt:2026-10-12T16:30:58.360Z`) — **9 stickies, 0 comment threads**
 - **Applied:** 9 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Hub stray stickies:** 0
 - **Contributors:** anonymous (team) — stickies had no Lucid author line

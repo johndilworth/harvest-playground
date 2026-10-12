@@ -118,15 +118,14 @@ function histogram(cs) {
     TYPES.forEach(([t, , col]) => { if (!r.k[t]) return; const sh = Math.max(1, Math.round(total * r.k[t] / r.t)); y -= sh; segs += `<rect x="${x}" y="${y}" width="${bw}" height="${sh}" fill="${col}"/>`; });
     const per = TYPES.map(([t, l]) => `${r.k[t]} ${l}`).join(", ");
     const tip = `<b>Cycle ${r.c.number}</b><br>${esc(fmtMT(r.c.createdAt))}<br><b>${r.t}</b> contributions${TYPES.map(([t, l, col]) => `<br><i style="background:${col}"></i>${l}: ${r.k[t]}`).join("")}`;
-    return `<g class="bar" tabindex="0" role="img" aria-label="Cycle ${r.c.number}, harvested ${esc(fmtMT(r.c.createdAt))}: ${r.t} contributions (${per})" data-tip="${esc(tip)}">
+    return `<g class="bar" tabindex="0" role="link" data-href="cycle.html?c=${r.c.number}" style="cursor:pointer" aria-label="Open Cycle ${r.c.number}, harvested ${esc(fmtMT(r.c.createdAt))}: ${r.t} contributions (${per})" data-tip="${esc(tip)}">
       <rect class="hit" x="${x - gap / 2}" y="0" width="${bw + gap}" height="${H + 22}" fill="transparent"/>
       <rect x="${x}" y="${H - BASE}" width="${bw}" height="${BASE}" fill="#9aa1a9"/>${segs}
       <text x="${x + bw / 2}" y="${H + 16}" text-anchor="middle">C${r.c.number}</text></g>`;
   }).join("");
   return `<div class="card histo"><div class="histo-head"><b>Contributions per cycle</b><span class="legend">${TYPES.map(([, l, col]) => `<span><i style="background:${col}"></i>${l}</span>`).join("")}</span></div>
    <div class="histo-wrap"><svg viewBox="0 0 ${W} ${H + 22}" width="${W}" height="${H + 22}" role="group" aria-label="Stickies per cycle, stacked by type (compressed square-root scale)">
-   <line x1="0" y1="${H}" x2="${W}" y2="${H}" stroke="#c8ccd1"/>${bars}</svg><div id="tip" class="tip" role="tooltip" hidden></div></div>
-   <div class="muted small">Bar height uses a compressed (square-root) scale; hover or focus a bar for exact counts.</div></div>`;
+   <line x1="0" y1="${H}" x2="${W}" y2="${H}" stroke="#c8ccd1"/>${bars}</svg><div id="tip" class="tip" role="tooltip" hidden></div></div></div>`;
 }
 function setupHistogram() {
   const tip = $("#tip"), wrap = $(".histo-wrap"); if (!tip) return;
@@ -135,6 +134,8 @@ function setupHistogram() {
     tip.style.left = Math.max(0, left) + "px"; tip.style.top = "2px"; };
   document.querySelectorAll(".histo .bar").forEach((g) => {
     g.addEventListener("mouseenter", () => show(g)); g.addEventListener("focus", () => show(g));
-    g.addEventListener("mouseleave", () => (tip.hidden = true)); g.addEventListener("blur", () => (tip.hidden = true));
+    g.addEventListener("mouseleave", () => (tip.hidden = true));
+    g.addEventListener("click", () => (location.href = g.dataset.href));
+    g.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); location.href = g.dataset.href; } }); g.addEventListener("blur", () => (tip.hidden = true));
   });
 }

@@ -10,17 +10,22 @@ N, COMMIT = int(sys.argv[1]), sys.argv[2]
 PAD, GAP, HGAP, FW = 400, 360, 480, 1440
 SITE = "https://harvest-dashboard.netlify.app"; CAP = f"{SITE}/captures/harvest-dashboard/c{N}-review"
 LOCAL = f"../public/captures/harvest-dashboard/c{N}-review"
-SCREENS = [("01-home", "/", "Home — all Harvest projects", "Wider grid (up to 5 tiles). Project cards: name, harvest mode, sparkline, cycle count, current cycle, last harvest, screenshot — no description blurb."),
- ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard (Harvest Playground)", "Project links (Dashboard / Summary / Live site / History) sit under the title; top header is brand + All projects only."),
- ("03-cycle", f"/p/harvest-dashboard/cycle.html?c={N}", f"Cycle page (Harvest Dashboard · Cycle {N})", "Lucid documents with Open board to comment buttons (no embeds); Changes / Sticky authors only when present; no large screenshot; Manual harvests with Run harvest now."),
+SCREENS = [("01-home", "/", "Home — all Harvest projects", "H1 is All projects (matches top nav). Wider grid (up to 5 tiles). Project cards: name, harvest mode, sparkline, cycle count, current cycle, last harvest, screenshot."),
+ ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard (Harvest Playground)", "Top header is brand Harvest + All projects + Harvest rules only (no project name). Project title row: h1 left, subnav (Dashboard / Summary / Live site) right — History removed."),
+ ("03-cycle", f"/p/harvest-dashboard/cycle.html?c={N}", f"Cycle page (Harvest Dashboard · Cycle {N})", "Title is [Project name] · Cycle N with project name linking to the project dashboard; subnav on the title row. Lucid documents with Open board to comment; Manual harvests with Run harvest now."),
  ("04-run-harvest-modal", f"/p/harvest-dashboard/cycle.html?c={N}", "Run harvest modal", "Passphrase only (no Type RUN); posts project 'harvest-dashboard' to the harvest webhook."),
- ("05-summary", "/p/harvest-playground/summary.html", "Summary (all cycles of a project)", "Table of every cycle: applied, skipped with reasons, conflicts. Authors appear next to each change; no separate authors section.")]
+ ("05-summary", "/p/harvest-playground/summary.html", "Summary (all cycles of a project)", "Title is [Project name] · Summary (breadcrumb). Subnav (Dashboard / Summary / Live site) sits to the right of the title — shared title-row component, no History.")]
 e = lambda s: html.escape(s, quote=False)
 def text(i, x, y, w, h, t): return {"id": i, "type": "text", "boundingBox": {"x": x, "y": y, "w": w, "h": h}, "text": t}
 shots = []
 for k, route, title, cap in SCREENS:
     w, h = Image.open(f"{LOCAL}/{k}.png").size; shots.append((k, route, title, cap, round(h * FW / w)))
-FH = PAD + max(s[4] for s in shots) + GAP + 260 + PAD
+CHANGES = {"01-home": "H1 'Harvest projects' -> 'All projects'.", "02-project-dashboard": "Project name removed from top header (global nav only); subnav right of title, no History.",
+ "03-cycle": "Title '[Project] · Cycle N' with project breadcrumb link.", "04-run-harvest-modal": "No change (title row shared).",
+ "05-summary": "Title '[Project] · Summary'; History removed; subnav right of title (shared component)."}
+PREV = f"{SITE}/captures/harvest-dashboard/c{N-1}-review" if N > 1 else None
+BW, BH = 720, 512
+FH = PAD + max(s[4] for s in shots) + GAP + 260 + (120 + BH + 80 if PREV else 0) + PAD
 W = len(shots) * (FW + 2 * PAD) + (len(shots) - 1) * HGAP
 sh = [text("doc-title", 0, -900, W, 240, f"<p style='font-size:40pt;text-align:left'><b>Harvest Dashboard — Cycle {N} review · All pages</b><br>"
            f"<span style='font-size:20pt'>{len(shots)} screens, left → right · Desktop 1440 wide (full page) · commit {COMMIT[:7]} · "
@@ -45,5 +50,11 @@ for k, route, title, cap, ih in shots:
                "stroke": {"color": "#C9CED8", "width": 2, "style": "solid"}, "actions": [{"type": "url", "url": SITE + route, "newWindow": True}]})
     sh.append(text(f"caption-{k}", x + PAD, PAD + ih + GAP, FW, 220, f"<p style='font-size:22pt;text-align:left'><b>{k} · {e(title)}</b><br>"
                    f"<span style='font-size:16pt'>{e(cap)}</span><br><span style='font-size:16pt'>Live: <a href=\"{SITE + route}\">{SITE + route}</a></span></p>"))
+    if PREV:
+        y0 = PAD + ih + GAP + 260
+        sh.append(text(f"changes-{k}", x + PAD, y0, FW, 100, f"<p style='font-size:18pt;text-align:left'><b>Changes in this cycle:</b> {e(CHANGES.get(k, ''))}</p>"))
+        sh.append(text(f"before-label-{k}", x + PAD, y0 + 110, BW, 60, f"<p style='font-size:16pt;text-align:left'>Cycle {N-1} (before) · reference only</p>"))
+        sh.append({"id": f"before-{k}", "type": "image", "boundingBox": {"x": x + PAD, "y": y0 + 180, "w": BW, "h": BH}, "image": {"type": "image", "url": f"{PREV}/{k}.png"},
+                   "stroke": {"color": "#C9CED8", "width": 1, "style": "solid"}})
     x += FW + 2 * PAD + HGAP
 print(json.dumps({"version": 1, "pages": [{"id": "review", "title": f"Cycle {N} · All pages", "shapes": sh}]}, ensure_ascii=False))

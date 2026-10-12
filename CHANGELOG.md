@@ -2,6 +2,31 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Harvest Dashboard · Cycle 2 (2026-10-12) · manual harvest
+Manual harvest triggered from the Harvest Dashboard webhook (`action:harvest` / `project:harvest-dashboard`).
+Harvested Cycle 1 boards: review `090db6e7-…` + New project `074fcea1-…` —
+**6 stickies** (all in-frame on review; 0 on New project), all safe. Authors: none on stickies → **anonymous**.
+
+### Applied (6)
+- **must** · 01-home · Change page title from "Harvest projects" to "All projects" to match menu option above. · by anonymous
+- **must** · 02-project-dashboard · Do: remove project name from top header. This will only be for global navigation items. do this on all pages. · by anonymous
+- **try** · 03-cycle · Change title from "Cycle 0" to "[Project name] · Cycle [0]" — project name is a breadcrumb link back to the project dashboard. · by anonymous
+- **try** · 05-summary · Remove "History" from navigation; this navigation should be a component used on all pages so navigation is not duplicated. · by anonymous
+- **try** · 05-summary · Move the navigation links (Dashboard, Summary, Live site) to the right of the page title. · by anonymous
+- **try** · 05-summary · Change title from "Summary of all cycles" to "[Project name] · Summary". · by anonymous
+
+### Skipped (0)
+- none
+
+### Conflicts
+- none
+
+### Board feedback (purple / Board:)
+- none
+
+### Authors
+- anonymous — 6
+
 ## Harvest Dashboard · Cycle 1 (2026-10-12) · manual harvest
 Manual harvest triggered from the Harvest Dashboard webhook at ~3:20 PM MT (payload
 `action:harvest` / `project:harvest-dashboard` / `requestedAt:2026-10-12T21:20:19Z`).

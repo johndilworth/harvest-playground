@@ -1,0 +1,264 @@
+{
+  "docId": "090db6e7-d945-43da-9eff-7d8181ab8f69",
+  "cycle": 1,
+  "harvestedAt": "2026-10-12T22:41:30.292760+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home — all Harvest projects",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/",
+      "url": "https://harvest-dashboard.netlify.app/",
+      "title": "Home",
+      "h1": "All projects",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "mTMCLlUNVfI1",
+          "kind": "sticky",
+          "text": "Change page title form \"Harvest projects\" to \"All projects\" to match menu option above.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 256.4189355829153,
+            "y": 486.45066880794957,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-project-dashboard",
+      "pageId": "review",
+      "frameTitle": "02-project-dashboard · /p/harvest-playground/ · Project dashboard (Harvest Playground)",
+      "stepKey": "02-project-dashboard",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/",
+      "title": "Project dashboard",
+      "h1": "Harvest Playground",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "B3MCOkQAkxq8",
+          "kind": "sticky",
+          "text": "Do: remove project name from top header. This will only be for global navigation items. do this on all pages.",
+          "priority": "must",
+          "prioritySource": "text",
+          "textPriority": "must",
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 3192.1679637866637,
+            "y": 240.0,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-project-dashboard",
+            "via": null,
+            "bbox": "frame-02-project-dashboard",
+            "bestOverlap": {
+              "frameId": "frame-02-project-dashboard",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-cycle",
+      "pageId": "review",
+      "frameTitle": "03-cycle · /p/harvest-dashboard/cycle.html?c=1 · Cycle page (Harvest Dashboard · Cycle 1)",
+      "stepKey": "03-cycle",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=1",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=1",
+      "title": "Cycle page",
+      "h1": "Cycle 1",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "63MCLDCvZ3Ed",
+          "kind": "sticky",
+          "text": "Change title here from \"Cycle 0\" to \n\n\"[Project name]/ Cycle [0]\"\n\n[project name] then functions as a breadcrumb link back to the project dashboard.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 5623.28316958133,
+            "y": 410.97225315576407,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-cycle",
+            "via": null,
+            "bbox": "frame-03-cycle",
+            "bestOverlap": {
+              "frameId": "frame-03-cycle",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-04-run-harvest-modal",
+      "pageId": "review",
+      "frameTitle": "04-run-harvest-modal · /p/harvest-dashboard/cycle.html?c=1 · Run harvest modal",
+      "stepKey": "04-run-harvest-modal",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=1",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=1",
+      "title": "Run harvest modal",
+      "h1": "Run harvest",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-05-summary",
+      "pageId": "review",
+      "frameTitle": "05-summary · /p/harvest-playground/summary.html · Summary (all cycles of a project)",
+      "stepKey": "05-summary",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/summary.html",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/summary.html",
+      "title": "Summary",
+      "h1": "Summary",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "T9MCMTsC85Ri",
+          "kind": "sticky",
+          "text": "Remove \"History\" from navigation, this navigation should be a component, used on all pages, so navigation is not duplicated",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 11666.0,
+            "y": 441.32694004973155,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-05-summary",
+            "via": null,
+            "bbox": "frame-05-summary",
+            "bestOverlap": {
+              "frameId": "frame-05-summary",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        },
+        {
+          "itemId": "H8MC.mwN8MAQ",
+          "kind": "sticky",
+          "text": "move the navigation links (Dashboard, summary, live site,) to the right of the page title.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 12636.303288498122,
+            "y": 385.11632402613145,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-05-summary",
+            "via": null,
+            "bbox": "frame-05-summary",
+            "bestOverlap": {
+              "frameId": "frame-05-summary",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        },
+        {
+          "itemId": "c8MC2K-fiDB2",
+          "kind": "sticky",
+          "text": "Change title from \"Summary of all cycles\" to \n\n[Project name]/Summary",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 11067.579689725031,
+            "y": 385.11632402613145,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-05-summary",
+            "via": null,
+            "bbox": "frame-05-summary",
+            "bestOverlap": {
+              "frameId": "frame-05-summary",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

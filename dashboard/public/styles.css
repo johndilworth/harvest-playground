@@ -52,6 +52,9 @@ a.btn{display:inline-block;align-self:center;padding:8px 16px;border:1px solid #
 .modal-box.wide{width:min(720px,94vw);max-height:90vh;overflow:auto}
 [hidden]{display:none!important}
 
+.title-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin:0 0 6px}
+.title-row h1{margin:0;flex:1 1 auto;min-width:12rem}
+.title-row .subnav{margin:0;flex:0 0 auto}
 .subnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin:4px 0 18px;font-size:14px}
 .subnav a{color:#1a5fb4}.subnav a.current{font-weight:700;color:#1f2328;text-decoration:none;pointer-events:none}
 .doc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-bottom:8px}

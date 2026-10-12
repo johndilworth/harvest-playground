@@ -3,18 +3,22 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "America/Denver" });
 const SLUG = (location.pathname.match(/^\/p\/([a-z0-9-]+)/) || [])[1] || "harvest-playground";
 const B = `/p/${SLUG}/`;
-// Top header: brand + All projects + system-wide Harvest rules. Project-specific links live under the title (subnav).
-const nav = (p) => `<header class="top"><b><a href="/" style="color:inherit">Harvest</a> · ${esc(p.name)}</b><nav><a href="/">All projects</a><a href="/rules.html">Harvest rules</a></nav></header>`;
+// Top header: brand + All projects + Harvest rules only (no project name). Project links live in title-row subnav.
+const nav = () => `<header class="top"><b><a href="/" style="color:inherit">Harvest</a></b><nav><a href="/">All projects</a><a href="/rules.html">Harvest rules</a></nav></header>`;
 function subnav(p, current) {
   const items = [
     ["Dashboard", B, "dash"],
     ["Summary", `${B}summary.html`, "summary"],
   ];
   if (p.site) items.push(["Live site ↗", p.site, "live"]);
-  if (p.historyBoard) items.push([p.historyBoardLabel || "History ↗", p.historyBoard, "history"]);
+  // History dropped from project subnav (cycle-1 sticky); navigation is a shared component.
   return `<nav class="subnav" aria-label="Project">${items.map(([label, href, key]) =>
     key === current ? `<a class="current" href="${href}" aria-current="page">${esc(label)}</a>` : `<a href="${href}">${esc(label)}</a>`
   ).join("")}</nav>`;
+}
+/** Title row: h1 on the left, project subnav on the right (shared on dashboard / cycle / summary). */
+function titleRow(titleHtml, p, current) {
+  return `<div class="title-row"><h1>${titleHtml}</h1>${subnav(p, current)}</div>`;
 }
 async function load(slug = SLUG) { const r = await fetch(`/data/${slug}.json`, { cache: "no-store" }); if (!r.ok) throw new Error("Unknown project " + slug); return r.json(); }
 const isNightly = (p) => p.harvestMode === "nightly";
@@ -25,8 +29,8 @@ const ordered = (cs) => [...cs].sort((a, b) => (b.status === "current") - (a.sta
 async function dashboard() {
   const d = await load(), p = d.project, cs = d.cycles, cur = cs.find((c) => c.status === "current");
   const applied = cs.reduce((n, c) => n + c.changes.applied.length, 0), skipped = cs.reduce((n, c) => n + c.changes.skipped.length, 0);
-  document.body.insertAdjacentHTML("afterbegin", nav(p));
-  $("main").innerHTML = `<h1>${esc(p.name)}</h1>${subnav(p, "dash")}<p class="muted">${esc(p.description)}</p>
+  document.body.insertAdjacentHTML("afterbegin", nav());
+  $("main").innerHTML = `${titleRow(esc(p.name), p, "dash")}<p class="muted">${esc(p.description)}</p>
   ${histogram(cs)}
   <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${isNightly(p) ? d.stats.nightlyHarvests : d.stats.manualHarvests ?? 0}</b> ${isNightly(p) ? "nightly" : "manual"} harvests</span></div>
   <h2>Cycles</h2><div class="grid">${ordered(cs).map((c) => `<a class="card cycle-card ${c.status}" href="${B}cycle.html?c=${c.number}" style="color:inherit;text-decoration:none">
@@ -71,11 +75,11 @@ function authorsSection(c) {
 
 async function cycle() {
   const d = await load(), n = +new URLSearchParams(location.search).get("c"), c = d.cycles.find((x) => x.number === n) || ordered(d.cycles)[0];
-  document.body.insertAdjacentHTML("afterbegin", nav(d.project)); document.title = `Cycle ${c.number} · ${d.project.name}`;
+  document.body.insertAdjacentHTML("afterbegin", nav()); document.title = `Cycle ${c.number} · ${d.project.name}`;
   const ch = c.changes;
   const curC = d.cycles.find((x) => x.status === "current");
-  $("main").innerHTML = `<h1>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>${curC ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${B}cycle.html?c=${curC.number}">Go to current cycle (Cycle ${curC.number}) →</a>` : ""}`}</h1>
-  ${subnav(d.project, "cycle")}
+  const cycleTitle = `<a href="${B}">${esc(d.project.name)}</a> · Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>${curC ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${B}cycle.html?c=${curC.number}">Go to current cycle (Cycle ${curC.number}) →</a>` : ""}`}`;
+  $("main").innerHTML = `${titleRow(cycleTitle, d.project, "cycle")}
   <p class="muted">${esc(c.title)} · created ${fmt(c.createdAt)}${c.harvestedFrom != null ? ` · harvested from Cycle ${c.harvestedFrom}` : ""}${c.pullRequest ? ` · <a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""} · commit <code>${esc(c.commit)}</code>${c.previewUrl ? ` · <a class="preview" href="${c.previewUrl}">Preview ↗</a>` : ""}</p>
   <h2>Lucid documents</h2>${docsHtml(c.documents, c.status, c.screenshot)}
   ${changesHtml(ch)}
@@ -86,9 +90,9 @@ async function cycle() {
 }
 
 async function summary() {
-  const d = await load(); document.body.insertAdjacentHTML("afterbegin", nav(d.project));
+  const d = await load(); document.body.insertAdjacentHTML("afterbegin", nav());
   const li = (a, f) => a.length ? `<ul>${a.map(f).join("")}</ul>` : "<span class='muted'>none</span>";
-  $("main").innerHTML = `<h1>Summary of all cycles</h1>${subnav(d.project, "summary")}<p class="muted">Every cycle and the changes it shipped.</p>
+  $("main").innerHTML = `${titleRow(`<a href="${B}">${esc(d.project.name)}</a> · Summary`, d.project, "summary")}<p class="muted">Every cycle and the changes it shipped.</p>
   <table><tr><th>Cycle</th><th>Date</th><th>Status</th><th>Applied</th><th>Skipped (reason)</th><th>Conflicts</th></tr>
   ${[...d.cycles].sort((a, b) => b.number - a.number).map((c) => `<tr><td><a href="${B}cycle.html?c=${c.number}">Cycle ${c.number}</a>${c.pullRequest ? `<br><a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""}</td>
    <td style="white-space:nowrap">${fmt(c.createdAt)}</td><td>${esc(c.status)}</td>
@@ -185,11 +189,11 @@ function setupHistogram() {
 
 // ---- Home: all projects ----
 async function home() {
-  document.body.insertAdjacentHTML("afterbegin", `<header class="top"><b>Harvest</b><nav><a href="/">All projects</a><a href="/rules.html">Harvest rules</a></nav></header>`);
+  document.body.insertAdjacentHTML("afterbegin", nav()); // shared global nav component
   const idx = await (await fetch("/data/projects.json", { cache: "no-store" })).json();
   const ds = await Promise.all(idx.projects.map((p) => load(p.slug).catch(() => null)));
   // Description under "Harvest projects" removed (cycle 0 sticky).
-  $("main").innerHTML = `<div class="doc"><h1>Harvest projects</h1><a class="btn" id="new-project" href="/new.html">+ New project</a></div><div class="grid projects">${idx.projects.map((p, i) => {
+  $("main").innerHTML = `<div class="doc"><h1>All projects</h1><a class="btn" id="new-project" href="/new.html">+ New project</a></div><div class="grid projects">${idx.projects.map((p, i) => {
     const d = ds[i]; if (!d) return `<div class="card">${esc(p.name)} — data unavailable</div>`;
     const cs = d.cycles, cur = cs.find((c) => c.status === "current") || cs[cs.length - 1];
     const all = cs.flatMap((c) => runs(d.project, c)).map((h) => h.date).sort(); const last = all[all.length - 1];

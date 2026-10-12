@@ -61,9 +61,9 @@ Every item that isn't applied is logged in CHANGELOG.md (that night's publish no
 5. Wait for the production deploy to be `ready`, then capture:
    `cd journey && node capture.mjs --cycle <N+1> --out out/c<N+1>` (1440×1024 viewport `01-home.png`, plus
    `02-home-full.png` if the page grows taller than 1024 px).
-6. Host the images on journey-assets-ai-xform under `/harvest-playground-c<N+1>-home/` (copy into
-   `/workspace/journey-assets-site/harvest-playground-c<N+1>-home/`, then
-   `netlify deploy --prod --dir=/workspace/journey-assets-site --site 072e8f44-b0a5-4b41-a9bb-bcbc8dd4eb92`).
+6. Host the images on the dashboard under `/captures/harvest-playground/c<N+1>-<flow>/` (copy into
+   `dashboard/public/captures/harvest-playground/c<N+1>-<flow>/`, then run the dashboard deploy command in § Dashboard).
+   URL: `https://harvest-dashboard.netlify.app/captures/<project>/<flow-slug>/<file>.png` (see § Screen captures).
 7. Build the next cycle review board(s) **as Lucidchart documents** (`product: "lucidchart"`, never Lucidspark) per
    § Board rules (single-page imports; keep screens on one board until a section has more than 5 flows or screens, then
    split; **no hub board**; rules from the prototype-to-lucid-journey-map skill including page background #E8EAED with
@@ -106,9 +106,17 @@ else **`anonymous`**). Include authors in the CHANGELOG entry (`… · by <autho
 - **Site:** https://harvest-dashboard.netlify.app (Netlify site `harvest-dashboard`, id `6f658653-21cc-4b1a-8094-b890bd04ef18`).
   Source lives in `dashboard/` (separate from `site/`, so stickies never touch it). Not Git-linked: deploy with
   `cd dashboard && netlify deploy --prod --dir=public --functions=netlify/functions --site 6f658653-21cc-4b1a-8094-b890bd04ef18`.
-- Pages: `/` dashboard, `/cycle.html?c=<N>` per cycle, `/summary.html` all cycles. All render client-side from
-  `dashboard/public/harvest.json`, the single data file. Noindex (header + meta + robots.txt).
-- **Nightly step 8:** update `harvest.json` (append a `nightlyHarvests` entry to the current cycle; on a new cycle mark the
+- **Multi-project (v4, 2026-10-12).** Pages: `/` lists every Harvest project as a card; `/p/<slug>/` project dashboard,
+  `/p/<slug>/cycle.html?c=<N>` per cycle, `/p/<slug>/summary.html` all cycles (one set of templates, `project*.html`, served
+  via rewrites in `dashboard/netlify.toml`; the slug is read from the path). Legacy `/cycle.html?c=N`, `/summary.html` and
+  `/harvest.json` 301 to the Harvest Playground equivalents. Noindex (header + meta + robots.txt).
+- **Data:** `dashboard/public/data/projects.json` (index: slug, name, file, harvestMode) + one file per project
+  `dashboard/public/data/<slug>.json` (schemaVersion 3 = v2 below plus `project.harvestMode` `"nightly"|"manual"`,
+  `project.trigger` bool, `stats.manualHarvests`, per-cycle `manualHarvests[]` (same shape as `nightlyHarvests`), optional
+  `authorsNote`, `screens`, `historyBoardLabel`). Manual projects show "Manual harvests" instead of "Nightly harvests".
+  Projects today: `harvest-playground` (nightly), `design-loop`, `harvest-site`, `harvest-dashboard` (manual).
+  `dashboard/build_projects.py` was a one-time seed; edit the data files directly afterwards.
+- **Nightly step 8:** update `dashboard/public/data/harvest-playground.json` (formerly `harvest.json`) (append a `nightlyHarvests` entry to the current cycle; on a new cycle mark the
   old one `"superseded"`, append the new cycle with `"status":"current"`, bump `stats.pullRequests` if a PR was opened,
   bump `stats.nightlyHarvests`, set `updatedAt`), commit, then run the deploy command above. Also:
   - add every Lucid board of the new cycle to its `documents` (role `flow`; never a `hub` entry);
@@ -156,7 +164,45 @@ v1 → v2 (2026-10-12): hub documents removed from every cycle, `previewUrl` and
 The button lives **only on the current cycle's page**, inside its "Nightly harvests" section (not on the project
 dashboard, not on older cycles). It opens a modal: passphrase + type `RUN`, then shows success or the error.
 `dashboard/netlify/functions/trigger.mjs` (`/api/trigger`). GET returns `{configured}`; the button is disabled unless
-both env vars below are set on the harvest-dashboard site. POST needs the shared secret plus typing `RUN`, then forwards
-`POST {project, action:"harvest", source, requestedAt}` with header `x-harvest-secret` to the webhook.
+both env vars below are set on the harvest-dashboard site. POST `{project, secret, confirm}` needs the shared secret plus typing `RUN`, then forwards
+`POST {project, action:"harvest", source, requestedAt}` with `Authorization: $HARVEST_WEBHOOK_AUTH` to the webhook.
+The button shows only on projects whose data file has `project.trigger: true`; the function allowlists
+`harvest-playground` and `harvest-dashboard` (the webhook routine must branch on `project`).
 - `HARVEST_TRIGGER_URL`: webhook that starts the harvest routine (it must run the nightly procedure and create cycle N+1).
-- `HARVEST_TRIGGER_SECRET`: shared secret typed by the user and sent to the webhook for verification.
+- `HARVEST_TRIGGER_SECRET`: shared secret typed by the user (checked in the function).
+- `HARVEST_WEBHOOK_AUTH`: Authorization header value sent to the webhook.
+
+## Screen captures (hosting)
+- **Host:** the dashboard site serves every Harvest screen capture at
+  `https://harvest-dashboard.netlify.app/captures/<project>/<flow-slug>/<file>.png` (source
+  `dashboard/public/captures/`, deployed with the dashboard deploy command). `<flow-slug>` is `c<N>-<flow>` (e.g.
+  `design-loop/c5-landing/`, `harvest-playground/c4-home/`). Stable filenames (`01-….png`) so re-captures overwrite.
+- 2026-10-12: all 42 folders of journey-assets-ai-xform were copied here (prefix `design-loop-`, `harvest-playground-`,
+  `harvest-site-` → `/captures/<project>/<rest>/`; non-project folders under `/captures/legacy/`). **journey-assets-ai-xform
+  (id 072e8f44-…) stays live and unchanged** so existing Lucid boards keep loading; never publish new captures there.
+- Watch the deploy size (`du -sh dashboard/public/captures`, ~33 MB on 2026-10-12); keep single files under 2 MB.
+
+## Harvest Dashboard project (manual)
+The dashboard itself is a Harvest project (`harvest-dashboard`). There is **no nightly routine**; a harvest runs only when
+someone presses **Run harvest now** on its current cycle page (`/p/harvest-dashboard/cycle.html?c=<N>`), which posts
+`{project:"harvest-dashboard", action:"harvest", …}` to the webhook. The routine for that payload:
+1. Read `dashboard/board/c<N>/lucid-doc.json`; fetch every `harvest:true` board (Lucid `fetch`, threads, comments) into
+   `dashboard/board/c<N>/raw/`, and classify with `journey/harvest/harvest.py` exactly as in the nightly procedure
+   (priority words/colours, purple = board feedback, authors).
+2. **Repo = this repo's `dashboard/` folder** (never `site/`). Apply every safe item per § What counts as safe, with
+   extra limits: keep `netlify/functions/trigger.mjs` auth logic and the env vars (`HARVEST_TRIGGER_URL`,
+   `HARVEST_WEBHOOK_AUTH`, `HARVEST_TRIGGER_SECRET`) unchanged, keep noindex, the legacy redirects, `/captures/`, and every
+   project's data. Skip malicious, illegal or offensive items (and anything that would remove projects/data, expose
+   secrets, or break the trigger) with a reason; newest wins on conflicts. Log applied/skipped in the data file.
+3. Commit to `main` (message `Harvest Dashboard cycle <N+1>: …`), push, and deploy with the dashboard deploy command.
+4. Capture cycle N+1: `cd journey && cp ../dashboard/shoot.mjs _shoot.mjs && node _shoot.mjs https://harvest-dashboard.netlify.app
+   ../dashboard/public/captures/harvest-dashboard/c<N+1>-review "" review` (home, project dashboard, cycle page, Run
+   harvest modal, summary; add screens if the dashboard grew new pages), then redeploy so the captures are public.
+5. Build the board: `cd dashboard/board && python3 build_board.py <N+1> <sha> > c<N+1>/lucid-spec.json`; import as
+   **Lucidchart** (`use_assisted_layout:false`), set the page background `#E8EAED` (`skills.pages.setBackgroundColor`),
+   export every page to verify the images render (`c<N+1>/export-p1.png`), write `c<N+1>/lucid-doc.json`. One board unless
+   a flow has more than 5 screens; no hub.
+6. Update `dashboard/public/data/harvest-dashboard.json`: mark cycle N `superseded`, add its `manualHarvests` entry and
+   `authors`; append cycle N+1 (`current`, `harvestedFrom` N, `commit`, `documents`, `contributions`, `changes` with
+   applied/skipped reasons, `previewUrl` = production deploy permalink `https://<deploy_id>--harvest-dashboard.netlify.app`
+   of that commit); bump `stats.manualHarvests`, set `updatedAt`; commit, push, deploy.

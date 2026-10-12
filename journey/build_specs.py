@@ -13,7 +13,7 @@ Hub mode needs flow-board edit URLs (config `flows[].editUrl`), so build flows f
 """
 import argparse, json, html
 PAD, GAP, HGAP, FW = 400, 360, 480, 1440
-ASSET = 'https://journey-assets-ai-xform.netlify.app'
+ASSET = 'https://harvest-dashboard.netlify.app/captures/harvest-playground'  # legacy journey-assets-ai-xform stays live; new captures: HARVEST.md § Screen captures
 LEGEND = [('must', '#FF8A80', '#C62828', 'Red', 'Do / Must do', None), ('try', '#FFE066', '#9A7B00', 'Yellow', 'Try', None),
           ('maybe', '#A3E4FF', '#1565C0', 'Blue', 'Consider', None), ('board', '#BA23F6', '#7B1FA2', 'Purple', 'Board format', '#FFFFFF')]
 def esc(s): return html.escape(s, quote=False)

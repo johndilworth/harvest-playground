@@ -1,0 +1,30 @@
+{
+  "cycle": 4,
+  "capturedAt": "2026-10-12T10:36:21-06:00",
+  "site": "https://harvest-playground.netlify.app",
+  "commit": "f3e1e36a01a3ed05c7671db8f8d0d442f1f7cfd0",
+  "pages": [
+    {
+      "slug": "home",
+      "route": "/",
+      "viewport": "01-home.png",
+      "full": "02-home-full.png",
+      "h": 3068
+    },
+    {
+      "slug": "dinosaur",
+      "route": "/dinosaur.html",
+      "viewport": "01-dinosaur.png",
+      "full": "02-dinosaur-full.png",
+      "h": 4366
+    },
+    {
+      "slug": "random",
+      "route": "/random.html",
+      "viewport": "01-random.png",
+      "full": "02-random-full.png",
+      "h": 2953
+    }
+  ],
+  "assetsBase": "https://journey-assets-ai-xform.netlify.app"
+}

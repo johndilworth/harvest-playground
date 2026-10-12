@@ -1,0 +1,94 @@
+{
+  "cycle": 3,
+  "harvestedAt": "2026-10-12T10:39:21-06:00",
+  "outcome": "applied",
+  "source": "manual/dashboard",
+  "requestedAt": "2026-10-12T16:30:58.360Z",
+  "cycle4Created": true,
+  "boards": {
+    "review": {
+      "docId": "a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random"
+      ],
+      "stickies": 9,
+      "threads": 0
+    }
+  },
+  "hub": {
+    "docId": "3539baec-5553-443e-aff3-e5936b3d697f",
+    "strayStickies": [],
+    "threads": []
+  },
+  "counts": {
+    "must": 4,
+    "try": 5,
+    "maybe": 0,
+    "total": 9,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 0,
+    "conflicts": 0
+  },
+  "applied": [
+    {
+      "priority": "must",
+      "flow": "home",
+      "text": "Do: Change site title to \"ENTROPY COLLECTIVE\""
+    },
+    {
+      "priority": "must",
+      "flow": "home",
+      "text": "Do: Give the whole site a new visual styles that's more retro tech\u2026 terminal aesthetic"
+    },
+    {
+      "priority": "must",
+      "flow": "dinosaur",
+      "text": "Apply aesthteic changes to the dino page also."
+    },
+    {
+      "priority": "must",
+      "flow": "random",
+      "text": "Add a new fact - showing Marshall McCluhan's grave\u2026 4 Laws of media"
+    },
+    {
+      "priority": "try",
+      "flow": "home",
+      "text": "Change heading and other fonts to use Share Tech Mono."
+    },
+    {
+      "priority": "try",
+      "flow": "random",
+      "text": "Use this image."
+    },
+    {
+      "priority": "try",
+      "flow": "random",
+      "text": "Site pages with more terminal aesthetic won't have rotated titles\u2026"
+    },
+    {
+      "priority": "try",
+      "flow": "random",
+      "text": "Make these background images into random ASCII art\u2026"
+    },
+    {
+      "priority": "try",
+      "flow": "dinosaur",
+      "text": "Keep the dino page \u2014 but change copy\u2026 extinction\u2026 modern tech\u2026 Ancient Aliens."
+    }
+  ],
+  "skipped": [],
+  "conflicts": [],
+  "boardFeedback": [],
+  "site": {
+    "url": "https://harvest-playground.netlify.app",
+    "liveFooter": "Cycle 4",
+    "commit": "f3e1e36"
+  },
+  "feedback": "journey/cycles/3/feedback-2026-10-12-manual.json",
+  "note": "Manual harvest started from the Harvest Dashboard webhook at ~10:30 AM MT 2026-10-12."
+}

@@ -1,0 +1,117 @@
+{
+  "project": "harvest-playground",
+  "cycle": 4,
+  "createdAt": "2026-10-12T10:39:21-06:00",
+  "repo": "https://github.com/johndilworth/harvest-playground",
+  "commit": "f3e1e36a01a3ed05c7671db8f8d0d442f1f7cfd0",
+  "pullRequest": null,
+  "site": {
+    "url": "https://harvest-playground.netlify.app",
+    "netlifySiteId": "4702dcbf-e724-4e32-b35c-739e1fdf7ae5",
+    "productionBranch": "main",
+    "continuousDeploy": true,
+    "publishDir": "site",
+    "deployId": "6acd0c631448",
+    "deployState": "ready",
+    "liveFooter": "Cycle 4"
+  },
+  "assets": {
+    "site": "journey-assets-ai-xform",
+    "siteId": "072e8f44-b0a5-4b41-a9bb-bcbc8dd4eb92",
+    "folders": [
+      "/harvest-playground-c4-home/",
+      "/harvest-playground-c4-dinosaur/",
+      "/harvest-playground-c4-random/"
+    ],
+    "images": [
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/02-home-full.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-dinosaur/02-dinosaur-full.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-random/02-random-full.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/01-home.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-dinosaur/01-dinosaur.png",
+      "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-random/01-random.png"
+    ]
+  },
+  "harvestSchedule": "daily 17:00 America/Denver",
+  "harvestedFrom": 3,
+  "harvestSource": "manual/dashboard",
+  "boardRules": "2026-10-05: one review board unless a section has >5 flows/screens (3 screens -> 1 board); page background #E8EAED set via skills.pages.setBackgroundColor; frames #F2F3F5, no border, 400 px padding",
+  "historyBoard": {
+    "docId": "e983d07c-47f1-4d0f-bfe6-81087a3b8ddd",
+    "title": "Harvest Playground \u2014 History",
+    "editUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+    "viewUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/view",
+    "role": "history",
+    "harvest": false,
+    "updatedInPlace": "2026-10-12: added Cycle 4 tile (c~HC~D1GGKm- at x24480) with shot c~HCh1HD6BZb and caption c~HCaYZDD0.R; Cycle 3 frame title no longer says live now; title totals 5 cycles / 10 nightly harvests / 31 stickies; page background #E8EAED; note manual dashboard harvest ~10:30 AM MT"
+  },
+  "hub": {
+    "docId": "bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf",
+    "title": "Harvest Playground \u2014 Cycle 4 \u00b7 Hub",
+    "editUrl": "https://lucid.app/lucidspark/bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf/edit",
+    "viewUrl": "https://lucid.app/lucidspark/bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf/view",
+    "role": "hub",
+    "spec": "journey/cycles/4/lucid-spec-hub.json",
+    "harvest": false,
+    "links": [
+      "review board 7e1a1751-68e6-4551-8845-64cc394e748a",
+      "history board e983d07c-47f1-4d0f-bfe6-81087a3b8ddd"
+    ],
+    "pageBackground": "#E8EAED"
+  },
+  "boards": [
+    {
+      "docId": "7e1a1751-68e6-4551-8845-64cc394e748a",
+      "title": "Harvest Playground \u2014 Cycle 4 review \u00b7 All pages",
+      "editUrl": "https://lucid.app/lucidspark/7e1a1751-68e6-4551-8845-64cc394e748a/edit",
+      "viewUrl": "https://lucid.app/lucidspark/7e1a1751-68e6-4551-8845-64cc394e748a/view",
+      "role": "flow",
+      "flow": "review",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random"
+      ],
+      "harvest": true,
+      "spec": "journey/cycles/4/lucid-spec-review.json",
+      "pages": 1,
+      "pageBackground": "#E8EAED",
+      "frames": [
+        {
+          "id": "frame-01-home",
+          "stepKey": "01-home",
+          "route": "/",
+          "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/02-home-full.png",
+          "thumbUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/01-home.png",
+          "beforeUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png"
+        },
+        {
+          "id": "frame-02-dinosaur",
+          "stepKey": "02-dinosaur",
+          "route": "/dinosaur.html",
+          "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-dinosaur/02-dinosaur-full.png",
+          "thumbUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-dinosaur/01-dinosaur.png",
+          "beforeUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-dinosaur/01-dinosaur.png"
+        },
+        {
+          "id": "frame-03-random",
+          "stepKey": "03-random",
+          "route": "/random.html",
+          "imageUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-random/02-random-full.png",
+          "thumbUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-random/01-random.png",
+          "beforeUrl": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-random/01-random.png"
+        }
+      ]
+    }
+  ],
+  "manifest": "journey/cycles/4/manifest.json",
+  "boardConfig": "journey/cycles/4/board-config.json",
+  "generator": "journey/build_specs.py (combined mode)",
+  "capture": "journey/out/c4 (gitignored)",
+  "appliedCount": 9,
+  "skippedCount": 0,
+  "conflicts": 0,
+  "boardFeedback": 0,
+  "hubStrays": 0,
+  "nightlyHarvests": []
+}

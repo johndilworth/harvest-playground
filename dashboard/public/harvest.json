@@ -13,13 +13,13 @@
   "stats": {
     "pullRequests": 2,
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
-    "nightlyHarvests": 9
+    "nightlyHarvests": 10
   },
-  "updatedAt": "2026-10-12T09:30:00-06:00",
+  "updatedAt": "2026-10-12T10:39:21-06:00",
   "cycles": [
     {
       "number": 0,
-      "title": "Cycle 0 — the blank canvas",
+      "title": "Cycle 0 \u2014 the blank canvas",
       "createdAt": "2026-10-02T16:04:00-06:00",
       "status": "superseded",
       "harvestedFrom": null,
@@ -40,7 +40,7 @@
           "flow": "home",
           "docId": "de6b75aa-0b51-49a1-a9e9-561e4b77d675",
           "url": "https://lucid.app/lucidspark/de6b75aa-0b51-49a1-a9e9-561e4b77d675/edit",
-          "description": "Home page (/) — leave stickies in the review frame.",
+          "description": "Home page (/) \u2014 leave stickies in the review frame.",
           "harvest": true
         }
       ],
@@ -60,7 +60,7 @@
     },
     {
       "number": 1,
-      "title": "Cycle 1 — childish 90s playground",
+      "title": "Cycle 1 \u2014 childish 90s playground",
       "createdAt": "2026-10-02T17:12:00-06:00",
       "status": "superseded",
       "harvestedFrom": 0,
@@ -81,7 +81,7 @@
           "flow": "home",
           "docId": "73045fe0-c76b-4823-a6cf-105303b7b61a",
           "url": "https://lucid.app/lucidspark/73045fe0-c76b-4823-a6cf-105303b7b61a/edit",
-          "description": "Home page (/) — leave stickies in the review frame.",
+          "description": "Home page (/) \u2014 leave stickies in the review frame.",
           "harvest": true
         },
         {
@@ -90,7 +90,7 @@
           "flow": "dinosaur",
           "docId": "d20497d0-4de6-4546-ae1c-0b8519911f0b",
           "url": "https://lucid.app/lucidspark/d20497d0-4de6-4546-ae1c-0b8519911f0b/edit",
-          "description": "Dino Town (/dinosaur.html) — Dinosaur, Colorado and the roadside dino hall of fame.",
+          "description": "Dino Town (/dinosaur.html) \u2014 Dinosaur, Colorado and the roadside dino hall of fame.",
           "harvest": true
         },
         {
@@ -99,7 +99,7 @@
           "flow": "random",
           "docId": "32384a35-da3c-463c-a2c2-7c204d6e2a27",
           "url": "https://lucid.app/lucidspark/32384a35-da3c-463c-a2c2-7c204d6e2a27/edit",
-          "description": "Totally Random (/random.html) — random facts page.",
+          "description": "Totally Random (/random.html) \u2014 random facts page.",
           "harvest": true
         }
       ],
@@ -135,7 +135,7 @@
           {
             "priority": "must",
             "flow": "home",
-            "text": "Headline font → Monoton"
+            "text": "Headline font \u2192 Monoton"
           },
           {
             "priority": "must",
@@ -150,7 +150,7 @@
           {
             "priority": "must",
             "flow": "home",
-            "text": "Not a boring corporate look → scrapbook / sticker layout"
+            "text": "Not a boring corporate look \u2192 scrapbook / sticker layout"
           },
           {
             "priority": "try",
@@ -175,7 +175,7 @@
           {
             "priority": "try",
             "flow": "home",
-            "text": "Headline → “WELCOME TO OUR SUPER COOL ZONE!!!”"
+            "text": "Headline \u2192 \u201cWELCOME TO OUR SUPER COOL ZONE!!!\u201d"
           },
           {
             "priority": "try",
@@ -189,7 +189,7 @@
     },
     {
       "number": 2,
-      "title": "Cycle 2 — midnight mode & roadside dinos",
+      "title": "Cycle 2 \u2014 midnight mode & roadside dinos",
       "createdAt": "2026-10-05T17:40:00-06:00",
       "status": "superseded",
       "harvestedFrom": 1,
@@ -210,7 +210,7 @@
           "flow": "home",
           "docId": "3d1704a5-0727-4aa0-9f05-d2609b1ac8fa",
           "url": "https://lucid.app/lucidspark/3d1704a5-0727-4aa0-9f05-d2609b1ac8fa/edit",
-          "description": "Home page (/) — leave stickies in the review frame.",
+          "description": "Home page (/) \u2014 leave stickies in the review frame.",
           "harvest": true
         },
         {
@@ -219,7 +219,7 @@
           "flow": "dinosaur",
           "docId": "1307df95-82cb-42ca-8fa5-0be7a2eba04b",
           "url": "https://lucid.app/lucidspark/1307df95-82cb-42ca-8fa5-0be7a2eba04b/edit",
-          "description": "Dino Town (/dinosaur.html) — Dinosaur, Colorado and the roadside dino hall of fame.",
+          "description": "Dino Town (/dinosaur.html) \u2014 Dinosaur, Colorado and the roadside dino hall of fame.",
           "harvest": true
         },
         {
@@ -228,7 +228,7 @@
           "flow": "random",
           "docId": "f206b6a4-74f6-4a19-87c4-8d843307a8c5",
           "url": "https://lucid.app/lucidspark/f206b6a4-74f6-4a19-87c4-8d843307a8c5/edit",
-          "description": "Totally Random (/random.html) — random facts page.",
+          "description": "Totally Random (/random.html) \u2014 random facts page.",
           "harvest": true
         }
       ],
@@ -289,17 +289,17 @@
           "Real tortoise photo replaced turtle in a cap"
         ],
         "hubStrays": [
-          "“background of pages should be slightly darker gray than frames” (later adopted as a board rule)",
-          "“only split into multiple files if a section has more than 5 flows or screens” (later adopted)",
+          "\u201cbackground of pages should be slightly darker gray than frames\u201d (later adopted as a board rule)",
+          "\u201conly split into multiple files if a section has more than 5 flows or screens\u201d (later adopted)",
           "empty purple rectangle"
         ]
       }
     },
     {
       "number": 3,
-      "title": "Cycle 3 — purple Home & golden spiral",
+      "title": "Cycle 3 \u2014 purple Home & golden spiral",
       "createdAt": "2026-10-06T17:16:00-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 2,
       "pullRequest": "https://github.com/johndilworth/harvest-playground/pull/2",
       "commit": "67c44ca",
@@ -342,6 +342,12 @@
           "date": "2026-10-11",
           "stickies": 0,
           "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-10-12",
+          "stickies": 9,
+          "outcome": "applied",
+          "note": "manual dashboard harvest ~10:30 AM MT"
         }
       ],
       "changes": {
@@ -349,18 +355,99 @@
           {
             "priority": "must",
             "flow": "home",
-            "text": "Change background to purple → midnight-purple Home"
+            "text": "Change background to purple \u2192 midnight-purple Home"
           },
           {
             "priority": "try",
             "flow": "home",
-            "text": "Golden spiral from classical artwork → golden spiral over the Mona Lisa"
+            "text": "Golden spiral from classical artwork \u2192 golden spiral over the Mona Lisa"
           }
         ],
         "skipped": [],
         "conflicts": [
           "Purple background (Cycle 2 board) beat Cycle 1 midnight blue on Home (newest wins)"
         ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Cycle 4 \u2014 ENTROPY COLLECTIVE terminal aesthetic",
+      "createdAt": "2026-10-12T10:39:21-06:00",
+      "status": "current",
+      "harvestedFrom": 3,
+      "pullRequest": null,
+      "commit": "f3e1e36",
+      "screenshot": "https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/01-home.png",
+      "documents": [
+        {
+          "title": "Hub",
+          "role": "hub",
+          "docId": "bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf",
+          "url": "https://lucid.app/lucidspark/bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf/edit",
+          "description": "Index board linking the Cycle 4 review board + History (never harvested)."
+        },
+        {
+          "title": "All pages",
+          "role": "flow",
+          "flow": "review",
+          "docId": "7e1a1751-68e6-4551-8845-64cc394e748a",
+          "url": "https://lucid.app/lucidspark/7e1a1751-68e6-4551-8845-64cc394e748a/edit",
+          "description": "All three pages on one board: Home, Dino Town, Totally Random (split only past 5 screens).",
+          "harvest": true
+        }
+      ],
+      "nightlyHarvests": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Site title \u2192 ENTROPY COLLECTIVE"
+          },
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Site-wide retro-tech terminal aesthetic + rewritten copy"
+          },
+          {
+            "priority": "must",
+            "flow": "dinosaur",
+            "text": "Apply terminal aesthetic to dino page"
+          },
+          {
+            "priority": "must",
+            "flow": "random",
+            "text": "McLuhan grave fact + four laws of media"
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Share Tech Mono font"
+          },
+          {
+            "priority": "try",
+            "flow": "random",
+            "text": "Use Lucid-uploaded McLuhan grave image"
+          },
+          {
+            "priority": "try",
+            "flow": "random",
+            "text": "Square / unrotated terminal layout"
+          },
+          {
+            "priority": "try",
+            "flow": "random",
+            "text": "ASCII art backgrounds"
+          },
+          {
+            "priority": "try",
+            "flow": "dinosaur",
+            "text": "Dino extinction \u2194 modern tech copy (Ancient Aliens energy)"
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "Manual harvest from Harvest Dashboard webhook at ~10:30 AM MT 2026-10-12 (not the 5pm nightly). Merged to main as commit f3e1e36 (GitHub MCP PR create returned 403)."
       }
     }
   ]

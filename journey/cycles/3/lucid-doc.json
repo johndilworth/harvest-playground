@@ -181,6 +181,17 @@
       "hubStrays": 0,
       "sundayPolish": true,
       "record": "journey/cycles/3/harvest-2026-10-11.json"
+    },
+    {
+      "date": "2026-10-12",
+      "harvestedAt": "2026-10-12T10:39:21-06:00",
+      "outcome": "applied",
+      "stickies": 9,
+      "threads": 0,
+      "hubStrays": 0,
+      "source": "manual/dashboard",
+      "record": "journey/cycles/3/harvest-2026-10-12-manual.json",
+      "note": "Manual harvest from Harvest Dashboard webhook ~10:30 AM MT; produced Cycle 4"
     }
   ]
 }

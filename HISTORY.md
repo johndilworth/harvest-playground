@@ -6,8 +6,8 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 3**) |
-| **Add a sticky (current hub)** | [Cycle 3 · Hub](https://lucid.app/lucidspark/3539baec-5553-443e-aff3-e5936b3d697f/edit) → [Cycle 3 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidspark/a1ee016b-d2ff-41fd-be8d-61c1b55d2ef3/edit) |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 4**) |
+| **Add a sticky (current hub)** | [Cycle 4 · Hub](https://lucid.app/lucidspark/bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf/edit) → [Cycle 4 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidspark/7e1a1751-68e6-4551-8845-64cc394e748a/edit) |
 | **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right) · [PNG snapshot](https://journey-assets-ai-xform.netlify.app/harvest-playground-history/history-2026-10-11.png) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
@@ -15,6 +15,7 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Mon 2026-10-12 | Cycle 3 board (manual dashboard) | 9 | 9 | 0 | **Cycle 4 shipped** — ENTROPY COLLECTIVE terminal aesthetic, McLuhan tetrad, dino extinction↔tech | [Cycle 4](https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/01-home.png) |
 | Sun 2026-10-11 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 · Sunday polish | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Sat 2026-10-10 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
 | Fri 2026-10-09 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
@@ -27,10 +28,20 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 4 cycles shipped (0 → 1 → 2 → 3) · 9 nightly harvests · 22 stickies applied · 0 skipped · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Quiet stretch since Cycle 3 (Oct 7–11). Ready to share Monday.
+**Totals so far:** 5 cycles shipped (0 → 1 → 2 → 3 → 4) · 10 nightly harvests · 31 stickies applied · 0 skipped · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 4 created by a **manual dashboard harvest** at ~10:30 AM MT on Mon 2026-10-12.
 
 ## Day by day
+
+### Mon 2026-10-12 — Cycle 3 harvest · **Cycle 4 shipped** · manual from dashboard
+- **Harvested:** Cycle 3 review board (Home · Dino Town · Totally Random) — **manual** run triggered from the Harvest Dashboard webhook at ~10:30 AM MT (payload `action:harvest` / `source:harvest-dashboard` / `requestedAt:2026-10-12T16:30:58.360Z`) — **9 stickies, 0 comment threads**
+- **Applied:** 9 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Hub stray stickies:** 0
+- **Contributors:** anonymous (team) — stickies had no Lucid author line
+- **Cycle 4 created:** yes — ENTROPY COLLECTIVE title, Share Tech Mono, site-wide retro-tech terminal aesthetic (square panels, ASCII backgrounds), McLuhan grave + four laws of media on Random, dino extinction↔modern-tech copy
+- **Commit:** `f3e1e36` on `main` (branch `harvest/cycle-4` merged ff; GitHub MCP PR create returned 403 so no PR #)
+- **Live:** https://harvest-playground.netlify.app (Cycle 4, HTTP 200)
+- **Boards:** [Cycle 4 · Hub](https://lucid.app/lucidspark/bc2ec8c8-7f20-4ed3-93d9-47a169c02bcf/edit) · [Cycle 4 review](https://lucid.app/lucidspark/7e1a1751-68e6-4551-8845-64cc394e748a/edit)
+- **HISTORY note:** this harvest was started **manually from the dashboard**, not the 5pm MT nightly routine.
 
 ### Sun 2026-10-11 — Cycle 3 harvest · no stickies · Sunday polish
 - **Harvested:** Cycle 3 review board (Home · Dino Town · Totally Random) at ~5:02 pm MT — **0 stickies, 0 comment threads**

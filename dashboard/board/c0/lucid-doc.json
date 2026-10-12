@@ -20,6 +20,27 @@
       "pageBackground": "#E8EAED",
       "spec": "dashboard/board/c0/lucid-spec.json",
       "export": "dashboard/board/c0/export-p1.png"
+    },
+    {
+      "docId": "ea0758f2-6453-444d-8e7d-7c296a92fd0b",
+      "title": "Harvest Dashboard — Cycle 0 — New project",
+      "product": "lucidchart",
+      "editUrl": "https://lucid.app/lucidchart/ea0758f2-6453-444d-8e7d-7c296a92fd0b/edit",
+      "viewUrl": "https://lucid.app/lucidchart/ea0758f2-6453-444d-8e7d-7c296a92fd0b/view",
+      "role": "flow",
+      "flow": "New project",
+      "harvest": true,
+      "pages": 1,
+      "frames": 6,
+      "pageBackground": "#E8EAED",
+      "createdAt": "2026-10-12T13:55:13-06:00",
+      "spec": "dashboard/board/c0/lucid-spec-new-project.json",
+      "builder": "dashboard/board/c0/build_spec_new_project.py",
+      "export": "dashboard/board/c0/export-new-project-p1.png",
+      "renderCheck": "exported 2026-10-12: all 6 screenshots render",
+      "captures": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c0-new-project/",
+      "captureScript": "journey/shoot-c0-new.mjs",
+      "note": "Captured on live site; create submitted only with a wrong passphrase (refused) — no project was created."
     }
   ],
   "captures": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c0-review/",

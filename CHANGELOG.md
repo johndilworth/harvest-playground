@@ -27,6 +27,8 @@ Harvested Cycle 1 boards: review `090db6e7-…` + New project `074fcea1-…` —
 ### Authors
 - anonymous — 6
 
+Commit `191461b` · preview https://6acd62d917ce9618cbc3ec9a--harvest-dashboard.netlify.app · Cycle 2 boards: [review](https://lucid.app/lucidchart/f04918ba-aee0-49b0-bb31-0a3c796b79d7/edit) · [New project](https://lucid.app/lucidchart/5ef85601-978c-4810-9cd3-f52ec629ca8e/edit)
+
 ## Harvest Dashboard · Cycle 1 (2026-10-12) · manual harvest
 Manual harvest triggered from the Harvest Dashboard webhook at ~3:20 PM MT (payload
 `action:harvest` / `project:harvest-dashboard` / `requestedAt:2026-10-12T21:20:19Z`).

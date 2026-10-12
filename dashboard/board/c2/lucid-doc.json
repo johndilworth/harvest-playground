@@ -1,0 +1,48 @@
+{
+  "project": "harvest-dashboard",
+  "cycle": 2,
+  "createdAt": "2026-10-12T16:45:00-06:00",
+  "commit": "191461b",
+  "previewUrl": "https://6acd62d917ce9618cbc3ec9a--harvest-dashboard.netlify.app",
+  "boards": [
+    {
+      "docId": "f04918ba-aee0-49b0-bb31-0a3c796b79d7",
+      "title": "Harvest Dashboard — Cycle 2 review · All pages",
+      "product": "lucidchart",
+      "editUrl": "https://lucid.app/lucidchart/f04918ba-aee0-49b0-bb31-0a3c796b79d7/edit",
+      "viewUrl": "https://lucid.app/lucidchart/f04918ba-aee0-49b0-bb31-0a3c796b79d7/view",
+      "commentUrl": "https://lucid.app/lucidchart/f04918ba-aee0-49b0-bb31-0a3c796b79d7/edit?invitationId=inv_18ce6946-3133-46fb-a5bf-4ad8cc42f56d",
+      "role": "flow",
+      "flow": "review",
+      "harvest": true,
+      "pages": 1,
+      "frames": 5,
+      "pageBackground": "#E8EAED",
+      "spec": "dashboard/board/c2/lucid-spec.json",
+      "export": "dashboard/board/c2/export-p1.png",
+      "renderCheck": "exported 2026-10-12: all 5 screenshots + 5 Cycle 1 before thumbnails render"
+    },
+    {
+      "docId": "5ef85601-978c-4810-9cd3-f52ec629ca8e",
+      "title": "Harvest Dashboard — Cycle 2 — New project",
+      "product": "lucidchart",
+      "editUrl": "https://lucid.app/lucidchart/5ef85601-978c-4810-9cd3-f52ec629ca8e/edit",
+      "viewUrl": "https://lucid.app/lucidchart/5ef85601-978c-4810-9cd3-f52ec629ca8e/view",
+      "commentUrl": "https://lucid.app/lucidchart/5ef85601-978c-4810-9cd3-f52ec629ca8e/edit?invitationId=inv_8401f093-8a17-4317-b18b-2beca7b123f2",
+      "role": "flow",
+      "flow": "New project",
+      "harvest": true,
+      "pages": 1,
+      "frames": 6,
+      "pageBackground": "#E8EAED",
+      "spec": "dashboard/board/c2/lucid-spec-new-project.json",
+      "builder": "dashboard/board/build_spec_new_project.py",
+      "export": "dashboard/board/c2/export-new-project-p1.png",
+      "renderCheck": "exported 2026-10-12: all 6 screenshots render",
+      "captures": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c2-new-project/",
+      "captureScript": "journey/shoot-c1-new.mjs"
+    }
+  ],
+  "captures": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c2-review/",
+  "hub": null
+}

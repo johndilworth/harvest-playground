@@ -124,14 +124,16 @@ noindex, headers or deploy config.</p>
 </ul>
 <h2 id="8-new-project-setup">8. New project setup</h2>
 <p>Started from the dashboard's <strong>New project</strong> form (<code>/new.html</code>, passphrase + typed <code>CREATE</code>); the <code>trigger</code> function
-validates it and posts <code>{action:"create-project", project, setup:{…}}</code> to the webhook. The setup run:
-1. Links or creates the repo (branch, base dir, build command, publish dir).
-2. Links or creates the Netlify site (optional PR deploy previews).
-3. Adds the project to <code>dashboard/public/data/projects.json</code> and creates <code>dashboard/public/data/&lt;slug&gt;.json</code>.
-4. Captures cycle 0 to <code>dashboard/public/captures/&lt;slug&gt;/&lt;flow&gt;/</code>.
-5. Builds Lucidchart review board(s) per § 3 (no hub) and shares them with reviewers (remind them to stay signed in).
-6. Records cycle 0 (<code>current</code>), redeploys the dashboard; adds the slug to <code>PROJECTS</code> in <code>trigger.mjs</code> for manual runs.
-7. Sets up the schedule (manual: nothing; nightly: a routine), stores the merge policy, and notifies John in Grok Bot chat.</p>
+validates it and posts <code>{action:"create-project", project, setup:{…}}</code> to the webhook. The setup run:</p>
+<ol>
+<li>Links or creates the repo (branch, base dir, build command, publish dir).</li>
+<li>Links or creates the Netlify site (optional PR deploy previews).</li>
+<li>Adds the project to <code>dashboard/public/data/projects.json</code> and creates <code>dashboard/public/data/&lt;slug&gt;.json</code>.</li>
+<li>Captures cycle 0 to <code>dashboard/public/captures/&lt;slug&gt;/&lt;flow&gt;/</code>.</li>
+<li>Builds Lucidchart review board(s) per § 3 (no hub) and shares them with reviewers (remind them to stay signed in).</li>
+<li>Records cycle 0 (<code>current</code>), redeploys the dashboard; adds the slug to <code>PROJECTS</code> in <code>trigger.mjs</code> for manual runs.</li>
+<li>Sets up the schedule (manual: nothing; nightly: a routine), stores the merge policy, and notifies John in Grok Bot chat.</li>
+</ol>
 <h2 id="9-captures-hosting">9. Captures hosting</h2>
 <ul>
 <li>All captures are served from <code>https://harvest-dashboard.netlify.app/captures/&lt;project&gt;/&lt;flow-slug&gt;/&lt;file&gt;.png</code>

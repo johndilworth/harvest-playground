@@ -93,6 +93,7 @@ noindex, headers or deploy config.
 ## 8. New project setup
 Started from the dashboard's **New project** form (`/new.html`, passphrase + typed `CREATE`); the `trigger` function
 validates it and posts `{action:"create-project", project, setup:{…}}` to the webhook. The setup run:
+
 1. Links or creates the repo (branch, base dir, build command, publish dir).
 2. Links or creates the Netlify site (optional PR deploy previews).
 3. Adds the project to `dashboard/public/data/projects.json` and creates `dashboard/public/data/<slug>.json`.

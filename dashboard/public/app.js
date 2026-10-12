@@ -3,8 +3,8 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "America/Denver" });
 const SLUG = (location.pathname.match(/^\/p\/([a-z0-9-]+)/) || [])[1] || "harvest-playground";
 const B = `/p/${SLUG}/`;
-// Top header: brand + All projects only. Project-specific links live under the title (subnav).
-const nav = (p) => `<header class="top"><b><a href="/" style="color:inherit">Harvest</a> · ${esc(p.name)}</b><nav><a href="/">All projects</a></nav></header>`;
+// Top header: brand + All projects + system-wide Harvest rules. Project-specific links live under the title (subnav).
+const nav = (p) => `<header class="top"><b><a href="/" style="color:inherit">Harvest</a> · ${esc(p.name)}</b><nav><a href="/">All projects</a><a href="/rules.html">Harvest rules</a></nav></header>`;
 function subnav(p, current) {
   const items = [
     ["Dashboard", B, "dash"],
@@ -33,7 +33,7 @@ async function dashboard() {
    <h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
    <div class="muted">${fmt(c.createdAt)} · ${c.documents.length} Lucid docs · ${c.changes.applied.length} applied · ${authorsTotal(c)} stickies by ${authorsCount(c)} author(s)</div><div>${esc(c.title)}</div>
    <img src="${c.screenshot}" alt="Cycle ${c.number} home screenshot" loading="lazy"></a>`).join("")}</div>
-  <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)} · <a href="${p.rules}">Harvest rules</a> · ${skipped} skipped overall</p>`;
+  <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)} · <a href="${p.rules}">Project rules ↗</a> · ${skipped} skipped overall</p>`;
   setupHistogram();
 }
 

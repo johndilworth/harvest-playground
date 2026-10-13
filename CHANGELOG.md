@@ -22,6 +22,9 @@ yellow fill made it **try**. The sticky had no Lucid author attribution line, so
 ### Authors
 - anonymous — 1
 
+Commit `8e1465f` · preview https://6acebaa338bc6460edd1b70d--harvest-playground.netlify.app · Cycle 6 board: [review (Lucidchart)](https://lucid.app/lucidchart/afda7e51-8cfc-4577-be4f-3550f9bf71b0/edit) · no PR (pushed to main)
+Record: `journey/cycles/5/feedback-2026-10-13.json` + `journey/cycles/5/harvest-2026-10-13.json` · raw board fetch in `journey/out/c5/raw/` (gitignored).
+
 ## Cycle 5 (2026-10-12) · nightly harvest
 Nightly 5 pm MT harvest of the Cycle 4 review board `7e1a1751-68e6-4551-8845-64cc394e748a` (Home · Dino Town · Totally Random) —
 **12 stickies, 0 comment threads** (11 in-frame with text, 1 empty). No priority keywords, so sticky colour decided

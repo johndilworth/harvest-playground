@@ -15,9 +15,9 @@
   "stats": {
     "pullRequests": 2,
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
-    "nightlyHarvests": 11
+    "nightlyHarvests": 12
   },
-  "updatedAt": "2026-10-12T17:30:00-06:00",
+  "updatedAt": "2026-10-13T17:20:00-06:00",
   "cycles": [
     {
       "number": 0,
@@ -509,7 +509,7 @@
       "number": 5,
       "title": "Cycle 5 — spiral art gallery, roar buttons, black Home",
       "createdAt": "2026-10-12T17:30:00-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 4,
       "pullRequest": null,
       "commit": "b07b10d",
@@ -526,7 +526,13 @@
           "harvest": true
         }
       ],
-      "nightlyHarvests": [],
+      "nightlyHarvests": [
+        {
+          "date": "2026-10-13",
+          "stickies": 1,
+          "outcome": "applied"
+        }
+      ],
       "changes": {
         "applied": [
           {
@@ -595,11 +601,59 @@
         "note": "Nightly 5pm MT harvest of the Cycle 4 board (12 stickies: 11 applied, 1 empty skipped). Merged to main as commit b07b10d (branch harvest/cycle-5, fast-forward; no PR). No malicious, illegal or offensive stickies."
       },
       "previewUrl": "https://6acd6b3d4cad2bdcce665143--harvest-playground.netlify.app",
-      "authors": [],
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 1
+        }
+      ],
       "contributions": {
         "red": 3,
         "yellow": 5,
         "blue": 4,
+        "purple": 0
+      }
+    },
+    {
+      "number": 6,
+      "title": "Cycle 6 — gallery opens on Leonardo’s Lady with an Ermine",
+      "createdAt": "2026-10-13T17:13:00-06:00",
+      "status": "current",
+      "harvestedFrom": 5,
+      "pullRequest": null,
+      "commit": "8e1465f",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/01-home.png",
+      "documents": [
+        {
+          "title": "All pages",
+          "role": "flow",
+          "flow": "review",
+          "docId": "afda7e51-8cfc-4577-be4f-3550f9bf71b0",
+          "url": "https://lucid.app/lucidchart/afda7e51-8cfc-4577-be4f-3550f9bf71b0/edit",
+          "commentUrl": "https://lucid.app/lucidchart/afda7e51-8cfc-4577-be4f-3550f9bf71b0/edit?invitationId=inv_dca1d5e9-2344-4f7e-aadc-ef7b57942e53",
+          "description": "All three pages on one Lucidchart board: Home, Dino Town, Totally Random (split only past 5 screens).",
+          "harvest": true
+        }
+      ],
+      "nightlyHarvests": [],
+      "previewUrl": "https://6acebaa338bc6460edd1b70d--harvest-playground.netlify.app",
+      "authors": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "SPIRAL.φ gallery opens on a new first slide, Leonardo’s Lady with an Ermine (golden-spiral overlay drawn for Cycle 6); Mona Lisa moves to slide 2 · by anonymous"
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "1 sticky harvested from the Cycle 5 board at 5 pm MT on 2026-10-13; no malicious, illegal or offensive items."
+      },
+      "contributions": {
+        "red": 0,
+        "yellow": 1,
+        "blue": 0,
         "purple": 0
       }
     }

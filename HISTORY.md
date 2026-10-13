@@ -6,9 +6,9 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 5**) |
-| **Add a sticky** | [Cycle 5 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit?invitationId=inv_a7d813ff-5eab-4979-89c5-d991a6338500) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 5 tile added 2026-10-12) |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 6**) |
+| **Add a sticky** | [Cycle 6 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/afda7e51-8cfc-4577-be4f-3550f9bf71b0/edit?invitationId=inv_dca1d5e9-2344-4f7e-aadc-ef7b57942e53) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 6 tile added 2026-10-13) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 
@@ -25,6 +25,7 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 2 boar
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Tue 2026-10-13 | Cycle 5 board (nightly) | 1 | 1 | 0 | **Cycle 6 shipped** — SPIRAL.φ gallery opens on Leonardo’s Lady with an Ermine (Mona Lisa now slide 2) · authors: anonymous 1 | [Cycle 6](https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/01-home.png) |
 | Mon 2026-10-12 | Cycle 4 board (nightly) | 12 | 11 | 1 | **Cycle 5 shipped** — black Home, SPIRAL.φ art gallery, 3-up dino grid + roar buttons, daytime stego, animated tetrad, meter chart · authors: Jilea Fobair 9, John Dilworth 2, Rob Witt 1 | [Cycle 5](https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-home/01-home.png) |
 | Mon 2026-10-12 | Cycle 3 board (manual dashboard) | 9 | 9 | 0 | **Cycle 4 shipped** — ENTROPY COLLECTIVE terminal aesthetic, McLuhan tetrad, dino extinction↔tech | [Cycle 4](https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/01-home.png) |
 | Sun 2026-10-11 | Cycle 3 board | 0 | 0 | 0 | No new cycle — site stays on Cycle 3 · Sunday polish | [Cycle 3](https://journey-assets-ai-xform.netlify.app/harvest-playground-c3-home/01-home.png) |
@@ -39,10 +40,20 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 2 boar
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 6 cycles shipped (0 → 1 → 2 → 3 → 4 → 5) · 11 nightly harvests · 42 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 5 created by the **5pm MT nightly harvest** on Mon 2026-10-12.
+**Totals so far:** 7 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6) · 12 nightly harvests · 43 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 6 created by the **5pm MT nightly harvest** on Tue 2026-10-13.
 
 ## Day by day
+
+### Tue 2026-10-13 — Cycle 5 harvest · **Cycle 6 shipped** · nightly
+- **Harvested:** Cycle 5 review board (Home · Dino Town · Totally Random) at ~5:10 pm MT — **1 sticky, 0 comment threads**
+- **Applied:** 1 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Malicious/illegal/offensive:** none
+- **Contributors:** anonymous × 1 (the sticky had no Lucid author line)
+- **Cycle 6 created:** yes — the SPIRAL.φ gallery now opens on Leonardo’s *Lady with an Ermine* with a golden-spiral overlay drawn for this cycle (the spiral closes in on her face); Mona Lisa moves to slide 2, counter 1 / 5 (yellow sticky “Add another as first — Use a different Leonardo painting.”)
+- **Commit:** `8e1465f` on `main` (pushed directly; no PR) · preview https://6acebaa338bc6460edd1b70d--harvest-playground.netlify.app
+- **Live:** https://harvest-playground.netlify.app (Cycle 6, HTTP 200)
+- **Board:** [Cycle 6 review (Lucidchart)](https://lucid.app/lucidchart/afda7e51-8cfc-4577-be4f-3550f9bf71b0/edit) — one board, 3 screens, no hub
+- **Record:** `journey/cycles/5/harvest-2026-10-13.json`
 
 ### Mon 2026-10-12 — Cycle 4 harvest · **Cycle 5 shipped** · nightly
 - **Harvested:** Cycle 4 review board (Home · Dino Town · Totally Random) at ~5:12 pm MT — **12 stickies, 0 comment threads**

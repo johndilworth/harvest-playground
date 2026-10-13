@@ -1,0 +1,80 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 6,
+ "date": "Tue 2026-10-13",
+ "commit": "8e1465f0a0e58a67dfb89ee9f826e1aac2b935f0",
+ "pullRequest": null,
+ "prNumber": null,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home · Dino Town · Totally Random on one board (3 screens ≤ 5, no split)",
+  "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "product_lucid": "lucidchart",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "gallery opens on Lady with an Ermine",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 3181,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/02-home-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-home/01-home.png",
+     "caption": "Full page. The SPIRAL.φ gallery now opens on Leonardo’s Lady with an Ermine (slide 1 of 5); Mona Lisa is slide 2. Footer Cycle 6.",
+     "changes": [
+      "SPIRAL.φ gallery opens on Lady with an Ermine (Leonardo, golden-spiral overlay drawn for Cycle 6); Mona Lisa moves to slide 2, counter 1 / 5 (sticky: Add another as first — Use a different Leonardo painting. · anonymous)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "no changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 3815,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-dinosaur/02-dinosaur-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-dinosaur/01-dinosaur.png",
+     "caption": "Full page. No changes this cycle; footer Cycle 6.",
+     "changes": [
+      "No changes this cycle (footer Cycle 6)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "no changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 3153,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-random/02-random-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-random/01-random.png",
+     "caption": "Full page. No changes this cycle; footer Cycle 6.",
+     "changes": [
+      "No changes this cycle (footer Cycle 6)"
+     ]
+    }
+   ]
+  }
+ ]
+}

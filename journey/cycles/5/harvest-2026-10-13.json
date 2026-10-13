@@ -1,0 +1,47 @@
+{
+ "cycle": 5,
+ "harvestedAt": "2026-10-13T17:10:00-06:00",
+ "outcome": "applied",
+ "source": "nightly",
+ "cycle6Created": true,
+ "boards": {
+  "review": {
+   "docId": "336cb099-c6d5-44da-bb6e-e883893de039",
+   "flows": [
+    "home",
+    "dinosaur",
+    "random"
+   ],
+   "stickies": 1,
+   "threads": 0
+  }
+ },
+ "counts": {
+  "must": 0,
+  "try": 1,
+  "maybe": 0,
+  "total": 1,
+  "board": 0,
+  "needsIntent": 0,
+  "outside": 0,
+  "skipped": 0,
+  "conflicts": 0
+ },
+ "applied": [
+  {
+   "priority": "try",
+   "flow": "home",
+   "text": "Add another as first  — Use a different Leonardo painting.",
+   "author": "anonymous"
+  }
+ ],
+ "skipped": [],
+ "conflicts": [],
+ "boardFeedback": [],
+ "authors": [
+  {
+   "name": "anonymous",
+   "stickies": 1
+  }
+ ]
+}

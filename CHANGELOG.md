@@ -2,6 +2,26 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 6 (2026-10-13) · nightly harvest
+Nightly 5 pm MT harvest of the Cycle 5 review board `336cb099-c6d5-44da-bb6e-e883893de039` (Home · Dino Town · Totally Random) —
+**1 sticky, 0 comment threads** (in the Home frame, on the SPIRAL.φ gallery's Mona Lisa slide). No priority keyword, so the
+yellow fill made it **try**. The sticky had no Lucid author attribution line, so it is recorded as **anonymous**.
+
+### Applied (1)
+- **try** · Home · “Add another as first — Use a different Leonardo painting.” → the SPIRAL.φ gallery now opens on Leonardo’s *Lady with an Ermine* (c. 1489–1491, painting public domain, golden-spiral overlay drawn for Cycle 6, `site/assets/c6/spiral-golden-lady-with-ermine.jpg`, the spiral closes in on her face); Mona Lisa moves to slide 2, the counter reads 1 / 5 and a fifth dot was added. · by anonymous
+
+### Skipped (0)
+- none. No malicious, illegal or offensive stickies.
+
+### Conflicts
+- none
+
+### Board feedback (purple / Board:)
+- none
+
+### Authors
+- anonymous — 1
+
 ## Cycle 5 (2026-10-12) · nightly harvest
 Nightly 5 pm MT harvest of the Cycle 4 review board `7e1a1751-68e6-4551-8845-64cc394e748a` (Home · Dino Town · Totally Random) —
 **12 stickies, 0 comment threads** (11 in-frame with text, 1 empty). No priority keywords, so sticky colour decided

@@ -1,0 +1,94 @@
+{
+  "docId": "336cb099-c6d5-44da-bb6e-e883893de039",
+  "cycle": 5,
+  "harvestedAt": "2026-10-13T23:10:24.520334+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": "home",
+      "h1": null,
+      "clicked": null,
+      "commit": "b07b10dfb0244458a7f9c1d3b0b431717cc3e8c1",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "hx3C0_XmdZM7",
+          "kind": "sticky",
+          "text": "Add another as first  — Use a different Leonardo painting.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1193.9095910363708,
+            "y": 2269.7406872215356,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-dinosaur",
+      "pageId": "review",
+      "frameTitle": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
+      "stepKey": "02-dinosaur",
+      "matchedBy": "frame-id",
+      "flow": "dinosaur",
+      "route": "/dinosaur.html",
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "title": "dinosaur",
+      "h1": null,
+      "clicked": null,
+      "commit": "b07b10dfb0244458a7f9c1d3b0b431717cc3e8c1",
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-03-random",
+      "pageId": "review",
+      "frameTitle": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
+      "stepKey": "03-random",
+      "matchedBy": "frame-id",
+      "flow": "random",
+      "route": "/random.html",
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "title": "random",
+      "h1": null,
+      "clicked": null,
+      "commit": "b07b10dfb0244458a7f9c1d3b0b431717cc3e8c1",
+      "screenshot": null,
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

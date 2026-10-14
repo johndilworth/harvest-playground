@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "type": "meeting",
-  "updatedAt": "2026-10-14T10:08:19-06:00",
+  "updatedAt": "2026-10-14T12:10:00-06:00",
   "series": {
     "slug": "team-meeting",
     "name": "Team Meeting",
-    "description": "Weekly team meeting: board → summary (decisions, tasks with owners, open items) → next board with carry-forward.",
+    "description": "Weekly team meeting: board \u2192 summary (decisions, tasks with owners, open items) \u2192 next board with carry-forward.",
     "cadence": "weekly",
     "attendees": [
       {
@@ -54,7 +54,7 @@
   "meetings": [
     {
       "id": "2026-10-27",
-      "title": "Team Meeting 2026-10-27",
+      "title": "Team Meeting Oct 27, 2026",
       "date": "2026-10-27",
       "status": "current",
       "createdAt": "2026-10-14T10:08:19-06:00",
@@ -84,7 +84,7 @@
     },
     {
       "id": "2026-10-20",
-      "title": "Team Meeting 2026-10-20",
+      "title": "Team Meeting Oct 20, 2026",
       "date": "2026-10-20",
       "status": "harvested",
       "createdAt": "2026-10-13T23:20:00-06:00",
@@ -273,7 +273,7 @@
     },
     {
       "id": "2026-10-13",
-      "title": "Team Meeting 2026-10-13",
+      "title": "Team Meeting Oct 13, 2026",
       "date": "2026-10-13",
       "status": "harvested",
       "createdAt": "2026-10-13T23:16:00-06:00",
@@ -307,7 +307,7 @@
             "due": null,
             "status": "Done",
             "source": "From last time",
-            "quote": "bob: set up the staging env for the new API — done, it's live now ✅",
+            "quote": "bob: set up the staging env for the new API \u2014 done, it's live now \u2705",
             "closed": true
           },
           {
@@ -317,7 +317,7 @@
             "due": null,
             "status": "In Progress",
             "source": "From last time",
-            "quote": "alice was going to send the vendor shortlist… still waiting on 2 quotes",
+            "quote": "alice was going to send the vendor shortlist\u2026 still waiting on 2 quotes",
             "flags": [
               "no due date"
             ]
@@ -376,7 +376,7 @@
             "source": "Quick Hits"
           },
           {
-            "text": "New Figma seats available — ping @chen.",
+            "text": "New Figma seats available \u2014 ping @chen.",
             "source": "Quick Hits"
           }
         ],

@@ -54,7 +54,8 @@
         "url": "https://lucid.app/lucidchart/bdfe11e0-bf6f-4f30-b1e7-956e78311a9b/edit",
         "commentUrl": "https://lucid.app/lucidchart/bdfe11e0-bf6f-4f30-b1e7-956e78311a9b/edit?invitationId=inv_1ddf1b54-47c4-4f14-8c98-d8f6121e55a7",
         "screenshot": "/captures/meetings/weekly-sync-2026-10-20.png",
-        "flow": "meeting"
+        "flow": "meeting",
+        "narrativeBlockId": "UP.Cm32yh3Ed"
       },
       "carriedIn": {
         "actions": [
@@ -225,7 +226,8 @@
           "a-e2e",
           "a-release-checklist",
           "o-analytics-owner"
-        ]
+        ],
+        "narrative": "Most of the sync was about release cadence: the team moved to weekly releases from next sprint and will keep the old login page until mobile ships. CI flakiness is mostly the e2e tests (bob), chen is drafting the mobile onboarding mockups, staging is live, and alice's vendor shortlist is waiting on two quotes. Wins: the Friday demo and merged onboarding docs. Concerns: meeting overload and the Q4 timeline. Still open: who owns the analytics dashboard, and who will update the release checklist."
       },
       "activity": {
         "boardObjects": 18,
@@ -251,7 +253,7 @@
       "title": "Draft mobile onboarding mockups",
       "assignee": "chen@example.com",
       "endTime": "2026-10-16",
-      "status": "To Do",
+      "status": "Done",
       "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13"
     },
     {
@@ -261,7 +263,7 @@
       "title": "Fix flaky e2e tests",
       "assignee": "bob@example.com",
       "endTime": "2026-10-20",
-      "status": "To Do",
+      "status": "Done",
       "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13"
     },
     {
@@ -271,8 +273,9 @@
       "title": "[needs owner] Update release checklist for weekly cadence",
       "assignee": null,
       "endTime": null,
-      "status": "To Do",
+      "status": "Not Doing",
       "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13"
     }
-  ]
+  ],
+  "cardsReadAt": "2026-10-13T23:50:00-06:00"
 }

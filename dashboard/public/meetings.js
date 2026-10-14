@@ -62,7 +62,7 @@ function summaryBox(S, from) {
     ...S.openItems.map((x) => `Open: ${esc(x.text)}${(x.flags || []).length ? ` — <b>${esc(x.flags.join(", "))}</b>` : ""}`),
     ...S.flags.filter((f) => !/needs owner/.test(f)).map((f) => `Flag: ${esc(f)}`),
   ];
-  return `<div class="card"><p class="muted" style="margin-top:0">Harvested from the <a href="${mUrl(from)}">${esc(mfmt(from.date))}</a> board${from.harvestedAt ? ` · ${esc(fmtMT(from.harvestedAt))}` : ""}</p><ul>${items.map((x) => `<li>${x}</li>`).join("")}</ul></div>`;
+  return `<div class="card"><p class="muted" style="margin-top:0">Harvested from the <a href="${mUrl(from)}">${esc(mfmt(from.date))}</a> board${from.harvestedAt ? ` · ${esc(fmtMT(from.harvestedAt))}` : ""}</p>${S.narrative ? `<p>${esc(S.narrative)}</p>` : ""}<ul>${items.map((x) => `<li>${x}</li>`).join("")}</ul></div>`;
 }
 function meetingNav(ms, m) {
   const l = byDate(ms), i = l.indexOf(m), prev = l[i - 1], next = l[i + 1];

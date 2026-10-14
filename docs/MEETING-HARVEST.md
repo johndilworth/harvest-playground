@@ -45,7 +45,7 @@ summary: { narrative, decisions[{text,source,quote}], actions[{id,task,owner,due
            openItems[{id,text,source,flags[]}], notes[{text,source}], wins[], concerns[], focus[{attendee,items[]}],
            flags[], closed[ids], carriedForward[ids], skipped[{reason}] }
 activity: { boardObjects: <count of stickies + text notes, excluding headings and the narrative>, actionItems: <count of tasks + cards> }
-stickiesRead, harvestedAt (ISO with -06:00/-07:00), status: "harvested"
+stickiesRead, harvestedAt (ISO with -06:00/-07:00), status: "harvested" (UI tag: **Archived**)
 ```
 
 - `narrative` is one short paragraph. The meeting page shows it above a single bullet list: decisions, then actions with owner and due date, then open items, then flags.
@@ -72,7 +72,7 @@ stickiesRead, harvestedAt (ISO with -06:00/-07:00), status: "harvested"
 
 ## 5. Update data, commit, deploy, verify
 1. In the data file:
-   - Mark the old meeting `status: "harvested"`.
+   - Mark the old meeting `status: "harvested"` (dashboard shows **Archived**).
    - Add the new meeting with `status: "current"`, `summary: null`, `harvestedFrom: <old id>`, `board{documentId,url,commentUrl,screenshot,flow:"meeting"}`, `carriedIn{actions,openItems}` and `activity{boardObjects:<open-item stickies>, actionItems:<cards>}`.
    - Set `currentMeetingId`.
    - Rebuild `cards[]` from the new board's cards.

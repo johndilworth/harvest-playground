@@ -20,7 +20,7 @@ new project). Project-specific procedures (paths, page structure, routines) live
 <li><strong>Apply</strong> every safe item to the project's code (§ 5), log applied/skipped/conflicts, merge per the project's merge
    policy (§ 6), deploy.</li>
 <li><strong>New cycle</strong>: capture the new build, build cycle N+1 boards, create an org-wide comment share link per board
-   (<code>commentUrl</code>, § 4), update the dashboard data; the old cycle becomes <code>superseded</code>.</li>
+   (<code>commentUrl</code>, § 4), update the dashboard data; the old cycle becomes archived (data <code>status: "superseded"</code>; UI shows <strong>Archived</strong>).</li>
 </ol>
 <h2 id="2-stickies-colours-and-priority">2. Stickies: colours and priority</h2>
 <table>
@@ -158,7 +158,8 @@ validates it and posts <code>{action:"create-project", project, setup:{…}}</co
   &quot;updatedAt&quot;: ISO-8601 with offset,
   &quot;authorsNote&quot;?, &quot;screens&quot;?, &quot;historyBoardLabel&quot;?,
   &quot;cycles&quot;: [ {
-    &quot;number&quot;, &quot;title&quot;, &quot;createdAt&quot;, &quot;status&quot;: &quot;current&quot;|&quot;superseded&quot;, &quot;harvestedFrom&quot;: int|null,
+    &quot;number&quot;, &quot;title&quot;, &quot;createdAt&quot;, &quot;status&quot;: &quot;current&quot;|&quot;superseded&quot;,  // UI label for superseded: Archived
+    &quot;harvestedFrom&quot;: int|null,
     &quot;pullRequest&quot;: url|null, &quot;commit&quot;: short sha, &quot;screenshot&quot;: url, &quot;previewUrl&quot;?: deploy permalink,
     &quot;documents&quot;: [ { &quot;title&quot;, &quot;role&quot;: &quot;flow&quot;, &quot;flow&quot;?, &quot;docId&quot;, &quot;url&quot;, &quot;commentUrl&quot;, &quot;description&quot;, &quot;harvest&quot;?: bool } ],
     &quot;authors&quot;: [ { &quot;name&quot;, &quot;stickies&quot; } ],
@@ -170,7 +171,7 @@ validates it and posts <code>{action:"create-project", project, setup:{…}}</co
 }
 </code></pre>
 <ul>
-<li>Every harvest that creates a new cycle marks the old one <code>superseded</code>, appends the new one as <code>current</code>, writes
+<li>Every harvest that creates a new cycle marks the old one archived (<code>superseded</code>), appends the new one as <code>current</code>, writes
   <code>contributions</code>, <code>authors</code> and the run entry, bumps stats and <code>updatedAt</code>. No <code>hub</code> document role.</li>
 <li>Pages: <code>/</code> all projects, <code>/p/&lt;slug&gt;/</code> project, <code>/p/&lt;slug&gt;/cycle.html?c=N</code> cycle, <code>/p/&lt;slug&gt;/summary.html</code>, <code>/new.html</code>, <code>/rules.html</code>.</li>
 </ul>

@@ -123,7 +123,7 @@ else **`anonymous`**). Include authors in the CHANGELOG entry (`… · by <autho
   Projects today: `harvest-playground` (nightly), `design-loop`, `harvest-site`, `harvest-dashboard` (manual).
   `dashboard/build_projects.py` was a one-time seed; edit the data files directly afterwards.
 - **Nightly step 8:** update `dashboard/public/data/harvest-playground.json` (formerly `harvest.json`) (append a `nightlyHarvests` entry to the current cycle; on a new cycle mark the
-  old one `"superseded"`, append the new cycle with `"status":"current"`, bump `stats.pullRequests` if a PR was opened,
+  old one archived (`"status":"superseded"`, UI **Archived**), append the new cycle with `"status":"current"`, bump `stats.pullRequests` if a PR was opened,
   bump `stats.nightlyHarvests`, set `updatedAt`), commit, then run the deploy command above. Also:
   - add every Lucid board of the new cycle to its `documents` (role `flow`; never a `hub` entry);
   - add/refresh the harvested cycle's `authors` (§ Sticky authors) — counts per author of every harvested sticky;
@@ -140,7 +140,7 @@ else **`anonymous`**). Include authors in the CHANGELOG entry (`… · by <autho
   "stats": { "pullRequests": int, "pullRequestsSource": str, "nightlyHarvests": int },
   "updatedAt": ISO-8601 with offset,
   "cycles": [ {
-    "number": int, "title": str, "createdAt": ISO-8601, "status": "current" | "superseded",
+    "number": int, "title": str, "createdAt": ISO-8601, "status": "current" | "superseded"  // UI label for superseded is "Archived",
     "harvestedFrom": int|null, "pullRequest": url|null, "commit": short sha, "screenshot": url,
     "previewUrl"?: url,       // Netlify deploy permalink https://<deploy_id>--harvest-playground.netlify.app for `commit`
     "documents": [ { "title", "role": "flow", "flow"?: "home"|"dinosaur"|"random"|"review"|…,
@@ -212,7 +212,7 @@ someone presses **Run harvest now** on its current cycle page (`/p/harvest-dashb
    export every page to verify the images render (`c<N+1>/export-p1.png`), write `c<N+1>/lucid-doc.json`. Create the org-wide
    comment share link (`lucid_create_document_share_link`: role `comment`, `restrict_to_account:true`, `allow_anonymous:false`, no expiry) and keep its acceptUrl as `commentUrl`. One board unless
    a flow has more than 5 screens; no hub.
-6. Update `dashboard/public/data/harvest-dashboard.json`: mark cycle N `superseded`, add its `manualHarvests` entry and
+6. Update `dashboard/public/data/harvest-dashboard.json`: mark cycle N archived (`superseded`), add its `manualHarvests` entry and
    `authors`; append cycle N+1 (`current`, `harvestedFrom` N, `commit`, `documents`, `contributions` (each document with `commentUrl`), `changes` with
    applied/skipped reasons, `previewUrl` = production deploy permalink `https://<deploy_id>--harvest-dashboard.netlify.app`
    of that commit); bump `stats.manualHarvests`, set `updatedAt`; commit, push, deploy.

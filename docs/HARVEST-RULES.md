@@ -17,7 +17,7 @@ Dashboard (the hub): https://harvest-dashboard.netlify.app · Rules page: https:
 5. **Apply** every safe item to the project's code (§ 5), log applied/skipped/conflicts, merge per the project's merge
    policy (§ 6), deploy.
 6. **New cycle**: capture the new build, build cycle N+1 boards, create an org-wide comment share link per board
-   (`commentUrl`, § 4), update the dashboard data; the old cycle becomes `superseded`.
+   (`commentUrl`, § 4), update the dashboard data; the old cycle becomes archived (data `status: "superseded"`; UI shows **Archived**).
 
 ## 2. Stickies: colours and priority
 | Colour | Meaning | Stored as |
@@ -124,7 +124,8 @@ validates it and posts `{action:"create-project", project, setup:{…}}` to the 
   "updatedAt": ISO-8601 with offset,
   "authorsNote"?, "screens"?, "historyBoardLabel"?,
   "cycles": [ {
-    "number", "title", "createdAt", "status": "current"|"superseded", "harvestedFrom": int|null,
+    "number", "title", "createdAt", "status": "current"|"superseded",  // UI label for superseded: Archived
+    "harvestedFrom": int|null,
     "pullRequest": url|null, "commit": short sha, "screenshot": url, "previewUrl"?: deploy permalink,
     "documents": [ { "title", "role": "flow", "flow"?, "docId", "url", "commentUrl", "description", "harvest"?: bool } ],
     "authors": [ { "name", "stickies" } ],
@@ -135,6 +136,6 @@ validates it and posts `{action:"create-project", project, setup:{…}}` to the 
   } ]
 }
 ```
-- Every harvest that creates a new cycle marks the old one `superseded`, appends the new one as `current`, writes
+- Every harvest that creates a new cycle marks the old one archived (`superseded`), appends the new one as `current`, writes
   `contributions`, `authors` and the run entry, bumps stats and `updatedAt`. No `hub` document role.
 - Pages: `/` all projects, `/p/<slug>/` project, `/p/<slug>/cycle.html?c=N` cycle, `/p/<slug>/summary.html`, `/new.html`, `/rules.html`.

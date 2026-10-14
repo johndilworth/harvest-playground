@@ -25,6 +25,9 @@ const isNightly = (p) => p.harvestMode === "nightly";
 const runsLabel = (p) => (isNightly(p) ? "Nightly harvests" : "Manual harvests");
 const runs = (p, c) => (isNightly(p) ? c.nightlyHarvests : c.manualHarvests) || [];
 const ordered = (cs) => [...cs].sort((a, b) => (b.status === "current") - (a.status === "current") || b.number - a.number);
+// UI label: non-current cycles/meetings show as Archived (data may still be superseded/harvested).
+const statusTag = (s) => s === "current" ? '<span class="tag current">Current</span>' : '<span class="tag">Archived</span>';
+const statusLabel = (s) => s === "current" ? "Current" : "Archived";
 // Strip leading "Cycle N — "/"Cycle N - " from cycle titles used as descriptions.
 const cycleDesc = (c) => String(c.title || "").replace(/^\s*Cycle\s*\d+\s*[—–-]\s*/i, "").trim() || String(c.title || "");
 
@@ -37,7 +40,7 @@ async function dashboard() {
   <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${isNightly(p) ? d.stats.nightlyHarvests : d.stats.manualHarvests ?? 0}</b> ${isNightly(p) ? "nightly" : "manual"} harvests</span></div>
   <h2>Cycles</h2><div class="stack" id="cycle-stack" role="list" aria-label="Cycles, newest first on top">${ordered(cs).map((c) => `<a role="listitem" class="card cycle-card stack-card ${c.status}" href="${B}cycle.html?c=${c.number}" data-cycle="${c.number}">
    ${c.screenshot ? `<img class="stack-shot" src="${esc(c.screenshot)}" alt="" loading="lazy">` : `<div class="stack-shot" aria-hidden="true"></div>`}
-   <div class="stack-body"><h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
+   <div class="stack-body"><h3>Cycle ${c.number}${statusTag(c.status)}</h3>
    <div class="stack-date muted">${esc(fmt(c.createdAt))}</div>
    <p class="stack-desc">${esc(cycleDesc(c))}</p></div></a>`).join("")}</div>
   <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)}${p.rules ? ` · <a href="${p.rules}">Project rules ↗</a>` : ""} · ${skipped} skipped overall</p>`;
@@ -82,7 +85,7 @@ async function cycle() {
   document.body.insertAdjacentHTML("afterbegin", nav()); document.title = `Cycle ${c.number} · ${d.project.name}`;
   const ch = c.changes;
   const curC = d.cycles.find((x) => x.status === "current");
-  const cycleTitle = `<a href="${B}">${esc(d.project.name)}</a> · Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>${curC ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${B}cycle.html?c=${curC.number}">Go to current cycle (Cycle ${curC.number}) →</a>` : ""}`}`;
+  const cycleTitle = `<a href="${B}">${esc(d.project.name)}</a> · Cycle ${c.number}${statusTag(c.status)}${c.status !== "current" && curC ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${B}cycle.html?c=${curC.number}">Go to current cycle (Cycle ${curC.number}) →</a>` : ""}`;
   $("main").innerHTML = `${titleRow(cycleTitle, d.project, "cycle")}
   <p class="muted">${esc(c.title)} · created ${fmt(c.createdAt)}${c.harvestedFrom != null ? ` · harvested from Cycle ${c.harvestedFrom}` : ""}${c.pullRequest ? ` · <a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""} · commit <code>${esc(c.commit)}</code>${c.previewUrl ? ` · <a class="preview" href="${c.previewUrl}">Preview ↗</a>` : ""}</p>
   <h2>Lucid documents</h2>${docsHtml(c.documents, c.status, c.screenshot)}
@@ -99,7 +102,7 @@ async function summary() {
   $("main").innerHTML = `${titleRow(`<a href="${B}">${esc(d.project.name)}</a> · Summary`, d.project, "summary")}<p class="muted">Every cycle and the changes it shipped.</p>
   <table><tr><th>Cycle</th><th>Date</th><th>Status</th><th>Applied</th><th>Skipped (reason)</th><th>Conflicts</th></tr>
   ${[...d.cycles].sort((a, b) => b.number - a.number).map((c) => `<tr><td><a href="${B}cycle.html?c=${c.number}">Cycle ${c.number}</a>${c.pullRequest ? `<br><a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""}</td>
-   <td style="white-space:nowrap">${fmt(c.createdAt)}</td><td>${esc(c.status)}</td>
+   <td style="white-space:nowrap">${fmt(c.createdAt)}</td><td>${esc(statusLabel(c.status))}</td>
    <td>${c.changes.note ? esc(c.changes.note) : ""}${c.changes.applied.length || !c.changes.note ? li(c.changes.applied, (a) => `<li><b>${esc(a.priority)}</b> · ${esc(a.text)}${a.author ? ` · by ${esc(a.author)}` : ""}</li>`) : ""}</td>
    <td>${li(c.changes.skipped, (s) => `<li>${esc(s.text)} — <i>${esc(s.reason)}</i>${s.author ? ` · by ${esc(s.author)}` : ""}</li>`)}</td>
    <td>${li(c.changes.conflicts, (s) => `<li>${esc(s)}</li>`)}</td></tr>`).join("")}</table>`;

@@ -53,7 +53,7 @@ async function meetingSeries() {
   <div class="chips"><span class="chip"><b>${ms.length}</b> meetings</span><span class="chip"><b>${tot("boardObjects")}</b> board objects</span><span class="chip"><b>${tot("actionItems")}</b> action items</span><span class="chip"><b>${openTasks(d).length}</b> open tasks</span><span class="chip"><b>${ms.filter((m) => m.summary).length}</b> harvests</span></div>
   <h2>Meetings</h2><div class="stack" id="meeting-stack" role="list" aria-label="Meetings, newest first on top">${mOrdered(ms).map((m) => `<a role="listitem" class="card cycle-card stack-card ${m.status}" href="${mUrl(m)}" data-meeting="${esc(m.id)}">
    ${m.board?.screenshot ? `<img class="stack-shot" src="${esc(m.board.screenshot)}" alt="" loading="lazy">` : `<div class="stack-shot" aria-hidden="true"></div>`}
-   <div class="stack-body"><h3>${esc(s.name)}${m.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(m.status)}</span>`}</h3>
+   <div class="stack-body"><h3>${esc(s.name)}${statusTag(m.status)}</h3>
    <div class="stack-date muted">${esc(mfmt(m.date))}</div>
    <p class="stack-desc">${esc(meetingDesc(m))}</p></div></a>`).join("")}</div>
   <p class="muted">Data: <a href="/data/meeting-${MSLUG}.json">meeting-${MSLUG}.json</a> · updated ${fmt(d.updatedAt)}</p>`;
@@ -93,7 +93,7 @@ async function meetingPage() {
   const m = d.meetings.find((x) => x.id === id) || mOrdered(d.meetings)[0], cur = d.meetings.find((x) => x.status === "current");
   document.body.insertAdjacentHTML("afterbegin", nav()); document.title = `${m.date} · ${d.series.name}`;
   const from = m.harvestedFrom ? d.meetings.find((x) => x.id === m.harvestedFrom) : null;
-  const title = `<a href="${MB}">${esc(d.series.name)}</a> · ${esc(mfmt(m.date))}${m.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(m.status)}</span>${cur && cur !== m ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${mUrl(cur)}">Go to current meeting (${esc(mfmt(cur.date))}) →</a>` : ""}`}`;
+  const title = `<a href="${MB}">${esc(d.series.name)}</a> · ${esc(mfmt(m.date))}${statusTag(m.status)}${m.status !== "current" && cur && cur !== m ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${mUrl(cur)}">Go to current meeting (${esc(mfmt(cur.date))}) →</a>` : ""}`;
   const next = d.meetings.find((x) => x.harvestedFrom === m.id);
   $("main").innerHTML = `${mTitleRow(title)}
   <p class="muted">${esc(m.title)} · created ${fmt(m.createdAt)}${from ? ` · carried forward from ${esc(mfmt(from.date))}` : ""} · ${(m.activity || {}).boardObjects || 0} board objects · ${(m.activity || {}).actionItems || 0} action items</p>

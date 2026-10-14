@@ -7,8 +7,8 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 | | |
 |---|---|
 | **Live site** | https://harvest-playground.netlify.app (currently **Cycle 7**) |
-| **Add a sticky** | [Cycle 6 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/afda7e51-8cfc-4577-be4f-3550f9bf71b0/edit?invitationId=inv_dca1d5e9-2344-4f7e-aadc-ef7b57942e53) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 6 tile added 2026-10-13) |
+| **Add a sticky** | [Cycle 7 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/1a4448c3-5153-4cc9-913f-459468cad2bd/edit?invitationId=inv_51a8592d-15ef-47fd-a8f8-046ed68b9f52) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 7 tile added 2026-10-14) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 
@@ -52,9 +52,9 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 3 boar
 - **Applied:** 3 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Malicious/illegal/offensive:** none
 - **Contributors:** anonymous × 3 (no Lucid author lines on the stickies)
 - **Cycle 7 created:** yes — Turkey 2026 sabbatical becomes the Home main feature (photos from johndilworth.com/turkey); Hall of Fame adds George the T. Rex + Dinah (Vernal, UT); Random’s nautilus becomes Spiral Jetty
-- **Commit:** `COMMIT_PLACEHOLDER` on `main` (pushed directly; no PR) · preview PREVIEW_PLACEHOLDER
+- **Commit:** `d2ce785` on `main` (pushed directly; no PR) · preview https://6ad00be10c0ae8cfa3c794d2--harvest-playground.netlify.app
 - **Live:** https://harvest-playground.netlify.app (Cycle 7)
-- **Board:** BOARD_PLACEHOLDER
+- **Board:** [review (Lucidchart)](https://lucid.app/lucidchart/1a4448c3-5153-4cc9-913f-459468cad2bd/edit)
 - **Record:** `journey/cycles/6/harvest-2026-10-14.json`
 
 ### Tue 2026-10-13 — Cycle 5 harvest · **Cycle 6 shipped** · nightly

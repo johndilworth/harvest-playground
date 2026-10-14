@@ -26,7 +26,7 @@ and summary for the Home sticky.
 ### Authors
 - anonymous — 3
 
-Commit `COMMIT_PLACEHOLDER` · preview PREVIEW_PLACEHOLDER · Cycle 7 board: BOARD_PLACEHOLDER · no PR (pushed to main)
+Commit `d2ce785` · preview https://6ad00be10c0ae8cfa3c794d2--harvest-playground.netlify.app · Cycle 7 board: [review (Lucidchart)](https://lucid.app/lucidchart/1a4448c3-5153-4cc9-913f-459468cad2bd/edit) · no PR (pushed to main)
 Record: `journey/cycles/6/feedback-2026-10-14.json` + `journey/cycles/6/harvest-2026-10-14.json` · raw board fetch in `journey/out/c6/raw/` (gitignored).
 
 ## Cycle 6 (2026-10-13) · nightly harvest

@@ -9,6 +9,8 @@ const digest = (s) => createHash("sha256").update(String(s)).digest();
 const safeEqual = (a, b) => timingSafeEqual(digest(a), digest(b)); // equal-length digests -> constant time
 // Projects whose current cycle page shows "Run harvest now" (must match data/<slug>.json project.trigger)
 const PROJECTS = new Set(["harvest-playground", "harvest-dashboard", "design-loop", "harvest-site"]);
+// Meeting series whose current meeting page shows "Harvest meeting" (data/meeting-<slug>.json series.trigger)
+const MEETINGS = new Set(["harvest-weekly-sync"]);
 const COOLDOWN_MS = 10 * 60 * 1000;
 const MAX_BODY = 32 * 1024, MAX_PAYLOAD = 24 * 1024;
 const lastTrigger = {}; // per project; best-effort: only holds within a warm function instance
@@ -37,6 +39,7 @@ async function send(url, auth, payload) {
 
 async function harvest(b, url, auth) {
   if (b.confirm !== "RUN") return json(400, { error: "Type RUN to confirm." });
+  if (b.meeting != null) return harvestMeeting(b, url, auth);
   const project = b.project ?? "harvest-playground";
   if (!PROJECTS.has(project)) return json(400, { error: "Unknown project." });
   const wait = (lastTrigger[project] || 0) + COOLDOWN_MS - Date.now();
@@ -46,6 +49,20 @@ async function harvest(b, url, auth) {
     if (!r.ok) return json(502, { error: `Harvest webhook rejected the request (HTTP ${r.status}).` });
     lastTrigger[project] = Date.now();
     return json(202, { ok: true, message: "Harvest started — new cycle will appear here when done" });
+  } catch { return json(502, { error: "Harvest webhook unreachable." }); }
+}
+
+// POST {action:"harvest", meeting:<slug>} -> POSTs {type:"meeting", meeting, action:"harvest", ...}. The downstream routine must handle type "meeting".
+async function harvestMeeting(b, url, auth) {
+  const meeting = b.meeting;
+  if (typeof meeting !== "string" || !MEETINGS.has(meeting)) return json(400, { error: "Unknown meeting series." });
+  const key = "meeting:" + meeting, wait = (lastTrigger[key] || 0) + COOLDOWN_MS - Date.now();
+  if (wait > 0) return json(429, { error: `A harvest was just started. Try again in ${Math.ceil(wait / 60000)} min.` });
+  try {
+    const r = await send(url, auth, { type: "meeting", meeting, action: "harvest", source: "harvest-dashboard", requestedAt: new Date().toISOString() });
+    if (!r.ok) return json(502, { error: `Harvest webhook rejected the request (HTTP ${r.status}).` });
+    lastTrigger[key] = Date.now();
+    return json(202, { ok: true, message: "Meeting harvest started — the summary and next meeting will appear here when done" });
   } catch { return json(502, { error: "Harvest webhook unreachable." }); }
 }
 

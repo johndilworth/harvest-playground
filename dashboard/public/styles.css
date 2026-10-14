@@ -81,3 +81,4 @@ a.btn{display:inline-block;align-self:center;padding:8px 16px;border:1px solid #
 .meeting-current{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;gap:20px;align-items:start}
 .meeting-current img{width:100%;border:1px solid #d5d8dc;display:block;background:#fff}
 @media (max-width:800px){.meeting-current{grid-template-columns:1fr}}
+.doc-tile .emb img[src^="/captures/meetings/"]{object-fit:contain;background:#fff}

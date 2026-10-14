@@ -50,6 +50,12 @@
   to = "/meeting.html"
   status = 200
 [[redirects]]
-  from = "/m/:slug/summary.html"
-  to = "/meeting-summary.html"
+  from = "/m/:slug/meeting.html"
+  to = "/meeting-page.html"
   status = 200
+# Old per-series summary page -> individual meeting page (query ?m=ID kept)
+[[redirects]]
+  from = "/m/:slug/summary.html"
+  to = "/m/:slug/meeting.html"
+  status = 301
+  force = true

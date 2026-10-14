@@ -102,6 +102,8 @@ function validateSetup(project, s) {
   const su = Array.isArray(s.startUrls) ? s.startUrls : [];
   if (!su.length || su.length > 20) e.push("1–20 start URLs required.");
   o.startUrls = su.slice(0, 20).map((u, i) => str(u, 300, `Start URL ${i + 1}`, e, { required: true, re: PATH_OR_URL }));
+  // Flows are now a natural-language description (cycle-2 sticky); the legacy structured `flows` array is still accepted.
+  o.flowsText = str(s.flowsText, 4000, "Flow descriptions", e);
   const fl = Array.isArray(s.flows) ? s.flows : []; if (fl.length > 30) e.push("At most 30 flows.");
   o.flows = fl.slice(0, 30).map((f, i) => ({ name: str(f?.name, 80, `Flow ${i + 1} name`, e, { required: true }),
     startPath: str(f?.startPath, 300, `Flow ${i + 1} start path`, e, { required: true, re: /^\/\S*$/ }), description: str(f?.description, 300, `Flow ${i + 1} description`, e) }));

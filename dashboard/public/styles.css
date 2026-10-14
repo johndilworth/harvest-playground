@@ -80,3 +80,16 @@ a.btn{display:inline-block;align-self:center;padding:8px 16px;border:1px solid #
 .meeting-current img{width:100%;border:1px solid #d5d8dc;display:block;background:#fff}
 @media (max-width:800px){.meeting-current{grid-template-columns:1fr}}
 .doc-tile .emb img[src^="/captures/meetings/"]{object-fit:contain;background:#fff}
+
+/* Cycle cards as a dynamic stack (cycle-2 sticky): newest/current card in front on the left, older cards tucked
+   behind to the right; hovering or focusing the stack fans it out, and a hovered/focused card comes to the front. */
+.stack{display:flex;align-items:flex-start;padding:4px 0 18px;overflow-x:auto;overflow-y:visible}
+.stack-card{flex:0 0 300px;margin:0;box-shadow:0 2px 8px rgba(31,35,40,.14);transition:margin .25s ease,transform .2s ease,box-shadow .2s ease;background:#F2F3F5;position:relative}
+.stack-card+.stack-card{margin-left:-220px}
+.stack:hover .stack-card+.stack-card,.stack:focus-within .stack-card+.stack-card{margin-left:-120px}
+.stack-card:hover,.stack-card:focus-visible{z-index:999!important;transform:translateY(-6px);box-shadow:0 8px 20px rgba(31,35,40,.22);outline:none}
+.stack-card:focus-visible{box-shadow:0 0 0 3px #1a5fb4,0 8px 20px rgba(31,35,40,.22)}
+.stack-card .peek{position:absolute;top:10px;right:12px;font-weight:700;font-size:13px;color:#57606a}
+.stack-card:first-child .peek{display:none}
+@media (prefers-reduced-motion:reduce){.stack-card{transition:none}}
+@media (max-width:700px){.stack-card+.stack-card{margin-left:-240px}}

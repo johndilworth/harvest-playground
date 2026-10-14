@@ -1,0 +1,142 @@
+{
+  "docId": "5ef85601-978c-4810-9cd3-f52ec629ca8e",
+  "cycle": 2,
+  "harvestedAt": "2026-10-14T06:05:46.099255+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home-new-button",
+      "pageId": "new-project",
+      "frameTitle": "01-home-new-button · / · Home — + New project",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-02-new-empty",
+      "pageId": "new-project",
+      "frameTitle": "02-new-empty · /new.html · New project form — empty",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "RP3CXSe-I6gk",
+          "kind": "sticky",
+          "text": "Make this a text only entry so people can describe in natural language what the flow is that they want to capture.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 2983.615571090675,
+            "y": 1352.2200905265895,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-new-empty",
+            "via": null,
+            "bbox": "frame-02-new-empty",
+            "bestOverlap": {
+              "frameId": "frame-02-new-empty",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-form-filled",
+      "pageId": "new-project",
+      "frameTitle": "03-form-filled · /new.html · Form filled with sample data",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-04-validation-errors",
+      "pageId": "new-project",
+      "frameTitle": "04-validation-errors · /new.html · Validation errors",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-05-confirm-modal",
+      "pageId": "new-project",
+      "frameTitle": "05-confirm-modal · /new.html · Review & confirm modal",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-06-wrong-passphrase",
+      "pageId": "new-project",
+      "frameTitle": "06-wrong-passphrase · /new.html · Wrong passphrase result",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

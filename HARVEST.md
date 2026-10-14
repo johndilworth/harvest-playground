@@ -203,7 +203,10 @@ someone presses **Run harvest now** on its current cycle page (`/p/harvest-dashb
 3. Commit to `main` (message `Harvest Dashboard cycle <N+1>: …`), push, and deploy with the dashboard deploy command.
 4. Capture cycle N+1: `cd journey && cp ../dashboard/shoot.mjs _shoot.mjs && node _shoot.mjs https://harvest-dashboard.netlify.app
    ../dashboard/public/captures/harvest-dashboard/c<N+1>-review "" review` (home, project dashboard, cycle page, Run
-   harvest modal, summary; add screens if the dashboard grew new pages), then redeploy so the captures are public.
+   harvest modal, summary; add screens if the dashboard grew new pages). Since cycle 3 also capture the meeting pages
+   (`node _shoot.mjs https://harvest-dashboard.netlify.app ../dashboard/public/captures/harvest-dashboard/c<N+1>-meetings "" meetings`:
+   meetings series page + current meeting page) for a separate **Meetings** board (`build_board.py <N+1> <sha> meetings`), and
+   re-capture the New project flow (`journey/shoot-c3-new.mjs`) when the form changed. Then redeploy so the captures are public.
 5. Build the board: `cd dashboard/board && python3 build_board.py <N+1> <sha> > c<N+1>/lucid-spec.json`; import as
    **Lucidchart** (`use_assisted_layout:false`), set the page background `#E8EAED` (`skills.pages.setBackgroundColor`),
    export every page to verify the images render (`c<N+1>/export-p1.png`), write `c<N+1>/lucid-doc.json`. Create the org-wide
@@ -226,7 +229,7 @@ Started from the dashboard's **New project** form (`/new.html`, passphrase + typ
     "repo": {"mode":"existing","fullName":"owner/name"} | {"mode":"new","name":"repo-name"},
     "branch", "baseDir", "buildCommand", "publishDir", "liveUrl",
     "netlify": {"mode":"new"|"existing","site"?:"name-or-id","deployPreviews":true},
-    "startUrls": ["/", "..."], "flows": [{"name","startPath","description"}],
+    "startUrls": ["/", "..."], "flowsText": "natural-language description of each flow to capture (max 4000 chars)",
     "schedule": {"mode":"manual"} | {"mode":"daily","time":"HH:MM","timezone":"America/Denver"} | {"mode":"weekly","time":"HH:MM","days":["mon","tue",…],"timezone":"America/Denver"} | {"mode":"nightly","time":"HH:MM","timezone":"America/Denver","weekends":false},
     "mergePolicy": "auto-merge-safe" | "pr-approval", "reviewers": ["email"], "notify": "John via Grok Bot chat" } }
 ```
@@ -236,7 +239,7 @@ The setup run must:
 1. **Repo** — link the existing `owner/name` repo, or create `johndilworth/<name>` (default branch as given). Record base dir, build command and publish dir.
 2. **Netlify** — link the named site, or create a new one (default) wired to the repo/branch/base/build/publish settings; enable PR deploy previews if requested. The live URL to capture is `liveUrl` if given, else the Netlify site URL after the first deploy.
 3. **Dashboard data** — add an entry to `dashboard/public/data/projects.json` (`slug`, `name`, `file`, `harvestMode`) and create `dashboard/public/data/<slug>.json` (project info incl. repo, site, schedule, merge policy, reviewers).
-4. **Cycle 0 captures** — capture every start URL and each flow's screens to `dashboard/public/captures/<slug>/<flow>/` (tracked in git).
+4. **Cycle 0 captures** — capture every start URL and each flow described in `flowsText` (read the plain-language description, work out the start path and the steps, and capture each screen; the legacy structured `flows` array is still accepted) to `dashboard/public/captures/<slug>/<flow>/` (tracked in git).
 5. **Lucidchart review board(s)** — follow the board rules: one board per flow, a flow with more than 5 screens is split into separate boards, **no hub board**.
 6. **Share** the board(s): create an org-wide comment share link per board (`lucid_create_document_share_link`, role `comment`, restricted to account, not anonymous, no expiry) and store it as `commentUrl` in the project data file; no embeds. Also share with the reviewers (edit/comment) as needed. Remind them that stickies show their author only when they are signed in to Lucid.
 7. **Record Cycle 0** in `<slug>.json` (boards, screenshots, status `current`).

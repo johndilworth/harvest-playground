@@ -1,0 +1,214 @@
+{
+  "docId": "f04918ba-aee0-49b0-bb31-0a3c796b79d7",
+  "cycle": 2,
+  "harvestedAt": "2026-10-14T06:05:46.069663+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home — all Harvest projects",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/",
+      "url": "https://harvest-dashboard.netlify.app/",
+      "title": "Home",
+      "h1": "All projects",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-02-project-dashboard",
+      "pageId": "review",
+      "frameTitle": "02-project-dashboard · /p/harvest-playground/ · Project dashboard (Harvest Playground)",
+      "stepKey": "02-project-dashboard",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/",
+      "title": "Project dashboard",
+      "h1": "Harvest Playground",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "D2.CXTocrScJ",
+          "kind": "sticky",
+          "text": "Remove title \"Contributions per cycle\" and key at the top of visualization to keep it clean and tight — the hover text  shows the key so having it is not necessary.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 2897.3360952848093,
+            "y": 428.26001116045995,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-project-dashboard",
+            "via": null,
+            "bbox": "frame-02-project-dashboard",
+            "bestOverlap": {
+              "frameId": "frame-02-project-dashboard",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        },
+        {
+          "itemId": "61.CtSDpJ49m",
+          "kind": "sticky",
+          "text": "THe order of visualizations should match the order of cycles — latest cycle on left, with older cycles to the right.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 3004.9003327836954,
+            "y": 626.5278919003003,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-project-dashboard",
+            "via": null,
+            "bbox": "frame-02-project-dashboard",
+            "bestOverlap": {
+              "frameId": "frame-02-project-dashboard",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        },
+        {
+          "itemId": "36.C147-rYxR",
+          "kind": "sticky",
+          "text": "Make these \"cycle cards\" more like dynamic stacks as found in this demo here — it's a way to fit more on each line without wrapping, and keeps the current cycle up front. \n",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 2771.670964699471,
+            "y": 1097.6120740805318,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-project-dashboard",
+            "via": null,
+            "bbox": "frame-02-project-dashboard",
+            "bestOverlap": {
+              "frameId": "frame-02-project-dashboard",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-cycle",
+      "pageId": "review",
+      "frameTitle": "03-cycle · /p/harvest-dashboard/cycle.html?c=2 · Cycle page (Harvest Dashboard · Cycle 2)",
+      "stepKey": "03-cycle",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=2",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=2",
+      "title": "Cycle page",
+      "h1": "Cycle 1",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-04-run-harvest-modal",
+      "pageId": "review",
+      "frameTitle": "04-run-harvest-modal · /p/harvest-dashboard/cycle.html?c=2 · Run harvest modal",
+      "stepKey": "04-run-harvest-modal",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=2",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=2",
+      "title": "Run harvest modal",
+      "h1": "Run harvest",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-05-summary",
+      "pageId": "review",
+      "frameTitle": "05-summary · /p/harvest-playground/summary.html · Summary (all cycles of a project)",
+      "stepKey": "05-summary",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/summary.html",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/summary.html",
+      "title": "Summary",
+      "h1": "Summary",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [
+    {
+      "itemId": "p8.COIhWeRPU",
+      "kind": "sticky",
+      "text": "Update board to include \"meeting\" pages also. ",
+      "fill": "#ba23f6ff",
+      "pageId": "review",
+      "boardSource": "color",
+      "bbox": {
+        "x": 4436.048388603154,
+        "y": -446.46779793920336,
+        "w": 160.0,
+        "h": 160.0
+      },
+      "frameId": null,
+      "author": null,
+      "nearest": [
+        {
+          "id": "doc-title",
+          "element": "page header",
+          "distance": 213.5
+        },
+        {
+          "id": "frame-02-project-dashboard",
+          "element": "frame",
+          "distance": 286.5
+        },
+        {
+          "id": "legend-purple",
+          "element": "legend",
+          "distance": 516.0
+        }
+      ]
+    }
+  ],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

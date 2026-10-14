@@ -13,11 +13,6 @@
     q("#schedOpts").hidden = sch === "manual";
     q("#daysOpts").hidden = sch !== "weekly"; };
   document.querySelectorAll("input[type=radio]").forEach((r) => (r.onchange = sync)); sync();
-  const addFlow = (f = {}) => { const d = document.createElement("div"); d.className = "flowrow";
-    d.innerHTML = `<input type="text" class="fname" maxlength="80" placeholder="Flow name"><input type="text" class="fpath" maxlength="300" placeholder="/start/path"><input type="text" class="fdesc" maxlength="300" placeholder="Short description"><button type="button" class="secondary" aria-label="Remove flow">✕</button>`;
-    d.querySelector(".fname").value = f.name || ""; d.querySelector(".fpath").value = f.startPath || ""; d.querySelector(".fdesc").value = f.description || "";
-    d.querySelector("button").onclick = () => d.remove(); q("#flows").append(d); };
-  q("#addFlow").onclick = () => addFlow(); window.addFlow = addFlow;
   const lines = (s) => s.split(/[\n,]+/).map((x) => x.trim()).filter(Boolean);
   function collect() {
     const v = (id) => q("#" + id).value.trim(), rm = radio("repoMode"), nm = radio("netlifyMode"), sch = radio("schedule");
@@ -26,7 +21,7 @@
       branch: v("branch") || "main", baseDir: v("baseDir"), buildCommand: v("buildCmd"), publishDir: v("publishDir"), liveUrl: v("liveUrl"),
       netlify: nm === "existing" ? { mode: "existing", site: v("netlifySite"), deployPreviews: q("#previews").checked } : { mode: "new", deployPreviews: q("#previews").checked },
       startUrls: lines(q("#startUrls").value.replace(/,/g, "\n")),
-      flows: [...document.querySelectorAll(".flowrow")].map((r) => ({ name: r.querySelector(".fname").value.trim(), startPath: r.querySelector(".fpath").value.trim(), description: r.querySelector(".fdesc").value.trim() })).filter((f) => f.name || f.startPath || f.description),
+      flowsText: q("#flows").value.trim(), // natural-language flow descriptions (cycle-2 sticky)
       schedule: (() => {
         if (sch === "manual") return { mode: "manual" };
         const time = q("#time").value, tz = "America/Denver";
@@ -49,8 +44,7 @@
     if (s.netlify.mode === "existing" && !/^[A-Za-z0-9-]{1,100}$/.test(s.netlify.site)) bad("netlifySite", "Enter the Netlify site name or id.");
     if (!s.startUrls.length) bad("startUrls", "At least one start URL or path is required.");
     else if (s.startUrls.length > 20 || s.startUrls.some((u) => !/^(\/|https:\/\/)\S*$/.test(u))) bad("startUrls", "Start URLs must be paths (/…) or https:// URLs (max 20).");
-    if (s.flows.length > 30) bad("flows", "At most 30 flows.");
-    s.flows.forEach((f, i) => { if (!f.name || !/^\//.test(f.startPath)) bad("flows", `Flow ${i + 1}: name and a start path beginning with / are required.`); });
+    if (s.flowsText.length > 4000) bad("flows", "Flow descriptions are too long (max 4000 characters).");
     if ((s.schedule.mode === "daily" || s.schedule.mode === "weekly" || s.schedule.mode === "nightly") && !/^\d\d:\d\d$/.test(s.schedule.time)) bad("time", "Pick a time.");
     if (s.schedule.mode === "weekly" && !(s.schedule.days || []).length) bad("time", "Pick at least one day of the week.");
     const badMail = s.reviewers.filter((m) => !EMAIL_RE.test(m)); if (badMail.length) bad("reviewers", `Invalid email(s): ${badMail.join(", ")}`);
@@ -69,7 +63,7 @@
     ${row("Repo", s.repo.mode === "existing" ? `existing <code>${esc(s.repo.fullName)}</code>` : `create new <code>johndilworth/${esc(s.repo.name)}</code>`)}
     ${row("Branch / base / build / publish", [s.branch, s.baseDir || "(root)", s.buildCommand || "(none)", s.publishDir || "(default)"].map(esc).join(" · "))}
     ${row("Live URL", esc(s.liveUrl))}${row("Netlify", (s.netlify.mode === "new" ? "create a new site" : `existing site <code>${esc(s.netlify.site)}</code>`) + (s.netlify.deployPreviews ? " · PR previews on" : " · no PR previews"))}
-    ${row("Start URL(s)", s.startUrls.map(esc).join("<br>"))}${row("Flows", s.flows.map((f) => `<b>${esc(f.name)}</b> <code>${esc(f.startPath)}</code> ${esc(f.description)}`).join("<br>"))}
+    ${row("Start URL(s)", s.startUrls.map(esc).join("<br>"))}${row("Flows", esc(s.flowsText).replace(/\n/g, "<br>"))}
     ${row("Schedule", s.schedule.mode === "manual" ? "Manual only" : s.schedule.mode === "daily" ? `Daily at ${esc(s.schedule.time)} MT` : s.schedule.mode === "weekly" ? `Weekly (${(s.schedule.days||[]).join(", ")}) at ${esc(s.schedule.time)} MT` : `Nightly at ${esc(s.schedule.time)} MT${s.schedule.weekends ? " incl. weekends" : ", weekdays only"}`)}
     ${row("Merge policy", s.mergePolicy === "auto-merge-safe" ? "Auto-apply & merge safe items" : "Open PR for approval")}
     ${row("Reviewers", s.reviewers.map(esc).join(", "))}${row("Notify", "Results sent to John in Grok Bot chat")}</dl>`; };

@@ -1,4 +1,4 @@
-// Headless captures of the dashboard. Usage: node shoot.mjs <baseUrl> <outDir> <prefix> [full|review]
+// Headless captures of the dashboard. Usage: node shoot.mjs <baseUrl> <outDir> <prefix> [full|review|meetings] [cycle]
 import { chromium } from "playwright";
 import fs from "node:fs";
 const [base, out, prefix, mode = "full", cycleArg] = process.argv.slice(2);
@@ -16,6 +16,14 @@ if (mode === "review") {
   await shot("/", "01-home"); await shot("/p/harvest-playground/", "02-project-dashboard");
   await shot(`/p/harvest-dashboard/cycle.html?c=${cycle}`, "03-cycle"); await shot(`/p/harvest-dashboard/cycle.html?c=${cycle}`, "04-run-harvest-modal", { full: false, modal: true });
   await shot("/p/harvest-playground/summary.html", "05-summary");
+} else if (mode === "meetings") {
+  // Meeting pages (added to the Harvest Dashboard review boards in cycle 3, from a cycle-2 board-feedback sticky)
+  const idx = await (await fetch(base + "/data/meetings.json")).json();
+  for (const [i, m] of idx.meetings.entries()) {
+    const d = await (await fetch(base + m.file)).json(); const n = idx.meetings.length > 1 ? `-${m.slug}` : "";
+    await shot(`/m/${m.slug}/`, `0${2 * i + 1}-meetings${n}`);
+    await shot(`/m/${m.slug}/meeting.html?m=${d.currentMeetingId}`, `0${2 * i + 2}-meeting-current${n}`);
+  }
 } else {
   await shot("/", "home");
   for (const s of ["harvest-playground", "design-loop", "harvest-site", "harvest-dashboard"]) { await shot(`/p/${s}/`, `${s}`); }

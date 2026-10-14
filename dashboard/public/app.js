@@ -33,7 +33,7 @@ async function dashboard() {
   $("main").innerHTML = `${titleRow(esc(p.name), p, "dash")}<p class="muted">${esc(p.description)}</p>
   ${histogram(cs)}
   <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${isNightly(p) ? d.stats.nightlyHarvests : d.stats.manualHarvests ?? 0}</b> ${isNightly(p) ? "nightly" : "manual"} harvests</span></div>
-  <h2>Cycles</h2><div class="grid">${ordered(cs).map((c) => `<a class="card cycle-card ${c.status}" href="${B}cycle.html?c=${c.number}" style="color:inherit;text-decoration:none">
+  <h2>Cycles</h2><div class="stack" role="list" aria-label="Cycles, newest first">${ordered(cs).map((c, i, all) => `<a role="listitem" class="card cycle-card stack-card ${c.status}" href="${B}cycle.html?c=${c.number}" style="--i:${i};z-index:${all.length - i};color:inherit;text-decoration:none"><span class="peek" aria-hidden="true">C${c.number}</span>
    <h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
    <div class="muted">${fmt(c.createdAt)} · ${c.documents.length} Lucid docs · ${c.changes.applied.length} applied · ${authorsTotal(c)} stickies by ${authorsCount(c)} author(s)</div><div>${esc(c.title)}</div>
    <img src="${c.screenshot}" alt="Cycle ${c.number} home screenshot" loading="lazy"></a>`).join("")}</div>
@@ -154,7 +154,7 @@ function contrib(c) {
 }
 const fmtMT = (d) => new Date(d).toLocaleString("en-US", { year: "numeric", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Denver" }) + " MT";
 function histogram(cs, opts = {}) {
-  const H = 140, BASE = 3, list = [...cs].sort((a, b) => a.number - b.number);
+  const H = 140, BASE = 3, list = [...cs].sort((a, b) => b.number - a.number); // newest cycle on the left (matches the cycle list)
   const rows = list.map((c) => { const k = contrib(c); return { c, k, t: TYPES.reduce((n, [t]) => n + k[t], 0) }; });
   const max = Math.max(1, ...rows.map((r) => r.t));
   const h = (n) => (n <= 0 ? 0 : Math.max(4, Math.round((Math.sqrt(n) / Math.sqrt(max)) * (H - 8))));
@@ -170,7 +170,8 @@ function histogram(cs, opts = {}) {
       <rect x="${x}" y="${H - BASE}" width="${bw}" height="${BASE}" fill="#9aa1a9"/>${segs}
       <text x="${x + bw / 2}" y="${H + 16}" text-anchor="middle">C${r.c.number}</text></g>`;
   }).join("");
-  return `<div class="card histo"><div class="histo-head"><b>Contributions per cycle</b><span class="legend">${TYPES.map(([, l, col]) => `<span><i style="background:${col}"></i>${l}</span>`).join("")}</span></div>
+  // No title or key above the chart (cycle-2 sticky): the hover/focus tooltip shows the colour key.
+  return `<div class="card histo">
    <div class="histo-wrap"><svg viewBox="0 0 ${W} ${H + 22}" width="${W}" height="${H + 22}" role="group" aria-label="Stickies per cycle, stacked by type (compressed square-root scale)">
    <line x1="0" y1="${H}" x2="${W}" y2="${H}" stroke="#c8ccd1"/>${bars}</svg><div id="tip" class="tip" role="tooltip" hidden></div></div></div>`;
 }
@@ -205,7 +206,7 @@ async function home() {
   <p class="muted">Index: <a href="/data/projects.json">projects.json</a> · screen captures hosted under <code>/captures/&lt;project&gt;/&lt;flow&gt;/</code></p>`;
 }
 function spark(cs) {
-  const list = [...cs].sort((a, b) => a.number - b.number).map((c) => { const k = contrib(c); return { n: c.number, k, t: TYPES.reduce((n, [t]) => n + k[t], 0) }; });
+  const list = [...cs].sort((a, b) => b.number - a.number).map((c) => { const k = contrib(c); return { n: c.number, k, t: TYPES.reduce((n, [t]) => n + k[t], 0) }; });
   const max = Math.max(1, ...list.map((r) => r.t)), H = 36, bw = 12, gap = 6;
   const bars = list.map((r, i) => { let y = H; const x = i * (bw + gap); const th = r.t ? Math.max(3, Math.round(Math.sqrt(r.t / max) * H)) : 0;
     let g = `<rect x="${x}" y="${H - 2}" width="${bw}" height="2" fill="#9aa1a9"/>`;

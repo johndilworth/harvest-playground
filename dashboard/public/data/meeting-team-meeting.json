@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "type": "meeting",
-  "updatedAt": "2026-10-13T23:30:00-06:00",
+  "updatedAt": "2026-10-14T10:08:19-06:00",
   "series": {
     "slug": "team-meeting",
     "name": "Team Meeting",
@@ -22,6 +22,18 @@
         "handle": "@chen",
         "name": "Chen",
         "email": "chen@example.com"
+      },
+      {
+        "handle": "@john",
+        "name": "John",
+        "email": null,
+        "addedFrom": "2026-10-20 board (row added in Areas of focus)"
+      },
+      {
+        "handle": "@tim",
+        "name": "Tim",
+        "email": null,
+        "addedFrom": "2026-10-20 board (row added in Areas of focus)"
       }
     ],
     "attendeesSource": "setup",
@@ -38,13 +50,43 @@
     },
     "trigger": true
   },
-  "currentMeetingId": "2026-10-20",
+  "currentMeetingId": "2026-10-27",
   "meetings": [
+    {
+      "id": "2026-10-27",
+      "title": "Team Meeting 2026-10-27",
+      "date": "2026-10-27",
+      "status": "current",
+      "createdAt": "2026-10-14T10:08:19-06:00",
+      "harvestedFrom": "2026-10-20",
+      "board": {
+        "documentId": "302092c4-cda1-4449-8356-c75fe5ddcef6",
+        "url": "https://lucid.app/lucidchart/302092c4-cda1-4449-8356-c75fe5ddcef6/edit",
+        "commentUrl": "https://lucid.app/lucidchart/302092c4-cda1-4449-8356-c75fe5ddcef6/edit?invitationId=inv_abd5a79f-c461-447b-b0fd-b9d486fc0322",
+        "screenshot": "/captures/meetings/team-meeting-2026-10-27.png",
+        "flow": "meeting",
+        "narrativeBlockId": "-ohD3Srz_ZQo"
+      },
+      "carriedIn": {
+        "actions": [
+          "a-vendor-shortlist",
+          "a-review-big-bets",
+          "a-jamie-followup"
+        ],
+        "openItems": [
+          "o-analytics-owner"
+        ]
+      },
+      "activity": {
+        "boardObjects": 1,
+        "actionItems": 3
+      }
+    },
     {
       "id": "2026-10-20",
       "title": "Team Meeting 2026-10-20",
       "date": "2026-10-20",
-      "status": "current",
+      "status": "harvested",
       "createdAt": "2026-10-13T23:20:00-06:00",
       "harvestedFrom": "2026-10-13",
       "board": {
@@ -66,11 +108,168 @@
           "o-analytics-owner"
         ]
       },
-      "summary": null,
+      "summary": {
+        "narrative": "A light, partly test board. Two carried tasks closed as done (chen's mobile onboarding mockups and bob's flaky e2e fix) and the release checklist update was set to Not Doing; alice's vendor shortlist is still in progress. John and Tim joined the Areas of focus table: John is on big-bets thinking for Project Defense, and Tim's row only had test stickies. Discussion touched on Project Defense big bets and Harvest Dashboard use cases with no outcome recorded. New actions: John reviews the big bets board and Tim follows up with Jamie. Still open: who owns the analytics dashboard.",
+        "decisions": [],
+        "actions": [
+          {
+            "id": "a-vendor-shortlist",
+            "task": "Send vendor shortlist (still waiting on 2 quotes)",
+            "owner": "@alice",
+            "due": null,
+            "status": "In Progress",
+            "source": "From last time",
+            "quote": "Card status: In Progress",
+            "flags": [
+              "no due date"
+            ]
+          },
+          {
+            "id": "a-mockups",
+            "task": "Draft mobile onboarding mockups",
+            "owner": "@chen",
+            "due": "2026-10-16",
+            "status": "Done",
+            "source": "From last time",
+            "quote": "Card status: Done",
+            "flags": [],
+            "closed": true
+          },
+          {
+            "id": "a-e2e",
+            "task": "Fix flaky e2e tests",
+            "owner": "@bob",
+            "due": "2026-10-20",
+            "status": "Done",
+            "source": "From last time",
+            "quote": "Card status: Done",
+            "flags": [],
+            "closed": true
+          },
+          {
+            "id": "a-release-checklist",
+            "task": "Update release checklist for weekly cadence",
+            "owner": null,
+            "due": null,
+            "status": "Not Doing",
+            "source": "From last time",
+            "quote": "Card status: Not Doing",
+            "flags": [],
+            "closed": true
+          },
+          {
+            "id": "a-review-big-bets",
+            "task": "Review the big bets board",
+            "owner": "@john",
+            "due": null,
+            "status": "To Do",
+            "source": "Action Items",
+            "quote": "@John Dilworth needs to review the big bets board",
+            "flags": [
+              "no due date"
+            ]
+          },
+          {
+            "id": "a-jamie-followup",
+            "task": "Follow up with Jamie on xyz",
+            "owner": "@tim",
+            "due": null,
+            "status": "To Do",
+            "source": "Areas of focus",
+            "quote": "@Tim Crabb follow-up with Jamie on xyz",
+            "flags": [
+              "no due date",
+              "unclear",
+              "placed in Areas of focus, not Action Items"
+            ]
+          }
+        ],
+        "openItems": [
+          {
+            "id": "o-analytics-owner",
+            "text": "Who owns the analytics dashboard now that Dana left?",
+            "source": "From last time",
+            "flags": [
+              "needs owner"
+            ]
+          }
+        ],
+        "notes": [
+          {
+            "text": "Discussion topic: Project Defense big bets (no outcome recorded).",
+            "source": "Discussion"
+          },
+          {
+            "text": "Discussion topic: Harvest Dashboard use cases (no outcome recorded).",
+            "source": "Discussion"
+          },
+          {
+            "text": "Tim's focus row had three test stickies ('Testing 1', 'Tim Crabb was here', 'Hellow there') and no focus content.",
+            "source": "Areas of focus"
+          }
+        ],
+        "wins": [],
+        "concerns": [],
+        "focus": [
+          {
+            "attendee": "@alice",
+            "items": []
+          },
+          {
+            "attendee": "@bob",
+            "items": []
+          },
+          {
+            "attendee": "@chen",
+            "items": []
+          },
+          {
+            "attendee": "John",
+            "items": [
+              "Big bets thinking for Project Defense"
+            ]
+          },
+          {
+            "attendee": "Tim",
+            "items": []
+          }
+        ],
+        "flags": [
+          "Action 'Follow up with Jamie on xyz' (Tim) has a placeholder topic ('xyz') and no due date; it sat in Areas of focus, not Action Items.",
+          "Action 'Review the big bets board' (John) has no due date.",
+          "Action 'Send vendor shortlist' (alice) still has no due date.",
+          "Open question 'Who owns the analytics dashboard?' still needs an owner.",
+          "Two attendees (John, Tim) were added to the Areas of focus table on the board; carried to the next board.",
+          "Authors: Lucid comment threads attribute the @mention stickies to jdilworth (John) and tcrabb (Tim); other stickies aren't attributed.",
+          "No transcript was read, so discussion topics have no recorded outcome."
+        ],
+        "closed": [
+          "a-mockups",
+          "a-e2e",
+          "a-release-checklist"
+        ],
+        "carriedForward": [
+          "a-vendor-shortlist",
+          "a-review-big-bets",
+          "a-jamie-followup",
+          "o-analytics-owner"
+        ],
+        "skipped": [
+          {
+            "reason": "Empty sticky in How are we doing? (Good), no text."
+          }
+        ],
+        "authors": {
+          "plhDYAKUU7gf": "jdilworth",
+          "DlhDXMuiB-.0": "tcrabb"
+        }
+      },
       "activity": {
-        "boardObjects": 1,
-        "actionItems": 4
-      }
+        "boardObjects": 9,
+        "actionItems": 6
+      },
+      "harvestedAt": "2026-10-14T10:08:19-06:00",
+      "stickiesRead": 10
     },
     {
       "id": "2026-10-13",
@@ -236,8 +435,8 @@
   "cards": [
     {
       "actionId": "a-vendor-shortlist",
-      "boardId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b",
-      "cardId": "wv.C-92QHQ.e",
+      "boardId": "302092c4-cda1-4449-8356-c75fe5ddcef6",
+      "cardId": "YohDY2kk1-Yc",
       "title": "Send vendor shortlist (still waiting on 2 quotes)",
       "assignee": "alice@example.com",
       "endTime": null,
@@ -245,35 +444,25 @@
       "sourceMeeting": "Team Meeting 2026-10-13"
     },
     {
-      "actionId": "a-mockups",
-      "boardId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b",
-      "cardId": "xv.CFl65VvuW",
-      "title": "Draft mobile onboarding mockups",
-      "assignee": "chen@example.com",
-      "endTime": "2026-10-16",
-      "status": "Done",
-      "sourceMeeting": "Team Meeting 2026-10-13"
+      "actionId": "a-review-big-bets",
+      "boardId": "302092c4-cda1-4449-8356-c75fe5ddcef6",
+      "cardId": "YohDxrE5a8E0",
+      "title": "Review the big bets board",
+      "assignee": "John",
+      "endTime": null,
+      "status": "To Do",
+      "sourceMeeting": "Team Meeting 2026-10-20"
     },
     {
-      "actionId": "a-e2e",
-      "boardId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b",
-      "cardId": "xv.CPJCwQi.~",
-      "title": "Fix flaky e2e tests",
-      "assignee": "bob@example.com",
-      "endTime": "2026-10-20",
-      "status": "Done",
-      "sourceMeeting": "Team Meeting 2026-10-13"
-    },
-    {
-      "actionId": "a-release-checklist",
-      "boardId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b",
-      "cardId": "xv.CF3ivi2qI",
-      "title": "[needs owner] Update release checklist for weekly cadence",
+      "actionId": "a-jamie-followup",
+      "boardId": "302092c4-cda1-4449-8356-c75fe5ddcef6",
+      "cardId": "YohDFLYz9mr4",
+      "title": "Follow up with Jamie on xyz",
       "assignee": null,
       "endTime": null,
-      "status": "Not Doing",
-      "sourceMeeting": "Team Meeting 2026-10-13"
+      "status": "To Do",
+      "sourceMeeting": "Team Meeting 2026-10-20"
     }
   ],
-  "cardsReadAt": "2026-10-13T23:50:00-06:00"
+  "cardsReadAt": "2026-10-14T10:08:19-06:00"
 }

@@ -44,3 +44,12 @@
   from = "/p/:slug/summary.html"
   to = "/project-summary.html"
   status = 200
+# Meeting series pages (type "meeting")
+[[redirects]]
+  from = "/m/:slug/"
+  to = "/meeting.html"
+  status = 200
+[[redirects]]
+  from = "/m/:slug/summary.html"
+  to = "/meeting-summary.html"
+  status = 200

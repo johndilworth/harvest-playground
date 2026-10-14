@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "type": "meeting",
+  "fake": true,
+  "fakeNote": "no real meeting, people, or Zoom. Generated to test the Harvest meeting variant.",
+  "updatedAt": "2026-10-13T23:30:00-06:00",
+  "series": {
+    "slug": "harvest-weekly-sync",
+    "name": "Harvest Weekly Sync (FAKE)",
+    "description": "FAKE weekly sync used to test meeting harvests: board → summary (decisions, tasks with owners, open items) → next board with carry-forward.",
+    "cadence": "weekly",
+    "attendees": [
+      { "handle": "@alice", "name": "Alice (fake)", "email": "alice@example.com" },
+      { "handle": "@bob", "name": "Bob (fake)", "email": "bob@example.com" },
+      { "handle": "@chen", "name": "Chen (fake)", "email": "chen@example.com" }
+    ],
+    "attendeesSource": "setup",
+    "template": { "documentId": "784fd831-30ac-4bca-b312-9dd1d3653f0d", "sections": ["From last time", "How are we doing? (Good / Bad/Uncertain)", "Areas of focus", "Quick Hits", "Discussion", "Action Items"] }
+  },
+  "currentMeetingId": "2026-10-20",
+  "meetings": [
+    {
+      "id": "2026-10-20",
+      "title": "Harvest Weekly Sync (FAKE) 2026-10-20",
+      "date": "2026-10-20",
+      "status": "current",
+      "createdAt": "2026-10-13T23:20:00-06:00",
+      "harvestedFrom": "2026-10-13",
+      "board": {
+        "documentId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b",
+        "url": "https://lucid.app/lucidchart/bdfe11e0-bf6f-4f30-b1e7-956e78311a9b/edit",
+        "commentUrl": "https://lucid.app/lucidchart/bdfe11e0-bf6f-4f30-b1e7-956e78311a9b/edit?invitationId=inv_1ddf1b54-47c4-4f14-8c98-d8f6121e55a7",
+        "screenshot": "/captures/meetings/weekly-sync-2026-10-20.png"
+      },
+      "carriedIn": { "actions": ["a-vendor-shortlist", "a-mockups", "a-e2e", "a-release-checklist"], "openItems": ["o-analytics-owner"] },
+      "summary": null
+    },
+    {
+      "id": "2026-10-13",
+      "title": "Harvest Weekly Sync (FAKE) 2026-10-13",
+      "date": "2026-10-13",
+      "status": "harvested",
+      "createdAt": "2026-10-13T23:16:00-06:00",
+      "harvestedAt": "2026-10-13T23:19:00-06:00",
+      "board": {
+        "documentId": "91fdc53a-d2fe-46e0-a8f2-9dbc9699aadf",
+        "url": "https://lucid.app/lucidchart/91fdc53a-d2fe-46e0-a8f2-9dbc9699aadf/edit",
+        "commentUrl": "https://lucid.app/lucidchart/91fdc53a-d2fe-46e0-a8f2-9dbc9699aadf/edit?invitationId=inv_64f81cb9-dbbe-4122-b4da-3472c7e69424",
+        "screenshot": "/captures/meetings/weekly-sync-2026-10-13.png"
+      },
+      "stickiesRead": 18,
+      "summary": {
+        "decisions": [
+          { "text": "Move to weekly releases (instead of biweekly), starting next sprint.", "source": "Discussion", "quote": "ok so we're doing weekly releases instead of biweekly, starting next sprint" },
+          { "text": "Keep the old login page until mobile ships.", "source": "Discussion", "quote": "let's keep the old login page until mobile ships" }
+        ],
+        "actions": [
+          { "id": "a-staging-env", "task": "Set up the staging env for the new API", "owner": "@bob", "due": null, "status": "Done", "source": "From last time", "quote": "bob: set up the staging env for the new API — done, it's live now ✅", "closed": true },
+          { "id": "a-vendor-shortlist", "task": "Send vendor shortlist (still waiting on 2 quotes)", "owner": "@alice", "due": null, "status": "In Progress", "source": "From last time", "quote": "alice was going to send the vendor shortlist… still waiting on 2 quotes", "flags": ["no due date"] },
+          { "id": "a-mockups", "task": "Draft mobile onboarding mockups", "owner": "@chen", "due": "2026-10-16", "status": "To Do", "source": "Action Items", "quote": "chen will draft the mobile onboarding mockups by Friday", "dueInferredFrom": "by Friday" },
+          { "id": "a-e2e", "task": "Fix flaky e2e tests", "owner": "@bob", "due": "2026-10-20", "status": "To Do", "source": "Action Items", "quote": "bob: fix the flaky e2e tests before next sync", "dueInferredFrom": "before next sync" },
+          { "id": "a-release-checklist", "task": "Update release checklist for weekly cadence", "owner": null, "due": null, "status": "To Do", "source": "Action Items", "quote": "someone should update the release checklist for the weekly cadence", "flags": ["needs owner", "no due date"] }
+        ],
+        "openItems": [
+          { "id": "o-analytics-owner", "text": "Who owns the analytics dashboard now that Dana left?", "source": "Discussion", "flags": ["needs owner"] }
+        ],
+        "notes": [
+          { "text": "CI flakiness is mostly the e2e tests.", "source": "Discussion" },
+          { "text": "Office closed Mon 10/19.", "source": "Quick Hits" },
+          { "text": "New Figma seats available — ping @chen.", "source": "Quick Hits" }
+        ],
+        "wins": ["Friday demo went really well, client was happy", "Onboarding docs finally merged"],
+        "concerns": ["Too many meetings this week, hard to focus", "Not sure the Q4 timeline is realistic"],
+        "focus": [
+          { "attendee": "@alice", "items": ["vendor selection"] },
+          { "attendee": "@bob", "items": ["staging + CI cleanup"] },
+          { "attendee": "@chen", "items": ["mobile onboarding flow"] }
+        ],
+        "flags": [
+          "Action 'Update release checklist for weekly cadence' needs owner (sticky said 'someone should').",
+          "Open question 'Who owns the analytics dashboard?' needs owner.",
+          "Action 'Send vendor shortlist' has no due date.",
+          "Sticky authors not attributable: all fake stickies were placed by one account; owners inferred from wording."
+        ],
+        "closed": ["a-staging-env"],
+        "carriedForward": ["a-vendor-shortlist", "a-mockups", "a-e2e", "a-release-checklist", "o-analytics-owner"]
+      }
+    }
+  ],
+  "cards": [
+    { "actionId": "a-vendor-shortlist", "boardId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b", "cardId": "wv.C-92QHQ.e", "title": "Send vendor shortlist (still waiting on 2 quotes)", "assignee": "alice@example.com", "endTime": null, "status": "In Progress", "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13" },
+    { "actionId": "a-mockups", "boardId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b", "cardId": "xv.CFl65VvuW", "title": "Draft mobile onboarding mockups", "assignee": "chen@example.com", "endTime": "2026-10-16", "status": "To Do", "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13" },
+    { "actionId": "a-e2e", "boardId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b", "cardId": "xv.CPJCwQi.~", "title": "Fix flaky e2e tests", "assignee": "bob@example.com", "endTime": "2026-10-20", "status": "To Do", "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13" },
+    { "actionId": "a-release-checklist", "boardId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b", "cardId": "xv.CF3ivi2qI", "title": "[needs owner] Update release checklist for weekly cadence", "assignee": null, "endTime": null, "status": "To Do", "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13" }
+  ]
+}

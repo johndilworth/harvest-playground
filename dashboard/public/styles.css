@@ -71,3 +71,13 @@ a.btn{display:inline-block;align-self:center;padding:8px 16px;border:1px solid #
 .btn-comment{display:inline-block;background:#f57c00;color:#fff!important;font-weight:600;padding:9px 16px;border-radius:8px;text-decoration:none}
 .btn-comment:hover{filter:brightness(1.08)}
 .note-signin{background:#fff8e1;border:1px solid #ffe08a;border-radius:8px;padding:8px 12px;font-size:14px}
+
+/* Meetings (FAKE test data) */
+.fake-banner{background:#fff8e1;border:2px dashed #e3b008;padding:8px 14px;margin:0 0 16px;font-weight:600}
+.tag.fake{background:#e3b008;color:#1f2328;border-color:#e3b008}
+.flag{display:inline-block;font-size:12px;padding:0 6px;margin-left:6px;border:1px solid #cf222e;color:#cf222e}
+.status{display:inline-block;font-size:12px;padding:0 6px;border:1px solid #9aa1a9}
+.status.Done{background:#1f883d;color:#fff;border-color:#1f883d}.status.In-Progress{background:#2f6fdd;color:#fff;border-color:#2f6fdd}
+.meeting-current{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;gap:20px;align-items:start}
+.meeting-current img{width:100%;border:1px solid #d5d8dc;display:block;background:#fff}
+@media (max-width:800px){.meeting-current{grid-template-columns:1fr}}

@@ -25,6 +25,8 @@ const isNightly = (p) => p.harvestMode === "nightly";
 const runsLabel = (p) => (isNightly(p) ? "Nightly harvests" : "Manual harvests");
 const runs = (p, c) => (isNightly(p) ? c.nightlyHarvests : c.manualHarvests) || [];
 const ordered = (cs) => [...cs].sort((a, b) => (b.status === "current") - (a.status === "current") || b.number - a.number);
+// Strip leading "Cycle N — "/"Cycle N - " from cycle titles used as descriptions.
+const cycleDesc = (c) => String(c.title || "").replace(/^\s*Cycle\s*\d+\s*[—–-]\s*/i, "").trim() || String(c.title || "");
 
 async function dashboard() {
   const d = await load(), p = d.project, cs = d.cycles, cur = cs.find((c) => c.status === "current");
@@ -35,8 +37,8 @@ async function dashboard() {
   <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${isNightly(p) ? d.stats.nightlyHarvests : d.stats.manualHarvests ?? 0}</b> ${isNightly(p) ? "nightly" : "manual"} harvests</span></div>
   <h2>Cycles</h2><div class="stack" id="cycle-stack" role="list" aria-label="Cycles, current in front">${[...ordered(cs)].reverse().map((c) => `<a role="listitem" class="card cycle-card stack-card ${c.status}" href="${B}cycle.html?c=${c.number}" data-cycle="${c.number}">
    <h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
-   <div class="muted">${fmt(c.createdAt)} · ${c.documents.length} Lucid docs · ${c.changes.applied.length} applied · ${authorsTotal(c)} stickies by ${authorsCount(c)} author(s)</div><div>${esc(c.title)}</div>
-   <img src="${c.screenshot}" alt="Cycle ${c.number} home screenshot" loading="lazy"></a>`).join("")}</div>
+   <div class="stack-date muted">${esc(fmt(c.createdAt))}</div>
+   <p class="stack-desc">${esc(cycleDesc(c))}</p></a>`).join("")}</div>
   <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)}${p.rules ? ` · <a href="${p.rules}">Project rules ↗</a>` : ""} · ${skipped} skipped overall</p>`;
   setupHistogram();
   setupCycleStack();
@@ -223,29 +225,33 @@ function setupCycleStack() {
   const cards = [...stack.querySelectorAll(".stack-card")];
   if (!cards.length) return;
 
-  // Reference: CARD_WIDTH=200; scale our tile width proportionally and keep ratios.
-  const CARD_WIDTH = 220;
+  // Reference CARD_WIDTH=200; tiles fixed square-ish; stack mirrored — left-anchored.
+  const CARD_WIDTH = 200;
+  const CARD_HEIGHT = 200;
   const STACK_OFFSET = Math.floor(CARD_WIDTH * 0.5);
-  const REVEAL_OVERLAP = Math.round(90 * (CARD_WIDTH / 200));
+  const REVEAL_OVERLAP = 90;
   const STIFFNESS = 300, DAMPING = 30, MASS = 1;
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   stack.style.setProperty("--card-w", CARD_WIDTH + "px");
-  cards.forEach((el) => { el.style.width = CARD_WIDTH + "px"; });
+  stack.style.setProperty("--card-h", CARD_HEIGHT + "px");
+  cards.forEach((el) => {
+    el.style.width = CARD_WIDTH + "px";
+    el.style.height = CARD_HEIGHT + "px";
+  });
 
-  // Measure natural height after width applied, then size the stage.
-  let maxH = 0;
-  cards.forEach((el) => { maxH = Math.max(maxH, el.offsetHeight); });
-  const stageH = Math.ceil(maxH * 1.05) + 16;
+  const stageH = Math.ceil(CARD_HEIGHT * 1.05) + 16;
   stack.style.height = stageH + "px";
-  // Span of stacked rights + card width (+ room to reveal leftward).
+  // Span of stacked lefts + card width (+ room to reveal rightward).
   const span = (cards.length - 1) * STACK_OFFSET + CARD_WIDTH + (CARD_WIDTH - REVEAL_OVERLAP);
   stack.style.minWidth = Math.min(span, stack.parentElement?.clientWidth || span) + "px";
 
   // Per-card spring state for x and scale (framer-motion spring, mass 1).
+  // left = i*STACK_OFFSET; later in DOM = on top, further right (current front).
   const state = cards.map((el, i) => {
-    el.style.right = (i * STACK_OFFSET) + "px";
-    el.style.zIndex = String(i + 1); // later in DOM = on top, further left
+    el.style.left = (i * STACK_OFFSET) + "px";
+    el.style.right = "auto";
+    el.style.zIndex = String(i + 1);
     return { el, i, x: 0, vX: 0, s: 1, vS: 0, tX: 0, tS: 1 };
   });
 
@@ -255,7 +261,7 @@ function setupCycleStack() {
   function targetsFor(h) {
     state.forEach((st) => {
       if (h == null) { st.tX = 0; st.tS = 1; return; }
-      st.tX = st.i > h ? -(CARD_WIDTH - REVEAL_OVERLAP) : 0;
+      st.tX = st.i > h ? (CARD_WIDTH - REVEAL_OVERLAP) : 0;
       const dist = Math.abs(st.i - h);
       const progressive = Math.max(0.85, 1 - dist * 0.05);
       st.tS = st.i === h ? 1.05 : progressive;
@@ -323,18 +329,4 @@ function setupCycleStack() {
   targetsFor(null);
   paint();
 
-  // Remeasure after screenshots load (aspect-ratio helps, but be safe).
-  const imgs = cards.map((el) => el.querySelector("img")).filter(Boolean);
-  let pending = imgs.filter((img) => !img.complete).length;
-  const remeasure = () => {
-    let h = 0;
-    cards.forEach((el) => { h = Math.max(h, el.offsetHeight); });
-    stack.style.height = Math.ceil(h * 1.05) + 16 + "px";
-  };
-  if (!pending) remeasure();
-  else imgs.forEach((img) => {
-    if (img.complete) return;
-    img.addEventListener("load", () => { if (--pending <= 0) remeasure(); }, { once: true });
-    img.addEventListener("error", () => { if (--pending <= 0) remeasure(); }, { once: true });
-  });
 }

@@ -16,10 +16,11 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result |
 |---|---|---:|---:|---:|---|
+| Wed 2026-10-14 ~12:05 AM | Cycle 2 boards (manual webhook) | 5 | 5 | 0 | **Cycle 3 shipped** — chart without title/key and newest cycle first, cycle cards as a dynamic stack, plain-language flows box on New project, new Meetings review board · authors: anonymous 5 |
 | Mon 2026-10-12 ~4:40 PM | Cycle 1 boards (manual webhook) | 6 | 6 | 0 | **Cycle 2 shipped** — 'All projects' heading, global-only top header, '[Project] · Cycle N' / '[Project] · Summary' breadcrumb titles, shared project nav right of title (no History) · authors: anonymous 6 |
 | Mon 2026-10-12 ~3:20 PM | Cycle 0 boards (manual webhook) | 13 | 11 | 2 | **Cycle 1 shipped** — wider home (≤5 tiles), project subnav, Lucid embeds, hide empty changes/authors, no cycle screenshot, Run harvest on all projects, drop Type RUN, schedule calendar (manual/daily/weekly) |
 
-Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 2 boards: [review](https://lucid.app/lucidchart/f04918ba-aee0-49b0-bb31-0a3c796b79d7/edit) · [New project](https://lucid.app/lucidchart/5ef85601-978c-4810-9cd3-f52ec629ca8e/edit)
+Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 3 boards: [All pages](https://lucid.app/lucidchart/3d838c49-6b8c-4a2f-848b-b3e8ddf7a5a7/edit) · [Meetings](https://lucid.app/lucidchart/2d87c927-c36d-4b79-8e57-3d2cb5e06cf3/edit) · [New project](https://lucid.app/lucidchart/333ebbdc-2de2-47bf-a02b-1b7c9167e870/edit)
 
 ## At a glance
 

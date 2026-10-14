@@ -7,27 +7,33 @@ Consider (blue), purple = board feedback; sticky-author line; no hub. Page backg
 import json, sys, html
 from PIL import Image
 N, COMMIT = int(sys.argv[1]), sys.argv[2]
+MODE = sys.argv[3] if len(sys.argv) > 3 else "review"   # "review" (all pages) or "meetings" (meeting pages board, since cycle 3)
 PAD, GAP, HGAP, FW = 400, 360, 480, 1440
-SITE = "https://harvest-dashboard.netlify.app"; CAP = f"{SITE}/captures/harvest-dashboard/c{N}-review"
-LOCAL = f"../public/captures/harvest-dashboard/c{N}-review"
+SITE = "https://harvest-dashboard.netlify.app"; CAP = f"{SITE}/captures/harvest-dashboard/c{N}-{MODE}"
+LOCAL = f"../public/captures/harvest-dashboard/c{N}-{MODE}"
 SCREENS = [("01-home", "/", "Home — all Harvest projects", "H1 is All projects (matches top nav). Wider grid (up to 5 tiles). Project cards: name, harvest mode, sparkline, cycle count, current cycle, last harvest, screenshot."),
  ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard (Harvest Playground)", "Top header is brand Harvest + All projects + Harvest rules only (no project name). Project title row: h1 left, subnav (Dashboard / Summary / Live site) right — History removed."),
  ("03-cycle", f"/p/harvest-dashboard/cycle.html?c={N}", f"Cycle page (Harvest Dashboard · Cycle {N})", "Title is [Project name] · Cycle N with project name linking to the project dashboard; subnav on the title row. Lucid documents with Open board to comment; Manual harvests with Run harvest now."),
  ("04-run-harvest-modal", f"/p/harvest-dashboard/cycle.html?c={N}", "Run harvest modal", "Passphrase only (no Type RUN); posts project 'harvest-dashboard' to the harvest webhook."),
  ("05-summary", "/p/harvest-playground/summary.html", "Summary (all cycles of a project)", "Title is [Project name] · Summary (breadcrumb). Subnav (Dashboard / Summary / Live site) sits to the right of the title — shared title-row component, no History.")]
+if MODE == "meetings":
+    import json as _j
+    _m = _j.load(open("../public/data/meeting-team-meeting.json"))["currentMeetingId"]
+    SCREENS = [("01-meetings", "/m/team-meeting/", "Meetings — Team Meeting series", "Activity histogram (board objects + action items per meeting), then every meeting with the current (unharvested) one first."),
+     ("02-meeting-current", f"/m/team-meeting/meeting.html?m={_m}", f"Current meeting page ({_m})", "Lucid board link, concise summary of the last meeting, Harvest meeting button, previous/next meeting links.")]
 e = lambda s: html.escape(s, quote=False)
 def text(i, x, y, w, h, t): return {"id": i, "type": "text", "boundingBox": {"x": x, "y": y, "w": w, "h": h}, "text": t}
 shots = []
 for k, route, title, cap in SCREENS:
     w, h = Image.open(f"{LOCAL}/{k}.png").size; shots.append((k, route, title, cap, round(h * FW / w)))
-CHANGES = {"01-home": "H1 'Harvest projects' -> 'All projects'.", "02-project-dashboard": "Project name removed from top header (global nav only); subnav right of title, no History.",
- "03-cycle": "Title '[Project] · Cycle N' with project breadcrumb link.", "04-run-harvest-modal": "No change (title row shared).",
- "05-summary": "Title '[Project] · Summary'; History removed; subnav right of title (shared component)."}
-PREV = f"{SITE}/captures/harvest-dashboard/c{N-1}-review" if N > 1 else None
+CHANGES = {"01-home": "Sparklines now run newest cycle first (left).", "02-project-dashboard": "Chart title and key removed (tooltip shows the key); bars newest cycle on the left; cycle cards are a dynamic stack (current in front, fans out on hover).",
+ "03-cycle": "No change.", "04-run-harvest-modal": "No change.", "05-summary": "No change."}
+PREV = f"{SITE}/captures/harvest-dashboard/c{N-1}-review" if N > 1 and MODE == "review" else None
+BOARD = "All pages" if MODE == "review" else "Meetings"
 BW, BH = 720, 512
 FH = PAD + max(s[4] for s in shots) + GAP + 260 + (120 + BH + 80 if PREV else 0) + PAD
 W = len(shots) * (FW + 2 * PAD) + (len(shots) - 1) * HGAP
-sh = [text("doc-title", 0, -900, W, 240, f"<p style='font-size:40pt;text-align:left'><b>Harvest Dashboard — Cycle {N} review · All pages</b><br>"
+sh = [text("doc-title", 0, -900, W, 240, f"<p style='font-size:40pt;text-align:left'><b>Harvest Dashboard — Cycle {N} review · {BOARD}</b><br>"
            f"<span style='font-size:20pt'>{len(shots)} screens, left → right · Desktop 1440 wide (full page) · commit {COMMIT[:7]} · "
            f"<a href=\"{SITE}\">{SITE}</a> · harvested manually (no nightly routine)</span></p>"),
       text("legend-box", 0, -600, 2600, 440, "<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE a grey frame "
@@ -57,4 +63,4 @@ for k, route, title, cap, ih in shots:
         sh.append({"id": f"before-{k}", "type": "image", "boundingBox": {"x": x + PAD, "y": y0 + 180, "w": BW, "h": BH}, "image": {"type": "image", "url": f"{PREV}/{k}.png"},
                    "stroke": {"color": "#C9CED8", "width": 1, "style": "solid"}})
     x += FW + 2 * PAD + HGAP
-print(json.dumps({"version": 1, "pages": [{"id": "review", "title": f"Cycle {N} · All pages", "shapes": sh}]}, ensure_ascii=False))
+print(json.dumps({"version": 1, "pages": [{"id": MODE, "title": f"Cycle {N} · {BOARD}", "shapes": sh}]}, ensure_ascii=False))

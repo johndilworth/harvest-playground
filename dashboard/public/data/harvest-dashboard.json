@@ -16,9 +16,9 @@
     "pullRequests": 0,
     "pullRequestsSource": "commits go straight to main (no PRs)",
     "nightlyHarvests": 0,
-    "manualHarvests": 2
+    "manualHarvests": 3
   },
-  "updatedAt": "2026-10-12T16:45:00-06:00",
+  "updatedAt": "2026-10-14T00:09:01-06:00",
   "cycles": [
     {
       "number": 0,
@@ -212,7 +212,7 @@
       "number": 2,
       "title": "Cycle 2 — All projects heading, global-only header, breadcrumb titles, shared project nav",
       "createdAt": "2026-10-12T16:45:00-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 1,
       "pullRequest": null,
       "commit": "191461b",
@@ -240,9 +240,21 @@
           "harvest": true
         }
       ],
-      "authors": [],
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 5
+        }
+      ],
       "nightlyHarvests": [],
-      "manualHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-14",
+          "stickies": 5,
+          "outcome": "applied",
+          "note": "Manual harvest (webhook, Run harvest now); started Cycle 3"
+        }
+      ],
       "changes": {
         "applied": [
           {
@@ -291,6 +303,95 @@
         "yellow": 4,
         "blue": 0,
         "purple": 0
+      }
+    },
+    {
+      "number": 3,
+      "title": "Cycle 3 — cleaner contributions chart (newest first), cycle cards as a dynamic stack, plain-language flows, meeting pages on the board",
+      "createdAt": "2026-10-14T00:09:01-06:00",
+      "status": "current",
+      "harvestedFrom": 2,
+      "pullRequest": null,
+      "commit": "efc74a6",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c3-review/01-home.png",
+      "previewUrl": "https://6acf1c5f8c92b5e45de94be8--harvest-dashboard.netlify.app",
+      "documents": [
+        {
+          "title": "Cycle 3 review · All pages",
+          "role": "flow",
+          "flow": "review",
+          "docId": "3d838c49-6b8c-4a2f-848b-b3e8ddf7a5a7",
+          "url": "https://lucid.app/lucidchart/3d838c49-6b8c-4a2f-848b-b3e8ddf7a5a7/edit",
+          "commentUrl": "https://lucid.app/lucidchart/3d838c49-6b8c-4a2f-848b-b3e8ddf7a5a7/edit?invitationId=inv_7d390f8d-69e5-4be9-a186-60cfd785007b",
+          "description": "5 screens: home, project dashboard, cycle page, Run harvest modal, summary.",
+          "harvest": true
+        },
+        {
+          "title": "Cycle 3 review · Meetings",
+          "role": "flow",
+          "flow": "meetings",
+          "docId": "2d87c927-c36d-4b79-8e57-3d2cb5e06cf3",
+          "url": "https://lucid.app/lucidchart/2d87c927-c36d-4b79-8e57-3d2cb5e06cf3/edit",
+          "commentUrl": "https://lucid.app/lucidchart/2d87c927-c36d-4b79-8e57-3d2cb5e06cf3/edit?invitationId=inv_68f129b1-7137-42d2-9ab0-1788f26f2ebe",
+          "description": "2 screens: Team Meeting series page and the current meeting page (new this cycle, from board feedback).",
+          "harvest": true
+        },
+        {
+          "title": "Harvest Dashboard — Cycle 3 — New project",
+          "role": "flow",
+          "flow": "New project",
+          "docId": "333ebbdc-2de2-47bf-a02b-1b7c9167e870",
+          "url": "https://lucid.app/lucidchart/333ebbdc-2de2-47bf-a02b-1b7c9167e870/edit",
+          "commentUrl": "https://lucid.app/lucidchart/333ebbdc-2de2-47bf-a02b-1b7c9167e870/edit?invitationId=inv_69b55aa6-d634-4236-9015-ad4d1014ae2d",
+          "description": "6 screens: home + New project, empty form (plain-text flows box), filled, validation, confirm modal, wrong passphrase.",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "nightlyHarvests": [],
+      "manualHarvests": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "review",
+            "text": "Project dashboard: removed the 'Contributions per cycle' title and colour key above the chart; the hover tooltip already shows the key.",
+            "author": "anonymous"
+          },
+          {
+            "priority": "must",
+            "flow": "review",
+            "text": "Project dashboard (and home sparklines): bars now follow the cycle order, newest cycle on the left and older cycles to the right.",
+            "author": "anonymous"
+          },
+          {
+            "priority": "try",
+            "flow": "review",
+            "text": "Project dashboard: cycle cards are now a dynamic stack like the linked demo: the current cycle sits in front on the left, older cycles tuck behind to the right (labelled C5, C4…), and the stack fans out on hover or keyboard focus.",
+            "author": "anonymous"
+          },
+          {
+            "priority": "try",
+            "flow": "New project",
+            "text": "New project form: flows are now one plain-text box where people describe each flow in natural language (replaces the name / start path / description rows); the trigger accepts it as flowsText.",
+            "author": "anonymous"
+          },
+          {
+            "priority": "board",
+            "flow": "review",
+            "text": "Board feedback: the Cycle 3 boards now include the meeting pages (Team Meeting series page and the current meeting page) on a separate Meetings board.",
+            "author": "anonymous"
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "5 anonymous stickies harvested from the Cycle 2 boards (4 on the review board incl. 1 purple board-feedback sticky, 1 on the New project board); all safe, none skipped."
+      },
+      "contributions": {
+        "red": 2,
+        "yellow": 2,
+        "blue": 0,
+        "purple": 1
       }
     }
   ]

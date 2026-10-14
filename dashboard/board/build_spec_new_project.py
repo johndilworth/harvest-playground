@@ -8,8 +8,8 @@ D=f"../public/captures/harvest-dashboard/c{N}-new-project"
 e=lambda s: html.escape(s, quote=False)
 steps=[
  ("01-home-new-button","/","Home — + New project","Starting point: the all-projects home page. The + New project button (outlined in red) opens the setup form.","Clicked: + New project"),
- ("02-new-empty","/new.html","New project form — empty","Blank setup form: project, prototype source, live site & Netlify, flows to capture, harvest schedule (manual / daily / weekly with day pickers), merge policy, reviewers.","Next: fill in the form"),
- ("03-form-filled","/new.html","Form filled with sample data","Sample project 'Recipe Planner' with weekly schedule (Mon/Wed 17:00 MT), two flows, two reviewers.","Clicked next: Review & create…"),
+ ("02-new-empty","/new.html","New project form — empty","Blank setup form: project, prototype source, live site & Netlify, a plain-text box to describe the flows to capture, harvest schedule (manual / daily / weekly with day pickers), merge policy, reviewers.","Next: fill in the form"),
+ ("03-form-filled","/new.html","Form filled with sample data","Sample project 'Recipe Planner' with weekly schedule (Mon/Wed 17:00 MT), two flows described in plain language, two reviewers.","Clicked next: Review & create…"),
  ("04-validation-errors","/new.html","Validation errors","Bad input flagged inline (duplicate slug, repo must be owner/name, invalid email).","Clicked: Review & create… (with bad input)"),
  ("05-confirm-modal","/new.html","Review & confirm modal","'Create Harvest project' modal summarises every setting; passphrase + type CREATE. Wrong passphrase entered.","Clicked next: Create project"),
  ("06-wrong-passphrase","/new.html","Wrong passphrase result","Create refused: 'Failed: Wrong passphrase.' Nothing created.","End of flow (no project was created)"),

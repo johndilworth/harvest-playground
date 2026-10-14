@@ -59,6 +59,33 @@ priority (red = must, yellow = try, blue = consider). Authors from Lucid sticky 
 Commit `b07b10d` · preview https://6acd6b3d4cad2bdcce665143--harvest-playground.netlify.app · Cycle 5 board: [review (Lucidchart)](https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit) · no PR (fast-forward merge)
 Record: `journey/cycles/4/feedback-2026-10-12.json` + `journey/cycles/4/harvest-2026-10-12.json` · raw board fetch in `journey/out/c4/raw/` (gitignored).
 
+## Harvest Dashboard · Cycle 3 (2026-10-14) · manual harvest
+Manual harvest triggered from the Harvest Dashboard webhook at ~12:05 AM MT (payload `action:harvest` / `project:harvest-dashboard` /
+`requestedAt:2026-10-14T06:04:50Z`). Harvested Cycle 2 boards: review `f04918ba-…` + New project `5ef85601-…` —
+**5 stickies, 0 comment threads** (4 on review incl. 1 purple board-feedback sticky, 1 on New project), all safe.
+No sticky had a Lucid author attribution line → **anonymous**. A Replit link card on the review board (the "dynamic stacks" demo) was used as the reference for the stack sticky.
+
+### Applied (4)
+- **must** · 02-project-dashboard · Remove title "Contributions per cycle" and key at the top of visualization to keep it clean and tight — the hover text shows the key. → chart title and colour key removed; the tooltip still lists each colour. · by anonymous
+- **must** · 02-project-dashboard · The order of visualizations should match the order of cycles — latest cycle on left, older to the right. → histogram (and home sparklines) now run newest → oldest. · by anonymous
+- **try** · 02-project-dashboard · Make these "cycle cards" more like dynamic stacks as found in this demo — fits more on each line without wrapping and keeps the current cycle up front. → cycle cards are an overlapping stack: current cycle in front on the left, older cycles tucked behind (C5, C4… labels), fans out on hover/keyboard focus. · by anonymous
+- **try** · New project · 02-new-empty · Make this a text only entry so people can describe in natural language what the flow is that they want to capture. → "Flows to capture" is now one plain-text box (`flowsText`, ≤ 4000 chars); the trigger validates it (legacy `flows` array still accepted). · by anonymous
+
+### Skipped (0)
+- none. No malicious, illegal or offensive stickies.
+
+### Conflicts
+- none
+
+### Board feedback (purple / Board:)
+- "Update board to include "meeting" pages also." → Cycle 3 adds a **Meetings** review board (Team Meeting series page + current meeting page); kept separate so the All pages board stays at 5 screens (5-screen split rule). · by anonymous
+
+### Authors
+- anonymous — 5
+
+Commit `efc74a6` · preview https://6acf1c5f8c92b5e45de94be8--harvest-dashboard.netlify.app · Cycle 3 boards: [All pages](https://lucid.app/lucidchart/3d838c49-6b8c-4a2f-848b-b3e8ddf7a5a7/edit) · [Meetings](https://lucid.app/lucidchart/2d87c927-c36d-4b79-8e57-3d2cb5e06cf3/edit) · [New project](https://lucid.app/lucidchart/333ebbdc-2de2-47bf-a02b-1b7c9167e870/edit)
+Record: `dashboard/board/c2/feedback-review.json` + `feedback-new-project.json` · raw board fetch in `dashboard/board/c2/raw/`.
+
 ## Harvest Dashboard · Cycle 2 (2026-10-12) · manual harvest
 Manual harvest triggered from the Harvest Dashboard webhook (`action:harvest` / `project:harvest-dashboard`).
 Harvested Cycle 1 boards: review `090db6e7-…` + New project `074fcea1-…` —

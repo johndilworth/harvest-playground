@@ -55,9 +55,20 @@ async function meetingSeries() {
 // ---- Individual meeting page (like a cycle page) ----
 function summaryBox(S, from) {
   const own = (a) => a.owner ? esc(a.owner) : "<b>needs owner</b>";
+  // Label from status (Not Doing/Blocked/In Progress/Done); do not treat closed===true as Done.
+  const actionLabel = (a) => {
+    const st = a.status || (a.closed ? "Done" : "");
+    if (["Done", "Not Doing", "Blocked", "In Progress"].includes(st)) return st;
+    return "Action";
+  };
   const items = [
     ...S.decisions.map((x) => `Decision: ${esc(x.text)}`),
-    ...S.actions.map((a) => `${a.closed || a.status === "Done" ? "Done" : "Action"}: ${esc(a.task)} — ${own(a)}${a.due ? `, due ${esc(mfmt(a.due))}` : ""}${a.status && a.status !== "Done" ? ` (${esc(a.status)})` : ""}`),
+    ...S.actions.map((a) => {
+      const label = actionLabel(a);
+      const st = a.status || (a.closed ? "Done" : "");
+      const paren = st && label === "Action" ? ` (${esc(st)})` : "";
+      return `${label}: ${esc(a.task)} — ${own(a)}${a.due ? `, due ${esc(mfmt(a.due))}` : ""}${paren}`;
+    }),
     ...S.openItems.map((x) => `Open: ${esc(x.text)}${(x.flags || []).length ? ` — <b>${esc(x.flags.join(", "))}</b>` : ""}`),
     ...S.flags.filter((f) => !/needs owner/.test(f)).map((f) => `Flag: ${esc(f)}`),
   ];

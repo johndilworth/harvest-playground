@@ -33,12 +33,13 @@ async function dashboard() {
   $("main").innerHTML = `${titleRow(esc(p.name), p, "dash")}<p class="muted">${esc(p.description)}</p>
   ${histogram(cs)}
   <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${isNightly(p) ? d.stats.nightlyHarvests : d.stats.manualHarvests ?? 0}</b> ${isNightly(p) ? "nightly" : "manual"} harvests</span></div>
-  <h2>Cycles</h2><div class="stack" role="list" aria-label="Cycles, newest first">${ordered(cs).map((c, i, all) => `<a role="listitem" class="card cycle-card stack-card ${c.status}" href="${B}cycle.html?c=${c.number}" style="--i:${i};z-index:${all.length - i};color:inherit;text-decoration:none"><span class="peek" aria-hidden="true">C${c.number}</span>
+  <h2>Cycles</h2><div class="stack" id="cycle-stack" role="list" aria-label="Cycles, current in front">${[...ordered(cs)].reverse().map((c) => `<a role="listitem" class="card cycle-card stack-card ${c.status}" href="${B}cycle.html?c=${c.number}" data-cycle="${c.number}">
    <h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
    <div class="muted">${fmt(c.createdAt)} · ${c.documents.length} Lucid docs · ${c.changes.applied.length} applied · ${authorsTotal(c)} stickies by ${authorsCount(c)} author(s)</div><div>${esc(c.title)}</div>
    <img src="${c.screenshot}" alt="Cycle ${c.number} home screenshot" loading="lazy"></a>`).join("")}</div>
   <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)}${p.rules ? ` · <a href="${p.rules}">Project rules ↗</a>` : ""} · ${skipped} skipped overall</p>`;
   setupHistogram();
+  setupCycleStack();
 }
 
 function docIdFromUrl(url) {
@@ -213,4 +214,127 @@ function spark(cs) {
     TYPES.forEach(([t, , col]) => { if (!r.k[t]) return; const h = Math.max(1, Math.round(th * r.k[t] / r.t)); y -= h; g += `<rect x="${x}" y="${y}" width="${bw}" height="${h}" fill="${col}"/>`; });
     return `<g><title>Cycle ${r.n}: ${r.t} contributions</title>${g}</g>`; }).join("");
   return `<svg class="spark" width="${list.length * (bw + gap)}" height="${H}" role="img" aria-label="Contributions per cycle">${bars}</svg>`;
+}
+
+// ---- Cycle card stack (faithful port of ProductTile / framer-motion spring) ----
+function setupCycleStack() {
+  const stack = document.getElementById("cycle-stack");
+  if (!stack) return;
+  const cards = [...stack.querySelectorAll(".stack-card")];
+  if (!cards.length) return;
+
+  // Reference: CARD_WIDTH=200; scale our tile width proportionally and keep ratios.
+  const CARD_WIDTH = 220;
+  const STACK_OFFSET = Math.floor(CARD_WIDTH * 0.5);
+  const REVEAL_OVERLAP = Math.round(90 * (CARD_WIDTH / 200));
+  const STIFFNESS = 300, DAMPING = 30, MASS = 1;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  stack.style.setProperty("--card-w", CARD_WIDTH + "px");
+  cards.forEach((el) => { el.style.width = CARD_WIDTH + "px"; });
+
+  // Measure natural height after width applied, then size the stage.
+  let maxH = 0;
+  cards.forEach((el) => { maxH = Math.max(maxH, el.offsetHeight); });
+  const stageH = Math.ceil(maxH * 1.05) + 16;
+  stack.style.height = stageH + "px";
+  // Span of stacked rights + card width (+ room to reveal leftward).
+  const span = (cards.length - 1) * STACK_OFFSET + CARD_WIDTH + (CARD_WIDTH - REVEAL_OVERLAP);
+  stack.style.minWidth = Math.min(span, stack.parentElement?.clientWidth || span) + "px";
+
+  // Per-card spring state for x and scale (framer-motion spring, mass 1).
+  const state = cards.map((el, i) => {
+    el.style.right = (i * STACK_OFFSET) + "px";
+    el.style.zIndex = String(i + 1); // later in DOM = on top, further left
+    return { el, i, x: 0, vX: 0, s: 1, vS: 0, tX: 0, tS: 1 };
+  });
+
+  let hovered = null; // index or null
+  let raf = 0;
+
+  function targetsFor(h) {
+    state.forEach((st) => {
+      if (h == null) { st.tX = 0; st.tS = 1; return; }
+      st.tX = st.i > h ? -(CARD_WIDTH - REVEAL_OVERLAP) : 0;
+      const dist = Math.abs(st.i - h);
+      const progressive = Math.max(0.85, 1 - dist * 0.05);
+      st.tS = st.i === h ? 1.05 : progressive;
+    });
+  }
+
+  function applyShadow(h) {
+    state.forEach((st) => st.el.classList.toggle("is-hovered", h != null && st.i === h));
+  }
+
+  function paint() {
+    state.forEach((st) => {
+      st.el.style.transform = `translateY(-50%) translateX(${st.x}px) scale(${st.s})`;
+    });
+  }
+
+  function stepSpring(st, dt) {
+    // Semi-implicit Euler matching framer spring (stiffness/damping/mass).
+    const ax = (-STIFFNESS * (st.x - st.tX) - DAMPING * st.vX) / MASS;
+    st.vX += ax * dt; st.x += st.vX * dt;
+    const as = (-STIFFNESS * (st.s - st.tS) - DAMPING * st.vS) / MASS;
+    st.vS += as * dt; st.s += st.vS * dt;
+    if (Math.abs(st.x - st.tX) < 0.05 && Math.abs(st.vX) < 0.05) { st.x = st.tX; st.vX = 0; }
+    if (Math.abs(st.s - st.tS) < 0.0005 && Math.abs(st.vS) < 0.0005) { st.s = st.tS; st.vS = 0; }
+  }
+
+  let last = performance.now();
+  function tick(now) {
+    const dt = Math.min(0.032, (now - last) / 1000) || 0.016;
+    last = now;
+    let moving = false;
+    state.forEach((st) => {
+      if (reduce) { st.x = st.tX; st.vX = 0; st.s = st.tS; st.vS = 0; }
+      else {
+        stepSpring(st, dt);
+        if (st.x !== st.tX || st.s !== st.tS || st.vX || st.vS) moving = true;
+      }
+    });
+    paint();
+    raf = moving && !reduce ? requestAnimationFrame(tick) : 0;
+  }
+
+  function kick() {
+    if (reduce) { state.forEach((st) => { st.x = st.tX; st.s = st.tS; st.vX = 0; st.vS = 0; }); paint(); return; }
+    if (!raf) { last = performance.now(); raf = requestAnimationFrame(tick); }
+  }
+
+  function setHovered(h) {
+    if (hovered === h) return;
+    hovered = h;
+    targetsFor(h);
+    applyShadow(h);
+    kick();
+  }
+
+  cards.forEach((el, i) => {
+    el.addEventListener("mouseenter", () => setHovered(i));
+    el.addEventListener("mouseleave", () => setHovered(null));
+    el.addEventListener("focus", () => setHovered(i));
+    el.addEventListener("blur", () => {
+      requestAnimationFrame(() => { if (!stack.contains(document.activeElement)) setHovered(null); });
+    });
+  });
+
+  targetsFor(null);
+  paint();
+
+  // Remeasure after screenshots load (aspect-ratio helps, but be safe).
+  const imgs = cards.map((el) => el.querySelector("img")).filter(Boolean);
+  let pending = imgs.filter((img) => !img.complete).length;
+  const remeasure = () => {
+    let h = 0;
+    cards.forEach((el) => { h = Math.max(h, el.offsetHeight); });
+    stack.style.height = Math.ceil(h * 1.05) + 16 + "px";
+  };
+  if (!pending) remeasure();
+  else imgs.forEach((img) => {
+    if (img.complete) return;
+    img.addEventListener("load", () => { if (--pending <= 0) remeasure(); }, { once: true });
+    img.addEventListener("error", () => { if (--pending <= 0) remeasure(); }, { once: true });
+  });
 }

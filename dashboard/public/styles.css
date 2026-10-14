@@ -81,15 +81,13 @@ a.btn{display:inline-block;align-self:center;padding:8px 16px;border:1px solid #
 @media (max-width:800px){.meeting-current{grid-template-columns:1fr}}
 .doc-tile .emb img[src^="/captures/meetings/"]{object-fit:contain;background:#fff}
 
-/* Cycle cards as a dynamic stack (cycle-2 sticky): newest/current card in front on the left, older cards tucked
-   behind to the right; hovering or focusing the stack fans it out, and a hovered/focused card comes to the front. */
-.stack{display:flex;align-items:flex-start;padding:4px 0 18px;overflow-x:auto;overflow-y:visible}
-.stack-card{flex:0 0 300px;margin:0;box-shadow:0 2px 8px rgba(31,35,40,.14);transition:margin .25s ease,transform .2s ease,box-shadow .2s ease;background:#F2F3F5;position:relative}
-.stack-card+.stack-card{margin-left:-220px}
-.stack:hover .stack-card+.stack-card,.stack:focus-within .stack-card+.stack-card{margin-left:-120px}
-.stack-card:hover,.stack-card:focus-visible{z-index:999!important;transform:translateY(-6px);box-shadow:0 8px 20px rgba(31,35,40,.22);outline:none}
-.stack-card:focus-visible{box-shadow:0 0 0 3px #1a5fb4,0 8px 20px rgba(31,35,40,.22)}
-.stack-card .peek{position:absolute;top:10px;right:12px;font-weight:700;font-size:13px;color:#57606a}
-.stack-card:first-child .peek{display:none}
-@media (prefers-reduced-motion:reduce){.stack-card{transition:none}}
-@media (max-width:700px){.stack-card+.stack-card{margin-left:-240px}}
+/* Cycle card stack — port of ProductTile (framer-motion): absolute stack anchored right, spring x/scale on hover. */
+.stack{position:relative;width:100%;margin:4px 0 24px;overflow:visible;/* height set by setupCycleStack */}
+.stack-card{position:absolute;top:50%;width:var(--card-w,220px);margin:0;padding:14px 14px;background:#F2F3F5;border:1px solid #d5d8dc;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);transition:box-shadow .2s ease;transform-origin:center center;will-change:transform;color:inherit;text-decoration:none;outline:none}
+.stack-card:hover{text-decoration:none}
+.stack-card.is-hovered{box-shadow:0 10px 15px -3px rgba(0,0,0,.1)}
+.stack-card:focus-visible{box-shadow:0 0 0 3px #1a5fb4,0 10px 15px -3px rgba(0,0,0,.1)}
+.stack-card h3{font-size:15px;margin:0 0 4px}
+.stack-card .muted{font-size:12px;line-height:1.35}
+.stack-card img{width:100%;border:1px solid #d5d8dc;margin-top:8px;display:block;aspect-ratio:4/3;object-fit:cover;object-position:top}
+@media (prefers-reduced-motion:reduce){.stack-card{transition:box-shadow .01s linear}}

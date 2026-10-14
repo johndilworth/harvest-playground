@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-label="Illustration of George the green T. Rex of Vernal, Utah">
+  <rect width="900" height="600" fill="#0b1a12"/>
+  <text x="40" y="48" fill="#7CFF9A" font-family="Share Tech Mono, monospace" font-size="22">GEORGE.TREX · VERNAL, UT · illustration</text>
+  <!-- ground -->
+  <rect x="0" y="520" width="900" height="80" fill="#163222"/>
+  <!-- body -->
+  <ellipse cx="420" cy="360" rx="160" ry="110" fill="#3d9b4a"/>
+  <!-- tail -->
+  <path d="M560 360 Q720 300 820 380 Q700 340 560 400 Z" fill="#348a42"/>
+  <!-- legs -->
+  <rect x="340" y="420" width="50" height="110" rx="12" fill="#2f7a3a"/>
+  <rect x="430" y="420" width="50" height="110" rx="12" fill="#2f7a3a"/>
+  <!-- head -->
+  <ellipse cx="250" cy="250" rx="110" ry="80" fill="#4caf57"/>
+  <!-- jaw -->
+  <path d="M160 260 Q200 320 280 300 L270 250 Z" fill="#3d9b4a"/>
+  <!-- teeth -->
+  <path d="M175 270 L180 290 L185 270 M195 275 L200 295 L205 275 M215 278 L220 298 L225 278" stroke="#e8ffe8" stroke-width="3" fill="none"/>
+  <!-- eye -->
+  <circle cx="220" cy="230" r="14" fill="#111"/>
+  <circle cx="224" cy="226" r="5" fill="#7CFF9A"/>
+  <!-- tiny arms -->
+  <path d="M360 320 Q330 350 340 380" stroke="#2f7a3a" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <text x="40" y="580" fill="#9ad0a8" font-family="Share Tech Mono, monospace" font-size="16">Built 1969 by George Millecam · restored &amp; named 2024 · no free Commons photo yet</text>
+</svg>

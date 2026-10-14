@@ -6,7 +6,7 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 6**) |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 7**) |
 | **Add a sticky** | [Cycle 6 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/afda7e51-8cfc-4577-be4f-3550f9bf71b0/edit?invitationId=inv_dca1d5e9-2344-4f7e-aadc-ef7b57942e53) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
 | **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 6 tile added 2026-10-13) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
@@ -26,6 +26,7 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 3 boar
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Wed 2026-10-14 | Cycle 6 board (nightly) | 3 | 3 | 0 | **Cycle 7 shipped** — Turkey 2026 sabbatical feature, Vernal George + Dinah dinos, Spiral Jetty on Random · authors: anonymous 3 | [Cycle 7](https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png) |
 | Tue 2026-10-13 | Cycle 5 board (nightly) | 1 | 1 | 0 | **Cycle 6 shipped** — SPIRAL.φ gallery opens on Leonardo’s Lady with an Ermine (Mona Lisa now slide 2) · authors: anonymous 1 | [Cycle 6](https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/01-home.png) |
 | Mon 2026-10-12 | Cycle 4 board (nightly) | 12 | 11 | 1 | **Cycle 5 shipped** — black Home, SPIRAL.φ art gallery, 3-up dino grid + roar buttons, daytime stego, animated tetrad, meter chart · authors: Jilea Fobair 9, John Dilworth 2, Rob Witt 1 | [Cycle 5](https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-home/01-home.png) |
 | Mon 2026-10-12 | Cycle 3 board (manual dashboard) | 9 | 9 | 0 | **Cycle 4 shipped** — ENTROPY COLLECTIVE terminal aesthetic, McLuhan tetrad, dino extinction↔tech | [Cycle 4](https://journey-assets-ai-xform.netlify.app/harvest-playground-c4-home/01-home.png) |
@@ -41,10 +42,20 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 3 boar
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 7 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6) · 12 nightly harvests · 43 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 6 created by the **5pm MT nightly harvest** on Tue 2026-10-13.
+**Totals so far:** 8 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7) · 13 nightly harvests · 46 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 7 created by the **5pm MT nightly harvest** on Wed 2026-10-14.
 
 ## Day by day
+
+### Wed 2026-10-14 — Cycle 6 harvest · **Cycle 7 shipped** · nightly
+- **Harvested:** Cycle 6 review board (Home · Dino Town · Totally Random) at ~5:02 pm MT — **3 stickies, 0 comment threads**
+- **Applied:** 3 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Malicious/illegal/offensive:** none
+- **Contributors:** anonymous × 3 (no Lucid author lines on the stickies)
+- **Cycle 7 created:** yes — Turkey 2026 sabbatical becomes the Home main feature (photos from johndilworth.com/turkey); Hall of Fame adds George the T. Rex + Dinah (Vernal, UT); Random’s nautilus becomes Spiral Jetty
+- **Commit:** `COMMIT_PLACEHOLDER` on `main` (pushed directly; no PR) · preview PREVIEW_PLACEHOLDER
+- **Live:** https://harvest-playground.netlify.app (Cycle 7)
+- **Board:** BOARD_PLACEHOLDER
+- **Record:** `journey/cycles/6/harvest-2026-10-14.json`
 
 ### Tue 2026-10-13 — Cycle 5 harvest · **Cycle 6 shipped** · nightly
 - **Harvested:** Cycle 5 review board (Home · Dino Town · Totally Random) at ~5:10 pm MT — **1 sticky, 0 comment threads**

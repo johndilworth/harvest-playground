@@ -2,6 +2,33 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 7 (2026-10-14) · nightly harvest
+Nightly 5 pm MT harvest of the Cycle 6 review board `afda7e51-8cfc-4577-be4f-3550f9bf71b0` (Home · Dino Town · Totally Random) —
+**3 stickies, 0 comment threads** (one in each frame). No priority keywords, so the yellow fill made each **try**.
+None had a Lucid author attribution line → **anonymous**. A Lucid link-unfurl card on the Home frame pointed at
+[johndilworth.com/turkey](https://johndilworth.com/turkey) (“Turkey 2026 — John Dilworth”), which supplied the photos
+and summary for the Home sticky.
+
+### Applied (3)
+- **try** · Home · “Change the main feature to showcase my sabbatical trip to Turkey. Use this site to grab a few photos and build a summary” → new **FEATURE — Turkey 2026 sabbatical** section leads `<main>` (cover + Blue Mosque, Cappadocia balloons & fairy chimneys, Nemrut heads, Göbekli Tepe) with a short trip summary and link to the full gallery; photos hosted under `site/assets/c7/` from johndilworth.com/turkey. · by anonymous
+- **try** · Dino · “Add Vernal Utah's famous T-REX and the dinaville motel pink dinosaur to this list.” → Hall of Fame grows to **8**: **#7 George the T. Rex** (Vernal, UT; illustration — no free Commons photo yet) and **#8 Dinah** the pink Dine-A-Ville Motel dinosaur (Commons photo). · by anonymous
+- **try** · Random · “change this to a photo of the spiral jetty in Utah.” → the nautilus shell figure is replaced by Robert Smithson’s **Spiral Jetty** (Great Salt Lake; Xrzt, CC BY-SA 4.0). · by anonymous
+
+### Skipped (0)
+- none. No malicious, illegal or offensive stickies.
+
+### Conflicts
+- none
+
+### Board feedback (purple / Board:)
+- none
+
+### Authors
+- anonymous — 3
+
+Commit `COMMIT_PLACEHOLDER` · preview PREVIEW_PLACEHOLDER · Cycle 7 board: BOARD_PLACEHOLDER · no PR (pushed to main)
+Record: `journey/cycles/6/feedback-2026-10-14.json` + `journey/cycles/6/harvest-2026-10-14.json` · raw board fetch in `journey/out/c6/raw/` (gitignored).
+
 ## Cycle 6 (2026-10-13) · nightly harvest
 Nightly 5 pm MT harvest of the Cycle 5 review board `336cb099-c6d5-44da-bb6e-e883893de039` (Home · Dino Town · Totally Random) —
 **1 sticky, 0 comment threads** (in the Home frame, on the SPIRAL.φ gallery's Mona Lisa slide). No priority keyword, so the

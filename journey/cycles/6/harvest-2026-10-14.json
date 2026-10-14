@@ -1,0 +1,59 @@
+{
+ "cycle": 6,
+ "harvestedAt": "2026-10-14T17:10:17-06:00",
+ "outcome": "applied",
+ "source": "nightly",
+ "cycle7Created": true,
+ "boards": {
+  "review": {
+   "docId": "afda7e51-8cfc-4577-be4f-3550f9bf71b0",
+   "flows": [
+    "home",
+    "dinosaur",
+    "random"
+   ],
+   "stickies": 3,
+   "threads": 0
+  }
+ },
+ "counts": {
+  "must": 0,
+  "try": 3,
+  "maybe": 0,
+  "total": 3,
+  "board": 0,
+  "needsIntent": 0,
+  "outside": 0,
+  "skipped": 0,
+  "conflicts": 0
+ },
+ "applied": [
+  {
+   "priority": "try",
+   "flow": "home",
+   "text": "Change the main feature to showcase my sabbatical trip to Turkey. Use this site to grab a few photos and build a summary",
+   "author": "anonymous"
+  },
+  {
+   "priority": "try",
+   "flow": "dinosaur",
+   "text": "Add Vernal Utah's famous T-REX and the dinaville motel pink dinosaur to this list.",
+   "author": "anonymous"
+  },
+  {
+   "priority": "try",
+   "flow": "random",
+   "text": "change this to a photo of the spiral jetty in Utah.",
+   "author": "anonymous"
+  }
+ ],
+ "skipped": [],
+ "conflicts": [],
+ "boardFeedback": [],
+ "authors": [
+  {
+   "name": "anonymous",
+   "stickies": 3
+  }
+ ]
+}

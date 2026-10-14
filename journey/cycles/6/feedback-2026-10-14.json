@@ -1,0 +1,150 @@
+{
+  "docId": "afda7e51-8cfc-4577-be4f-3550f9bf71b0",
+  "cycle": 6,
+  "harvestedAt": "2026-10-14T23:03:44.059620+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": "home",
+      "h1": null,
+      "clicked": null,
+      "commit": "8e1465f0a0e58a67dfb89ee9f826e1aac2b935f0",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "wBmDQ4m-OmMg",
+          "kind": "sticky",
+          "text": "Change the main feature to showcase my sabbatical trip to Turkey. Use this site to grab a few photos and build a summary",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 261.57595788221806,
+            "y": 784.3559265413787,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-dinosaur",
+      "pageId": "review",
+      "frameTitle": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
+      "stepKey": "02-dinosaur",
+      "matchedBy": "frame-id",
+      "flow": "dinosaur",
+      "route": "/dinosaur.html",
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "title": "dinosaur",
+      "h1": null,
+      "clicked": null,
+      "commit": "8e1465f0a0e58a67dfb89ee9f826e1aac2b935f0",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "D6mDHzbvUqgH",
+          "kind": "sticky",
+          "text": "Add Vernal Utah's famous T-REX and the dinaville motel pink dinosaur to this list.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 4509.246150189781,
+            "y": 2876.030492854851,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-dinosaur",
+            "via": null,
+            "bbox": "frame-02-dinosaur",
+            "bestOverlap": {
+              "frameId": "frame-02-dinosaur",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-random",
+      "pageId": "review",
+      "frameTitle": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
+      "stepKey": "03-random",
+      "matchedBy": "frame-id",
+      "flow": "random",
+      "route": "/random.html",
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "title": "random",
+      "h1": null,
+      "clicked": null,
+      "commit": "8e1465f0a0e58a67dfb89ee9f826e1aac2b935f0",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "h7mDMzQXkPw6",
+          "kind": "sticky",
+          "text": "change this to a photo of the spiral jetty in Utah.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 6902.050417973537,
+            "y": 1877.834686587713,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-random",
+            "via": null,
+            "bbox": "frame-03-random",
+            "bestOverlap": {
+              "frameId": "frame-03-random",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

@@ -377,3 +377,9 @@ body.terminal-mode{
 .meter-val{color:#1aff80}
 .terminal-mode .nav-link.fill-from-left,.terminal-mode .nav-link.fill-from-right{animation:hp-tab-text .45s cubic-bezier(.2,.7,.2,1) .05s both}
 @keyframes hp-tab-text{from{color:#1aff80}to{color:#020805}}
+
+/* ---- cycle 7 ---- */
+.turkey-feature .turkey-hero{max-width:420px}
+.turkey-feature .turkey-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:12px 0}
+.turkey-feature .turkey-summary{margin-top:10px;color:#b8f5c2}
+.terminal-mode .dino-card.r7,.terminal-mode .dino-card.r8{/* reuse scatter flow */}

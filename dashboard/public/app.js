@@ -41,7 +41,7 @@ async function dashboard() {
    <p class="stack-desc">${esc(cycleDesc(c))}</p></a>`).join("")}</div>
   <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)}${p.rules ? ` · <a href="${p.rules}">Project rules ↗</a>` : ""} · ${skipped} skipped overall</p>`;
   setupHistogram();
-  setupCycleStack();
+  setupStack();
 }
 
 function docIdFromUrl(url) {
@@ -219,8 +219,8 @@ function spark(cs) {
 }
 
 // ---- Cycle card stack (faithful port of ProductTile / framer-motion spring) ----
-function setupCycleStack() {
-  const stack = document.getElementById("cycle-stack");
+function setupStack(rootId = "cycle-stack") {
+  const stack = document.getElementById(rootId);
   if (!stack) return;
   const cards = [...stack.querySelectorAll(".stack-card")];
   if (!cards.length) return;

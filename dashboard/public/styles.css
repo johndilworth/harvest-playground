@@ -81,7 +81,7 @@ a.btn{display:inline-block;align-self:center;padding:8px 16px;border:1px solid #
 @media (max-width:800px){.meeting-current{grid-template-columns:1fr}}
 .doc-tile .emb img[src^="/captures/meetings/"]{object-fit:contain;background:#fff}
 
-/* Cycle card stack — ProductTile spring; left-anchored (mirrored); fixed-size tiles. */
+/* Shared card stack (projects + meetings) — ProductTile spring; left-anchored; fixed-size tiles. */
 .stack{position:relative;width:100%;margin:4px 0 24px;overflow:visible;/* height set by setupCycleStack */}
 .stack-card{position:absolute;top:50%;left:0;width:var(--card-w,200px);height:var(--card-h,200px);margin:0;padding:14px;background:#F2F3F5;border:1px solid #d5d8dc;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);transition:box-shadow .2s ease;transform-origin:center center;will-change:transform;color:inherit;text-decoration:none;outline:none;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box}
 .stack-card:hover{text-decoration:none}

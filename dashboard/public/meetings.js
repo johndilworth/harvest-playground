@@ -7,6 +7,13 @@ const mUrl = (m) => `${MB}meeting.html?m=${m.id}`;
 const byDate = (ms) => [...ms].sort((a, b) => a.date.localeCompare(b.date));
 // Current (unharvested) first, then newest first — same ordering rule as cycles.
 const mOrdered = (ms) => [...ms].sort((a, b) => (b.status === "current") - (a.status === "current") || b.date.localeCompare(a.date));
+// Narrative, else first summary line (decision / action / open / note), else title.
+function meetingDesc(m) {
+  const S = m.summary;
+  if (S?.narrative) return S.narrative;
+  const line = S?.decisions?.[0]?.text || S?.actions?.[0]?.task || S?.openItems?.[0]?.text || S?.notes?.[0]?.text;
+  return (line || m.title || "").trim();
+}
 function mTitleRow(titleHtml) { return `<div class="title-row"><h1>${titleHtml}</h1><nav class="subnav" aria-label="Meeting"><a href="${MB}">Meeting series</a></nav></div>`; }
 
 // ---- Activity histogram (same look as project histogram): board objects + action items ----
@@ -44,12 +51,13 @@ async function meetingSeries() {
   $("main").innerHTML = `${mTitleRow(`${esc(s.name)}`)}<p class="muted">${esc(s.description)} · attendees: ${s.attendees.map((a) => esc(a.handle)).join(", ")}</p>
   ${meetingHistogram(ms)}
   <div class="chips"><span class="chip"><b>${ms.length}</b> meetings</span><span class="chip"><b>${tot("boardObjects")}</b> board objects</span><span class="chip"><b>${tot("actionItems")}</b> action items</span><span class="chip"><b>${openTasks(d).length}</b> open tasks</span><span class="chip"><b>${ms.filter((m) => m.summary).length}</b> harvests</span></div>
-  <h2>Meetings</h2><div class="grid">${mOrdered(ms).map((m) => `<a class="card cycle-card ${m.status}" href="${mUrl(m)}" style="color:inherit;text-decoration:none">
-   <h3>${esc(mfmt(m.date))}${m.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(m.status)}</span>`}</h3>
-   <div class="muted">${(m.activity || {}).boardObjects || 0} board objects · ${(m.activity || {}).actionItems || 0} action items</div><div>${esc(m.title)}</div>
-   ${m.board.screenshot ? `<img src="${esc(m.board.screenshot)}" alt="Board for ${esc(mfmt(m.date))}" loading="lazy">` : ""}</a>`).join("")}</div>
+  <h2>Meetings</h2><div class="stack" id="meeting-stack" role="list" aria-label="Meetings, current in front">${[...mOrdered(ms)].reverse().map((m) => `<a role="listitem" class="card cycle-card stack-card ${m.status}" href="${mUrl(m)}" data-meeting="${esc(m.id)}">
+   <h3>${esc(m.title)}${m.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(m.status)}</span>`}</h3>
+   <div class="stack-date muted">${esc(mfmt(m.date))}</div>
+   <p class="stack-desc">${esc(meetingDesc(m))}</p></a>`).join("")}</div>
   <p class="muted">Data: <a href="/data/meeting-${MSLUG}.json">meeting-${MSLUG}.json</a> · updated ${fmt(d.updatedAt)}</p>`;
   setupHistogram();
+  setupStack("meeting-stack");
 }
 
 // ---- Individual meeting page (like a cycle page) ----

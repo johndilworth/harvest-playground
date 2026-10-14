@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "type": "meeting",
-  "updatedAt": "2026-10-14T12:10:00-06:00",
+  "updatedAt": "2026-10-14T16:24:34-06:00",
   "series": {
     "slug": "team-meeting",
     "name": "Team Meeting",
-    "description": "Weekly team meeting: board \u2192 summary (decisions, tasks with owners, open items) \u2192 next board with carry-forward.",
+    "description": "Weekly team meeting: board → summary (decisions, tasks with owners, open items) → next board with carry-forward.",
     "cadence": "weekly",
     "attendees": [
       {
@@ -34,6 +34,18 @@
         "name": "Tim",
         "email": null,
         "addedFrom": "2026-10-20 board (row added in Areas of focus)"
+      },
+      {
+        "handle": "@casey",
+        "name": "Casey Robinson",
+        "email": "crobinson@lucidchart.com",
+        "addedFrom": "2026-10-27 board (row added in Areas of focus)"
+      },
+      {
+        "handle": "@taylor",
+        "name": "Taylor Lykins",
+        "email": null,
+        "addedFrom": "2026-10-27 board (row added in Areas of focus)"
       }
     ],
     "attendeesSource": "setup",
@@ -50,13 +62,42 @@
     },
     "trigger": true
   },
-  "currentMeetingId": "2026-10-27",
+  "currentMeetingId": "2026-11-03",
   "meetings": [
+    {
+      "id": "2026-11-03",
+      "title": "Team Meeting Nov 3, 2026",
+      "date": "2026-11-03",
+      "status": "current",
+      "createdAt": "2026-10-14T16:24:34-06:00",
+      "harvestedFrom": "2026-10-27",
+      "board": {
+        "documentId": "4ed558d0-6d8e-438f-8ca7-51cc7e5c2400",
+        "url": "https://lucid.app/lucidchart/4ed558d0-6d8e-438f-8ca7-51cc7e5c2400/edit",
+        "commentUrl": "https://lucid.app/lucidchart/4ed558d0-6d8e-438f-8ca7-51cc7e5c2400/edit?invitationId=inv_5752ed6a-a564-4e16-b810-0f64f7460cac",
+        "screenshot": "/captures/meetings/team-meeting-2026-11-03.png",
+        "flow": "meeting",
+        "narrativeBlockId": "4AmDZl_mSCAN"
+      },
+      "carriedIn": {
+        "actions": [
+          "a-vendor-shortlist",
+          "a-casey-concept-feedback"
+        ],
+        "openItems": [
+          "o-analytics-owner"
+        ]
+      },
+      "activity": {
+        "boardObjects": 1,
+        "actionItems": 2
+      }
+    },
     {
       "id": "2026-10-27",
       "title": "Team Meeting Oct 27, 2026",
       "date": "2026-10-27",
-      "status": "current",
+      "status": "harvested",
       "createdAt": "2026-10-14T10:08:19-06:00",
       "harvestedFrom": "2026-10-20",
       "board": {
@@ -78,9 +119,191 @@
         ]
       },
       "activity": {
-        "boardObjects": 1,
-        "actionItems": 3
-      }
+        "boardObjects": 19,
+        "actionItems": 4
+      },
+      "summary": {
+        "narrative": "A mostly mood-check board. Both new tasks from 10/20 closed as done (John reviewed the big bets board, Tim followed up with Jamie); alice's vendor shortlist is still in progress. Wins were light (team doing great, loving the rain, a running banana joke), while concerns centred on energy: John is tired from too many meetings and Brian was described as fried. John talked through the Harvest concept and the one new action is for Casey to give feedback on it. Casey and Taylor joined the Areas of focus table. Three personal remarks about teammates were skipped. Still open: who owns the analytics dashboard.",
+        "decisions": [],
+        "actions": [
+          {
+            "id": "a-vendor-shortlist",
+            "task": "Send vendor shortlist (still waiting on 2 quotes)",
+            "owner": "@alice",
+            "due": null,
+            "status": "In Progress",
+            "source": "From last time",
+            "quote": "Card status: In Progress",
+            "flags": [
+              "no due date"
+            ]
+          },
+          {
+            "id": "a-review-big-bets",
+            "task": "Review the big bets board",
+            "owner": "@john",
+            "due": null,
+            "status": "Done",
+            "source": "From last time",
+            "quote": "Card status: Done",
+            "flags": [],
+            "closed": true
+          },
+          {
+            "id": "a-jamie-followup",
+            "task": "Follow up with Jamie on xyz",
+            "owner": "@tim",
+            "due": null,
+            "status": "Done",
+            "source": "From last time",
+            "quote": "Card status: Done",
+            "flags": [],
+            "closed": true
+          },
+          {
+            "id": "a-casey-concept-feedback",
+            "task": "Give feedback on the Harvest concept",
+            "owner": "@casey",
+            "due": null,
+            "status": "To Do",
+            "source": "Action Items",
+            "quote": "@Casey Robinson give feedback on concept",
+            "flags": [
+              "no due date",
+              "'concept' read as the Harvest concept from the Discussion sticky"
+            ]
+          }
+        ],
+        "openItems": [
+          {
+            "id": "o-analytics-owner",
+            "text": "Who owns the analytics dashboard now that Dana left?",
+            "source": "From last time",
+            "flags": [
+              "needs owner"
+            ]
+          }
+        ],
+        "notes": [
+          {
+            "text": "Talked about the Harvest concept (no outcome recorded).",
+            "source": "Discussion"
+          },
+          {
+            "text": "Quick Hits was empty.",
+            "source": "Quick Hits"
+          }
+        ],
+        "wins": [
+          "We're doing great! (Taylor)",
+          "Loving the rain (Casey)",
+          "Bananas are great (Taylor, playful)"
+        ],
+        "concerns": [
+          "Tired today, too many meetings (John)",
+          "Brian is fried (Casey)",
+          "Things could be better (Taylor; placed in Good)",
+          "We need fewer bananas (Taylor, playful)"
+        ],
+        "focus": [
+          {
+            "attendee": "@alice",
+            "items": [
+              "Follow up on project alphabet (written by Taylor)"
+            ]
+          },
+          {
+            "attendee": "@bob",
+            "items": [
+              "\"stop it\" (written by Taylor; unclear)"
+            ]
+          },
+          {
+            "attendee": "@chen",
+            "items": [
+              "Check last sprint's stories to see what actually closed on time (written by Taylor)"
+            ]
+          },
+          {
+            "attendee": "John",
+            "items": [
+              "Getting more sleep"
+            ]
+          },
+          {
+            "attendee": "Tim",
+            "items": [
+              "Solve all the problems (written by Taylor)"
+            ]
+          },
+          {
+            "attendee": "Casey",
+            "items": [
+              "Figure out how to keep SWE happier"
+            ]
+          },
+          {
+            "attendee": "Taylor",
+            "items": [
+              "PTO (three stickies)"
+            ]
+          }
+        ],
+        "flags": [
+          "Action 'Give feedback on the Harvest concept' (Casey) has no due date; 'concept' was inferred from the Discussion sticky. The card's assignee is left blank so Lucid doesn't notify Casey automatically.",
+          "Action 'Send vendor shortlist' (alice) still has no due date and has carried since 10/13.",
+          "Open question 'Who owns the analytics dashboard?' still needs an owner (carried since 10/13).",
+          "Taylor wrote the focus stickies in the @alice, @bob, @chen and Tim rows; they may belong to Taylor rather than those attendees.",
+          "Focus sticky \"stop it\" in @bob's row is unclear.",
+          "'Things could be better' sat in Good but reads as a concern.",
+          "Two attendees (Casey, Taylor) were added to the Areas of focus table on the board; carried to the next board.",
+          "Authors come from Lucid sticky attribution; one Bad/Uncertain sticky had no author.",
+          "No transcript was read, so the Harvest concept discussion has no recorded outcome."
+        ],
+        "closed": [
+          "a-review-big-bets",
+          "a-jamie-followup"
+        ],
+        "carriedForward": [
+          "a-vendor-shortlist",
+          "a-casey-concept-feedback",
+          "o-analytics-owner"
+        ],
+        "skipped": [
+          {
+            "reason": "Disparaging personal remark about a named teammate (Bad/Uncertain, by Taylor)."
+          },
+          {
+            "reason": "Disparaging personal remark about a named teammate (Bad/Uncertain, by Casey)."
+          },
+          {
+            "reason": "Personal remark about a named colleague rather than the work (Bad/Uncertain, unattributed)."
+          }
+        ],
+        "authors": {
+          "5umDW8xagim0": "Taylor Lykins",
+          "bvmDO~45qjhT": "Taylor Lykins",
+          "gvmDcQzNWsnk": "Taylor Lykins",
+          "bvmD3W.JxWPJ": "John Dilworth",
+          "FvmDSujqhh_l": "Taylor Lykins",
+          "fvmDnttQ.L.8": "Casey Robinson",
+          "tvmDNj0qbCMu": "Taylor Lykins",
+          "yvmD1RZQI~n2": "Taylor Lykins",
+          "AvmDMLIzu.Yz": "Taylor Lykins",
+          "numD_8wOp6iK": "John Dilworth",
+          "jvmDL87wke7L": "John Dilworth",
+          "GumDXpfQlQFr": "John Dilworth",
+          "TumDSERw_HdO": "Casey Robinson",
+          "WumD7NRSu33L": "Taylor Lykins",
+          "IumDJhlYqh~o": "Taylor Lykins",
+          "iumDnBJiCtG.": "Taylor Lykins",
+          "oumD8Ju16U~y": "Taylor Lykins",
+          "KumDO..eRiuw": "Casey Robinson",
+          "ZohDv0yu3_eh": "John Dilworth"
+        }
+      },
+      "harvestedAt": "2026-10-14T16:24:34-06:00",
+      "stickiesRead": 22
     },
     {
       "id": "2026-10-20",
@@ -307,7 +530,7 @@
             "due": null,
             "status": "Done",
             "source": "From last time",
-            "quote": "bob: set up the staging env for the new API \u2014 done, it's live now \u2705",
+            "quote": "bob: set up the staging env for the new API — done, it's live now ✅",
             "closed": true
           },
           {
@@ -317,7 +540,7 @@
             "due": null,
             "status": "In Progress",
             "source": "From last time",
-            "quote": "alice was going to send the vendor shortlist\u2026 still waiting on 2 quotes",
+            "quote": "alice was going to send the vendor shortlist… still waiting on 2 quotes",
             "flags": [
               "no due date"
             ]
@@ -376,7 +599,7 @@
             "source": "Quick Hits"
           },
           {
-            "text": "New Figma seats available \u2014 ping @chen.",
+            "text": "New Figma seats available — ping @chen.",
             "source": "Quick Hits"
           }
         ],
@@ -435,8 +658,8 @@
   "cards": [
     {
       "actionId": "a-vendor-shortlist",
-      "boardId": "302092c4-cda1-4449-8356-c75fe5ddcef6",
-      "cardId": "YohDY2kk1-Yc",
+      "boardId": "4ed558d0-6d8e-438f-8ca7-51cc7e5c2400",
+      "cardId": "LAmDRDcqz_AX",
       "title": "Send vendor shortlist (still waiting on 2 quotes)",
       "assignee": "alice@example.com",
       "endTime": null,
@@ -444,24 +667,14 @@
       "sourceMeeting": "Team Meeting 2026-10-13"
     },
     {
-      "actionId": "a-review-big-bets",
-      "boardId": "302092c4-cda1-4449-8356-c75fe5ddcef6",
-      "cardId": "YohDxrE5a8E0",
-      "title": "Review the big bets board",
-      "assignee": "John",
+      "actionId": "a-casey-concept-feedback",
+      "boardId": "4ed558d0-6d8e-438f-8ca7-51cc7e5c2400",
+      "cardId": "LAmDY-s.jP9O",
+      "title": "Give feedback on the Harvest concept",
+      "assignee": "Casey Robinson",
       "endTime": null,
       "status": "To Do",
-      "sourceMeeting": "Team Meeting 2026-10-20"
-    },
-    {
-      "actionId": "a-jamie-followup",
-      "boardId": "302092c4-cda1-4449-8356-c75fe5ddcef6",
-      "cardId": "YohDFLYz9mr4",
-      "title": "Follow up with Jamie on xyz",
-      "assignee": null,
-      "endTime": null,
-      "status": "To Do",
-      "sourceMeeting": "Team Meeting 2026-10-20"
+      "sourceMeeting": "Team Meeting 2026-10-27"
     }
   ],
   "cardsReadAt": "2026-10-14T10:08:19-06:00"

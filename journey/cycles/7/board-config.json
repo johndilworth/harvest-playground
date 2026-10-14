@@ -1,0 +1,80 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 7,
+ "date": "Wed 2026-10-14",
+ "commit": "d2ce785f1662aeba406420291141921dd9073e8b",
+ "pullRequest": null,
+ "prNumber": null,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home \u00b7 Dino Town \u00b7 Totally Random on one board (3 screens \u2264 5, no split)",
+  "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "product_lucid": "lucidchart",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "Turkey 2026 sabbatical is the main feature",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 4544,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/02-home-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/01-home.png",
+     "caption": "Full page. New FEATURE \u2014 Turkey 2026 sabbatical leads main (cover + Istanbul, Cappadocia, Nemrut, G\u00f6bekli Tepe). Footer Cycle 7.",
+     "changes": [
+      "FEATURE \u2014 Turkey 2026 sabbatical is the new main feature (photos + summary from johndilworth.com/turkey) (sticky: Change the main feature to showcase my sabbatical trip to Turkey\u2026 \u00b7 anonymous)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "Hall of Fame adds George + Dinah (Vernal, UT)",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 4910,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-dinosaur/02-dinosaur-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-dinosaur/01-dinosaur.png",
+     "caption": "Full page. Hall of Fame now has 8 roadside dinos including George the T. Rex and Dinah (Vernal, UT). Footer Cycle 7.",
+     "changes": [
+      "Hall of Fame #7 George the T. Rex + #8 Dinah the pink Dine-A-Ville dinosaur (Vernal, UT) (sticky: Add Vernal Utah's famous T-REX and the dinaville motel pink dinosaur\u2026 \u00b7 anonymous)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "Spiral Jetty replaces the nautilus",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 3010,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-random/02-random-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-random/01-random.png",
+     "caption": "Full page. Spiral Jetty (Great Salt Lake) replaces the nautilus shell photo. Footer Cycle 7.",
+     "changes": [
+      "Nautilus photo \u2192 Spiral Jetty, Utah (sticky: change this to a photo of the spiral jetty in Utah. \u00b7 anonymous)"
+     ]
+    }
+   ]
+  }
+ ]
+}

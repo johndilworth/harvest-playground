@@ -1,0 +1,476 @@
+{
+ "version": 1,
+ "pages": [
+  {
+   "id": "review",
+   "title": "Cycle 7 · All pages",
+   "shapes": [
+    {
+     "id": "doc-title-review",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -900,
+      "w": 7680,
+      "h": 240
+     },
+     "text": "<p style='font-size:40pt;text-align:left'><b>Harvest Playground — Cycle 7 review · All pages</b><br><span style='font-size:20pt'>3 screens, left → right · Desktop 1440×1024 (full page) · commit d2ce785 · <a href=\"https://harvest-playground.netlify.app\">https://harvest-playground.netlify.app</a> · harvested Wed 2026-10-14</span></p>"
+    },
+    {
+     "id": "legend-box-review",
+     "type": "text",
+     "boundingBox": {
+      "x": 0,
+      "y": -600,
+      "w": 2600,
+      "h": 440
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE a grey frame below and write whatever you want to see on that page. Stickies are harvested at 5pm MT daily; safe requests are applied automatically and merged. Start with <b>Do:</b>, <b>Try:</b> or <b>Consider:</b> to set priority (the words win over the colour); otherwise the colour counts. Purple = feedback about this board.<br><b>Stickies show your name — leave yours signed in.</b></p>"
+    },
+    {
+     "id": "legend-must-review",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FF8A80"
+      },
+      "stroke": {
+       "color": "#C62828",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Red</b><br>Do / Must do</p>"
+    },
+    {
+     "id": "legend-try-review",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#FFE066"
+      },
+      "stroke": {
+       "color": "#9A7B00",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Yellow</b><br>Try</p>"
+    },
+    {
+     "id": "legend-maybe-review",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#A3E4FF"
+      },
+      "stroke": {
+       "color": "#1565C0",
+       "width": 2,
+       "style": "solid"
+      }
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Blue</b><br>Consider</p>"
+    },
+    {
+     "id": "legend-board-review",
+     "type": "rectangle",
+     "boundingBox": {
+      "x": 3660,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#BA23F6"
+      },
+      "stroke": {
+       "color": "#7B1FA2",
+       "width": 2,
+       "style": "solid"
+      },
+      "textColor": "#FFFFFF"
+     },
+     "text": "<p style='font-size:24pt;text-align:center'><b>Purple</b><br>Board format</p>"
+    },
+    {
+     "id": "frame-01-home",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 0,
+      "y": 0,
+      "w": 2240,
+      "h": 7120
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "01-home · / · Home · Leave stickies anywhere in this frame",
+     "customData": [
+      {
+       "key": "stepKey",
+       "value": "01-home"
+      },
+      {
+       "key": "route",
+       "value": "/"
+      },
+      {
+       "key": "cycle",
+       "value": "7"
+      },
+      {
+       "key": "flow",
+       "value": "home"
+      }
+     ]
+    },
+    {
+     "id": "shot-01-home",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 400,
+      "w": 1440,
+      "h": 4544
+     },
+     "image": {
+      "type": "image",
+      "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/02-home-full.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://harvest-playground.netlify.app/",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "caption-01-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 5304,
+      "w": 1440,
+      "h": 240
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>01-home · Home</b>  ·  /<br><span style='font-size:16pt'>Full page. New FEATURE — Turkey 2026 sabbatical leads main (cover + Istanbul, Cappadocia, Nemrut, Göbekli Tepe). Footer Cycle 7.</span><br><span style='font-size:16pt'>Live: <a href=\"https://harvest-playground.netlify.app/\">https://harvest-playground.netlify.app/</a></span></p>"
+    },
+    {
+     "id": "changes-01-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 5584,
+      "w": 1440,
+      "h": 192
+     },
+     "text": "<p style='font-size:18pt;text-align:left'><b>Changes in this cycle</b><br><span style='font-size:15pt'>• FEATURE — Turkey 2026 sabbatical is the new main feature (photos + summary from johndilworth.com/turkey) (sticky: Change the main feature to showcase my sabbatical trip to Turkey… · anonymous)</span></p>"
+    },
+    {
+     "id": "before-label-01-home",
+     "type": "text",
+     "boundingBox": {
+      "x": 400,
+      "y": 5816,
+      "w": 1440,
+      "h": 48
+     },
+     "text": "<p style='font-size:16pt;text-align:left'><b>Cycle 6 (before)</b> · reference only</p>"
+    },
+    {
+     "id": "before-img-01-home",
+     "type": "image",
+     "boundingBox": {
+      "x": 400,
+      "y": 5876,
+      "w": 720,
+      "h": 512
+     },
+     "image": {
+      "type": "image",
+      "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/01-home.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 1,
+      "style": "solid"
+     }
+    },
+    {
+     "id": "frame-02-dinosaur",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 2720,
+      "y": 0,
+      "w": 2240,
+      "h": 7120
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
+     "customData": [
+      {
+       "key": "stepKey",
+       "value": "02-dinosaur"
+      },
+      {
+       "key": "route",
+       "value": "/dinosaur.html"
+      },
+      {
+       "key": "cycle",
+       "value": "7"
+      },
+      {
+       "key": "flow",
+       "value": "dinosaur"
+      }
+     ]
+    },
+    {
+     "id": "shot-02-dinosaur",
+     "type": "image",
+     "boundingBox": {
+      "x": 3120,
+      "y": 400,
+      "w": 1440,
+      "h": 4910
+     },
+     "image": {
+      "type": "image",
+      "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-dinosaur/02-dinosaur-full.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://harvest-playground.netlify.app/dinosaur.html",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "caption-02-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 3120,
+      "y": 5670,
+      "w": 1440,
+      "h": 240
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>02-dinosaur · Dino Town</b>  ·  /dinosaur.html<br><span style='font-size:16pt'>Full page. Hall of Fame now has 8 roadside dinos including George the T. Rex and Dinah (Vernal, UT). Footer Cycle 7.</span><br><span style='font-size:16pt'>Live: <a href=\"https://harvest-playground.netlify.app/dinosaur.html\">https://harvest-playground.netlify.app/dinosaur.html</a></span></p>"
+    },
+    {
+     "id": "changes-02-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 3120,
+      "y": 5950,
+      "w": 1440,
+      "h": 158
+     },
+     "text": "<p style='font-size:18pt;text-align:left'><b>Changes in this cycle</b><br><span style='font-size:15pt'>• Hall of Fame #7 George the T. Rex + #8 Dinah the pink Dine-A-Ville dinosaur (Vernal, UT) (sticky: Add Vernal Utah's famous T-REX and the dinaville motel pink dinosaur… · anonymous)</span></p>"
+    },
+    {
+     "id": "before-label-02-dinosaur",
+     "type": "text",
+     "boundingBox": {
+      "x": 3120,
+      "y": 6148,
+      "w": 1440,
+      "h": 48
+     },
+     "text": "<p style='font-size:16pt;text-align:left'><b>Cycle 6 (before)</b> · reference only</p>"
+    },
+    {
+     "id": "before-img-02-dinosaur",
+     "type": "image",
+     "boundingBox": {
+      "x": 3120,
+      "y": 6208,
+      "w": 720,
+      "h": 512
+     },
+     "image": {
+      "type": "image",
+      "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-dinosaur/01-dinosaur.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 1,
+      "style": "solid"
+     }
+    },
+    {
+     "id": "frame-03-random",
+     "type": "sparkFrame",
+     "boundingBox": {
+      "x": 5440,
+      "y": 0,
+      "w": 2240,
+      "h": 7120
+     },
+     "style": {
+      "fill": {
+       "type": "color",
+       "color": "#F2F3F5"
+      },
+      "stroke": {
+       "color": "#F2F3F5",
+       "width": 0,
+       "style": "solid"
+      }
+     },
+     "title": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
+     "customData": [
+      {
+       "key": "stepKey",
+       "value": "03-random"
+      },
+      {
+       "key": "route",
+       "value": "/random.html"
+      },
+      {
+       "key": "cycle",
+       "value": "7"
+      },
+      {
+       "key": "flow",
+       "value": "random"
+      }
+     ]
+    },
+    {
+     "id": "shot-03-random",
+     "type": "image",
+     "boundingBox": {
+      "x": 5840,
+      "y": 400,
+      "w": 1440,
+      "h": 3010
+     },
+     "image": {
+      "type": "image",
+      "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-random/02-random-full.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 2,
+      "style": "solid"
+     },
+     "actions": [
+      {
+       "type": "url",
+       "url": "https://harvest-playground.netlify.app/random.html",
+       "newWindow": true
+      }
+     ]
+    },
+    {
+     "id": "caption-03-random",
+     "type": "text",
+     "boundingBox": {
+      "x": 5840,
+      "y": 3770,
+      "w": 1440,
+      "h": 240
+     },
+     "text": "<p style='font-size:22pt;text-align:left'><b>03-random · Totally Random</b>  ·  /random.html<br><span style='font-size:16pt'>Full page. Spiral Jetty (Great Salt Lake) replaces the nautilus shell photo. Footer Cycle 7.</span><br><span style='font-size:16pt'>Live: <a href=\"https://harvest-playground.netlify.app/random.html\">https://harvest-playground.netlify.app/random.html</a></span></p>"
+    },
+    {
+     "id": "changes-03-random",
+     "type": "text",
+     "boundingBox": {
+      "x": 5840,
+      "y": 4050,
+      "w": 1440,
+      "h": 158
+     },
+     "text": "<p style='font-size:18pt;text-align:left'><b>Changes in this cycle</b><br><span style='font-size:15pt'>• Nautilus photo → Spiral Jetty, Utah (sticky: change this to a photo of the spiral jetty in Utah. · anonymous)</span></p>"
+    },
+    {
+     "id": "before-label-03-random",
+     "type": "text",
+     "boundingBox": {
+      "x": 5840,
+      "y": 4248,
+      "w": 1440,
+      "h": 48
+     },
+     "text": "<p style='font-size:16pt;text-align:left'><b>Cycle 6 (before)</b> · reference only</p>"
+    },
+    {
+     "id": "before-img-03-random",
+     "type": "image",
+     "boundingBox": {
+      "x": 5840,
+      "y": 4308,
+      "w": 720,
+      "h": 512
+     },
+     "image": {
+      "type": "image",
+      "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-random/01-random.png"
+     },
+     "stroke": {
+      "color": "#C9CED8",
+      "width": 1,
+      "style": "solid"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -35,10 +35,11 @@ async function dashboard() {
   $("main").innerHTML = `${titleRow(esc(p.name), p, "dash")}<p class="muted">${esc(p.description)}</p>
   ${histogram(cs)}
   <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${isNightly(p) ? d.stats.nightlyHarvests : d.stats.manualHarvests ?? 0}</b> ${isNightly(p) ? "nightly" : "manual"} harvests</span></div>
-  <h2>Cycles</h2><div class="stack" id="cycle-stack" role="list" aria-label="Cycles, current in front">${[...ordered(cs)].reverse().map((c) => `<a role="listitem" class="card cycle-card stack-card ${c.status}" href="${B}cycle.html?c=${c.number}" data-cycle="${c.number}">
-   <h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
+  <h2>Cycles</h2><div class="stack" id="cycle-stack" role="list" aria-label="Cycles, newest first on top">${ordered(cs).map((c) => `<a role="listitem" class="card cycle-card stack-card ${c.status}" href="${B}cycle.html?c=${c.number}" data-cycle="${c.number}">
+   ${c.screenshot ? `<img class="stack-shot" src="${esc(c.screenshot)}" alt="" loading="lazy">` : `<div class="stack-shot" aria-hidden="true"></div>`}
+   <div class="stack-body"><h3>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(c.status)}</span>`}</h3>
    <div class="stack-date muted">${esc(fmt(c.createdAt))}</div>
-   <p class="stack-desc">${esc(cycleDesc(c))}</p></a>`).join("")}</div>
+   <p class="stack-desc">${esc(cycleDesc(c))}</p></div></a>`).join("")}</div>
   <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)}${p.rules ? ` · <a href="${p.rules}">Project rules ↗</a>` : ""} · ${skipped} skipped overall</p>`;
   setupHistogram();
   setupStack();
@@ -225,13 +226,14 @@ function setupStack(rootId = "cycle-stack") {
   const cards = [...stack.querySelectorAll(".stack-card")];
   if (!cards.length) return;
 
-  // Reference CARD_WIDTH=200; tiles fixed square-ish; stack mirrored — left-anchored.
+  // Newest (index 0) leftmost + highest z; older tuck under to the right.
   const CARD_WIDTH = 200;
-  const CARD_HEIGHT = 200;
+  const CARD_HEIGHT = 292; // square thumb (full width) + title/date/desc
   const STACK_OFFSET = Math.floor(CARD_WIDTH * 0.5);
   const REVEAL_OVERLAP = 90;
   const STIFFNESS = 300, DAMPING = 30, MASS = 1;
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const n = cards.length;
 
   stack.style.setProperty("--card-w", CARD_WIDTH + "px");
   stack.style.setProperty("--card-h", CARD_HEIGHT + "px");
@@ -242,17 +244,16 @@ function setupStack(rootId = "cycle-stack") {
 
   const stageH = Math.ceil(CARD_HEIGHT * 1.05) + 16;
   stack.style.height = stageH + "px";
-  // Span of stacked lefts + card width (+ room to reveal rightward).
+  // Span + room for older cards to shift right on reveal.
   const span = (cards.length - 1) * STACK_OFFSET + CARD_WIDTH + (CARD_WIDTH - REVEAL_OVERLAP);
   stack.style.minWidth = Math.min(span, stack.parentElement?.clientWidth || span) + "px";
 
-  // Per-card spring state for x and scale (framer-motion spring, mass 1).
-  // left = i*STACK_OFFSET; later in DOM = on top, further right (current front).
+  // left = i*STACK_OFFSET; z descends left→right so newest is on top.
   const state = cards.map((el, i) => {
     el.style.left = (i * STACK_OFFSET) + "px";
     el.style.right = "auto";
-    el.style.zIndex = String(i + 1);
-    return { el, i, x: 0, vX: 0, s: 1, vS: 0, tX: 0, tS: 1 };
+    el.style.zIndex = String(n - i);
+    return { el, i, baseZ: n - i, x: 0, vX: 0, s: 1, vS: 0, tX: 0, tS: 1 };
   });
 
   let hovered = null; // index or null
@@ -261,6 +262,7 @@ function setupStack(rootId = "cycle-stack") {
   function targetsFor(h) {
     state.forEach((st) => {
       if (h == null) { st.tX = 0; st.tS = 1; return; }
+      // Older cards (index > h, to the right, underneath) shift further right to expose h.
       st.tX = st.i > h ? (CARD_WIDTH - REVEAL_OVERLAP) : 0;
       const dist = Math.abs(st.i - h);
       const progressive = Math.max(0.85, 1 - dist * 0.05);
@@ -269,7 +271,12 @@ function setupStack(rootId = "cycle-stack") {
   }
 
   function applyShadow(h) {
-    state.forEach((st) => st.el.classList.toggle("is-hovered", h != null && st.i === h));
+    state.forEach((st) => {
+      const on = h != null && st.i === h;
+      st.el.classList.toggle("is-hovered", on);
+      // Raise hovered card above left neighbors so its full face is readable.
+      st.el.style.zIndex = String(on ? n + 1 : st.baseZ);
+    });
   }
 
   function paint() {

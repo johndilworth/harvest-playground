@@ -51,10 +51,11 @@ async function meetingSeries() {
   $("main").innerHTML = `${mTitleRow(`${esc(s.name)}`)}<p class="muted">${esc(s.description)} · attendees: ${s.attendees.map((a) => esc(a.handle)).join(", ")}</p>
   ${meetingHistogram(ms)}
   <div class="chips"><span class="chip"><b>${ms.length}</b> meetings</span><span class="chip"><b>${tot("boardObjects")}</b> board objects</span><span class="chip"><b>${tot("actionItems")}</b> action items</span><span class="chip"><b>${openTasks(d).length}</b> open tasks</span><span class="chip"><b>${ms.filter((m) => m.summary).length}</b> harvests</span></div>
-  <h2>Meetings</h2><div class="stack" id="meeting-stack" role="list" aria-label="Meetings, current in front">${[...mOrdered(ms)].reverse().map((m) => `<a role="listitem" class="card cycle-card stack-card ${m.status}" href="${mUrl(m)}" data-meeting="${esc(m.id)}">
-   <h3>${esc(m.title)}${m.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(m.status)}</span>`}</h3>
+  <h2>Meetings</h2><div class="stack" id="meeting-stack" role="list" aria-label="Meetings, newest first on top">${mOrdered(ms).map((m) => `<a role="listitem" class="card cycle-card stack-card ${m.status}" href="${mUrl(m)}" data-meeting="${esc(m.id)}">
+   ${m.board?.screenshot ? `<img class="stack-shot" src="${esc(m.board.screenshot)}" alt="" loading="lazy">` : `<div class="stack-shot" aria-hidden="true"></div>`}
+   <div class="stack-body"><h3>${esc(m.title)}${m.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(m.status)}</span>`}</h3>
    <div class="stack-date muted">${esc(mfmt(m.date))}</div>
-   <p class="stack-desc">${esc(meetingDesc(m))}</p></a>`).join("")}</div>
+   <p class="stack-desc">${esc(meetingDesc(m))}</p></div></a>`).join("")}</div>
   <p class="muted">Data: <a href="/data/meeting-${MSLUG}.json">meeting-${MSLUG}.json</a> · updated ${fmt(d.updatedAt)}</p>`;
   setupHistogram();
   setupStack("meeting-stack");

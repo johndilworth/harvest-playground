@@ -1,8 +1,13 @@
 {
   "schemaVersion": 1,
-  "description": "FAKE TEST DATA — meeting series harvested from Lucidchart meeting boards. Fake people only (@alice, @bob, @chen).",
+  "description": "Meeting series harvested from Lucidchart meeting boards.",
   "updatedAt": "2026-10-13T23:30:00-06:00",
   "meetings": [
-    { "slug": "harvest-weekly-sync", "name": "Harvest Weekly Sync (FAKE)", "file": "/data/meeting-harvest-weekly-sync.json", "type": "meeting", "fake": true }
+    {
+      "slug": "team-meeting",
+      "name": "Team Meeting",
+      "file": "/data/meeting-team-meeting.json",
+      "type": "meeting"
+    }
   ]
 }

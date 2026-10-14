@@ -1,7 +1,7 @@
 # Meeting harvest procedure
 
 This is for the webhook routine. Payload: `{type:"meeting", meeting:"<slug>", action:"harvest", source, requestedAt}`.
-The dashboard's "Harvest meeting" button sends it through `dashboard/netlify/functions/trigger.mjs`. That function allows `MEETINGS = {"harvest-weekly-sync"}` and posts to the **same** `HARVEST_TRIGGER_URL` webhook as project harvests. Use `type === "meeting"` to tell the two apart.
+The dashboard's "Harvest meeting" button sends it through `dashboard/netlify/functions/trigger.mjs`. That function allows `MEETINGS = {"team-meeting"}` and posts to the **same** `HARVEST_TRIGGER_URL` webhook as project harvests. Use `type === "meeting"` to tell the two apart.
 
 **Hard rules:**
 - Use Lucidchart only.

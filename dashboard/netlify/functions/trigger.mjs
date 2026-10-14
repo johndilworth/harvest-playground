@@ -10,7 +10,7 @@ const safeEqual = (a, b) => timingSafeEqual(digest(a), digest(b)); // equal-leng
 // Projects whose current cycle page shows "Run harvest now" (must match data/<slug>.json project.trigger)
 const PROJECTS = new Set(["harvest-playground", "harvest-dashboard", "design-loop", "harvest-site"]);
 // Meeting series whose current meeting page shows "Harvest meeting" (data/meeting-<slug>.json series.trigger)
-const MEETINGS = new Set(["harvest-weekly-sync"]);
+const MEETINGS = new Set(["team-meeting"]);
 const COOLDOWN_MS = 10 * 60 * 1000;
 const MAX_BODY = 32 * 1024, MAX_PAYLOAD = 24 * 1024;
 const lastTrigger = {}; // per project; best-effort: only holds within a warm function instance

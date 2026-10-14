@@ -1,4 +1,4 @@
-# Meeting board helpers (proven on the FAKE Harvest Weekly Sync boards, Oct 2026)
+# Meeting board helpers (proven on the Team Meeting test boards, Oct 2026)
 - `build_board.py` — `js(title, attendeeRows, content, cards)` returns a lucid_run_script source that replicates
   template 784fd831-… exactly (7 frames, orange header, Fraunces headings, Good/Bad sub-frames, Areas of focus table
   with one row per attendee) and optionally drops left-aligned stickies and cards. Needs the `dynamicmatrix` skill loaded.

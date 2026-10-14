@@ -1,7 +1,6 @@
-// Meeting series pages (type "meeting"), modelled on project dashboard / cycle pages. Current data is FAKE test data.
-const MSLUG = (location.pathname.match(/^\/m\/([a-z0-9-]+)/) || [])[1] || "harvest-weekly-sync";
+// Meeting series pages (type "meeting"), modelled on project dashboard / cycle pages.
+const MSLUG = (location.pathname.match(/^\/m\/([a-z0-9-]+)/) || [])[1] || "team-meeting";
 const MB = `/m/${MSLUG}/`;
-const fakeBanner = (d) => d.fake ? `<p class="fake-banner">⚠ FAKE TEST DATA — ${esc(d.fakeNote || "not a real meeting")}</p>` : "";
 async function loadMeeting(slug = MSLUG) { const r = await fetch(`/data/meeting-${slug}.json`, { cache: "no-store" }); if (!r.ok) throw new Error("Unknown meeting " + slug); return r.json(); }
 const mfmt = (d) => fmt(d + "T12:00:00");
 const mUrl = (m) => `${MB}meeting.html?m=${m.id}`;
@@ -42,7 +41,7 @@ async function meetingSeries() {
   const d = await loadMeeting(), s = d.series, ms = d.meetings;
   document.body.insertAdjacentHTML("afterbegin", nav()); document.title = `${s.name} · Harvest`;
   const tot = (k) => ms.reduce((n, m) => n + ((m.activity || {})[k] || 0), 0);
-  $("main").innerHTML = `${fakeBanner(d)}${mTitleRow(`${esc(s.name)} <span class="tag fake">FAKE</span>`)}<p class="muted">${esc(s.description)} · attendees: ${s.attendees.map((a) => esc(a.handle)).join(", ")}</p>
+  $("main").innerHTML = `${mTitleRow(`${esc(s.name)}`)}<p class="muted">${esc(s.description)} · attendees: ${s.attendees.map((a) => esc(a.handle)).join(", ")}</p>
   ${meetingHistogram(ms)}
   <div class="chips"><span class="chip"><b>${ms.length}</b> meetings</span><span class="chip"><b>${tot("boardObjects")}</b> board objects</span><span class="chip"><b>${tot("actionItems")}</b> action items</span><span class="chip"><b>${openTasks(d).length}</b> open tasks</span><span class="chip"><b>${ms.filter((m) => m.summary).length}</b> harvests</span></div>
   <h2>Meetings</h2><div class="grid">${mOrdered(ms).map((m) => `<a class="card cycle-card ${m.status}" href="${mUrl(m)}" style="color:inherit;text-decoration:none">
@@ -74,9 +73,9 @@ async function meetingPage() {
   const m = d.meetings.find((x) => x.id === id) || mOrdered(d.meetings)[0], cur = d.meetings.find((x) => x.status === "current");
   document.body.insertAdjacentHTML("afterbegin", nav()); document.title = `${m.date} · ${d.series.name}`;
   const from = m.harvestedFrom ? d.meetings.find((x) => x.id === m.harvestedFrom) : null;
-  const title = `<a href="${MB}">${esc(d.series.name)}</a> · ${esc(mfmt(m.date))}${m.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(m.status)}</span>${cur && cur !== m ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${mUrl(cur)}">Go to current meeting (${esc(mfmt(cur.date))}) →</a>` : ""}`} <span class="tag fake">FAKE</span>`;
+  const title = `<a href="${MB}">${esc(d.series.name)}</a> · ${esc(mfmt(m.date))}${m.status === "current" ? '<span class="tag current">Current</span>' : `<span class="tag">${esc(m.status)}</span>${cur && cur !== m ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${mUrl(cur)}">Go to current meeting (${esc(mfmt(cur.date))}) →</a>` : ""}`}`;
   const next = d.meetings.find((x) => x.harvestedFrom === m.id);
-  $("main").innerHTML = `${fakeBanner(d)}${mTitleRow(title)}
+  $("main").innerHTML = `${mTitleRow(title)}
   <p class="muted">${esc(m.title)} · created ${fmt(m.createdAt)}${from ? ` · carried forward from ${esc(mfmt(from.date))}` : ""} · ${(m.activity || {}).boardObjects || 0} board objects · ${(m.activity || {}).actionItems || 0} action items</p>
   <h2>Lucid document</h2>${docsHtml([{ title: m.title, flow: m.board.flow || "meeting", description: "Meeting board", url: m.board.url, commentUrl: m.board.commentUrl }], m.status, m.board.screenshot)}
   <h2>Summary from last meeting</h2>${from && from.summary ? summaryBox(from.summary, from) : `<div class="card"><p class="muted" style="margin:0">First meeting in the series — no previous summary.${next ? ` This board's harvest is on the <a href="${mUrl(next)}">${esc(mfmt(next.date))}</a> page.` : ""}</p></div>`}
@@ -122,7 +121,7 @@ async function homeMeetings() {
   const foot = document.querySelector("main > p.muted:last-child");
   const html = `<h2>Meetings</h2><div class="grid projects">${idx.meetings.map((x, i) => { const d = ds[i]; if (!d) return `<div class="card">${esc(x.name)} — data unavailable</div>`;
     const cur = d.meetings.find((m) => m.status === "current");
-    return `<a class="card project-card" href="/m/${x.slug}/" style="color:inherit;text-decoration:none"><h3>${esc(d.series.name)} <span class="tag">Meeting</span>${d.fake ? '<span class="tag fake">FAKE</span>' : ""}</h3>
+    return `<a class="card project-card" href="/m/${x.slug}/" style="color:inherit;text-decoration:none"><h3>${esc(d.series.name)} <span class="tag">Meeting</span></h3>
      <div class="kv"><span><b>${d.meetings.length}</b> meetings</span><span>current <b>${cur ? esc(mfmt(cur.date)) : "—"}</b></span><span><b>${openTasks(d).length}</b> open tasks</span></div>
      ${cur?.board.screenshot ? `<img src="${esc(cur.board.screenshot)}" alt="Current meeting board" loading="lazy">` : ""}</a>`; }).join("")}</div>`;
   if (foot) foot.insertAdjacentHTML("beforebegin", html); else $("main").insertAdjacentHTML("beforeend", html);

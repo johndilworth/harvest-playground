@@ -44,6 +44,12 @@
   from = "/p/:slug/summary.html"
   to = "/project-summary.html"
   status = 200
+# Old meeting series slug -> team-meeting (query strings kept)
+[[redirects]]
+  from = "/m/harvest-weekly-sync/*"
+  to = "/m/team-meeting/:splat"
+  status = 301
+  force = true
 # Meeting series pages (type "meeting")
 [[redirects]]
   from = "/m/:slug/"

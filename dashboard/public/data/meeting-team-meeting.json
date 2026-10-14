@@ -1,28 +1,26 @@
 {
   "schemaVersion": 1,
   "type": "meeting",
-  "fake": true,
-  "fakeNote": "no real meeting, people, or Zoom. Generated to test the Harvest meeting variant.",
   "updatedAt": "2026-10-13T23:30:00-06:00",
   "series": {
-    "slug": "harvest-weekly-sync",
-    "name": "Harvest Weekly Sync (FAKE)",
-    "description": "FAKE weekly sync used to test meeting harvests: board → summary (decisions, tasks with owners, open items) → next board with carry-forward.",
+    "slug": "team-meeting",
+    "name": "Team Meeting",
+    "description": "Weekly team meeting: board → summary (decisions, tasks with owners, open items) → next board with carry-forward.",
     "cadence": "weekly",
     "attendees": [
       {
         "handle": "@alice",
-        "name": "Alice (fake)",
+        "name": "Alice",
         "email": "alice@example.com"
       },
       {
         "handle": "@bob",
-        "name": "Bob (fake)",
+        "name": "Bob",
         "email": "bob@example.com"
       },
       {
         "handle": "@chen",
-        "name": "Chen (fake)",
+        "name": "Chen",
         "email": "chen@example.com"
       }
     ],
@@ -44,7 +42,7 @@
   "meetings": [
     {
       "id": "2026-10-20",
-      "title": "Harvest Weekly Sync (FAKE) 2026-10-20",
+      "title": "Team Meeting 2026-10-20",
       "date": "2026-10-20",
       "status": "current",
       "createdAt": "2026-10-13T23:20:00-06:00",
@@ -53,7 +51,7 @@
         "documentId": "bdfe11e0-bf6f-4f30-b1e7-956e78311a9b",
         "url": "https://lucid.app/lucidchart/bdfe11e0-bf6f-4f30-b1e7-956e78311a9b/edit",
         "commentUrl": "https://lucid.app/lucidchart/bdfe11e0-bf6f-4f30-b1e7-956e78311a9b/edit?invitationId=inv_1ddf1b54-47c4-4f14-8c98-d8f6121e55a7",
-        "screenshot": "/captures/meetings/weekly-sync-2026-10-20.png",
+        "screenshot": "/captures/meetings/team-meeting-2026-10-20.png",
         "flow": "meeting",
         "narrativeBlockId": "UP.Cm32yh3Ed"
       },
@@ -76,7 +74,7 @@
     },
     {
       "id": "2026-10-13",
-      "title": "Harvest Weekly Sync (FAKE) 2026-10-13",
+      "title": "Team Meeting 2026-10-13",
       "date": "2026-10-13",
       "status": "harvested",
       "createdAt": "2026-10-13T23:16:00-06:00",
@@ -85,7 +83,7 @@
         "documentId": "91fdc53a-d2fe-46e0-a8f2-9dbc9699aadf",
         "url": "https://lucid.app/lucidchart/91fdc53a-d2fe-46e0-a8f2-9dbc9699aadf/edit",
         "commentUrl": "https://lucid.app/lucidchart/91fdc53a-d2fe-46e0-a8f2-9dbc9699aadf/edit?invitationId=inv_64f81cb9-dbbe-4122-b4da-3472c7e69424",
-        "screenshot": "/captures/meetings/weekly-sync-2026-10-13.png",
+        "screenshot": "/captures/meetings/team-meeting-2026-10-13.png",
         "flow": "meeting"
       },
       "stickiesRead": 18,
@@ -215,7 +213,7 @@
           "Action 'Update release checklist for weekly cadence' needs owner (sticky said 'someone should').",
           "Open question 'Who owns the analytics dashboard?' needs owner.",
           "Action 'Send vendor shortlist' has no due date.",
-          "Sticky authors not attributable: all fake stickies were placed by one account; owners inferred from wording."
+          "Sticky authors not attributable: all stickies were placed by one account; owners inferred from wording."
         ],
         "closed": [
           "a-staging-env"
@@ -244,7 +242,7 @@
       "assignee": "alice@example.com",
       "endTime": null,
       "status": "In Progress",
-      "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13"
+      "sourceMeeting": "Team Meeting 2026-10-13"
     },
     {
       "actionId": "a-mockups",
@@ -254,7 +252,7 @@
       "assignee": "chen@example.com",
       "endTime": "2026-10-16",
       "status": "Done",
-      "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13"
+      "sourceMeeting": "Team Meeting 2026-10-13"
     },
     {
       "actionId": "a-e2e",
@@ -264,7 +262,7 @@
       "assignee": "bob@example.com",
       "endTime": "2026-10-20",
       "status": "Done",
-      "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13"
+      "sourceMeeting": "Team Meeting 2026-10-13"
     },
     {
       "actionId": "a-release-checklist",
@@ -274,7 +272,7 @@
       "assignee": null,
       "endTime": null,
       "status": "Not Doing",
-      "sourceMeeting": "Harvest Weekly Sync (FAKE) 2026-10-13"
+      "sourceMeeting": "Team Meeting 2026-10-13"
     }
   ],
   "cardsReadAt": "2026-10-13T23:50:00-06:00"

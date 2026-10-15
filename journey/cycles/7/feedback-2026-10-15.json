@@ -1,0 +1,66 @@
+{
+  "docId": "1a4448c3-5153-4cc9-913f-459468cad2bd",
+  "cycle": 7,
+  "harvestedAt": "2026-10-15T23:06:35.422870+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home \u00b7 / \u00b7 Home \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": "home",
+      "h1": null,
+      "clicked": null,
+      "commit": "d2ce785f1662aeba406420291141921dd9073e8b",
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-02-dinosaur",
+      "pageId": "review",
+      "frameTitle": "02-dinosaur \u00b7 /dinosaur.html \u00b7 Dino Town \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": "02-dinosaur",
+      "matchedBy": "frame-id",
+      "flow": "dinosaur",
+      "route": "/dinosaur.html",
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "title": "dinosaur",
+      "h1": null,
+      "clicked": null,
+      "commit": "d2ce785f1662aeba406420291141921dd9073e8b",
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-03-random",
+      "pageId": "review",
+      "frameTitle": "03-random \u00b7 /random.html \u00b7 Totally Random \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": "03-random",
+      "matchedBy": "frame-id",
+      "flow": "random",
+      "route": "/random.html",
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "title": "random",
+      "h1": null,
+      "clicked": null,
+      "commit": "d2ce785f1662aeba406420291141921dd9073e8b",
+      "screenshot": null,
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

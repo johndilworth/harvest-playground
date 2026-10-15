@@ -26,6 +26,7 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 3 boar
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Thu 2026-10-15 | Cycle 7 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 7 | [Cycle 7](https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png) |
 | Wed 2026-10-14 | Cycle 6 board (nightly) | 3 | 3 | 0 | **Cycle 7 shipped** — Turkey 2026 sabbatical feature, Vernal George + Dinah dinos, Spiral Jetty on Random · authors: anonymous 3 | [Cycle 7](https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png) |
 | Tue 2026-10-13 | Cycle 5 board (nightly) | 1 | 1 | 0 | **Cycle 6 shipped** — SPIRAL.φ gallery opens on Leonardo’s Lady with an Ermine (Mona Lisa now slide 2) · authors: anonymous 1 | [Cycle 6](https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/01-home.png) |
 | Mon 2026-10-12 | Cycle 4 board (nightly) | 12 | 11 | 1 | **Cycle 5 shipped** — black Home, SPIRAL.φ art gallery, 3-up dino grid + roar buttons, daytime stego, animated tetrad, meter chart · authors: Jilea Fobair 9, John Dilworth 2, Rob Witt 1 | [Cycle 5](https://harvest-dashboard.netlify.app/captures/harvest-playground/c5-home/01-home.png) |
@@ -42,10 +43,19 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 3 boar
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 8 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7) · 13 nightly harvests · 46 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 7 created by the **5pm MT nightly harvest** on Wed 2026-10-14.
+**Totals so far:** 8 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7) · 14 nightly harvests · 46 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 7 remains current after the **5pm MT quiet-night harvest** on Thu 2026-10-15 (0 stickies).
 
 ## Day by day
+
+### Thu 2026-10-15 — Cycle 7 harvest · no stickies · nightly
+- **Harvested:** Cycle 7 review board (Home · Dino Town · Totally Random) at ~5:07 pm MT — **0 stickies, 0 comment threads**
+- **Applied:** 0 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Hub stray stickies:** 0
+- **Contributors:** none
+- **Cycle 8 created:** no (nothing to apply, per HARVEST.md). The Cycle 7 board stays open for stickies.
+- **Live:** https://harvest-playground.netlify.app (Cycle 7)
+- **Screenshot (unchanged):** https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png
+- **Record:** `journey/cycles/7/harvest-2026-10-15.json`
 
 ### Wed 2026-10-14 — Cycle 6 harvest · **Cycle 7 shipped** · nightly
 - **Harvested:** Cycle 6 review board (Home · Dino Town · Totally Random) at ~5:02 pm MT — **3 stickies, 0 comment threads**

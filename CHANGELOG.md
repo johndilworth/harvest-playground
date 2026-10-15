@@ -2,6 +2,12 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## 2026-10-15 harvest (no Cycle 8)
+Harvested the Cycle 7 review board `1a4448c3-5153-4cc9-913f-459468cad2bd` (Home · Dino Town · Totally Random) at ~5:07 pm MT —
+**0 stickies, 0 comment threads**. Hub stray: none (no hub; dashboard is the hub).
+No site changes; Cycle 7 remains live. Applied: none. Skipped: none. Conflicts: none. Board feedback: none.
+Record: `journey/cycles/7/harvest-2026-10-15.json`.
+
 ## Cycle 7 (2026-10-14) · nightly harvest
 Nightly 5 pm MT harvest of the Cycle 6 review board `afda7e51-8cfc-4577-be4f-3550f9bf71b0` (Home · Dino Town · Totally Random) —
 **3 stickies, 0 comment threads** (one in each frame). No priority keywords, so the yellow fill made each **try**.

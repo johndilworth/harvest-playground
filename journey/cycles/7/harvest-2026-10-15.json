@@ -1,0 +1,55 @@
+{
+  "cycle": 7,
+  "harvestedAt": "2026-10-15T17:07:03-06:00",
+  "outcome": "no_stickies",
+  "cycle8Created": false,
+  "boards": {
+    "review": {
+      "docId": "1a4448c3-5153-4cc9-913f-459468cad2bd",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random"
+      ],
+      "stickies": 0,
+      "threads": 0
+    }
+  },
+  "counts": {
+    "must": 0,
+    "try": 0,
+    "maybe": 0,
+    "total": 0,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 0,
+    "conflicts": 0
+  },
+  "applied": [],
+  "skipped": [],
+  "conflicts": [],
+  "boardFeedback": [],
+  "contributors": [],
+  "verification": {
+    "method": [
+      "fetch(metadata_only) for Cycle 7 review board 1a4448c3-5153-4cc9-913f-459468cad2bd: 1 page, 1 region",
+      "fetch(page_index=1) full page: only generated ids (frame-, shot-, caption-, changes-, before-, legend-); zero StickiesStickyNoteBlock",
+      "list_document_threads: []",
+      "harvest.py on p1: frames=3 feedback_in_frames=0 outside=0 board=0 needsIntent=0"
+    ],
+    "stickyCount": 0,
+    "hubStrayStickies": 0
+  },
+  "site": {
+    "url": "https://harvest-playground.netlify.app",
+    "liveFooter": "Cycle 7"
+  },
+  "historyBoard": {
+    "docId": "e983d07c-47f1-4d0f-bfe6-81087a3b8ddd",
+    "updated": "not updated (quiet night; no new cycle tile per HARVEST.md quiet-night procedure)"
+  },
+  "feedback": "journey/cycles/7/feedback-2026-10-15.json",
+  "raw": "journey/out/c7/raw/ (gitignored)"
+}

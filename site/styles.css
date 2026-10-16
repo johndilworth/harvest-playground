@@ -383,3 +383,13 @@ body.terminal-mode{
 .turkey-feature .turkey-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:12px 0}
 .turkey-feature .turkey-summary{margin-top:10px;color:#b8f5c2}
 .terminal-mode .dino-card.r7,.terminal-mode .dino-card.r8{/* reuse scatter flow */}
+
+/* ---- cycle 8 ---- */
+/* Home: WebGL shader background (assets/c8/shader-bg.js) */
+body > canvas#c8-shader-bg.shader-bg{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;
+  opacity:.55;mix-blend-mode:screen;image-rendering:auto}
+.has-shader-bg .ascii-bg{opacity:.5}
+/* Random: newest fact first (DOM order is newest → oldest; drop Cycle 4's mcluhan order bump) */
+.page-random .terminal-grid > *{order:0}
+.page-random .rz-mcluhan{order:0}
+.log-order-note{color:#7dffa8;margin:0 !important;font-size:.95rem}

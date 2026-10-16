@@ -1,0 +1,177 @@
+{
+  "docId": "1a4448c3-5153-4cc9-913f-459468cad2bd",
+  "cycle": 7,
+  "harvestedAt": "2026-10-16T23:02:41.922859+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": "home",
+      "h1": null,
+      "clicked": null,
+      "commit": "d2ce785f1662aeba406420291141921dd9073e8b",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "PhXDSfcLIeW2",
+          "kind": "sticky",
+          "text": "Try somethign cool using WebGL shaders in the background.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1752.4232416416899,
+            "y": 1025.3373414606654,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-dinosaur",
+      "pageId": "review",
+      "frameTitle": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
+      "stepKey": "02-dinosaur",
+      "matchedBy": "frame-id",
+      "flow": "dinosaur",
+      "route": "/dinosaur.html",
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "title": "dinosaur",
+      "h1": null,
+      "clicked": null,
+      "commit": "d2ce785f1662aeba406420291141921dd9073e8b",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "9ZMDm46VrZ0J",
+          "kind": "sticky",
+          "text": "Use this vintage photo for the Dinaville motel. ",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 4680.174475623095,
+            "y": 4448.373477640802,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-dinosaur",
+            "via": null,
+            "bbox": "frame-02-dinosaur",
+            "bestOverlap": {
+              "frameId": "frame-02-dinosaur",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        },
+        {
+          "itemId": "JEKDIsphOUD9",
+          "kind": "sticky",
+          "text": "Use this image for George the T. Rex instead of the svg drawingl",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 3171.836995832596,
+            "y": 4148.0,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-dinosaur",
+            "via": "shot-02-dinosaur",
+            "bbox": "frame-02-dinosaur",
+            "bestOverlap": {
+              "frameId": "frame-02-dinosaur",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-random",
+      "pageId": "review",
+      "frameTitle": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
+      "stepKey": "03-random",
+      "matchedBy": "frame-id",
+      "flow": "random",
+      "route": "/random.html",
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "title": "random",
+      "h1": null,
+      "clicked": null,
+      "commit": "d2ce785f1662aeba406420291141921dd9073e8b",
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "N1MDeb95gx_f",
+          "kind": "sticky",
+          "text": "Change the order, so most recent fact is first. ",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 5896.8037776939,
+            "y": 1169.875237209872,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-random",
+            "via": null,
+            "bbox": "frame-03-random",
+            "bestOverlap": {
+              "frameId": "frame-03-random",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

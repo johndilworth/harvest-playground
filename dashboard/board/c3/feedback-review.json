@@ -1,0 +1,263 @@
+{
+  "docId": "3d838c49-6b8c-4a2f-848b-b3e8ddf7a5a7",
+  "cycle": 3,
+  "harvestedAt": "2026-10-16T05:49:11.253708+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home — all Harvest projects",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/",
+      "url": "https://harvest-dashboard.netlify.app/",
+      "title": "Home",
+      "h1": "All projects",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "2mMDjPsI0AmT",
+          "kind": "sticky",
+          "text": "Remove label \"last harvest\" and keep only the date - cards should look like attached images (one light and one darkmode)",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 194.29982101950122,
+            "y": 812.2851289212442,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        },
+        {
+          "itemId": ".kMDPiEvJRk3",
+          "kind": "sticky",
+          "text": "Add a dark mode option to site and set dark mode as default.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 1798.369859970907,
+            "y": 207.26841589207675,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        },
+        {
+          "itemId": "IlMDaLssbCXh",
+          "kind": "sticky",
+          "text": "icon in upper right corner can be used to toggle dark mode on and off",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1893.1247326158002,
+            "y": 400.0,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        },
+        {
+          "itemId": "amMDDnLdRCoE",
+          "kind": "sticky",
+          "text": "Remove \"current: Cycle x\" from cards, as there's already text that says 7 cycles, and that number will always be the current. \n\nUse updated sparkline bar chart with tightened space and design.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 223.03182368377202,
+            "y": 586.8582417623688,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-project-dashboard",
+      "pageId": "review",
+      "frameTitle": "02-project-dashboard · /p/harvest-playground/ · Project dashboard (Harvest Playground)",
+      "stepKey": "02-project-dashboard",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/",
+      "title": "Project dashboard",
+      "h1": "Harvest Playground",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": ".fMDD3qRO6fO",
+          "kind": "sticky",
+          "text": "Make the dashboard more compact. Remove padding margin and and labels.\n\nUse the connected image as an example of output.  (Dark mode example shown)",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 2891.166906577262,
+            "y": 564.7604175436259,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-project-dashboard",
+            "via": null,
+            "bbox": "frame-02-project-dashboard",
+            "bestOverlap": {
+              "frameId": "frame-02-project-dashboard",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-cycle",
+      "pageId": "review",
+      "frameTitle": "03-cycle · /p/harvest-dashboard/cycle.html?c=3 · Cycle page (Harvest Dashboard · Cycle 3)",
+      "stepKey": "03-cycle",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=3",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=3",
+      "title": "Cycle page",
+      "h1": "Harvest Dashboard · Cycle 3",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-04-run-harvest-modal",
+      "pageId": "review",
+      "frameTitle": "04-run-harvest-modal · /p/harvest-dashboard/cycle.html?c=3 · Run harvest modal",
+      "stepKey": "04-run-harvest-modal",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=3",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=3",
+      "title": "Run harvest modal",
+      "h1": "Run harvest",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-05-summary",
+      "pageId": "review",
+      "frameTitle": "05-summary · /p/harvest-playground/summary.html · Summary (all cycles of a project)",
+      "stepKey": "05-summary",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/summary.html",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/summary.html",
+      "title": "Summary",
+      "h1": "Summary",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "g9iDCQuhpZNC",
+          "kind": "sticky",
+          "text": "Add screenshot to summary table, use same screenshot that's on the cards for each cycle.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 12579.64215552733,
+            "y": 868.7219268142985,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-05-summary",
+            "via": null,
+            "bbox": "frame-05-summary",
+            "bestOverlap": {
+              "frameId": "frame-05-summary",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

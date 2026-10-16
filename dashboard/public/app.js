@@ -4,7 +4,9 @@ const fmt = (d) => new Date(d).toLocaleDateString("en-US", { year: "numeric", mo
 const SLUG = (location.pathname.match(/^\/p\/([a-z0-9-]+)/) || [])[1] || "harvest-playground";
 const B = `/p/${SLUG}/`;
 // Top header: brand + All projects + Harvest rules only (no project name). Project links live in title-row subnav.
-const nav = () => `<header class="top"><b><a href="/" style="color:inherit">Harvest</a></b><nav><a href="/">All projects</a><a href="/rules.html">Harvest rules</a></nav></header>`;
+// Dark-mode toggle (cycle 4): icon button in the top-right corner of the header; theme.js handles clicks + storage.
+const THEME_TOGGLE = `<button type="button" class="theme-toggle" aria-label="Toggle dark mode"><svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g></svg><svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg></button>`;
+const nav = () => `<header class="top"><b><a href="/" style="color:inherit">Harvest</a></b><nav><a href="/">All projects</a><a href="/rules.html">Harvest rules</a></nav>${THEME_TOGGLE}</header>`;
 function subnav(p, current) {
   const items = [
     ["Dashboard", B, "dash"],
@@ -100,8 +102,9 @@ async function summary() {
   const d = await load(); document.body.insertAdjacentHTML("afterbegin", nav());
   const li = (a, f) => a.length ? `<ul>${a.map(f).join("")}</ul>` : "<span class='muted'>none</span>";
   $("main").innerHTML = `${titleRow(`<a href="${B}">${esc(d.project.name)}</a> · Summary`, d.project, "summary")}<p class="muted">Every cycle and the changes it shipped.</p>
-  <table><tr><th>Cycle</th><th>Date</th><th>Status</th><th>Applied</th><th>Skipped (reason)</th><th>Conflicts</th></tr>
+  <table class="summary-table"><tr><th>Cycle</th><th>Screenshot</th><th>Date</th><th>Status</th><th>Applied</th><th>Skipped (reason)</th><th>Conflicts</th></tr>
   ${[...d.cycles].sort((a, b) => b.number - a.number).map((c) => `<tr><td><a href="${B}cycle.html?c=${c.number}">Cycle ${c.number}</a>${c.pullRequest ? `<br><a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""}</td>
+   <td class="sum-shot">${c.screenshot ? `<a href="${B}cycle.html?c=${c.number}" aria-label="Open Cycle ${c.number}"><img src="${esc(c.screenshot)}" alt="Cycle ${c.number} screenshot" loading="lazy"></a>` : ""}</td>
    <td style="white-space:nowrap">${fmt(c.createdAt)}</td><td>${esc(statusLabel(c.status))}</td>
    <td>${c.changes.note ? esc(c.changes.note) : ""}${c.changes.applied.length || !c.changes.note ? li(c.changes.applied, (a) => `<li><b>${esc(a.priority)}</b> · ${esc(a.text)}${a.author ? ` · by ${esc(a.author)}` : ""}</li>`) : ""}</td>
    <td>${li(c.changes.skipped, (s) => `<li>${esc(s.text)} — <i>${esc(s.reason)}</i>${s.author ? ` · by ${esc(s.author)}` : ""}</li>`)}</td>
@@ -151,7 +154,8 @@ async function setupTrigger(c) {
 }
 
 // ---- Contributions histogram (one stacked bar per cycle, compressed sqrt scale) ----
-const TYPES = [["red", "Must do", "#d1242f"], ["yellow", "Try", "#e3b008"], ["blue", "Consider", "#2f6fdd"], ["purple", "Board feedback", "#8250df"]];
+// Colours from the cycle-3 sparkline reference image (brighter red / amber / blue).
+const TYPES = [["red", "Must do", "#e40024"], ["yellow", "Try", "#edad00"], ["blue", "Consider", "#0071e5"], ["purple", "Board feedback", "#8250df"]];
 const PRI = { must: "red", try: "yellow", consider: "blue", board: "purple" };
 function contrib(c) {
   if (c.contributions) return { red: 0, yellow: 0, blue: 0, purple: 0, ...c.contributions };
@@ -161,26 +165,24 @@ function contrib(c) {
 }
 const fmtMT = (d) => new Date(d).toLocaleString("en-US", { year: "numeric", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Denver" }) + " MT";
 function histogram(cs, opts = {}) {
-  const H = 140, BASE = 3, list = [...cs].sort((a, b) => b.number - a.number); // newest cycle on the left (matches the cycle list)
+  // Compact chart (cycle-3 sticky): no padding/margins, no axis labels, bars side by side with no gaps,
+  // newest cycle on the left. Hover/focus tooltip shows the date and colour key; click opens the cycle.
+  const H = 96, list = [...cs].sort((a, b) => b.number - a.number);
   const rows = list.map((c) => { const k = contrib(c); return { c, k, t: TYPES.reduce((n, [t]) => n + k[t], 0) }; });
   const max = Math.max(1, ...rows.map((r) => r.t));
-  const h = (n) => (n <= 0 ? 0 : Math.max(4, Math.round((Math.sqrt(n) / Math.sqrt(max)) * (H - 8))));
-  const bw = 34, gap = 22, W = rows.length * (bw + gap) + gap;
+  const h = (n) => (n <= 0 ? 0 : Math.max(4, Math.round((Math.sqrt(n) / Math.sqrt(max)) * H)));
+  const bw = 32, W = rows.length * bw;
   const bars = rows.map((r, i) => {
-    const x = gap + i * (bw + gap), total = h(r.t);
+    const x = i * bw, total = h(r.t);
     let y = H, segs = "";
     TYPES.forEach(([t, , col]) => { if (!r.k[t]) return; const sh = Math.max(1, Math.round(total * r.k[t] / r.t)); y -= sh; segs += `<rect x="${x}" y="${y}" width="${bw}" height="${sh}" fill="${col}"/>`; });
     const per = TYPES.map(([t, l]) => `${r.k[t]} ${l}`).join(", ");
     const tip = `<b>Cycle ${r.c.number}</b><br>${esc(fmtMT(r.c.createdAt))}<br><b>${r.t}</b> contributions${TYPES.map(([t, l, col]) => `<br><i style="background:${col}"></i>${l}: ${r.k[t]}`).join("")}`;
     return `<g class="bar" tabindex="0" role="link" data-href="${B}cycle.html?c=${r.c.number}" style="cursor:pointer" aria-label="Open Cycle ${r.c.number}, harvested ${esc(fmtMT(r.c.createdAt))}: ${r.t} contributions (${per})" data-tip="${esc(tip)}">
-      <rect class="hit" x="${x - gap / 2}" y="0" width="${bw + gap}" height="${H + 22}" fill="transparent"/>
-      <rect x="${x}" y="${H - BASE}" width="${bw}" height="${BASE}" fill="#9aa1a9"/>${segs}
-      <text x="${x + bw / 2}" y="${H + 16}" text-anchor="middle">C${r.c.number}</text></g>`;
+      <rect class="hit" x="${x}" y="0" width="${bw}" height="${H}" fill="transparent"/>${r.t ? "" : `<rect class="empty" x="${x}" y="${H - 2}" width="${bw}" height="2"/>`}${segs}</g>`;
   }).join("");
-  // No title or key above the chart (cycle-2 sticky): the hover/focus tooltip shows the colour key.
-  return `<div class="card histo">
-   <div class="histo-wrap"><svg viewBox="0 0 ${W} ${H + 22}" width="${W}" height="${H + 22}" role="group" aria-label="Stickies per cycle, stacked by type (compressed square-root scale)">
-   <line x1="0" y1="${H}" x2="${W}" y2="${H}" stroke="#c8ccd1"/>${bars}</svg><div id="tip" class="tip" role="tooltip" hidden></div></div></div>`;
+  return `<div class="histo compact">
+   <div class="histo-wrap"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="group" aria-label="Stickies per cycle, stacked by type, newest cycle first (compressed square-root scale)">${bars}</svg><div id="tip" class="tip" role="tooltip" hidden></div></div></div>`;
 }
 function setupHistogram() {
   const tip = $("#tip"), wrap = $(".histo-wrap"); if (!tip) return;
@@ -201,25 +203,27 @@ async function home() {
   const idx = await (await fetch("/data/projects.json", { cache: "no-store" })).json();
   const ds = await Promise.all(idx.projects.map((p) => load(p.slug).catch(() => null)));
   // Description under "Harvest projects" removed (cycle 0 sticky).
+  // Cards (cycle-3 stickies): "N cycles / <last harvest date>" (no "current Cycle x", no "last harvest" label), then the sparkline.
   $("main").innerHTML = `<div class="doc"><h1>All projects</h1><a class="btn" id="new-project" href="/new.html">+ New project</a></div><div class="grid projects">${idx.projects.map((p, i) => {
     const d = ds[i]; if (!d) return `<div class="card">${esc(p.name)} — data unavailable</div>`;
     const cs = d.cycles, cur = cs.find((c) => c.status === "current") || cs[cs.length - 1];
     const all = cs.flatMap((c) => runs(d.project, c)).map((h) => h.date).sort(); const last = all[all.length - 1];
     return `<a class="card project-card" href="/p/${p.slug}/" style="color:inherit;text-decoration:none">
      <h3>${esc(d.project.name)} <span class="tag">${isNightly(d.project) ? "Nightly" : "Manual"}</span></h3>
+     <div class="kv"><span><b>${cs.length}</b> cycles</span><span class="sep">/</span><span>${esc(last ? fmt(last + "T12:00:00") : fmt(cur.createdAt))}</span></div>
      ${spark(cs)}
-     <div class="kv"><span><b>${cs.length}</b> cycles</span><span>current <b>Cycle ${cur.number}</b></span><span>last harvest <b>${last ? esc(fmt(last + "T12:00:00")) : "none yet"}</b></span></div>
      ${cur.screenshot ? `<img src="${cur.screenshot}" alt="${esc(d.project.name)} Cycle ${cur.number} screenshot" loading="lazy">` : ""}</a>`; }).join("")}</div>
   <p class="muted">Index: <a href="/data/projects.json">projects.json</a> · screen captures hosted under <code>/captures/&lt;project&gt;/&lt;flow&gt;/</code></p>`;
 }
 function spark(cs) {
+  // Tightened sparkline (cycle-3 sticky): bars touch (no gaps, no baseline), newest cycle on the left.
   const list = [...cs].sort((a, b) => b.number - a.number).map((c) => { const k = contrib(c); return { n: c.number, k, t: TYPES.reduce((n, [t]) => n + k[t], 0) }; });
-  const max = Math.max(1, ...list.map((r) => r.t)), H = 36, bw = 12, gap = 6;
-  const bars = list.map((r, i) => { let y = H; const x = i * (bw + gap); const th = r.t ? Math.max(3, Math.round(Math.sqrt(r.t / max) * H)) : 0;
-    let g = `<rect x="${x}" y="${H - 2}" width="${bw}" height="2" fill="#9aa1a9"/>`;
+  const max = Math.max(1, ...list.map((r) => r.t)), H = 32, bw = 10;
+  const bars = list.map((r, i) => { let y = H; const x = i * bw; const th = r.t ? Math.max(3, Math.round(Math.sqrt(r.t / max) * H)) : 0;
+    let g = "";
     TYPES.forEach(([t, , col]) => { if (!r.k[t]) return; const h = Math.max(1, Math.round(th * r.k[t] / r.t)); y -= h; g += `<rect x="${x}" y="${y}" width="${bw}" height="${h}" fill="${col}"/>`; });
-    return `<g><title>Cycle ${r.n}: ${r.t} contributions</title>${g}</g>`; }).join("");
-  return `<svg class="spark" width="${list.length * (bw + gap)}" height="${H}" role="img" aria-label="Contributions per cycle">${bars}</svg>`;
+    return `<g><title>Cycle ${r.n}: ${r.t} contributions</title><rect x="${x}" y="0" width="${bw}" height="${H}" fill="transparent"/>${g}</g>`; }).join("");
+  return `<svg class="spark" width="${list.length * bw}" height="${H}" role="img" aria-label="Contributions per cycle, newest first">${bars}</svg>`;
 }
 
 // ---- Cycle card stack (faithful port of ProductTile / framer-motion spring) ----

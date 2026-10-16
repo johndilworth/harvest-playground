@@ -17,7 +17,7 @@ function meetingDesc(m) {
 function mTitleRow(titleHtml) { return `<div class="title-row"><h1>${titleHtml}</h1><nav class="subnav" aria-label="Meeting"><a href="${MB}">Meeting series</a></nav></div>`; }
 
 // ---- Activity histogram (same look as project histogram): board objects + action items ----
-const MTYPES = [["obj", "Board objects (stickies/notes)", "#e3b008"], ["act", "Action items", "#2f6fdd"]];
+const MTYPES = [["obj", "Board objects (stickies/notes)", "#edad00"], ["act", "Action items", "#0071e5"]];
 function meetingHistogram(ms) {
   const H = 90, BASE = 3, rows = byDate(ms).map((m) => { const a = m.activity || {}; const k = { obj: a.boardObjects || 0, act: a.actionItems || 0 }; return { m, k, t: k.obj + k.act }; });
   const max = Math.max(1, ...rows.map((r) => r.t));
@@ -30,12 +30,12 @@ function meetingHistogram(ms) {
     const tip = `<b>${esc(mfmt(r.m.date))}</b>${r.m.status === "current" ? " (current)" : ""}<br><b>${r.t}</b> activity${MTYPES.map(([t, l, col]) => `<br><i style="background:${col}"></i>${l}: ${r.k[t]}`).join("")}`;
     return `<g class="bar" tabindex="0" role="link" data-href="${mUrl(r.m)}" style="cursor:pointer" aria-label="Open meeting ${esc(mfmt(r.m.date))}: ${r.k.obj} board objects, ${r.k.act} action items" data-tip="${esc(tip)}">
       <rect class="hit" x="${x - gap / 2}" y="0" width="${bw + gap}" height="${H + 22}" fill="transparent"/>
-      <rect x="${x}" y="${H - BASE}" width="${bw}" height="${BASE}" fill="#9aa1a9"/>${segs}
+      <rect x="${x}" y="${H - BASE}" width="${bw}" height="${BASE}" style="fill:var(--chart-base)"/>${segs}
       <text x="${x + bw / 2}" y="${H + 16}" text-anchor="middle">${lab}</text></g>`;
   }).join("");
   return `<div class="card histo"><div class="histo-head"><b>Activity per meeting</b><span class="legend">${MTYPES.map(([, l, col]) => `<span><i style="background:${col}"></i>${l}</span>`).join("")}</span></div>
    <div class="histo-wrap"><svg viewBox="0 0 ${W} ${H + 22}" width="${W}" height="${H + 22}" role="group" aria-label="Activity per meeting, stacked (compressed square-root scale)">
-   <line x1="0" y1="${H}" x2="${W}" y2="${H}" stroke="#c8ccd1"/>${bars}</svg><div id="tip" class="tip" role="tooltip" hidden></div></div></div>`;
+   <line x1="0" y1="${H}" x2="${W}" y2="${H}" style="stroke:var(--chart-axis)"/>${bars}</svg><div id="tip" class="tip" role="tooltip" hidden></div></div></div>`;
 }
 function openTasks(d) {
   const m = {}; byDate(d.meetings).forEach((x) => (x.summary?.actions || []).forEach((a) => (m[a.id] = { ...a })));

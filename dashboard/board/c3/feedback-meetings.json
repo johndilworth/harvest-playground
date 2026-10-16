@@ -1,0 +1,50 @@
+{
+  "docId": "2d87c927-c36d-4b79-8e57-3d2cb5e06cf3",
+  "cycle": 3,
+  "harvestedAt": "2026-10-16T05:49:11.305223+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-meetings",
+      "pageId": "meetings",
+      "frameTitle": "01-meetings · /m/team-meeting/ · Meetings — Team Meeting series",
+      "stepKey": "01-meetings",
+      "matchedBy": "frame-id",
+      "flow": "meetings",
+      "route": "/m/team-meeting/",
+      "url": "https://harvest-dashboard.netlify.app/m/team-meeting/",
+      "title": "Meetings",
+      "h1": "Team Meeting",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-02-meeting-current",
+      "pageId": "meetings",
+      "frameTitle": "02-meeting-current · /m/team-meeting/meeting.html?m=2026-10-20 · Current meeting page (2026-10-20)",
+      "stepKey": "02-meeting-current",
+      "matchedBy": "frame-id",
+      "flow": "meetings",
+      "route": "/m/team-meeting/meeting.html",
+      "url": "https://harvest-dashboard.netlify.app/m/team-meeting/meeting.html",
+      "title": "Current meeting page",
+      "h1": "Team Meeting",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

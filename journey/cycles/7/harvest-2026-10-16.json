@@ -1,0 +1,103 @@
+{
+  "cycle": 7,
+  "harvestedAt": "2026-10-16T17:02:41-06:00",
+  "outcome": "applied",
+  "cycle8Created": true,
+  "boards": {
+    "review": {
+      "docId": "1a4448c3-5153-4cc9-913f-459468cad2bd",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random"
+      ],
+      "stickies": 4,
+      "threads": 0
+    }
+  },
+  "counts": {
+    "must": 0,
+    "try": 4,
+    "maybe": 0,
+    "total": 4,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 0,
+    "conflicts": 0
+  },
+  "applied": [
+    {
+      "priority": "try",
+      "flow": "home",
+      "text": "Try somethign cool using WebGL shaders in the background.",
+      "author": "anonymous"
+    },
+    {
+      "priority": "try",
+      "flow": "dinosaur",
+      "text": "Use this image for George the T. Rex instead of the svg drawingl",
+      "author": "anonymous"
+    },
+    {
+      "priority": "try",
+      "flow": "dinosaur",
+      "text": "Use this vintage photo for the Dinaville motel.",
+      "author": "anonymous"
+    },
+    {
+      "priority": "try",
+      "flow": "random",
+      "text": "Change the order, so most recent fact is first.",
+      "author": "anonymous"
+    }
+  ],
+  "skipped": [],
+  "conflicts": [],
+  "boardFeedback": [],
+  "contributors": [
+    {
+      "name": "anonymous",
+      "stickies": 4
+    }
+  ],
+  "attachments": [
+    {
+      "stickyId": "JEKDIsphOUD9",
+      "imageItemId": "DFKDWUcx2U4u",
+      "source": "https://images.lucid.app/images/a4a8face-b5cc-494d-94b0-adc294bdf42e/content",
+      "savedAs": "site/assets/c8/george-trex-vintage.jpg",
+      "note": "8.6 MB 2099x3300 PNG resized to 700x1100 JPEG"
+    },
+    {
+      "stickyId": "9ZMDm46VrZ0J",
+      "imageItemId": "s1MDqSFr~Fzv",
+      "source": "https://images.lucid.app/images/1ab735f6-dbce-4926-9fa9-177ddc9b2686/content",
+      "savedAs": "site/assets/c8/dine-a-ville-motel-vintage.jpg",
+      "note": "526x640 PNG re-encoded as JPEG"
+    }
+  ],
+  "safety": "all 4 safe: no secrets, no third-party scripts (shader is a local script, assets/c8/shader-bg.js), no forms/redirects, all files < 2 MB",
+  "site": {
+    "url": "https://harvest-playground.netlify.app",
+    "liveFooter": "Cycle 8",
+    "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+    "deployId": "6ad2adae43409751d6f40f42",
+    "previewUrl": "https://6ad2adae43409751d6f40f42--harvest-playground.netlify.app"
+  },
+  "newBoard": {
+    "docId": "d0c055a3-adba-4f7d-9ade-84534dc3e5e7",
+    "editUrl": "https://lucid.app/lucidchart/d0c055a3-adba-4f7d-9ade-84534dc3e5e7/edit",
+    "commentUrl": "https://lucid.app/lucidchart/d0c055a3-adba-4f7d-9ade-84534dc3e5e7/edit?invitationId=inv_23e61252-e2f3-4e7e-b91a-1eaf698663b9"
+  },
+  "historyBoard": {
+    "docId": "e983d07c-47f1-4d0f-bfe6-81087a3b8ddd",
+    "updated": "2026-10-16 nightly: added Cycle 8 tile (frame AX0DTWDSrcM3 at x35360, shot CY0DlhifNgQa, caption AX0DO7yEKrBj); Cycle 7 frame no longer says live now; title totals 9 cycles / 50 applied / 1 skipped / 15 nightly harvests"
+  },
+  "feedback": "journey/cycles/7/feedback-2026-10-16.json",
+  "raw": "journey/out/c7/raw/2026-10-16/ (gitignored)",
+  "notes": [
+    "c8-dinosaur/02-dinosaur-full.png was 2.3 MB and was re-encoded as a 256-colour PNG (0.6 MB) to stay under the 2 MB limit"
+  ]
+}

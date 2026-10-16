@@ -2,7 +2,38 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
-## 2026-10-15 harvest (no Cycle 8)
+## Cycle 8 (2026-10-16) · nightly harvest
+Nightly 5 pm MT harvest of the Cycle 7 review board `1a4448c3-5153-4cc9-913f-459468cad2bd` (Home · Dino Town · Totally Random) —
+**4 stickies, 0 comment threads** (Home 1, Dino Town 2, Random 1). No priority keywords, so the yellow fill made each **try**.
+None had a Lucid author attribution line → **anonymous**. Two Dino Town stickies were connected by arrows to images uploaded
+on the board (a vintage postcard of the Vernal T. rex and a vintage photo of Dinah holding the Dine-A-Ville Motel sign); both were
+downloaded, resized to JPEG and hosted under `site/assets/c8/`.
+
+### Applied (4)
+- **try** · Home · “Try somethign cool using WebGL shaders in the background.” → a full-screen **WebGL shader** (slow green/blue plasma with a faint golden-spiral swirl and scanlines) now runs behind Home. Local script `site/assets/c8/shader-bg.js` (no third-party code), half-resolution, pauses in hidden tabs, draws one still frame for reduced motion, and removes itself if WebGL is unavailable. · by anonymous
+- **try** · Dino · “Use this image for George the T. Rex instead of the svg drawingl” → #7 George now shows the vintage postcard photo from the board (`site/assets/c8/george-trex-vintage.jpg`) instead of the Cycle 7 drawing. · by anonymous
+- **try** · Dino · “Use this vintage photo for the Dinaville motel.” → #8 Dinah · Dine-A-Ville Motel now shows the vintage motel-sign photo from the board (`site/assets/c8/dine-a-ville-motel-vintage.jpg`). · by anonymous
+- **try** · Random · “Change the order, so most recent fact is first.” → RANDOM.LOG now runs newest first: Spiral Jetty (C7), McLuhan (C4), wombat cubes + meter (C2), socks (C1), with a one-line “newest fact first” note. · by anonymous
+
+### Skipped (0)
+- none. No malicious, illegal or offensive stickies.
+
+### Conflicts
+- none
+
+### Board feedback (purple / Board:)
+- none
+
+### Authors
+- anonymous — 4
+
+### Notes
+- The full-page Dino Town capture came out at 2.3 MB, so it was re-encoded as a 256-colour PNG (0.6 MB) to stay under the 2 MB file limit.
+
+Commit `54eaa91` · preview https://6ad2adae43409751d6f40f42--harvest-playground.netlify.app · Cycle 8 board: [review (Lucidchart)](https://lucid.app/lucidchart/d0c055a3-adba-4f7d-9ade-84534dc3e5e7/edit) · no PR (pushed to main)
+Record: `journey/cycles/7/feedback-2026-10-16.json` + `journey/cycles/7/harvest-2026-10-16.json` · raw board fetch in `journey/out/c7/raw/2026-10-16/` (gitignored).
+
+## 2026-10-15 harvest (quiet night, no new cycle)
 Harvested the Cycle 7 review board `1a4448c3-5153-4cc9-913f-459468cad2bd` (Home · Dino Town · Totally Random) at ~5:07 pm MT —
 **0 stickies, 0 comment threads**. Hub stray: none (no hub; dashboard is the hub).
 No site changes; Cycle 7 remains live. Applied: none. Skipped: none. Conflicts: none. Board feedback: none.

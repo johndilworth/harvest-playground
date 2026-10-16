@@ -1,0 +1,81 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 8,
+ "date": "Fri 2026-10-16",
+ "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+ "pullRequest": null,
+ "prNumber": null,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home \u00b7 Dino Town \u00b7 Totally Random on one board (3 screens \u2264 5, no split)",
+  "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "product_lucid": "lucidchart",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "WebGL shader background",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 4544,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/02-home-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png",
+     "caption": "Full page. A WebGL shader (slow green/blue plasma with a golden-spiral swirl) now runs behind every section. Footer Cycle 8.",
+     "changes": [
+      "WebGL shader background (local script, still frame for reduced motion) (sticky: Try somethign cool using WebGL shaders in the background. \u00b7 anonymous)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "Vintage photos for George + Dinah",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 5055,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-dinosaur/02-dinosaur-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-dinosaur/01-dinosaur.png",
+     "caption": "Full page. George the T. Rex (#7) and Dinah / Dine-A-Ville Motel (#8) now use the vintage photos left on the board. Footer Cycle 8.",
+     "changes": [
+      "#7 George: drawing replaced with the vintage postcard photo (sticky: Use this image for George the T. Rex instead of the svg drawing \u00b7 anonymous)",
+      "#8 Dinah: vintage Dine-A-Ville Motel sign photo (sticky: Use this vintage photo for the Dinaville motel. \u00b7 anonymous)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "Newest fact first",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 3081,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-random/02-random-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-random/01-random.png",
+     "caption": "Full page. Entries now run newest first: Spiral Jetty (C7), McLuhan (C4), wombat cubes and meter (C2), socks (C1). Footer Cycle 8.",
+     "changes": [
+      "Order changed so the most recent fact is first (sticky: Change the order, so most recent fact is first. \u00b7 anonymous)"
+     ]
+    }
+   ]
+  }
+ ]
+}

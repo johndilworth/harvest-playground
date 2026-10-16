@@ -6,9 +6,9 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 7**) |
-| **Add a sticky** | [Cycle 7 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/1a4448c3-5153-4cc9-913f-459468cad2bd/edit?invitationId=inv_51a8592d-15ef-47fd-a8f8-046ed68b9f52) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 7 tile added 2026-10-14) |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 8**) |
+| **Add a sticky** | [Cycle 8 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/d0c055a3-adba-4f7d-9ade-84534dc3e5e7/edit?invitationId=inv_23e61252-e2f3-4e7e-b91a-1eaf698663b9) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 8 tile added 2026-10-16) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 
@@ -27,6 +27,7 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 4 boar
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Fri 2026-10-16 | Cycle 7 board (nightly) | 4 | 4 | 0 | **Cycle 8 shipped** — WebGL shader background on Home, vintage photos for George + Dinah / Dine-A-Ville Motel, Random newest fact first · authors: anonymous 4 | [Cycle 8](https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png) |
 | Thu 2026-10-15 | Cycle 7 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 7 | [Cycle 7](https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png) |
 | Wed 2026-10-14 | Cycle 6 board (nightly) | 3 | 3 | 0 | **Cycle 7 shipped** — Turkey 2026 sabbatical feature, Vernal George + Dinah dinos, Spiral Jetty on Random · authors: anonymous 3 | [Cycle 7](https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png) |
 | Tue 2026-10-13 | Cycle 5 board (nightly) | 1 | 1 | 0 | **Cycle 6 shipped** — SPIRAL.φ gallery opens on Leonardo’s Lady with an Ermine (Mona Lisa now slide 2) · authors: anonymous 1 | [Cycle 6](https://harvest-dashboard.netlify.app/captures/harvest-playground/c6-home/01-home.png) |
@@ -44,10 +45,20 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 4 boar
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 8 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7) · 14 nightly harvests · 46 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 7 remains current after the **5pm MT quiet-night harvest** on Thu 2026-10-15 (0 stickies).
+**Totals so far:** 9 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8) · 15 nightly harvests · 50 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 8 created by the **5pm MT nightly harvest** on Fri 2026-10-16.
 
 ## Day by day
+
+### Fri 2026-10-16 — Cycle 7 harvest · **Cycle 8 shipped** · nightly
+- **Harvested:** Cycle 7 review board (Home · Dino Town · Totally Random) at ~5:02 pm MT — **4 stickies, 0 comment threads**
+- **Applied:** 4 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Malicious/illegal/offensive:** none
+- **Contributors:** anonymous × 4 (no Lucid author lines on the stickies)
+- **Cycle 8 created:** yes — WebGL shader background on Home (local script); George the T. Rex and Dinah / Dine-A-Ville Motel use the two vintage photos attached on the board; RANDOM.LOG lists the newest fact first
+- **Commit:** `54eaa91` on `main` (pushed directly; no PR) · preview https://6ad2adae43409751d6f40f42--harvest-playground.netlify.app
+- **Live:** https://harvest-playground.netlify.app (Cycle 8)
+- **Board:** [review (Lucidchart)](https://lucid.app/lucidchart/d0c055a3-adba-4f7d-9ade-84534dc3e5e7/edit)
+- **Record:** `journey/cycles/7/harvest-2026-10-16.json`
 
 ### Thu 2026-10-15 — Cycle 7 harvest · no stickies · nightly
 - **Harvested:** Cycle 7 review board (Home · Dino Town · Totally Random) at ~5:07 pm MT — **0 stickies, 0 comment threads**

@@ -24,7 +24,7 @@
     "editUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
     "role": "history",
     "harvest": false,
-    "updatedInPlace": "2026-10-14 nightly: added Cycle 7 tile (frame cgnDNuxayzyS at x32640, shot hgnDYNu1uOJQ, caption hgnDxfVn1ibH); Cycle 6 frame no longer says live now; title totals 8 cycles / 46 applied / 1 skipped / 13 nightly harvests"
+    "updatedInPlace": "2026-10-16 nightly: added Cycle 8 tile (frame AX0DTWDSrcM3 at x35360, shot CY0DlhifNgQa, caption AX0DO7yEKrBj); Cycle 7 frame no longer says live now; title totals 9 cycles / 50 applied / 1 skipped / 15 nightly harvests"
   },
   "boards": [
     {
@@ -87,6 +87,11 @@
       "date": "2026-10-15",
       "stickies": 0,
       "outcome": "no_stickies"
+    },
+    {
+      "date": "2026-10-16",
+      "stickies": 4,
+      "outcome": "applied"
     }
   ]
 }

@@ -11,11 +11,11 @@ MODE = sys.argv[3] if len(sys.argv) > 3 else "review"   # "review" (all pages) o
 PAD, GAP, HGAP, FW = 400, 360, 480, 1440
 SITE = "https://harvest-dashboard.netlify.app"; CAP = f"{SITE}/captures/harvest-dashboard/c{N}-{MODE}"
 LOCAL = f"../public/captures/harvest-dashboard/c{N}-{MODE}"
-SCREENS = [("01-home", "/", "Home — all Harvest projects", "H1 is All projects (matches top nav). Wider grid (up to 5 tiles). Project cards: name, harvest mode, sparkline, cycle count, current cycle, last harvest, screenshot."),
- ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard (Harvest Playground)", "Top header is brand Harvest + All projects + Harvest rules only (no project name). Project title row: h1 left, subnav (Dashboard / Summary / Live site) right — History removed."),
+SCREENS = [("01-home", "/", "Home — all Harvest projects", "Dark mode by default; sun/moon toggle in the top-right of the header. Project cards: name + harvest mode, 'N cycles / date', tightened sparkline, screenshot."),
+ ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard (Harvest Playground)", "Compact contributions chart (no card, padding or labels; bars touch, newest left; hover for date + key). Cycle cards as a left-anchored stack, newest on top."),
  ("03-cycle", f"/p/harvest-dashboard/cycle.html?c={N}", f"Cycle page (Harvest Dashboard · Cycle {N})", "Title is [Project name] · Cycle N with project name linking to the project dashboard; subnav on the title row. Lucid documents with Open board to comment; Manual harvests with Run harvest now."),
- ("04-run-harvest-modal", f"/p/harvest-dashboard/cycle.html?c={N}", "Run harvest modal", "Passphrase only (no Type RUN); posts project 'harvest-dashboard' to the harvest webhook."),
- ("05-summary", "/p/harvest-playground/summary.html", "Summary (all cycles of a project)", "Title is [Project name] · Summary (breadcrumb). Subnav (Dashboard / Summary / Live site) sits to the right of the title — shared title-row component, no History.")]
+ ("04-run-harvest-modal", f"/p/harvest-dashboard/cycle.html?c={N}", "Run harvest modal", "Passphrase only; posts project 'harvest-dashboard' to the harvest webhook (dark mode)."),
+ ("05-summary", "/p/harvest-playground/summary.html", "Summary (all cycles of a project)", "Title is [Project name] · Summary (breadcrumb). Each cycle row now has its screenshot (same image as the cycle cards).")]
 if MODE == "meetings":
     import json as _j
     _m = _j.load(open("../public/data/meeting-team-meeting.json"))["currentMeetingId"]
@@ -26,8 +26,9 @@ def text(i, x, y, w, h, t): return {"id": i, "type": "text", "boundingBox": {"x"
 shots = []
 for k, route, title, cap in SCREENS:
     w, h = Image.open(f"{LOCAL}/{k}.png").size; shots.append((k, route, title, cap, round(h * FW / w)))
-CHANGES = {"01-home": "Sparklines now run newest cycle first (left).", "02-project-dashboard": "Chart title and key removed (tooltip shows the key); bars newest cycle on the left; cycle cards are a dynamic stack (current in front, fans out on hover).",
- "03-cycle": "No change.", "04-run-harvest-modal": "No change.", "05-summary": "No change."}
+CHANGES = {"01-home": "Dark mode (default) + header toggle; cards show 'N cycles / date' (no 'current Cycle x' or 'last harvest' label); tighter sparklines with brighter colours.",
+ "02-project-dashboard": "Contributions chart made compact: no card, padding, margins or C-labels; bars side by side with no gaps.",
+ "03-cycle": "Dark mode + header toggle.", "04-run-harvest-modal": "Dark mode.", "05-summary": "Screenshot column added (same image as the cycle cards)."}
 PREV = f"{SITE}/captures/harvest-dashboard/c{N-1}-review" if N > 1 and MODE == "review" else None
 BOARD = "All pages" if MODE == "review" else "Meetings"
 BW, BH = 720, 512

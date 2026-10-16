@@ -92,6 +92,35 @@ priority (red = must, yellow = try, blue = consider). Authors from Lucid sticky 
 Commit `b07b10d` · preview https://6acd6b3d4cad2bdcce665143--harvest-playground.netlify.app · Cycle 5 board: [review (Lucidchart)](https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit) · no PR (fast-forward merge)
 Record: `journey/cycles/4/feedback-2026-10-12.json` + `journey/cycles/4/harvest-2026-10-12.json` · raw board fetch in `journey/out/c4/raw/` (gitignored).
 
+## Harvest Dashboard · Cycle 4 (2026-10-15) · manual harvest
+Manual harvest triggered from the Harvest Dashboard webhook at ~11:46 PM MT (payload `action:harvest` / `project:harvest-dashboard` /
+`requestedAt:2026-10-16T05:46:17.929Z`). Harvested Cycle 3 boards: All pages `3d838c49-…` + Meetings `2d87c927-…` + New project `333ebbdc-…` —
+**6 stickies, 0 comment threads** (all on the All pages board: 4 on Home, 1 on the project dashboard, 1 on Summary; 0 on Meetings / New project), all safe.
+Every sticky carried a Lucid attribution line → **John Dilworth**. Three reference images were connected to stickies (light + dark home-card mockups, dark compact chart); saved in `dashboard/board/c3/raw/ref/`.
+
+### Applied (6)
+- **must** · 01-home · Add a dark mode option to site and set dark mode as default. → site-wide theme (CSS variables), dark by default (`theme.js`, stored in localStorage only). · by John Dilworth
+- **must** · 02-project-dashboard · Make the dashboard more compact. Remove padding margin and labels. Use the connected image as an example of output. → contributions chart has no card, padding, margins or C-labels; 32 px bars touch (no gaps), 96 px tall; hover tooltip + click still work. · by John Dilworth
+- **must** · 05-summary · Add screenshot to summary table, use same screenshot that's on the cards for each cycle. → new Screenshot column (96 px square, object-fit cover, links to the cycle). · by John Dilworth
+- **try** · 01-home · Remove label "last harvest" and keep only the date — cards should look like attached images (one light and one dark mode). → cards: name + mode badge, "N cycles / date", sparkline, screenshot. · by John Dilworth
+- **try** · 01-home · Icon in upper right corner can be used to toggle dark mode on and off. → sun/moon icon button at the right end of the top header on every page (incl. New project and Rules). · by John Dilworth
+- **try** · 01-home · Remove "current: Cycle x" from cards … Use updated sparkline bar chart with tightened space and design. → "current Cycle x" removed; sparkline bars touch, no baseline; colours from the reference (#e40024 / #edad00 / #0071e5), also on the project chart. · by John Dilworth
+
+### Skipped (0)
+- none. No malicious, illegal or offensive stickies. (Judgement call: the Nightly/Manual badge was kept on home cards — no sticky asked to remove it, though the mockups omit it.)
+
+### Conflicts
+- none
+
+### Board feedback (purple / Board:)
+- none
+
+### Authors
+- John Dilworth — 6
+
+Commit `7391594` · preview https://6ad1bbbbf54a13a5a963703f--harvest-dashboard.netlify.app · Cycle 4 boards: [All pages](https://lucid.app/lucidchart/d0d31d0c-39b4-4e1a-996c-067c53ffe8ab/edit) · [Meetings](https://lucid.app/lucidchart/310fd895-b478-4f22-b133-ca891f81fac8/edit) · [New project](https://lucid.app/lucidchart/07412c8b-c70e-4607-ba48-05aa3f00de06/edit)
+Record: `dashboard/board/c3/feedback-review.json` (+ `feedback-meetings.json`, `feedback-new-project.json`) · raw board fetch in `dashboard/board/c3/raw/`.
+
 ## Harvest Dashboard · Cycle 3 (2026-10-14) · manual harvest
 Manual harvest triggered from the Harvest Dashboard webhook at ~12:05 AM MT (payload `action:harvest` / `project:harvest-dashboard` /
 `requestedAt:2026-10-14T06:04:50Z`). Harvested Cycle 2 boards: review `f04918ba-…` + New project `5ef85601-…` —

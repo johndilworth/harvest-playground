@@ -16,9 +16,9 @@
     "pullRequests": 0,
     "pullRequestsSource": "commits go straight to main (no PRs)",
     "nightlyHarvests": 0,
-    "manualHarvests": 3
+    "manualHarvests": 4
   },
-  "updatedAt": "2026-10-14T00:09:01-06:00",
+  "updatedAt": "2026-10-15T23:57:15-06:00",
   "cycles": [
     {
       "number": 0,
@@ -309,7 +309,7 @@
       "number": 3,
       "title": "Cycle 3 — cleaner contributions chart (newest first), cycle cards as a dynamic stack, plain-language flows, meeting pages on the board",
       "createdAt": "2026-10-14T00:09:01-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 2,
       "pullRequest": null,
       "commit": "efc74a6",
@@ -347,9 +347,21 @@
           "harvest": true
         }
       ],
-      "authors": [],
+      "authors": [
+        {
+          "name": "John Dilworth",
+          "stickies": 6
+        }
+      ],
       "nightlyHarvests": [],
-      "manualHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-15",
+          "stickies": 6,
+          "outcome": "applied",
+          "note": "Manual harvest (webhook, Run harvest now, requested 11:46 PM MT); started Cycle 4"
+        }
+      ],
       "changes": {
         "applied": [
           {
@@ -392,6 +404,107 @@
         "yellow": 2,
         "blue": 0,
         "purple": 1
+      }
+    },
+    {
+      "number": 4,
+      "title": "Cycle 4 — dark mode by default with a header toggle, simpler home cards with tighter sparklines, compact contributions chart, screenshots in the summary table",
+      "createdAt": "2026-10-15T23:52:50-06:00",
+      "status": "current",
+      "harvestedFrom": 3,
+      "pullRequest": null,
+      "commit": "7391594",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c4-review/01-home.png",
+      "previewUrl": "https://6ad1bbbbf54a13a5a963703f--harvest-dashboard.netlify.app",
+      "documents": [
+        {
+          "title": "Cycle 4 review · All pages",
+          "role": "flow",
+          "flow": "review",
+          "docId": "d0d31d0c-39b4-4e1a-996c-067c53ffe8ab",
+          "url": "https://lucid.app/lucidchart/d0d31d0c-39b4-4e1a-996c-067c53ffe8ab/edit",
+          "commentUrl": "https://lucid.app/lucidchart/d0d31d0c-39b4-4e1a-996c-067c53ffe8ab/edit?invitationId=inv_a22373f6-1a71-4887-b8ef-cba426ed8dc2",
+          "description": "5 screens: home, project dashboard, cycle page, Run harvest modal, summary (all in dark mode).",
+          "harvest": true
+        },
+        {
+          "title": "Cycle 4 review · Meetings",
+          "role": "flow",
+          "flow": "meetings",
+          "docId": "310fd895-b478-4f22-b133-ca891f81fac8",
+          "url": "https://lucid.app/lucidchart/310fd895-b478-4f22-b133-ca891f81fac8/edit",
+          "commentUrl": "https://lucid.app/lucidchart/310fd895-b478-4f22-b133-ca891f81fac8/edit?invitationId=inv_e0575cdb-a25c-4ea9-94f2-8e0b4120b660",
+          "description": "2 screens: Team Meeting series page and the current meeting page.",
+          "harvest": true
+        },
+        {
+          "title": "Harvest Dashboard — Cycle 4 — New project",
+          "role": "flow",
+          "flow": "New project",
+          "docId": "07412c8b-c70e-4607-ba48-05aa3f00de06",
+          "url": "https://lucid.app/lucidchart/07412c8b-c70e-4607-ba48-05aa3f00de06/edit",
+          "commentUrl": "https://lucid.app/lucidchart/07412c8b-c70e-4607-ba48-05aa3f00de06/edit?invitationId=inv_d69656e3-0287-4eba-b24d-82ed5daed6d0",
+          "description": "6 screens: home + New project, empty form, filled, validation, confirm modal, wrong passphrase.",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "nightlyHarvests": [],
+      "manualHarvests": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "review",
+            "text": "All pages: dark mode added and set as the default (light mode still available).",
+            "author": "John Dilworth",
+            "sticky": "Add a dark mode option to site and set dark mode as default."
+          },
+          {
+            "priority": "must",
+            "flow": "review",
+            "text": "Project dashboard: contributions chart made compact like the attached example: no card, padding, margins or C-labels; bars sit side by side with no gaps (hover still shows date + key, click opens the cycle).",
+            "author": "John Dilworth",
+            "sticky": "Make the dashboard more compact. Remove padding margin and and labels. Use the connected image as an example of output. (Dark mode example shown)"
+          },
+          {
+            "priority": "must",
+            "flow": "review",
+            "text": "Summary: each cycle row now shows its screenshot (the same image as the cycle cards; square thumbnail linking to the cycle).",
+            "author": "John Dilworth",
+            "sticky": "Add screenshot to summary table, use same screenshot that's on the cards for each cycle."
+          },
+          {
+            "priority": "try",
+            "flow": "review",
+            "text": "Home: the 'last harvest' label is gone, only the date stays, and project cards follow the attached light/dark examples: name, 'N cycles / date', sparkline, screenshot.",
+            "author": "John Dilworth",
+            "sticky": "Remove label \"last harvest\" and keep only the date - cards should look like attached images (one light and one darkmode)"
+          },
+          {
+            "priority": "try",
+            "flow": "review",
+            "text": "All pages: an icon button in the top-right corner of the header switches dark mode on and off (sun/moon; the choice is remembered in this browser).",
+            "author": "John Dilworth",
+            "sticky": "icon in upper right corner can be used to toggle dark mode on and off"
+          },
+          {
+            "priority": "try",
+            "flow": "review",
+            "text": "Home: 'current Cycle x' removed from the project cards (the cycle count already says it); sparklines tightened (bars touch, no baseline) with the brighter red/amber/blue from the example, also used on the project chart.",
+            "author": "John Dilworth",
+            "sticky": "Remove \"current: Cycle x\" from cards, as there's already text that says 7 cycles, and that number will always be the current. Use updated sparkline bar chart with tightened space and design."
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "6 stickies by John Dilworth harvested from the Cycle 3 review board (3 red, 3 yellow; 4 on Home, 1 on the project dashboard, 1 on Summary; 3 attached reference images). 0 on the Meetings and New project boards, 0 comment threads, no board feedback. All safe, none skipped. The Nightly/Manual badge stays on the home cards (no sticky asked to remove it)."
+      },
+      "contributions": {
+        "red": 3,
+        "yellow": 3,
+        "blue": 0,
+        "purple": 0
       }
     }
   ]

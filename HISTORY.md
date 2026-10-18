@@ -27,6 +27,7 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 4 boar
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Sun 2026-10-18 | Cycle 8 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 8 | [Cycle 8](https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png) |
 | Sat 2026-10-17 | Cycle 8 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 8 | [Cycle 8](https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png) |
 | Fri 2026-10-16 | Cycle 7 board (nightly) | 4 | 4 | 0 | **Cycle 8 shipped** — WebGL shader background on Home, vintage photos for George + Dinah / Dine-A-Ville Motel, Random newest fact first · authors: anonymous 4 | [Cycle 8](https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png) |
 | Thu 2026-10-15 | Cycle 7 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 7 | [Cycle 7](https://harvest-dashboard.netlify.app/captures/harvest-playground/c7-home/01-home.png) |
@@ -46,10 +47,19 @@ Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 4 boar
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 9 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8) · 16 nightly harvests · 50 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 8 remains current after the **5pm MT quiet-night harvest** on Sat 2026-10-17 (0 stickies).
+**Totals so far:** 9 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8) · 17 nightly harvests · 50 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 8 remains current after the **5pm MT quiet-night harvest** on Sun 2026-10-18 (0 stickies).
 
 ## Day by day
+
+### Sun 2026-10-18 — Cycle 8 harvest · no stickies · nightly
+- **Harvested:** Cycle 8 review board (Home · Dino Town · Totally Random) at ~5:08 pm MT — **0 stickies, 0 comment threads**
+- **Applied:** 0 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Hub stray stickies:** 0
+- **Contributors:** none
+- **Cycle 9 created:** no (nothing to apply, per HARVEST.md). The Cycle 8 board stays open for stickies.
+- **Live:** https://harvest-playground.netlify.app (Cycle 8)
+- **Screenshot (unchanged):** https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png
+- **Record:** `journey/cycles/8/harvest-2026-10-18.json`
 
 ### Sat 2026-10-17 — Cycle 8 harvest · no stickies · nightly
 - **Harvested:** Cycle 8 review board (Home · Dino Town · Totally Random) at ~5:07 pm MT — **0 stickies, 0 comment threads**

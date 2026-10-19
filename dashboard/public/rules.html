@@ -80,7 +80,7 @@ new project). Project-specific procedures (paths, page structure, routines) live
   "Cycle N-1 (before) · reference only" 720×512 thumbnail, or a plain "New this cycle" line. No boxes/fills around text.</li>
 <li><strong>Legend</strong> at the top: how to review, swatches Red = Do / Must do, Yellow = Try, Blue = Consider, Purple = Board
   format, "a start-of-text keyword wins over colour", and "Stickies show your name — stay signed in".</li>
-<li>Title: <code>&lt;product&gt; — Cycle N review (PR #x) · &lt;Section or Flow&gt;</code>; export every board to PNG to verify images render.</li>
+<li>Title: <code>[Project name]:[flow]:C[n]</code> (see § Lucid naming and folders), created in the project's Lucid folder; export every board to PNG to verify images render.</li>
 <li>Record every board (docId, URL, flows, frames, spec file, render check) in the cycle's <code>lucid-doc.json</code> (<code>boards[]</code>).</li>
 <li>No secrets (e.g. prototype passwords) on boards; no filenames in image notes.</li>
 </ul>
@@ -174,6 +174,22 @@ validates it and posts <code>{action:"create-project", project, setup:{…}}</co
 <li>Every harvest that creates a new cycle marks the old one archived (<code>superseded</code>), appends the new one as <code>current</code>, writes
   <code>contributions</code>, <code>authors</code> and the run entry, bumps stats and <code>updatedAt</code>. No <code>hub</code> document role.</li>
 <li>Pages: <code>/</code> all projects, <code>/p/&lt;slug&gt;/</code> project, <code>/p/&lt;slug&gt;/cycle.html?c=N</code> cycle, <code>/p/&lt;slug&gt;/summary.html</code>, <code>/new.html</code>, <code>/rules.html</code>.</li>
+</ul>
+<h2 id="lucid-naming-and-folders-from-2026-10-19">Lucid naming and folders (from 2026-10-19)</h2>
+<ul>
+<li><strong>Board title:</strong> <code>[Project name]:[flow]:C[n]</code>, with the project name as shown on the dashboard (Design Loop, Harvest Site,
+  Harvest Dashboard, Harvest Playground). Examples: <code>Harvest Playground:All pages:C8</code>, <code>Harvest Dashboard:New project:C4</code>,
+  <code>Harvest Dashboard:Meetings:C4</code>. The history board is <code>[Project name]:History</code>. A replaced duplicate is prefixed <code>[superseded]</code>.
+  Meeting boards are not project cycles and keep <code>&lt;Series&gt; &lt;Mon D, YYYY&gt;</code> (e.g. <code>Team Meeting Oct 27, 2026</code>).</li>
+<li><strong>Folders:</strong> <code>Harvest/</code> (id 452808961) → one folder per project (ids in <code>dashboard/public/data/projects.json</code>
+  <code>projects[].lucidFolderId</code> and each project file's <code>project.lucidFolder</code>). The <strong>current</strong> cycle's docs and the History
+  board sit directly in the project folder. Each archived cycle's docs sit in a subfolder <code>C[n]</code> of the project folder
+  (siblings, not nested). Meetings: <code>Harvest/Meetings/Team Meeting</code> holds the current meeting; archived meetings go into a
+  subfolder named by date (<code>Oct 13, 2026</code>); the template lives in <code>Harvest/Meetings/Templates</code>.</li>
+<li><strong>New cycle:</strong> create each new board with the new title, then <code>lucid_update_document(parent=&lt;project folder id&gt;)</code>.
+  <strong>Archiving the previous cycle:</strong> <code>lucid_create_folder(name="C&lt;n&gt;", parent=&lt;project folder id&gt;)</code>, move every doc of that
+  cycle into it with <code>lucid_update_document(parent=...)</code>, and record the id in <code>project.lucidFolder.cycleFolders</code> and the
+  cycle's <code>lucidFolderId</code>. Never edit board content to move it.</li>
 </ul>
 <h2 id="code">Code</h2><div class="card"><ul>
 <li><a href="https://github.com/johndilworth/harvest-playground/tree/main/dashboard">Dashboard code</a> (<code>dashboard/</code>)</li>

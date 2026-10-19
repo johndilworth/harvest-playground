@@ -10,7 +10,18 @@
     "site": "https://harvest-dashboard.netlify.app",
     "historyBoard": null,
     "schedule": "manual (Run harvest now on the current cycle page; no nightly routine)",
-    "rules": "https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md#harvest-dashboard-project-manual"
+    "rules": "https://github.com/johndilworth/harvest-playground/blob/main/HARVEST.md#harvest-dashboard-project-manual",
+    "lucidFolder": {
+      "id": 452808970,
+      "url": "https://lucid.app/documents#/documents?folder_id=452808970",
+      "parentId": 452808961,
+      "cycleFolders": {
+        "C0": 452809002,
+        "C1": 452809004,
+        "C2": 452809005,
+        "C3": 452809009
+      }
+    }
   },
   "stats": {
     "pullRequests": 0,
@@ -31,7 +42,7 @@
       "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c0-review/01-home.png",
       "documents": [
         {
-          "title": "Cycle 0 review · All pages",
+          "title": "Harvest Dashboard:All pages:C0",
           "role": "flow",
           "flow": "review",
           "docId": "6337bd96-737f-4d11-8030-10b15474e71c",
@@ -41,7 +52,7 @@
           "commentUrl": "https://lucid.app/lucidchart/6337bd96-737f-4d11-8030-10b15474e71c/edit?invitationId=inv_03838dcf-411d-4d0b-a001-22e0bf3512d4"
         },
         {
-          "title": "Harvest Dashboard — Cycle 0 — New project",
+          "title": "Harvest Dashboard:New project:C0",
           "role": "flow",
           "flow": "New project",
           "docId": "ea0758f2-6453-444d-8e7d-7c296a92fd0b",
@@ -82,7 +93,8 @@
         "blue": 0,
         "purple": 0
       },
-      "previewUrl": "https://6acd329cc14d4df7244284f9--harvest-dashboard.netlify.app"
+      "previewUrl": "https://6acd329cc14d4df7244284f9--harvest-dashboard.netlify.app",
+      "lucidFolderId": 452809002
     },
     {
       "number": 1,
@@ -96,7 +108,7 @@
       "previewUrl": "https://6acd50670401fb3f6f1deffe--harvest-dashboard.netlify.app",
       "documents": [
         {
-          "title": "Cycle 1 review · All pages",
+          "title": "Harvest Dashboard:All pages:C1",
           "role": "flow",
           "flow": "review",
           "docId": "090db6e7-d945-43da-9eff-7d8181ab8f69",
@@ -106,7 +118,7 @@
           "commentUrl": "https://lucid.app/lucidchart/090db6e7-d945-43da-9eff-7d8181ab8f69/edit?invitationId=inv_3081e3e2-6a61-45cb-a0cc-06a0f4fabf89"
         },
         {
-          "title": "Harvest Dashboard — Cycle 1 — New project",
+          "title": "Harvest Dashboard:New project:C1",
           "role": "flow",
           "flow": "New project",
           "docId": "074fcea1-0c98-4909-9ae1-743624362fe9",
@@ -206,7 +218,8 @@
         "yellow": 9,
         "blue": 0,
         "purple": 0
-      }
+      },
+      "lucidFolderId": 452809004
     },
     {
       "number": 2,
@@ -220,7 +233,7 @@
       "previewUrl": "https://6acd62d917ce9618cbc3ec9a--harvest-dashboard.netlify.app",
       "documents": [
         {
-          "title": "Cycle 2 review · All pages",
+          "title": "Harvest Dashboard:All pages:C2",
           "role": "flow",
           "flow": "review",
           "docId": "f04918ba-aee0-49b0-bb31-0a3c796b79d7",
@@ -230,7 +243,7 @@
           "harvest": true
         },
         {
-          "title": "Harvest Dashboard — Cycle 2 — New project",
+          "title": "Harvest Dashboard:New project:C2",
           "role": "flow",
           "flow": "New project",
           "docId": "5ef85601-978c-4810-9cd3-f52ec629ca8e",
@@ -303,7 +316,8 @@
         "yellow": 4,
         "blue": 0,
         "purple": 0
-      }
+      },
+      "lucidFolderId": 452809005
     },
     {
       "number": 3,
@@ -317,7 +331,7 @@
       "previewUrl": "https://6acf1c5f8c92b5e45de94be8--harvest-dashboard.netlify.app",
       "documents": [
         {
-          "title": "Cycle 3 review · All pages",
+          "title": "Harvest Dashboard:All pages:C3",
           "role": "flow",
           "flow": "review",
           "docId": "3d838c49-6b8c-4a2f-848b-b3e8ddf7a5a7",
@@ -327,7 +341,7 @@
           "harvest": true
         },
         {
-          "title": "Cycle 3 review · Meetings",
+          "title": "Harvest Dashboard:Meetings:C3",
           "role": "flow",
           "flow": "meetings",
           "docId": "2d87c927-c36d-4b79-8e57-3d2cb5e06cf3",
@@ -337,7 +351,7 @@
           "harvest": true
         },
         {
-          "title": "Harvest Dashboard — Cycle 3 — New project",
+          "title": "Harvest Dashboard:New project:C3",
           "role": "flow",
           "flow": "New project",
           "docId": "333ebbdc-2de2-47bf-a02b-1b7c9167e870",
@@ -404,7 +418,8 @@
         "yellow": 2,
         "blue": 0,
         "purple": 1
-      }
+      },
+      "lucidFolderId": 452809009
     },
     {
       "number": 4,
@@ -418,7 +433,7 @@
       "previewUrl": "https://6ad1bbbbf54a13a5a963703f--harvest-dashboard.netlify.app",
       "documents": [
         {
-          "title": "Cycle 4 review · All pages",
+          "title": "Harvest Dashboard:All pages:C4",
           "role": "flow",
           "flow": "review",
           "docId": "d0d31d0c-39b4-4e1a-996c-067c53ffe8ab",
@@ -428,7 +443,7 @@
           "harvest": true
         },
         {
-          "title": "Cycle 4 review · Meetings",
+          "title": "Harvest Dashboard:Meetings:C4",
           "role": "flow",
           "flow": "meetings",
           "docId": "310fd895-b478-4f22-b133-ca891f81fac8",
@@ -438,7 +453,7 @@
           "harvest": true
         },
         {
-          "title": "Harvest Dashboard — Cycle 4 — New project",
+          "title": "Harvest Dashboard:New project:C4",
           "role": "flow",
           "flow": "New project",
           "docId": "07412c8b-c70e-4607-ba48-05aa3f00de06",
@@ -505,7 +520,8 @@
         "yellow": 3,
         "blue": 0,
         "purple": 0
-      }
+      },
+      "lucidFolderId": 452808970
     }
   ]
 }

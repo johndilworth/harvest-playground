@@ -34,7 +34,7 @@ BOARD = "All pages" if MODE == "review" else "Meetings"
 BW, BH = 720, 512
 FH = PAD + max(s[4] for s in shots) + GAP + 260 + (120 + BH + 80 if PREV else 0) + PAD
 W = len(shots) * (FW + 2 * PAD) + (len(shots) - 1) * HGAP
-sh = [text("doc-title", 0, -900, W, 240, f"<p style='font-size:40pt;text-align:left'><b>Harvest Dashboard — Cycle {N} review · {BOARD}</b><br>"
+sh = [text("doc-title", 0, -900, W, 240, f"<p style='font-size:40pt;text-align:left'><b>Harvest Dashboard:{BOARD}:C{N}</b><br>"
            f"<span style='font-size:20pt'>{len(shots)} screens, left → right · Desktop 1440 wide (full page) · commit {COMMIT[:7]} · "
            f"<a href=\"{SITE}\">{SITE}</a> · harvested manually (no nightly routine)</span></p>"),
       text("legend-box", 0, -600, 2600, 440, "<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE a grey frame "

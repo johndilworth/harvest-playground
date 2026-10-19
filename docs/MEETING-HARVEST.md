@@ -53,7 +53,8 @@ stickiesRead, harvestedAt (ISO with -06:00/-07:00), status: "harvested" (UI tag:
 
 ## 4. Create the next meeting board
 1. **Date:** use the date provided in the payload if there is one. Otherwise use the next date on the series cadence. For manual or test harvests, today+7 is acceptable.
-2. **Title (Lucid document + data `title`):** `<series name> <Mon D, YYYY>` — e.g. `Team Meeting Oct 27, 2026` (no zero-padded day). Dashboard stack tiles show the series name only; the date is on the card separately.
+2. **Folder:** the new board goes in `Harvest/Meetings/Team Meeting` (id in `meeting-team-meeting.json` `series.lucidFolder.id`). When a meeting is harvested and replaced, create a subfolder named by its date (`Oct 27, 2026`) inside that folder, move the old board there with `lucid_update_document(parent=...)`, and record the id in `series.lucidFolder.archiveFolders`. The template stays in `Harvest/Meetings/Templates`.
+2b. **Title (Lucid document + data `title`):** `<series name> <Mon D, YYYY>` — e.g. `Team Meeting Oct 27, 2026` (no zero-padded day). Dashboard stack tiles show the series name only; the date is on the card separately.
 3. **New document:** call `lucid_create_diagram_from_specification` (lucidchart, `use_assisted_layout:false`) with a single placeholder rectangle with id `tmp`.
 4. **Structure:** load `dynamicmatrix` and run `dashboard/meeting/build_board.py` → `js(title, attendeeHandles, {"main":{}}, [])`. This draws the 7 template frames, the header, the Good/Bad sub-frames and the attendee table rows. Then delete `tmp`.
 5. **Carry-forward:** load `lucidcards` and run a `carry-cards.example.js`-style script. It adds to From last time:

@@ -247,3 +247,19 @@ The setup run must:
 9. **Schedule** — Manual: nothing more. Nightly: a routine must be created to run the harvest at the chosen time (MT), weekdays only unless weekends is on.
 10. **Merge policy** — store it; harvests then either auto-apply & merge safe items or open a PR for approval.
 11. **Notify** — send the result (links to dashboard, site, boards) to John in Grok Bot chat.
+
+## Lucid naming and folders (from 2026-10-19)
+
+- **Board title:** `[Project name]:[flow]:C[n]`, with the project name as shown on the dashboard (Design Loop, Harvest Site,
+  Harvest Dashboard, Harvest Playground). Examples: `Harvest Playground:All pages:C8`, `Harvest Dashboard:New project:C4`,
+  `Harvest Dashboard:Meetings:C4`. The history board is `[Project name]:History`. A replaced duplicate is prefixed `[superseded] `.
+  Meeting boards are not project cycles and keep `<Series> <Mon D, YYYY>` (e.g. `Team Meeting Oct 27, 2026`).
+- **Folders:** `Harvest/` (id 452808961) → one folder per project (ids in `dashboard/public/data/projects.json`
+  `projects[].lucidFolderId` and each project file's `project.lucidFolder`). The **current** cycle's docs and the History
+  board sit directly in the project folder. Each archived cycle's docs sit in a subfolder `C[n]` of the project folder
+  (siblings, not nested). Meetings: `Harvest/Meetings/Team Meeting` holds the current meeting; archived meetings go into a
+  subfolder named by date (`Oct 13, 2026`); the template lives in `Harvest/Meetings/Templates`.
+- **New cycle:** create each new board with the new title, then `lucid_update_document(parent=<project folder id>)`.
+  **Archiving the previous cycle:** `lucid_create_folder(name="C<n>", parent=<project folder id>)`, move every doc of that
+  cycle into it with `lucid_update_document(parent=...)`, and record the id in `project.lucidFolder.cycleFolders` and the
+  cycle's `lucidFolderId`. Never edit board content to move it.

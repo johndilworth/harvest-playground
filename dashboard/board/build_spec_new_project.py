@@ -18,7 +18,7 @@ FW,PAD,GAP,CAPG,CAPH=2240,400,480,360,260
 hs=[Image.open(f"{D}/{s[0]}.png").size[1] for s in steps]
 FH=PAD+max(hs)+CAPG+CAPH+PAD
 W=len(steps)*FW+(len(steps)-1)*GAP
-title=f"Harvest Dashboard — Cycle {N} — New project"
+title=f"Harvest Dashboard:New project:C{N}"  # Lucid doc title convention [Project]:[flow]:C[n]
 sh=[{"id":"doc-title","type":"text","boundingBox":{"x":0,"y":-900,"w":W,"h":240},"text":f"<p style='font-size:40pt;text-align:left'><b>{title}</b><br><span style='font-size:20pt'>6 screens, left → right · Desktop 1440 wide · commit {COMMIT[:7]} · <a href=\"{B}/new.html\">{B}/new.html</a> · harvested manually</span></p>"},
  {"id":"legend-box","type":"text","boundingBox":{"x":0,"y":-600,"w":2600,"h":440},"text":"<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE a grey frame and write what you want changed on that screen of the New project flow. Harvests of this project are manual; safe requests are applied, committed and deployed. Start with <b>Do:</b> / <b>Must do</b>, <b>Try:</b> or <b>Consider:</b> to set priority (the words win over the colour); otherwise the colour counts. Purple = feedback about this board.<br><b>Stickies show your name — stay signed in.</b></p>"}]
 for i,(c,f,s,t) in enumerate([("red","#FF8A80","#C62828","<b>Red</b><br>Do / Must do"),("yellow","#FFE066","#9A7B00","<b>Yellow</b><br>Try"),("blue","#A3E4FF","#1565C0","<b>Blue</b><br>Consider"),("purple","#BA23F6","#7B1FA2","<b>Purple</b><br>Board feedback")]):

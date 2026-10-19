@@ -10,7 +10,18 @@
     "site": "https://design-loop-sample-prototype.netlify.app",
     "historyBoard": "https://lucid.app/lucidchart/01d8c4f0-95d2-4de7-b997-d9a83df20ccb/edit",
     "historyBoardLabel": "Evolution c1→c4 ↗",
-    "schedule": "manual (no nightly routine)"
+    "schedule": "manual (no nightly routine)",
+    "lucidFolder": {
+      "id": 452808976,
+      "url": "https://lucid.app/documents#/documents?folder_id=452808976",
+      "parentId": 452808961,
+      "cycleFolders": {
+        "C1": 452809015,
+        "C2": 452809018,
+        "C3": 452809022,
+        "C4": 452809023
+      }
+    }
   },
   "stats": {
     "pullRequests": 4,
@@ -32,7 +43,7 @@
       "previewUrl": "https://design-loop-sample-prototype.netlify.app",
       "documents": [
         {
-          "title": "Design loop — Cycle 1 review",
+          "title": "Design Loop:Review:C1",
           "role": "flow",
           "flow": "review",
           "docId": "9a9f5f0a-dfec-4dbb-8249-679a82bd0cb5",
@@ -64,7 +75,8 @@
         "yellow": 0,
         "blue": 0,
         "purple": 0
-      }
+      },
+      "lucidFolderId": 452809015
     },
     {
       "number": 2,
@@ -78,7 +90,7 @@
       "previewUrl": "https://deploy-preview-1--design-loop-sample-prototype.netlify.app",
       "documents": [
         {
-          "title": "Design loop — Cycle 2 review (PR #1)",
+          "title": "Design Loop:Review:C2",
           "role": "flow",
           "flow": "review",
           "docId": "d56b0edf-53e9-4933-a64b-a2be6c500d0d",
@@ -166,7 +178,8 @@
         "yellow": 6,
         "blue": 0,
         "purple": 0
-      }
+      },
+      "lucidFolderId": 452809018
     },
     {
       "number": 3,
@@ -180,7 +193,7 @@
       "previewUrl": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app",
       "documents": [
         {
-          "title": "Design loop — Cycle 3 review (PR #2)",
+          "title": "Design Loop:Review:C3",
           "role": "flow",
           "flow": "review",
           "docId": "934e442a-203d-441c-b216-e0340808aa6b",
@@ -253,7 +266,8 @@
         "yellow": 6,
         "blue": 0,
         "purple": 0
-      }
+      },
+      "lucidFolderId": 452809022
     },
     {
       "number": 4,
@@ -267,7 +281,7 @@
       "previewUrl": "https://deploy-preview-3--design-loop-sample-prototype.netlify.app",
       "documents": [
         {
-          "title": "Design loop — Cycle 4 review (PR #3, final)",
+          "title": "Design Loop:Review:C4",
           "role": "flow",
           "flow": "review",
           "docId": "c95ea620-f506-4499-9d67-dc821b143297",
@@ -365,7 +379,8 @@
         "yellow": 9,
         "blue": 0,
         "purple": 0
-      }
+      },
+      "lucidFolderId": 452809023
     },
     {
       "number": 5,
@@ -379,7 +394,7 @@
       "previewUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
       "documents": [
         {
-          "title": "Design loop — Cycle 5 review (PR #4) v2",
+          "title": "Design Loop:Review:C5",
           "role": "flow",
           "flow": "review",
           "docId": "89d26530-417e-44f0-ae5d-afa58a59fe83",
@@ -389,7 +404,7 @@
           "commentUrl": "https://lucid.app/lucidchart/89d26530-417e-44f0-ae5d-afa58a59fe83/edit?invitationId=inv_5e834a32-643e-444c-8069-e8d8f4c52bd5"
         },
         {
-          "title": "Design loop — Cycle 5 review (PR #4) v1",
+          "title": "Design Loop:Review v1:C5",
           "role": "flow",
           "flow": "review",
           "docId": "80e68a74-a706-4fe1-b22f-4dfc5c5eb215",
@@ -458,7 +473,8 @@
         "yellow": 4,
         "blue": 0,
         "purple": 0
-      }
+      },
+      "lucidFolderId": 452808976
     }
   ]
 }

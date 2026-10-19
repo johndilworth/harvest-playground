@@ -1,7 +1,7 @@
 {
   "docId": "d0c055a3-adba-4f7d-9ade-84534dc3e5e7",
   "cycle": 8,
-  "harvestedAt": "2026-10-18T23:08:40.759219+00:00",
+  "harvestedAt": "2026-10-19T23:11:15.275362+00:00",
   "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
   "frames": [
     {
@@ -10,14 +10,14 @@
       "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
       "stepKey": "01-home",
       "matchedBy": "frame-id",
-      "flow": null,
+      "flow": "home",
       "route": "/",
-      "url": null,
+      "url": "https://harvest-playground.netlify.app/",
       "title": null,
       "h1": null,
       "clicked": null,
-      "commit": null,
-      "screenshot": null,
+      "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8/02-home-full.png",
       "feedback": []
     },
     {
@@ -26,14 +26,14 @@
       "frameTitle": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
       "stepKey": "02-dinosaur",
       "matchedBy": "frame-id",
-      "flow": null,
+      "flow": "dinosaur",
       "route": "/dinosaur.html",
-      "url": null,
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
       "title": null,
       "h1": null,
       "clicked": null,
-      "commit": null,
-      "screenshot": null,
+      "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8/02-dinosaur-full.png",
       "feedback": []
     },
     {
@@ -42,14 +42,14 @@
       "frameTitle": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
       "stepKey": "03-random",
       "matchedBy": "frame-id",
-      "flow": null,
+      "flow": "random",
       "route": "/random.html",
-      "url": null,
+      "url": "https://harvest-playground.netlify.app/random.html",
       "title": null,
       "h1": null,
       "clicked": null,
-      "commit": null,
-      "screenshot": null,
+      "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8/02-random-full.png",
       "feedback": []
     }
   ],

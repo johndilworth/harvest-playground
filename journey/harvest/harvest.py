@@ -137,6 +137,28 @@ def overlap_ratio(a, f):
     area = a['w'] * a['h'] or 1
     return ix * iy / area
 
+def load_steps(manifest, cycle):
+    """Return {stepKey: entry} for both manifest shapes: canonical {'entries': [...]} (cycles 0-3) and the
+    capture-pages shape {'cycle', 'site', 'commit', 'pages': [{slug, route, viewport, full, h}]} (cycles 4+).
+    Pages are normalized to entries; stepKey is NN-slug (1-based order), matching board frame ids frame-NN-slug."""
+    if 'entries' in manifest:
+        return {e['stepKey']: e for e in manifest['entries'] if e.get('cycle', cycle) == cycle}
+    if 'pages' in manifest:
+        mc = manifest.get('cycle', cycle)
+        if mc != cycle:
+            return {}
+        site, base = (manifest.get('site') or '').rstrip('/'), (manifest.get('assetsBase') or '').rstrip('/')
+        steps = {}
+        for i, p in enumerate(manifest['pages'], 1):
+            sk = p.get('stepKey') or f"{i:02d}-{p['slug']}"
+            shot = p.get('full') or p.get('viewport')
+            steps[sk] = {'stepKey': sk, 'flow': p['slug'], 'cycle': mc, 'index': i, 'route': p.get('route'),
+                         'url': (site + p['route']) if site and p.get('route') else None, 'title': p.get('title'),
+                         'h1': p.get('h1'), 'commit': manifest.get('commit'),
+                         'screenshot': f"{base}/c{mc}/{shot}" if base and shot else shot}
+        return steps
+    raise SystemExit(f"manifest has neither 'entries' nor 'pages' (keys: {sorted(manifest)})")
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--doc-id', required=True); ap.add_argument('--cycle', type=int, required=True)
@@ -146,7 +168,7 @@ def main():
     a = ap.parse_args()
 
     manifest = json.load(open(a.manifest))
-    steps = {e['stepKey']: e for e in manifest['entries'] if e['cycle'] == a.cycle}
+    steps = load_steps(manifest, a.cycle)
     items = {}
     for fp in a.fetch:
         raw = json.load(open(fp))

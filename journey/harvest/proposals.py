@@ -20,7 +20,7 @@ Commands (all paths explicit; the Lucid connector itself is called by the agent,
   mark-applied --proposals P [--dashboard-copy D] --commit SHA [ids...]  -> approved items become applied
   carry    --proposals P --out NEXT                -> deferred + still-pending items, ready to seed next cycle (--carry)
   writeback-js --proposals P [--labels itemId=Status ...] [--feedback F --auto-applied id,id]  -> prints a
-           lucid_run_script source that puts a small status label above each sticky (see journey/harvest/lucid-writeback.example.js)
+           lucid_run_script source that sets HarvestStatus shape data + a 'Harvest: <status>' tag on each sticky and a badge rule (see journey/harvest/lucid-writeback.example.js)
 """
 import argparse, datetime, json, pathlib, re, sys
 

@@ -85,7 +85,7 @@ Setting: `approval` on this project in `dashboard/public/data/projects.json` (ge
 Playground is **`auto`** (the procedure above runs unchanged). When it is `required`, the nightly/manual run does this instead:
 1. Steps 1–2 of the nightly procedure (fetch + `harvest.py`), then
    `python3 journey/harvest/proposals.py propose --project harvest-playground --cycle <N> --feedback journey/cycles/<N>/feedback.json --carry journey/cycles/<N-1>/proposals.json --out journey/cycles/<N>/proposals.json --dashboard-copy dashboard/public/data/proposals/harvest-playground-c<N>.json`
-   (omit `--carry` if that file doesn't exist). Refine interpretations/risk in the JSON if needed. Write back Pending labels
+   (omit `--carry` if that file doesn't exist). Refine interpretations/risk in the JSON if needed. Write back Pending status (HarvestStatus field + tag + badge)
    (`proposals.py writeback-js --proposals … --doc-id <DOC>` → `lucid_run_script`), commit the proposals + dashboard copy
    (message `Harvest <date> cycle <N>: proposals (waiting for approval)`), deploy the dashboard. **Do not touch `site/`, open
    PRs, merge, capture or build cycle N+1.** Log the run as `outcome: "waiting_approval"` in `nightlyHarvests`.
@@ -97,9 +97,9 @@ Playground is **`auto`** (the procedure above runs unchanged). When it is `requi
 4. Apply: `proposals.py apply --proposals … --plan journey/cycles/<N>/apply-plan.json` and implement **only** the items in the
    plan, following steps 3–8 of the nightly procedure (safety rules still apply; rejected → skipped `rejected by reviewer`,
    deferred → listed in CHANGELOG as deferred). After the merge: `proposals.py mark-applied --proposals … --dashboard-copy … --commit <sha>`,
-   write back Approved→Applied/Rejected/Deferred labels on the cycle N board, commit, deploy.
+   write back Applied/Rejected/Deferred status (badges) on the cycle N board, commit, deploy.
 5. The next cycle's propose uses `--carry journey/cycles/<N>/proposals.json` so deferred and unreviewed items come back.
-In `auto` mode the run may also write back Applied/Skipped labels after the merge:
+In `auto` mode the run may also write back Applied/Skipped status badges after the merge:
 `proposals.py writeback-js --feedback journey/cycles/<N>/feedback.json --auto-applied <itemId,…>` → `lucid_run_script` on the board.
 Helper docs: `journey/harvest/README.md`. Dry run (fake stickies, scratch board): `journey/harvest/dryrun/`.
 

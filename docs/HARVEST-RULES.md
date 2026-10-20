@@ -14,7 +14,7 @@ Dashboard (the hub): https://harvest-dashboard.netlify.app · Rules page: https:
 3. **Reviewers leave stickies** (and comments) on the boards, signed in so each sticky carries their name.
 4. **Harvest**: read every `harvest: true` board of the current cycle (Lucid `fetch` per page + threads/comments), classify
    each sticky (priority, author, frame/screen) — read-only, never recolour/move/delete stickies in Lucid (the only
-   board edit is the status-label write-back, § 11). In approval mode `required` the harvest stops here with a proposal (§ 11).
+   board edit is the status write-back — shape data, tag and badge rule, § 11). In approval mode `required` the harvest stops here with a proposal (§ 11).
 5. **Apply** every safe item to the project's code (§ 5), log applied/skipped/conflicts, merge per the project's merge
    policy (§ 6), deploy.
 6. **New cycle**: capture the new build, build cycle N+1 boards, create an org-wide comment share link per board
@@ -168,12 +168,15 @@ Each project chooses how harvested stickies become changes, in `dashboard/public
      Rejected items are logged as skipped (`rejected by reviewer`); deferred and unreviewed (pending) items are **carried
      over**: pass `--carry journey/cycles/<N>/proposals.json` when proposing cycle N+1 (they come back as pending, marked
      "carried from C<N>").
-- **Lucid write-back** (both modes): after decide/apply, label each harvested sticky with a small status tag above it —
-  Pending (grey #6E7781), Approved (green #1A7F37), Applied (blue #0969DA), Rejected (red #CF222E), Deferred (amber
-  #9A6700), Skipped (grey #57606A); white 7 pt text, sticky-wide, 26 px tall. Generate the script with
-  `proposals.py writeback-js --proposals <P> --doc-id <DOC>` (auto mode: `writeback-js --feedback <feedback.json>
-  --auto-applied <itemId,…>` → Applied/Skipped) and run it with Lucid `lucid_run_script` on that board. It is idempotent
-  (re-runs replace earlier `Harvest: …` labels) and never moves or edits the sticky; `harvest.py` ignores the labels.
+- **Lucid write-back** (both modes, v2 from 2026-10-19): after decide/apply, put the status **on** each harvested sticky —
+  shape data field `HarvestStatus` = Pending | Approved | Applied | Rejected | Deferred | Skipped (shown in Lucid's Data
+  panel) plus a document tag `Harvest: <status>` (machine-readable backup; older `Harvest:` tags on that sticky are removed).
+  One page-level conditional formatting rule **`Harvest status`** draws a small badge with the value on the sticky's top
+  edge: Approved green #1A7F37, Applied blue #0969DA, Rejected red #CF222E, Deferred amber #9A6700, Pending #6E7781 /
+  Skipped #57606A grey. Generate the script with `proposals.py writeback-js --proposals <P> --doc-id <DOC>` (auto mode:
+  `writeback-js --feedback <feedback.json> --auto-applied <itemId,…>` → Applied/Skipped) and run it with Lucid
+  `lucid_run_script` on that board. It is idempotent (the rule is recreated, fields/tags overwritten) and deletes any v1
+  `Harvest: …` label shapes. Sticky text, fill, size and position are never changed, so `harvest.py` is unaffected.
   Template: `journey/harvest/lucid-writeback.example.js`. This is the one sanctioned edit a harvest makes on a board.
 
 ## Lucid naming and folders (from 2026-10-19)

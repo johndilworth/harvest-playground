@@ -2,6 +2,12 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## 2026-10-20 harvest (no Cycle 9)
+Harvested the Cycle 8 review board `d0c055a3-adba-4f7d-9ade-84534dc3e5e7` (`Harvest Playground:All pages:C8` — Home · Dino Town · Totally Random) at ~5:06 pm MT —
+**0 stickies, 0 comment threads**. Hub stray: none (no hub; dashboard is the hub).
+Quiet night: no site changes; Cycle 8 remains live. Applied: none. Skipped: none (no malicious, illegal or offensive items). Conflicts: none. Board feedback: none.
+Record: `journey/cycles/8/harvest-2026-10-20.json`.
+
 ## 2026-10-19 harvest (no Cycle 9)
 Harvested the Cycle 8 review board `d0c055a3-adba-4f7d-9ade-84534dc3e5e7` (`Harvest Playground:All pages:C8` — Home · Dino Town · Totally Random) at ~5:11 pm MT —
 **0 stickies, 0 comment threads**. Hub stray: none (no hub; dashboard is the hub).

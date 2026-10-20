@@ -1,0 +1,66 @@
+{
+  "docId": "d0c055a3-adba-4f7d-9ade-84534dc3e5e7",
+  "cycle": 8,
+  "harvestedAt": "2026-10-20T23:05:48.585395+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8/02-home-full.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-02-dinosaur",
+      "pageId": "review",
+      "frameTitle": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
+      "stepKey": "02-dinosaur",
+      "matchedBy": "frame-id",
+      "flow": "dinosaur",
+      "route": "/dinosaur.html",
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8/02-dinosaur-full.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-03-random",
+      "pageId": "review",
+      "frameTitle": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
+      "stepKey": "03-random",
+      "matchedBy": "frame-id",
+      "flow": "random",
+      "route": "/random.html",
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8/02-random-full.png",
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

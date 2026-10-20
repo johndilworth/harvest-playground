@@ -1,7 +1,7 @@
 {
   "docId": "d0c055a3-adba-4f7d-9ade-84534dc3e5e7",
   "cycle": 8,
-  "harvestedAt": "2026-10-19T23:11:15.275362+00:00",
+  "harvestedAt": "2026-10-20T23:05:48.585395+00:00",
   "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
   "frames": [
     {

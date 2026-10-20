@@ -13,9 +13,11 @@ async function shot(path, name, { full = true, modal = false } = {}) {
   console.log(name, p.url(), (await p.title()));
 }
 if (mode === "review") {
+  // Cycle 5+: dashboard, cycle page and summary are one view (/p/<slug>/?c=N&tab=summary).
   await shot("/", "01-home"); await shot("/p/harvest-playground/", "02-project-dashboard");
-  await shot(`/p/harvest-dashboard/cycle.html?c=${cycle}`, "03-cycle"); await shot(`/p/harvest-dashboard/cycle.html?c=${cycle}`, "04-run-harvest-modal", { full: false, modal: true });
-  await shot("/p/harvest-playground/summary.html", "05-summary");
+  await shot(`/p/harvest-playground/?c=${cycle || 6}`, "03-selected-cycle");
+  await shot("/p/harvest-dashboard/", "04-run-harvest-modal", { full: false, modal: true });
+  await shot("/p/harvest-playground/?tab=summary", "05-summary-tab");
 } else if (mode === "meetings") {
   // Meeting pages (added to the Harvest Dashboard review boards in cycle 3, from a cycle-2 board-feedback sticky)
   const idx = await (await fetch(base + "/data/meetings.json")).json();

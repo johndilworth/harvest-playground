@@ -27,9 +27,9 @@
     "pullRequests": 0,
     "pullRequestsSource": "commits go straight to main (no PRs)",
     "nightlyHarvests": 0,
-    "manualHarvests": 4
+    "manualHarvests": 5
   },
-  "updatedAt": "2026-10-15T23:57:15-06:00",
+  "updatedAt": "2026-10-19T22:45:00-06:00",
   "cycles": [
     {
       "number": 0,
@@ -425,7 +425,7 @@
       "number": 4,
       "title": "Cycle 4 — dark mode by default with a header toggle, simpler home cards with tighter sparklines, compact contributions chart, screenshots in the summary table",
       "createdAt": "2026-10-15T23:52:50-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 3,
       "pullRequest": null,
       "commit": "7391594",
@@ -463,9 +463,21 @@
           "harvest": true
         }
       ],
-      "authors": [],
+      "authors": [
+        {
+          "name": "John Dilworth",
+          "stickies": 4
+        }
+      ],
       "nightlyHarvests": [],
-      "manualHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-19",
+          "stickies": 4,
+          "outcome": "applied",
+          "note": "Manual harvest (webhook, Run harvest now, requested 10:20 PM MT); started Cycle 5"
+        }
+      ],
       "changes": {
         "applied": [
           {
@@ -522,6 +534,58 @@
         "purple": 0
       },
       "lucidFolderId": 452808970
+    },
+    {
+      "number": 5,
+      "title": "Cycle 5 — project dashboard, cycle page and summary merged into one view with a cycle list on the left, Lucidchart docs and Summary tabs",
+      "createdAt": "2026-10-19T22:45:00-06:00",
+      "status": "current",
+      "harvestedFrom": 4,
+      "pullRequest": null,
+      "commit": "68b5716",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c5-review/02-project-dashboard.png",
+      "previewUrl": "https://6ad6ed41a9234ce9f2fac7b9--harvest-dashboard.netlify.app",
+      "documents": [],
+      "authors": [],
+      "nightlyHarvests": [],
+      "manualHarvests": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "review",
+            "text": "Project dashboard, cycle page and summary merged into one single-page view, following the wireframe on the board: project name and description at the top, the contributions chart full width, a left column with a Live site link and a 'Cycles' list (newest first, current selected), and the selected cycle in the main panel. Selecting a cycle switches instantly without a page load. The selected cycle's bar animates wider with an indicator underneath, and its details (date, contributions per type) show inline next to the chart. The cycle shows a 'Lucidchart docs' tab (selected by default) with simplified document cards in the animated card stack, followed by the changes made this cycle, and a second 'Summary' tab. Run harvest moved to the selected cycle's header (current cycle only). Old /cycle.html and /summary.html links still open the same view.",
+            "author": "John Dilworth"
+          },
+          {
+            "priority": "try",
+            "flow": "review",
+            "text": "Project dashboard: removed the 'leave a sticky on the current cycle's Lucid board…' instructions so the header shows only the project description (Harvest Playground and Harvest Dashboard descriptions trimmed).",
+            "author": "John Dilworth"
+          },
+          {
+            "priority": "try",
+            "flow": "review",
+            "text": "Cycle page: now part of the project dashboard, shown under the selected cycle.",
+            "author": "John Dilworth"
+          },
+          {
+            "priority": "try",
+            "flow": "review",
+            "text": "Summary page: now the 'Summary' tab of the selected cycle in the consolidated dashboard.",
+            "author": "John Dilworth"
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "4 stickies by John Dilworth harvested from the Cycle 4 All pages board (1 red with a wireframe, 3 yellow; 1 on the project dashboard plus the wireframe, 1 on the cycle page, 1 on the summary). 0 on the Meetings and New project boards, 0 comment threads, no board feedback. All safe, none skipped."
+      },
+      "contributions": {
+        "red": 1,
+        "yellow": 3,
+        "blue": 0,
+        "purple": 0
+      }
     }
   ]
 }

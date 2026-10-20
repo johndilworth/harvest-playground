@@ -11,11 +11,11 @@ MODE = sys.argv[3] if len(sys.argv) > 3 else "review"   # "review" (all pages) o
 PAD, GAP, HGAP, FW = 400, 360, 480, 1440
 SITE = "https://harvest-dashboard.netlify.app"; CAP = f"{SITE}/captures/harvest-dashboard/c{N}-{MODE}"
 LOCAL = f"../public/captures/harvest-dashboard/c{N}-{MODE}"
-SCREENS = [("01-home", "/", "Home — all Harvest projects", "Dark mode by default; sun/moon toggle in the top-right of the header. Project cards: name + harvest mode, 'N cycles / date', tightened sparkline, screenshot."),
- ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard (Harvest Playground)", "Compact contributions chart (no card, padding or labels; bars touch, newest left; hover for date + key). Cycle cards as a left-anchored stack, newest on top."),
- ("03-cycle", f"/p/harvest-dashboard/cycle.html?c={N}", f"Cycle page (Harvest Dashboard · Cycle {N})", "Title is [Project name] · Cycle N with project name linking to the project dashboard; subnav on the title row. Lucid documents with Open board to comment; Manual harvests with Run harvest now."),
- ("04-run-harvest-modal", f"/p/harvest-dashboard/cycle.html?c={N}", "Run harvest modal", "Passphrase only; posts project 'harvest-dashboard' to the harvest webhook (dark mode)."),
- ("05-summary", "/p/harvest-playground/summary.html", "Summary (all cycles of a project)", "Title is [Project name] · Summary (breadcrumb). Each cycle row now has its screenshot (same image as the cycle cards).")]
+SCREENS = [("01-home", "/", "Home — all Harvest projects", "Dark mode by default with the sun/moon toggle; project cards show name + harvest mode, 'N cycles / date', sparkline and screenshot."),
+ ("02-project-dashboard", "/p/harvest-playground/", "Project dashboard — one view (Harvest Playground, current cycle)", "Dashboard, cycle page and summary merged: project name + description, full-width chart (selected cycle's bar wider, details inline), left column with Live site and Cycles, selected cycle with Lucidchart docs and Summary tabs."),
+ ("03-selected-cycle", "/p/harvest-playground/?c=6", "Selecting an older cycle (Cycle 6)", "Picking a cycle in the left list or the chart switches the main panel instantly: Archived tag + Go to current cycle, the cycle's Lucidchart docs as an animated card stack, then the changes made this cycle."),
+ ("04-run-harvest-modal", "/p/harvest-dashboard/", "Run harvest modal (Harvest Dashboard, current cycle)", "Run harvest now sits in the selected (current) cycle's header; passphrase only; posts project 'harvest-dashboard' to the harvest webhook."),
+ ("05-summary-tab", "/p/harvest-playground/?tab=summary", "Summary tab", "The old summary page is now the Summary tab next to Lucidchart docs: every cycle with screenshot, date, status, applied, skipped and conflicts.")]
 if MODE == "meetings":
     import json as _j
     _m = _j.load(open("../public/data/meeting-team-meeting.json"))["currentMeetingId"]
@@ -26,9 +26,11 @@ def text(i, x, y, w, h, t): return {"id": i, "type": "text", "boundingBox": {"x"
 shots = []
 for k, route, title, cap in SCREENS:
     w, h = Image.open(f"{LOCAL}/{k}.png").size; shots.append((k, route, title, cap, round(h * FW / w)))
-CHANGES = {"01-home": "Dark mode (default) + header toggle; cards show 'N cycles / date' (no 'current Cycle x' or 'last harvest' label); tighter sparklines with brighter colours.",
- "02-project-dashboard": "Contributions chart made compact: no card, padding, margins or C-labels; bars side by side with no gaps.",
- "03-cycle": "Dark mode + header toggle.", "04-run-harvest-modal": "Dark mode.", "05-summary": "Screenshot column added (same image as the cycle cards)."}
+CHANGES = {"01-home": "Unchanged (project cards don't show descriptions).",
+ "02-project-dashboard": "New single-page layout from the cycle-4 wireframe; project description no longer includes sticky instructions.",
+ "03-selected-cycle": "Replaces the separate cycle page (shown on the right for reference).", "04-run-harvest-modal": "Button moved from the Manual harvests section to the cycle header.",
+ "05-summary-tab": "Replaces the separate summary page."}
+PREV_KEY = {"03-selected-cycle": "03-cycle", "05-summary-tab": "05-summary"}
 PREV = f"{SITE}/captures/harvest-dashboard/c{N-1}-review" if N > 1 and MODE == "review" else None
 BOARD = "All pages" if MODE == "review" else "Meetings"
 BW, BH = 720, 512
@@ -38,8 +40,8 @@ sh = [text("doc-title", 0, -900, W, 240, f"<p style='font-size:40pt;text-align:l
            f"<span style='font-size:20pt'>{len(shots)} screens, left → right · Desktop 1440 wide (full page) · commit {COMMIT[:7]} · "
            f"<a href=\"{SITE}\">{SITE}</a> · harvested manually (no nightly routine)</span></p>"),
       text("legend-box", 0, -600, 2600, 440, "<p style='font-size:22pt;text-align:left'><b>How to add anything</b><br>Put a sticky note INSIDE a grey frame "
-           "and write what you want changed on that page of the dashboard. Harvests of this project are manual (Run harvest now on the current "
-           "cycle page); safe requests are applied, committed and deployed. Start with <b>Do:</b> / <b>Must do</b>, <b>Try:</b> or <b>Consider:</b> "
+           "and write what you want changed on that page of the dashboard. Harvests of this project are manual (Run harvest on the current "
+           "cycle); safe requests are applied, committed and deployed. Start with <b>Do:</b> / <b>Must do</b>, <b>Try:</b> or <b>Consider:</b> "
            "to set priority (the words win over the colour); otherwise the colour counts. Purple = feedback about this board.<br>"
            "<b>Stickies show your name — stay signed in.</b></p>")]
 for i, (name, fill, line, label, tc) in enumerate([("Red", "#FF8A80", "#C62828", "Do / Must do", None), ("Yellow", "#FFE066", "#9A7B00", "Try", None),
@@ -61,7 +63,7 @@ for k, route, title, cap, ih in shots:
         y0 = PAD + ih + GAP + 260
         sh.append(text(f"changes-{k}", x + PAD, y0, FW, 100, f"<p style='font-size:18pt;text-align:left'><b>Changes in this cycle:</b> {e(CHANGES.get(k, ''))}</p>"))
         sh.append(text(f"before-label-{k}", x + PAD, y0 + 110, BW, 60, f"<p style='font-size:16pt;text-align:left'>Cycle {N-1} (before) · reference only</p>"))
-        sh.append({"id": f"before-{k}", "type": "image", "boundingBox": {"x": x + PAD, "y": y0 + 180, "w": BW, "h": BH}, "image": {"type": "image", "url": f"{PREV}/{k}.png"},
+        sh.append({"id": f"before-{k}", "type": "image", "boundingBox": {"x": x + PAD, "y": y0 + 180, "w": BW, "h": BH}, "image": {"type": "image", "url": f"{PREV}/{PREV_KEY.get(k, k)}.png"},
                    "stroke": {"color": "#C9CED8", "width": 1, "style": "solid"}})
     x += FW + 2 * PAD + HGAP
 print(json.dumps({"version": 1, "pages": [{"id": MODE, "title": f"Cycle {N} · {BOARD}", "shapes": sh}]}, ensure_ascii=False))

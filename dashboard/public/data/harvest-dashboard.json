@@ -19,7 +19,8 @@
         "C0": 452809002,
         "C1": 452809004,
         "C2": 452809005,
-        "C3": 452809009
+        "C3": 452809009,
+        "C4": 452844155
       }
     }
   },
@@ -533,7 +534,7 @@
         "blue": 0,
         "purple": 0
       },
-      "lucidFolderId": 452808970
+      "lucidFolderId": 452844155
     },
     {
       "number": 5,
@@ -545,7 +546,41 @@
       "commit": "68b5716",
       "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c5-review/02-project-dashboard.png",
       "previewUrl": "https://6ad6ed41a9234ce9f2fac7b9--harvest-dashboard.netlify.app",
-      "documents": [],
+      "documents": [
+        {
+          "title": "Harvest Dashboard:All pages:C5",
+          "role": "flow",
+          "flow": "review",
+          "docId": "21e07c60-fd42-4b84-bce5-728454db7063",
+          "url": "https://lucid.app/lucidchart/21e07c60-fd42-4b84-bce5-728454db7063/edit",
+          "commentUrl": "https://lucid.app/lucidchart/21e07c60-fd42-4b84-bce5-728454db7063/edit?invitationId=inv_7e7f0fd8-74ad-42ee-bf89-3d8ffec93962",
+          "description": "5 screens: home, project dashboard as one view, selecting an older cycle, Run harvest modal, Summary tab.",
+          "harvest": true,
+          "thumbnail": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c5-review/01-home.png"
+        },
+        {
+          "title": "Harvest Dashboard:Meetings:C5",
+          "role": "flow",
+          "flow": "meetings",
+          "docId": "bcfbc935-e762-474b-ad4d-11847858f4e6",
+          "url": "https://lucid.app/lucidchart/bcfbc935-e762-474b-ad4d-11847858f4e6/edit",
+          "commentUrl": "https://lucid.app/lucidchart/bcfbc935-e762-474b-ad4d-11847858f4e6/edit?invitationId=inv_2578da12-bc15-43e6-8f34-e4d1a45552cf",
+          "description": "2 screens: Team Meeting series page and the current meeting page.",
+          "harvest": true,
+          "thumbnail": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c5-meetings/01-meetings.png"
+        },
+        {
+          "title": "Harvest Dashboard:New project:C5",
+          "role": "flow",
+          "flow": "New project",
+          "docId": "1b6e06d3-0f14-4ece-b108-3a03ca8a6d57",
+          "url": "https://lucid.app/lucidchart/1b6e06d3-0f14-4ece-b108-3a03ca8a6d57/edit",
+          "commentUrl": "https://lucid.app/lucidchart/1b6e06d3-0f14-4ece-b108-3a03ca8a6d57/edit?invitationId=inv_e421b160-c256-4b2c-855d-f5aeece8aeff",
+          "description": "6 screens: home + New project, empty form, filled, validation, confirm modal, wrong passphrase (form unchanged since Cycle 4).",
+          "harvest": true,
+          "thumbnail": "https://harvest-dashboard.netlify.app/captures/harvest-dashboard/c5-new-project/02-new-empty.png"
+        }
+      ],
       "authors": [],
       "nightlyHarvests": [],
       "manualHarvests": [],

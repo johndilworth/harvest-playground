@@ -141,7 +141,7 @@ validates it and posts `{action:"create-project", project, setup:{…}}` to the 
 ```
 - Every harvest that creates a new cycle marks the old one archived (`superseded`), appends the new one as `current`, writes
   `contributions`, `authors` and the run entry, bumps stats and `updatedAt`. No `hub` document role.
-- Pages: `/` all projects, `/p/<slug>/` project, `/p/<slug>/cycle.html?c=N` cycle, `/p/<slug>/summary.html`, `/new.html`, `/rules.html`.
+- Pages: `/` all projects, `/p/<slug>/` project (one single-page view since Harvest Dashboard cycle 5: left cycle list, selected cycle via `?c=N`, tabs Lucidchart docs / Summary via `&tab=summary`; `/p/<slug>/cycle.html?c=N` and `/p/<slug>/summary.html` open the same view), `/new.html`, `/rules.html`.
 
 ## 11. Approval mode (Phase 1, from 2026-10-19)
 Each project chooses how harvested stickies become changes, in `dashboard/public/data/projects.json`:

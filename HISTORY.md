@@ -16,12 +16,13 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result |
 |---|---|---:|---:|---:|---|
+| Mon 2026-10-19 ~10:20 PM | Cycle 4 boards (manual webhook) | 4 | 4 | 0 | **Cycle 5 shipped**: project dashboard, cycle page and summary merged into one view (left cycle list with Live site link, selected bar widens with inline details, Lucidchart docs + Summary tabs), project description only · authors: John Dilworth 4 |
 | Thu 2026-10-15 ~11:46 PM | Cycle 3 boards (manual webhook) | 6 | 6 | 0 | **Cycle 4 shipped** — dark mode by default + header toggle, home cards "N cycles / date" with tighter sparklines, compact contributions chart, screenshots in the summary table · authors: John Dilworth 6 |
 | Wed 2026-10-14 ~12:05 AM | Cycle 2 boards (manual webhook) | 5 | 5 | 0 | **Cycle 3 shipped** — chart without title/key and newest cycle first, cycle cards as a dynamic stack, plain-language flows box on New project, new Meetings review board · authors: anonymous 5 |
 | Mon 2026-10-12 ~4:40 PM | Cycle 1 boards (manual webhook) | 6 | 6 | 0 | **Cycle 2 shipped** — 'All projects' heading, global-only top header, '[Project] · Cycle N' / '[Project] · Summary' breadcrumb titles, shared project nav right of title (no History) · authors: anonymous 6 |
 | Mon 2026-10-12 ~3:20 PM | Cycle 0 boards (manual webhook) | 13 | 11 | 2 | **Cycle 1 shipped** — wider home (≤5 tiles), project subnav, Lucid embeds, hide empty changes/authors, no cycle screenshot, Run harvest on all projects, drop Type RUN, schedule calendar (manual/daily/weekly) |
 
-Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 4 boards: [All pages](https://lucid.app/lucidchart/d0d31d0c-39b4-4e1a-996c-067c53ffe8ab/edit) · [Meetings](https://lucid.app/lucidchart/310fd895-b478-4f22-b133-ca891f81fac8/edit) · [New project](https://lucid.app/lucidchart/07412c8b-c70e-4607-ba48-05aa3f00de06/edit)
+Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 5 boards: [All pages](https://lucid.app/lucidchart/21e07c60-fd42-4b84-bce5-728454db7063/edit) · [Meetings](https://lucid.app/lucidchart/bcfbc935-e762-474b-ad4d-11847858f4e6/edit) · [New project](https://lucid.app/lucidchart/1b6e06d3-0f14-4ece-b108-3a03ca8a6d57/edit)
 
 ## At a glance
 

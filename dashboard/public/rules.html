@@ -176,7 +176,7 @@ validates it and posts <code>{action:"create-project", project, setup:{…}}</co
 <ul>
 <li>Every harvest that creates a new cycle marks the old one archived (<code>superseded</code>), appends the new one as <code>current</code>, writes
   <code>contributions</code>, <code>authors</code> and the run entry, bumps stats and <code>updatedAt</code>. No <code>hub</code> document role.</li>
-<li>Pages: <code>/</code> all projects, <code>/p/&lt;slug&gt;/</code> project, <code>/p/&lt;slug&gt;/cycle.html?c=N</code> cycle, <code>/p/&lt;slug&gt;/summary.html</code>, <code>/new.html</code>, <code>/rules.html</code>.</li>
+<li>Pages: <code>/</code> all projects, <code>/p/&lt;slug&gt;/</code> project (one single-page view since Harvest Dashboard cycle 5: left cycle list, selected cycle via <code>?c=N</code>, tabs Lucidchart docs / Summary via <code>&amp;tab=summary</code>; <code>/p/&lt;slug&gt;/cycle.html?c=N</code> and <code>/p/&lt;slug&gt;/summary.html</code> open the same view), <code>/new.html</code>, <code>/rules.html</code>.</li>
 </ul>
 <h2 id="11-approval-mode-phase-1-from-2026-10-19">11. Approval mode (Phase 1, from 2026-10-19)</h2>
 <p>Each project chooses how harvested stickies become changes, in <code>dashboard/public/data/projects.json</code>:

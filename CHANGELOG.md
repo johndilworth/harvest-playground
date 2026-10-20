@@ -141,6 +141,33 @@ priority (red = must, yellow = try, blue = consider). Authors from Lucid sticky 
 Commit `b07b10d` · preview https://6acd6b3d4cad2bdcce665143--harvest-playground.netlify.app · Cycle 5 board: [review (Lucidchart)](https://lucid.app/lucidchart/336cb099-c6d5-44da-bb6e-e883893de039/edit) · no PR (fast-forward merge)
 Record: `journey/cycles/4/feedback-2026-10-12.json` + `journey/cycles/4/harvest-2026-10-12.json` · raw board fetch in `journey/out/c4/raw/` (gitignored).
 
+## Harvest Dashboard · Cycle 5 (2026-10-19) · manual harvest
+Manual harvest triggered from the Harvest Dashboard webhook at ~10:20 PM MT (payload `action:harvest` / `project:harvest-dashboard` /
+`requestedAt:2026-10-20T04:20:49.459Z`). Approval mode: `auto`. Harvested Cycle 4 boards: All pages `d0d31d0c-…` + Meetings `310fd895-…` + New project `07412c8b-…`:
+**4 stickies, 0 comment threads** (all on the All pages board: 1 red + a wireframe frame on the project dashboard, 1 yellow on the project dashboard, 1 on the cycle page, 1 on Summary; 0 on Meetings / New project), all safe.
+Every sticky carried a Lucid attribution line, so all are **John Dilworth**.
+
+### Applied (4)
+- **must** · 02-project-dashboard · Merge the dashboard page and the cycle page per the wireframe: left column cycle navigation (newest on top and selected), selecting a cycle instantly shows its Lucidchart documents, simplified doc cards in the animated stack (instead of cycles), selected cycle animates wider on the chart with its details inline, Lucidchart docs tab + Summary tab in a single-page app, Live site link at the top of the left column above a "Cycles" header. → `/p/<slug>/` is now one view (`?c=N&tab=summary`); `/cycle.html?c=N` and `/summary.html` open the same view; Run harvest moved into the selected (current) cycle's header. · by John Dilworth
+- **try** · 02-project-dashboard · Remove the "…leave a sticky on the current cycle's Lucid board" instructions; this should only be the project description. → Harvest Playground and Harvest Dashboard descriptions trimmed to the description only. · by John Dilworth
+- **try** · 03-cycle · This page will be integrated into the project dashboard under the selected cycle. → done (part of the must item). · by John Dilworth
+- **try** · 05-summary · Summary is integrated into the consolidated dashboard as a "Summary" tab of the selected cycle. → done (part of the must item). · by John Dilworth
+
+### Skipped (0)
+- none. No malicious, illegal or offensive stickies.
+
+### Conflicts
+- none (the stickies supersede the older cycle-page rules: previous/next links and the separate Run harvest section are replaced by the left cycle list and the header button).
+
+### Board feedback (purple / Board:)
+- none
+
+### Authors
+- John Dilworth: 4
+
+Commit `68b5716` · preview https://6ad6ed41a9234ce9f2fac7b9--harvest-dashboard.netlify.app · Cycle 5 boards: [All pages](https://lucid.app/lucidchart/21e07c60-fd42-4b84-bce5-728454db7063/edit) · [Meetings](https://lucid.app/lucidchart/bcfbc935-e762-474b-ad4d-11847858f4e6/edit) · [New project](https://lucid.app/lucidchart/1b6e06d3-0f14-4ece-b108-3a03ca8a6d57/edit)
+Record: `dashboard/board/c4/feedback-review.json` (+ `feedback-meetings.json`, `feedback-new-project.json`) · raw board fetch in `dashboard/board/c4/raw/`.
+
 ## Harvest Dashboard · Cycle 4 (2026-10-15) · manual harvest
 Manual harvest triggered from the Harvest Dashboard webhook at ~11:46 PM MT (payload `action:harvest` / `project:harvest-dashboard` /
 `requestedAt:2026-10-16T05:46:17.929Z`). Harvested Cycle 3 boards: All pages `3d838c49-…` + Meetings `2d87c927-…` + New project `333ebbdc-…` —

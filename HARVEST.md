@@ -192,8 +192,8 @@ must write it** for that cycle (a new cycle with no stickies gets all zeros). It
 v1 → v2 (2026-10-12): hub documents removed from every cycle, `previewUrl` and `authors` added.
 
 ### "Run harvest now" trigger
-The button lives **only on the current cycle's page**, inside its "Nightly harvests" section (not on the project
-dashboard, not on older cycles). It opens a modal: passphrase + type `RUN`, then shows success or the error.
+Since Harvest Dashboard cycle 5 the project dashboard, cycle page and summary are one view; the button sits in the selected
+cycle's header and shows **only when the current cycle is selected** (not on older cycles). It opens a modal: passphrase + type `RUN`, then shows success or the error.
 `dashboard/netlify/functions/trigger.mjs` (`/api/trigger`). GET returns `{configured}`; the button is disabled unless
 both env vars below are set on the harvest-dashboard site. POST `{project, secret, confirm}` needs the shared secret plus typing `RUN`, then forwards
 `POST {project, action:"harvest", source, requestedAt}` with `Authorization: $HARVEST_WEBHOOK_AUTH` to the webhook.
@@ -215,7 +215,7 @@ The button shows only on projects whose data file has `project.trigger: true`; t
 
 ## Harvest Dashboard project (manual)
 The dashboard itself is a Harvest project (`harvest-dashboard`). There is **no nightly routine**; a harvest runs only when
-someone presses **Run harvest now** on its current cycle page (`/p/harvest-dashboard/cycle.html?c=<N>`), which posts
+someone presses **Run harvest** on its current cycle (`/p/harvest-dashboard/`), which posts
 `{project:"harvest-dashboard", action:"harvest", …}` to the webhook. The routine for that payload:
 1. Read `dashboard/board/c<N>/lucid-doc.json`; fetch every `harvest:true` board (Lucid `fetch`, threads, comments) into
    `dashboard/board/c<N>/raw/`, and classify with `journey/harvest/harvest.py` exactly as in the nightly procedure
@@ -227,8 +227,8 @@ someone presses **Run harvest now** on its current cycle page (`/p/harvest-dashb
    secrets, or break the trigger) with a reason; newest wins on conflicts. Log applied/skipped in the data file.
 3. Commit to `main` (message `Harvest Dashboard cycle <N+1>: …`), push, and deploy with the dashboard deploy command.
 4. Capture cycle N+1: `cd journey && cp ../dashboard/shoot.mjs _shoot.mjs && node _shoot.mjs https://harvest-dashboard.netlify.app
-   ../dashboard/public/captures/harvest-dashboard/c<N+1>-review "" review` (home, project dashboard, cycle page, Run
-   harvest modal, summary; add screens if the dashboard grew new pages). Since cycle 3 also capture the meeting pages
+   ../dashboard/public/captures/harvest-dashboard/c<N+1>-review "" review` (home, project dashboard, a selected older cycle, Run
+   harvest modal, Summary tab; add screens if the dashboard grew new pages). Since cycle 3 also capture the meeting pages
    (`node _shoot.mjs https://harvest-dashboard.netlify.app ../dashboard/public/captures/harvest-dashboard/c<N+1>-meetings "" meetings`:
    meetings series page + current meeting page) for a separate **Meetings** board (`build_board.py <N+1> <sha> meetings`), and
    re-capture the New project flow (`journey/shoot-c3-new.mjs`) when the form changed. Then redeploy so the captures are public.

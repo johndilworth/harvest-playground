@@ -7,11 +7,11 @@
     "reviewer": "John Dilworth",
     "auto_approve_low_risk": false
   },
-  "state": "waiting",
+  "state": "decided",
   "createdAt": "2026-10-19T22:53:19-06:00",
-  "decidedAt": null,
-  "appliedAt": null,
-  "appliedCommit": null,
+  "decidedAt": "2026-10-19T22:56:08-06:00",
+  "appliedAt": "2026-10-19T23:01:04-06:00",
+  "appliedCommit": "3dd76b4",
   "items": [
     {
       "lucidItemId": "x7YEXMVWF9IV",
@@ -26,8 +26,13 @@
       "interpretation": "Restyle the whole site with a more technical look instead of the Lucid default style: Design Loop's fonts and colour scheme, plus Design Loop's animated ASCII background behind the hero.",
       "proposedChange": "Swap the site's type and colour tokens in styles.css for Design Loop's (fonts, accent colours, surfaces), and port Design Loop's AsciiBackground canvas animation to a small inline vanilla-JS canvas behind the hero (no external scripts; static frame for reduced motion and during capture). Done together with item 3, since Design Loop's palette is dark.",
       "risk": "med",
-      "status": "pending",
-      "decision": null,
+      "status": "applied",
+      "decision": {
+        "decision": "approved",
+        "by": "John Dilworth",
+        "at": "2026-10-19T22:56:08-06:00",
+        "instruction": null
+      },
       "id": "c3-01",
       "n": 1
     },
@@ -44,8 +49,13 @@
       "interpretation": "Change the hero headline from \"Every sticky note becomes a change\" back to the cycle 2 wording.",
       "proposedChange": "Set the hero h1 to \"Turn every sticky note into a pull request\" (and the page title/meta description to match if they use the current headline).",
       "risk": "low",
-      "status": "pending",
-      "decision": null,
+      "status": "applied",
+      "decision": {
+        "decision": "approved",
+        "by": "John Dilworth",
+        "at": "2026-10-19T22:56:08-06:00",
+        "instruction": null
+      },
       "id": "c3-02",
       "n": 2
     },
@@ -62,8 +72,13 @@
       "interpretation": "Add a dark mode and make dark the default.",
       "proposedChange": "Add a dark theme as the default with a sun/moon toggle in the header that remembers the choice (localStorage, no external code); recolour the section bands (orange, teal, grey) and SVG icon strokes for dark. Pairs with item 1.",
       "risk": "med",
-      "status": "pending",
-      "decision": null,
+      "status": "applied",
+      "decision": {
+        "decision": "approved",
+        "by": "John Dilworth",
+        "at": "2026-10-19T22:56:08-06:00",
+        "instruction": null
+      },
       "id": "c3-03",
       "n": 3
     },
@@ -80,8 +95,13 @@
       "interpretation": "Add a section explaining Harvest's approval flow: anyone can collaborate, but named people control what gets built. Highlight three modes: Auto (runs on a schedule automatically), Manual (run a harvest whenever you want) and Approver (an assigned person approves or edits each change before it goes into code).",
       "proposedChange": "Add a new \"You choose who approves\" section after the Review/Harvest/Ship/Repeat loop with three cards: Auto, Manual and Approver mode, using the sticky's descriptions (copy tidied), plus a nav link if it fits.",
       "risk": "low",
-      "status": "pending",
-      "decision": null,
+      "status": "applied",
+      "decision": {
+        "decision": "approved",
+        "by": "John Dilworth",
+        "at": "2026-10-19T22:56:08-06:00",
+        "instruction": null
+      },
       "id": "c3-04",
       "n": 4
     },
@@ -98,8 +118,13 @@
       "interpretation": "In the problem section, replace the three card icons with an X or cancel mark so they read as problems with today's tools.",
       "proposedChange": "Replace the three problem-card SVG icons with a matching red X-in-circle icon (inline SVG, not emoji, so it renders the same everywhere).",
       "risk": "low",
-      "status": "pending",
-      "decision": null,
+      "status": "applied",
+      "decision": {
+        "decision": "approved",
+        "by": "John Dilworth",
+        "at": "2026-10-19T22:56:08-06:00",
+        "instruction": null
+      },
       "id": "c3-05",
       "n": 5
     },
@@ -116,8 +141,13 @@
       "interpretation": "Use real screenshots of the Harvest Dashboard project on the site.",
       "proposedChange": "Capture current Harvest Dashboard pages (home cards, single-page project view, approval list) at harvest-dashboard.netlify.app, add them as compressed .webp images (each well under 2 MB) and use them in the 'Works with your agents' area and the evolution/proof section in place of the older Design Loop shots where they fit. Which spots to replace is a judgement call; say so if you want them somewhere specific.",
       "risk": "low",
-      "status": "pending",
-      "decision": null,
+      "status": "applied",
+      "decision": {
+        "decision": "approved",
+        "by": "John Dilworth",
+        "at": "2026-10-19T22:56:08-06:00",
+        "instruction": null
+      },
       "id": "c3-06",
       "n": 6
     }

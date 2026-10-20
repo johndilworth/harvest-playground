@@ -1,321 +1,424 @@
 {
-  "schemaVersion": 3,
-  "project": {
-    "name": "Harvest Site",
-    "slug": "harvest-site",
-    "harvestMode": "manual",
-    "trigger": true,
-    "description": "Concept marketing site for Lucid Harvest for Lucidchart (home, beta signup, how it works, pricing). Reviewed on Lucidchart boards; stickies become a PR.",
-    "repo": "https://github.com/johndilworth/harvest-for-lucid-site",
-    "site": "https://harvest-for-lucid.netlify.app",
-    "historyBoard": null,
-    "schedule": "manual (no nightly routine)",
-    "lucidFolder": {
-      "id": 452808972,
-      "url": "https://lucid.app/documents#/documents?folder_id=452808972",
-      "parentId": 452808961,
-      "cycleFolders": {
-        "C1": 452809010,
-        "C2": 452809012
-      }
-    }
-  },
-  "stats": {
-    "pullRequests": 1,
-    "pullRequestsSource": "GitHub API state=all 2026-10-12: PR #1 OPEN",
-    "nightlyHarvests": 0,
-    "manualHarvests": 3
-  },
-  "updatedAt": "2026-10-19T22:58:00-06:00",
-  "cycles": [
+ "schemaVersion": 3,
+ "project": {
+  "name": "Harvest Site",
+  "slug": "harvest-site",
+  "harvestMode": "manual",
+  "trigger": true,
+  "description": "Concept marketing site for Lucid Harvest for Lucidchart (home, beta signup, how it works, pricing). Reviewed on Lucidchart boards; stickies become a PR.",
+  "repo": "https://github.com/johndilworth/harvest-for-lucid-site",
+  "site": "https://harvest-for-lucid.netlify.app",
+  "historyBoard": null,
+  "schedule": "manual (no nightly routine)",
+  "lucidFolder": {
+   "id": 452808972,
+   "url": "https://lucid.app/documents#/documents?folder_id=452808972",
+   "parentId": 452808961,
+   "cycleFolders": {
+    "C1": 452809010,
+    "C2": 452809012,
+    "C3": 452845244
+   }
+  }
+ },
+ "stats": {
+  "pullRequests": 1,
+  "pullRequestsSource": "GitHub API state=all 2026-10-12: PR #1 OPEN",
+  "nightlyHarvests": 0,
+  "manualHarvests": 3
+ },
+ "updatedAt": "2026-10-19T23:10:00-06:00",
+ "cycles": [
+  {
+   "number": 1,
+   "title": "Cycle 1 — Harvest for Lucidchart concept site",
+   "createdAt": "2026-10-02T02:15:16-06:00",
+   "status": "superseded",
+   "harvestedFrom": null,
+   "pullRequest": null,
+   "commit": "8cec138",
+   "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c1-home/01-home-01-hero.png",
+   "previewUrl": null,
+   "documents": [
     {
-      "number": 1,
-      "title": "Cycle 1 — Harvest for Lucidchart concept site",
-      "createdAt": "2026-10-02T02:15:16-06:00",
-      "status": "superseded",
-      "harvestedFrom": null,
-      "pullRequest": null,
-      "commit": "8cec138",
-      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c1-home/01-home-01-hero.png",
-      "previewUrl": null,
-      "documents": [
-        {
-          "title": "Harvest Site:All pages:C1",
-          "role": "flow",
-          "flow": "review",
-          "docId": "58ff5647-5bbd-472f-b880-d91bec0f4005",
-          "url": "https://lucid.app/lucidchart/58ff5647-5bbd-472f-b880-d91bec0f4005/edit",
-          "description": "4 pages: home (11), beta-signup (4), how-it-works (5), pricing (2)",
-          "harvest": true,
-          "commentUrl": "https://lucid.app/lucidchart/58ff5647-5bbd-472f-b880-d91bec0f4005/edit?invitationId=inv_9815ba8e-97e9-47a4-9629-3b3e81bb9d6a"
-        }
-      ],
-      "authors": [],
-      "authorsNote": "Not recorded — harvested before sticky attribution was read.",
-      "nightlyHarvests": [],
-      "manualHarvests": [
-        {
-          "date": "2026-10-02",
-          "stickies": 6,
-          "outcome": "applied"
-        }
-      ],
-      "screens": 22,
-      "changes": {
-        "applied": [],
-        "skipped": [],
-        "conflicts": [],
-        "note": "Initial capture of production @8cec138 (22 screens)."
-      },
-      "contributions": {
-        "red": 0,
-        "yellow": 0,
-        "blue": 0,
-        "purple": 0
-      },
-      "lucidFolderId": 452809010
+     "title": "Harvest Site:All pages:C1",
+     "role": "flow",
+     "flow": "review",
+     "docId": "58ff5647-5bbd-472f-b880-d91bec0f4005",
+     "url": "https://lucid.app/lucidchart/58ff5647-5bbd-472f-b880-d91bec0f4005/edit",
+     "description": "4 pages: home (11), beta-signup (4), how-it-works (5), pricing (2)",
+     "harvest": true,
+     "commentUrl": "https://lucid.app/lucidchart/58ff5647-5bbd-472f-b880-d91bec0f4005/edit?invitationId=inv_9815ba8e-97e9-47a4-9629-3b3e81bb9d6a"
+    }
+   ],
+   "authors": [],
+   "authorsNote": "Not recorded — harvested before sticky attribution was read.",
+   "nightlyHarvests": [],
+   "manualHarvests": [
+    {
+     "date": "2026-10-02",
+     "stickies": 6,
+     "outcome": "applied"
+    }
+   ],
+   "screens": 22,
+   "changes": {
+    "applied": [],
+    "skipped": [],
+    "conflicts": [],
+    "note": "Initial capture of production @8cec138 (22 screens)."
+   },
+   "contributions": {
+    "red": 0,
+    "yellow": 0,
+    "blue": 0,
+    "purple": 0
+   },
+   "lucidFolderId": 452809010
+  },
+  {
+   "number": 2,
+   "title": "Cycle 2 — single Harvest header, renamed to Harvest (PR #1)",
+   "createdAt": "2026-10-02T12:48:20-06:00",
+   "status": "superseded",
+   "harvestedFrom": 1,
+   "pullRequest": "https://github.com/johndilworth/harvest-for-lucid-site/pull/1",
+   "commit": "7a89b64",
+   "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c2-home/01-home-01-hero.png",
+   "previewUrl": "https://deploy-preview-1--harvest-for-lucid.netlify.app",
+   "documents": [
+    {
+     "title": "Harvest Site:Home:C2",
+     "role": "flow",
+     "flow": "home",
+     "docId": "94e6f74e-a6ce-43cd-a33d-73bb349db041",
+     "url": "https://lucid.app/lucidchart/94e6f74e-a6ce-43cd-a33d-73bb349db041/edit",
+     "description": "11 screens",
+     "harvest": true,
+     "commentUrl": "https://lucid.app/lucidchart/94e6f74e-a6ce-43cd-a33d-73bb349db041/edit?invitationId=inv_26836ab6-43b4-4787-96d3-b22df53fba77"
     },
     {
-      "number": 2,
-      "title": "Cycle 2 — single Harvest header, renamed to Harvest (PR #1)",
-      "createdAt": "2026-10-02T12:48:20-06:00",
-      "status": "superseded",
-      "harvestedFrom": 1,
-      "pullRequest": "https://github.com/johndilworth/harvest-for-lucid-site/pull/1",
-      "commit": "7a89b64",
-      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c2-home/01-home-01-hero.png",
-      "previewUrl": "https://deploy-preview-1--harvest-for-lucid.netlify.app",
-      "documents": [
-        {
-          "title": "Harvest Site:Home:C2",
-          "role": "flow",
-          "flow": "home",
-          "docId": "94e6f74e-a6ce-43cd-a33d-73bb349db041",
-          "url": "https://lucid.app/lucidchart/94e6f74e-a6ce-43cd-a33d-73bb349db041/edit",
-          "description": "11 screens",
-          "harvest": true,
-          "commentUrl": "https://lucid.app/lucidchart/94e6f74e-a6ce-43cd-a33d-73bb349db041/edit?invitationId=inv_26836ab6-43b4-4787-96d3-b22df53fba77"
-        },
-        {
-          "title": "Harvest Site:Beta signup:C2",
-          "role": "flow",
-          "flow": "beta-signup",
-          "docId": "c7af9ce3-3fbe-431b-8745-aab57fa2f2c2",
-          "url": "https://lucid.app/lucidchart/c7af9ce3-3fbe-431b-8745-aab57fa2f2c2/edit",
-          "description": "4 screens",
-          "harvest": true,
-          "commentUrl": "https://lucid.app/lucidchart/c7af9ce3-3fbe-431b-8745-aab57fa2f2c2/edit?invitationId=inv_d6cc61da-c8b5-455d-9732-f8744dc9ddae"
-        },
-        {
-          "title": "Harvest Site:How it works:C2",
-          "role": "flow",
-          "flow": "how-it-works",
-          "docId": "e036d1c4-3f8b-4069-b797-b8e338bca337",
-          "url": "https://lucid.app/lucidchart/e036d1c4-3f8b-4069-b797-b8e338bca337/edit",
-          "description": "5 screens",
-          "harvest": true,
-          "commentUrl": "https://lucid.app/lucidchart/e036d1c4-3f8b-4069-b797-b8e338bca337/edit?invitationId=inv_33314a7a-5b80-4048-9bac-cd029ca534ab"
-        },
-        {
-          "title": "Harvest Site:Pricing:C2",
-          "role": "flow",
-          "flow": "pricing",
-          "docId": "3071b809-3d20-47e9-b24c-5e494f58d5b6",
-          "url": "https://lucid.app/lucidchart/3071b809-3d20-47e9-b24c-5e494f58d5b6/edit",
-          "description": "2 screens",
-          "harvest": true,
-          "commentUrl": "https://lucid.app/lucidchart/3071b809-3d20-47e9-b24c-5e494f58d5b6/edit?invitationId=inv_ea28fab8-4524-4fde-b31d-3104b054b81e"
-        }
-      ],
-      "authors": [
-        {
-          "name": "John Dilworth",
-          "stickies": 9
-        }
-      ],
-      "nightlyHarvests": [],
-      "manualHarvests": [
-        {
-          "date": "2026-10-13",
-          "stickies": 9,
-          "outcome": "applied"
-        }
-      ],
-      "screens": 22,
-      "changes": {
-        "applied": [
-          {
-            "priority": "try",
-            "flow": "home-01-hero",
-            "text": "Simplify this into a single header menu — don't need Lucid menu and Harvest menu. For now remove the \"Lucid menu\" at top, and focus on Harvest only. Remove \"for Lucidchart\" and let's just call it Harvest."
-          },
-          {
-            "priority": "must",
-            "flow": "home-01-hero",
-            "text": "Remove the get on the list banner. It's unnecessary"
-          },
-          {
-            "priority": "try",
-            "flow": "home-01-hero",
-            "text": "Don't use the all caps eyebrow titles in the design — they are unecessary — remove \"HARVEST FOR LUCIDCHART - LUCID SUITE ADD-ON (CONCEPT) here."
-          },
-          {
-            "priority": "must",
-            "flow": "home-01-hero",
-            "text": "remove caption text below buttons, also unecessary — keep focus simple."
-          },
-          {
-            "priority": "try",
-            "flow": "home-02-problem",
-            "text": "remove eyebrow titles such as \"THE PROBLEM\" wherever possible, headlines can stand on their own."
-          }
-        ],
-        "skipped": [
-          {
-            "text": "(empty sticky on pricing-01-plans)",
-            "reason": "empty"
-          }
-        ],
-        "conflicts": [],
-        "note": "Cycle 1 board stickies implemented in PR #1 (open, not merged). Cycle 2 hub ab0c1380 not listed (no hubs, v2)."
-      },
-      "contributions": {
-        "red": 2,
-        "yellow": 3,
-        "blue": 0,
-        "purple": 0
-      },
-      "lucidFolderId": 452809012
+     "title": "Harvest Site:Beta signup:C2",
+     "role": "flow",
+     "flow": "beta-signup",
+     "docId": "c7af9ce3-3fbe-431b-8745-aab57fa2f2c2",
+     "url": "https://lucid.app/lucidchart/c7af9ce3-3fbe-431b-8745-aab57fa2f2c2/edit",
+     "description": "4 screens",
+     "harvest": true,
+     "commentUrl": "https://lucid.app/lucidchart/c7af9ce3-3fbe-431b-8745-aab57fa2f2c2/edit?invitationId=inv_d6cc61da-c8b5-455d-9732-f8744dc9ddae"
     },
     {
-      "number": 3,
-      "title": "Cycle 3 — one-page site, “Every sticky note becomes a change”, Review/Harvest/Ship/Repeat",
-      "createdAt": "2026-10-13T10:29:00-06:00",
-      "status": "current",
-      "harvestedFrom": 2,
-      "pullRequest": null,
-      "branch": "https://github.com/johndilworth/harvest-for-lucid-site/tree/cycle-2-feedback",
-      "commit": "9f6f8db",
-      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c3-home-story/01-home-01-hero.png",
-      "previewUrl": "https://6ace5bda91107ed2c5b1d4c2--harvest-for-lucid.netlify.app",
-      "documents": [
-        {
-          "title": "Harvest Site:Home story:C3",
-          "role": "flow",
-          "flow": "home-story",
-          "docId": "5448a628-69f0-444f-a9a8-ee3b9e1d06d2",
-          "url": "https://lucid.app/lucidchart/5448a628-69f0-444f-a9a8-ee3b9e1d06d2/edit",
-          "commentUrl": "https://lucid.app/lucidchart/5448a628-69f0-444f-a9a8-ee3b9e1d06d2/edit?invitationId=inv_fa86c165-fa7d-41d8-a708-347f9f252899",
-          "description": "5 screens: hero, problem, loop, benefits, works with your agents",
-          "harvest": true
-        },
-        {
-          "title": "Harvest Site:Home proof:C3",
-          "role": "flow",
-          "flow": "home-proof",
-          "docId": "5217e3f9-4530-4f04-90cc-989da95dad72",
-          "url": "https://lucid.app/lucidchart/5217e3f9-4530-4f04-90cc-989da95dad72/edit",
-          "commentUrl": "https://lucid.app/lucidchart/5217e3f9-4530-4f04-90cc-989da95dad72/edit?invitationId=inv_6d469560-4a70-4f48-97f8-3dac5e9be26c",
-          "description": "3 screens: before/after, paper trail, results",
-          "harvest": true
-        },
-        {
-          "title": "Harvest Site:Home close:C3",
-          "role": "flow",
-          "flow": "home-close",
-          "docId": "8ebd8ae7-da9b-4140-8ae0-d57ffb0239fb",
-          "url": "https://lucid.app/lucidchart/8ebd8ae7-da9b-4140-8ae0-d57ffb0239fb/edit",
-          "commentUrl": "https://lucid.app/lucidchart/8ebd8ae7-da9b-4140-8ae0-d57ffb0239fb/edit?invitationId=inv_4adc4c16-7193-4c38-ad4a-ae0b3638686b",
-          "description": "3 screens: compare table, Lucidchart, closing band and footer",
-          "harvest": true
-        }
-      ],
-      "authors": [
-        {
-          "name": "John Dilworth",
-          "stickies": 6
-        }
-      ],
-      "authorsNote": "Harvested 2026-10-19 (approval mode): 6 stickies on Home story, 0 on Home proof and Home close.",
-      "nightlyHarvests": [],
-      "manualHarvests": [
-        {
-          "date": "2026-10-19",
-          "stickies": 6,
-          "outcome": "waiting_approval",
-          "proposals": "/data/proposals/harvest-site-c3.json",
-          "note": "Approval mode: 6 proposals (all Home story board) waiting for John Dilworth; nothing applied yet."
-        }
-      ],
-      "screens": 11,
-      "changes": {
-        "applied": [
-          {
-            "priority": "must",
-            "flow": "home-01-hero",
-            "text": "One-page site: How it works, Pricing and Beta pages removed (old URLs redirect to the home page); nav links jump to sections; the loop section covers the how-it-works basics.",
-            "author": "John Dilworth"
-          },
-          {
-            "priority": "must",
-            "flow": "home-11-cta-footer",
-            "text": "Footer link columns and dead legal links removed; only the Lucid wordmark and the concept-mockup note remain.",
-            "author": "John Dilworth"
-          },
-          {
-            "priority": "must",
-            "flow": "home-10-suite",
-            "text": "Bullet list removed from the Lucidchart section (keyword “do:” on a yellow sticky).",
-            "author": "John Dilworth"
-          },
-          {
-            "priority": "try",
-            "flow": "home-01-hero",
-            "text": "Headline changed to “Every sticky note becomes a change”.",
-            "author": "John Dilworth"
-          },
-          {
-            "priority": "try",
-            "flow": "home-03-how",
-            "text": "Loop is now “Review. Harvest. Ship. Repeat.”: Capture folded into Review, new Repeat step.",
-            "author": "John Dilworth"
-          },
-          {
-            "priority": "try",
-            "flow": "home-02-problem",
-            "text": "Problem headlines reworded as negatives (“Only one voice reaches the AI”, “Feedback gets lost in translation”, “Decisions vanish with the chat”).",
-            "author": "John Dilworth"
-          },
-          {
-            "priority": "try",
-            "flow": "home-02-problem",
-            "text": "Story structure applied: problem, loop, benefits, works with your agents, proof, where it fits, Lucidchart, closing (judgment call, please confirm).",
-            "author": "John Dilworth"
-          },
-          {
-            "priority": "try",
-            "flow": "home-08-cost",
-            "text": "“Honest numbers on what a cycle costs” replaced by “Works with your agents” (no AI seat per reviewer); measurements removed.",
-            "author": "John Dilworth"
-          },
-          {
-            "priority": "try",
-            "flow": "home-09-compare",
-            "text": "Compare table: red ✕ on drawbacks, green ✓ on Harvest, cells rewritten pros/cons style.",
-            "author": "John Dilworth"
-          }
-        ],
-        "skipped": [],
-        "conflicts": [],
-        "note": "Started manually from the dashboard (Run harvest now, 2026-10-13 10:22 MT). 9 stickies from the Cycle 2 Home board, all by John Dilworth; the Beta signup, How it works and Pricing boards had none, and there were no comments. Changes are on branch cycle-2-feedback (stacked on PR #1), previewed on a Netlify draft deploy; no PR yet because the GitHub connector wasn't allowed to open one. 11 home screens > 5, so the cycle has three boards."
-      },
-      "contributions": {
-        "red": 3,
-        "yellow": 6,
-        "blue": 0,
-        "purple": 0
-      },
-      "lucidFolderId": 452808972
+     "title": "Harvest Site:How it works:C2",
+     "role": "flow",
+     "flow": "how-it-works",
+     "docId": "e036d1c4-3f8b-4069-b797-b8e338bca337",
+     "url": "https://lucid.app/lucidchart/e036d1c4-3f8b-4069-b797-b8e338bca337/edit",
+     "description": "5 screens",
+     "harvest": true,
+     "commentUrl": "https://lucid.app/lucidchart/e036d1c4-3f8b-4069-b797-b8e338bca337/edit?invitationId=inv_33314a7a-5b80-4048-9bac-cd029ca534ab"
+    },
+    {
+     "title": "Harvest Site:Pricing:C2",
+     "role": "flow",
+     "flow": "pricing",
+     "docId": "3071b809-3d20-47e9-b24c-5e494f58d5b6",
+     "url": "https://lucid.app/lucidchart/3071b809-3d20-47e9-b24c-5e494f58d5b6/edit",
+     "description": "2 screens",
+     "harvest": true,
+     "commentUrl": "https://lucid.app/lucidchart/3071b809-3d20-47e9-b24c-5e494f58d5b6/edit?invitationId=inv_ea28fab8-4524-4fde-b31d-3104b054b81e"
     }
-  ]
+   ],
+   "authors": [
+    {
+     "name": "John Dilworth",
+     "stickies": 9
+    }
+   ],
+   "nightlyHarvests": [],
+   "manualHarvests": [
+    {
+     "date": "2026-10-13",
+     "stickies": 9,
+     "outcome": "applied"
+    }
+   ],
+   "screens": 22,
+   "changes": {
+    "applied": [
+     {
+      "priority": "try",
+      "flow": "home-01-hero",
+      "text": "Simplify this into a single header menu — don't need Lucid menu and Harvest menu. For now remove the \"Lucid menu\" at top, and focus on Harvest only. Remove \"for Lucidchart\" and let's just call it Harvest."
+     },
+     {
+      "priority": "must",
+      "flow": "home-01-hero",
+      "text": "Remove the get on the list banner. It's unnecessary"
+     },
+     {
+      "priority": "try",
+      "flow": "home-01-hero",
+      "text": "Don't use the all caps eyebrow titles in the design — they are unecessary — remove \"HARVEST FOR LUCIDCHART - LUCID SUITE ADD-ON (CONCEPT) here."
+     },
+     {
+      "priority": "must",
+      "flow": "home-01-hero",
+      "text": "remove caption text below buttons, also unecessary — keep focus simple."
+     },
+     {
+      "priority": "try",
+      "flow": "home-02-problem",
+      "text": "remove eyebrow titles such as \"THE PROBLEM\" wherever possible, headlines can stand on their own."
+     }
+    ],
+    "skipped": [
+     {
+      "text": "(empty sticky on pricing-01-plans)",
+      "reason": "empty"
+     }
+    ],
+    "conflicts": [],
+    "note": "Cycle 1 board stickies implemented in PR #1 (open, not merged). Cycle 2 hub ab0c1380 not listed (no hubs, v2)."
+   },
+   "contributions": {
+    "red": 2,
+    "yellow": 3,
+    "blue": 0,
+    "purple": 0
+   },
+   "lucidFolderId": 452809012
+  },
+  {
+   "number": 3,
+   "title": "Cycle 3 — one-page site, “Every sticky note becomes a change”, Review/Harvest/Ship/Repeat",
+   "createdAt": "2026-10-13T10:29:00-06:00",
+   "status": "superseded",
+   "harvestedFrom": 2,
+   "pullRequest": null,
+   "branch": "https://github.com/johndilworth/harvest-for-lucid-site/tree/cycle-2-feedback",
+   "commit": "9f6f8db",
+   "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c3-home-story/01-home-01-hero.png",
+   "previewUrl": "https://6ace5bda91107ed2c5b1d4c2--harvest-for-lucid.netlify.app",
+   "documents": [
+    {
+     "title": "Harvest Site:Home story:C3",
+     "role": "flow",
+     "flow": "home-story",
+     "docId": "5448a628-69f0-444f-a9a8-ee3b9e1d06d2",
+     "url": "https://lucid.app/lucidchart/5448a628-69f0-444f-a9a8-ee3b9e1d06d2/edit",
+     "commentUrl": "https://lucid.app/lucidchart/5448a628-69f0-444f-a9a8-ee3b9e1d06d2/edit?invitationId=inv_fa86c165-fa7d-41d8-a708-347f9f252899",
+     "description": "5 screens: hero, problem, loop, benefits, works with your agents",
+     "harvest": true
+    },
+    {
+     "title": "Harvest Site:Home proof:C3",
+     "role": "flow",
+     "flow": "home-proof",
+     "docId": "5217e3f9-4530-4f04-90cc-989da95dad72",
+     "url": "https://lucid.app/lucidchart/5217e3f9-4530-4f04-90cc-989da95dad72/edit",
+     "commentUrl": "https://lucid.app/lucidchart/5217e3f9-4530-4f04-90cc-989da95dad72/edit?invitationId=inv_6d469560-4a70-4f48-97f8-3dac5e9be26c",
+     "description": "3 screens: before/after, paper trail, results",
+     "harvest": true
+    },
+    {
+     "title": "Harvest Site:Home close:C3",
+     "role": "flow",
+     "flow": "home-close",
+     "docId": "8ebd8ae7-da9b-4140-8ae0-d57ffb0239fb",
+     "url": "https://lucid.app/lucidchart/8ebd8ae7-da9b-4140-8ae0-d57ffb0239fb/edit",
+     "commentUrl": "https://lucid.app/lucidchart/8ebd8ae7-da9b-4140-8ae0-d57ffb0239fb/edit?invitationId=inv_4adc4c16-7193-4c38-ad4a-ae0b3638686b",
+     "description": "3 screens: compare table, Lucidchart, closing band and footer",
+     "harvest": true
+    }
+   ],
+   "authors": [
+    {
+     "name": "John Dilworth",
+     "stickies": 6
+    }
+   ],
+   "authorsNote": "Harvested 2026-10-19 (approval mode): 6 stickies on Home story, 0 on Home proof and Home close.",
+   "nightlyHarvests": [],
+   "manualHarvests": [
+    {
+     "date": "2026-10-19",
+     "stickies": 6,
+     "outcome": "applied",
+     "proposals": "/data/proposals/harvest-site-c3.json",
+     "note": "Approval mode: John Dilworth approved all 6 proposals in Grok Bot chat; applied on main @ 3dd76b4 and Applied badges written on the Home story board.",
+     "decidedAt": "2026-10-19T22:55:00-06:00",
+     "appliedCommit": "3dd76b4"
+    }
+   ],
+   "screens": 11,
+   "changes": {
+    "applied": [
+     {
+      "priority": "must",
+      "flow": "home-01-hero",
+      "text": "One-page site: How it works, Pricing and Beta pages removed (old URLs redirect to the home page); nav links jump to sections; the loop section covers the how-it-works basics.",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "must",
+      "flow": "home-11-cta-footer",
+      "text": "Footer link columns and dead legal links removed; only the Lucid wordmark and the concept-mockup note remain.",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "must",
+      "flow": "home-10-suite",
+      "text": "Bullet list removed from the Lucidchart section (keyword “do:” on a yellow sticky).",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "try",
+      "flow": "home-01-hero",
+      "text": "Headline changed to “Every sticky note becomes a change”.",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "try",
+      "flow": "home-03-how",
+      "text": "Loop is now “Review. Harvest. Ship. Repeat.”: Capture folded into Review, new Repeat step.",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "try",
+      "flow": "home-02-problem",
+      "text": "Problem headlines reworded as negatives (“Only one voice reaches the AI”, “Feedback gets lost in translation”, “Decisions vanish with the chat”).",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "try",
+      "flow": "home-02-problem",
+      "text": "Story structure applied: problem, loop, benefits, works with your agents, proof, where it fits, Lucidchart, closing (judgment call, please confirm).",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "try",
+      "flow": "home-08-cost",
+      "text": "“Honest numbers on what a cycle costs” replaced by “Works with your agents” (no AI seat per reviewer); measurements removed.",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "try",
+      "flow": "home-09-compare",
+      "text": "Compare table: red ✕ on drawbacks, green ✓ on Harvest, cells rewritten pros/cons style.",
+      "author": "John Dilworth"
+     }
+    ],
+    "skipped": [],
+    "conflicts": [],
+    "note": "Started manually from the dashboard (Run harvest now, 2026-10-13 10:22 MT). 9 stickies from the Cycle 2 Home board, all by John Dilworth; the Beta signup, How it works and Pricing boards had none, and there were no comments. Changes are on branch cycle-2-feedback (stacked on PR #1), previewed on a Netlify draft deploy; no PR yet because the GitHub connector wasn't allowed to open one. 11 home screens > 5, so the cycle has three boards."
+   },
+   "contributions": {
+    "red": 3,
+    "yellow": 6,
+    "blue": 0,
+    "purple": 0
+   },
+   "lucidFolderId": 452808972
+  },
+  {
+   "number": 4,
+   "title": "Cycle 4 — Design Loop look, dark by default, “Turn every sticky note into a pull request”, approval modes",
+   "createdAt": "2026-10-19T23:05:00-06:00",
+   "status": "current",
+   "harvestedFrom": 3,
+   "pullRequest": null,
+   "branch": "https://github.com/johndilworth/harvest-for-lucid-site/tree/main",
+   "commit": "3dd76b4",
+   "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c4-home-story/01-home-01-hero.png",
+   "previewUrl": "https://6ad6f57b5bbb80f6db68b761--harvest-for-lucid.netlify.app",
+   "documents": [
+    {
+     "title": "Harvest Site:Home story:C4",
+     "role": "flow",
+     "flow": "home-story",
+     "docId": "cdc99cb7-7617-4895-aa26-9355e84d7fcc",
+     "url": "https://lucid.app/lucidchart/cdc99cb7-7617-4895-aa26-9355e84d7fcc/edit",
+     "commentUrl": "https://lucid.app/lucidchart/cdc99cb7-7617-4895-aa26-9355e84d7fcc/edit?invitationId=inv_9d7306c8-70a9-4e7b-b978-17780d5cdcf6",
+     "description": "5 screens: hero, problem, loop, approval modes, benefits",
+     "harvest": true
+    },
+    {
+     "title": "Harvest Site:Home proof:C4",
+     "role": "flow",
+     "flow": "home-proof",
+     "docId": "e8c72295-b6c0-445c-9cc1-15d5ec33b7a6",
+     "url": "https://lucid.app/lucidchart/e8c72295-b6c0-445c-9cc1-15d5ec33b7a6/edit",
+     "commentUrl": "https://lucid.app/lucidchart/e8c72295-b6c0-445c-9cc1-15d5ec33b7a6/edit?invitationId=inv_027ff5a7-5f90-45d0-b389-728cde490eba",
+     "description": "4 screens: works with your agents, before/after, paper trail, results",
+     "harvest": true
+    },
+    {
+     "title": "Harvest Site:Home close:C4",
+     "role": "flow",
+     "flow": "home-close",
+     "docId": "e944c280-becd-4165-a4a8-8ab49d90172d",
+     "url": "https://lucid.app/lucidchart/e944c280-becd-4165-a4a8-8ab49d90172d/edit",
+     "commentUrl": "https://lucid.app/lucidchart/e944c280-becd-4165-a4a8-8ab49d90172d/edit?invitationId=inv_1c0fe396-b5dc-4e10-ba00-768db4ff8cc4",
+     "description": "3 screens: compare table, Lucidchart, closing band and footer",
+     "harvest": true
+    }
+   ],
+   "authors": [],
+   "authorsNote": "No stickies yet on the Cycle 4 boards.",
+   "nightlyHarvests": [],
+   "manualHarvests": [],
+   "screens": 12,
+   "changes": {
+    "applied": [
+     {
+      "priority": "must",
+      "flow": "home-01-hero",
+      "text": "Design Loop look: JetBrains Mono, indigo accent, square edges; Design Loop's animated ASCII background ported as a small inline canvas script behind the hero (static frame for reduced motion).",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "must",
+      "flow": "home-01-hero",
+      "text": "Headline back to “Turn every sticky note into a pull request” (title and meta description too).",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "must",
+      "flow": "home-01-hero",
+      "text": "Dark theme by default with a sun/moon toggle in the header (saved in localStorage); orange/teal/grey bands, cards and icons recoloured for dark.",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "try",
+      "flow": "home-12-modes",
+      "text": "New “You choose who approves” section after the loop: Auto, Manual and Approver mode cards, plus an Approval modes nav link.",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "try",
+      "flow": "home-02-problem",
+      "text": "Problem-card icons replaced with red X-in-circle inline SVGs.",
+      "author": "John Dilworth"
+     },
+     {
+      "priority": "try",
+      "flow": "home-05-agents",
+      "text": "Harvest Dashboard captures (home, project page, approval list) added: approval list under the modes section, project page in Works with your agents, dashboard home replaces the Lucid all-cycles export in the side-by-side tabs.",
+      "author": "John Dilworth"
+     }
+    ],
+    "skipped": [],
+    "conflicts": [],
+    "deferred": [],
+    "note": "Approval mode: John Dilworth approved all 6 Cycle 3 proposals in Grok Bot chat (2026-10-19). Committed straight to main (PR tool returned 403 earlier); Netlify production deploy of 3dd76b4. 12 home screens > 5, so three boards (story 5, proof 4, close 3)."
+   },
+   "contributions": {
+    "red": 3,
+    "yellow": 3,
+    "blue": 0,
+    "purple": 0
+   },
+   "lucidFolderId": 452808972
+  }
+ ]
 }

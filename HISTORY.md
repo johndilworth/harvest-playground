@@ -24,6 +24,14 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 Live: https://harvest-dashboard.netlify.app/p/harvest-dashboard/ · Cycle 5 boards: [All pages](https://lucid.app/lucidchart/21e07c60-fd42-4b84-bce5-728454db7063/edit) · [Meetings](https://lucid.app/lucidchart/bcfbc935-e762-474b-ad4d-11847858f4e6/edit) · [New project](https://lucid.app/lucidchart/1b6e06d3-0f14-4ece-b108-3a03ca8a6d57/edit)
 
+## Harvest Site (manual, approval mode)
+
+| Date (MT) | Harvest | Stickies | Applied | Skipped | Result |
+|---|---|---:|---:|---:|---|
+| Mon 2026-10-19 ~11:00 PM | Cycle 3 boards (approval mode, 6/6 approved by John in Grok Bot chat) | 6 | 6 | 0 | **Cycle 4 shipped** (main 3dd76b4): Design Loop look + animated ASCII hero, dark by default + sun/moon toggle, headline "Turn every sticky note into a pull request", "You choose who approves" (Auto / Manual / Approver), red X problem icons, Harvest Dashboard screenshots · authors: John Dilworth 6 |
+
+Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashboard.netlify.app/p/harvest-site/ · Cycle 4 boards: [Home story](https://lucid.app/lucidchart/cdc99cb7-7617-4895-aa26-9355e84d7fcc/edit?invitationId=inv_9d7306c8-70a9-4e7b-b978-17780d5cdcf6) · [Home proof](https://lucid.app/lucidchart/e8c72295-b6c0-445c-9cc1-15d5ec33b7a6/edit?invitationId=inv_027ff5a7-5f90-45d0-b389-728cde490eba) · [Home close](https://lucid.app/lucidchart/e944c280-becd-4165-a4a8-8ab49d90172d/edit?invitationId=inv_1c0fe396-b5dc-4e10-ba00-768db4ff8cc4)
+
 ## At a glance
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |

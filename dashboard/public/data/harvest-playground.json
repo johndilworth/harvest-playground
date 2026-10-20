@@ -3,7 +3,7 @@
   "project": {
     "name": "Harvest Playground",
     "slug": "harvest-playground",
-    "description": "A playful page John's team grows one Harvest cycle at a time: leave a sticky on the current cycle's Lucid board, and every safe request is applied at 5 pm MT, merged to main and deployed.",
+    "description": "A playful page John's team grows one Harvest cycle at a time.",
     "repo": "https://github.com/johndilworth/harvest-playground",
     "site": "https://harvest-playground.netlify.app",
     "historyBoard": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",

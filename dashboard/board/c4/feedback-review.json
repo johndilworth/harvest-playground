@@ -1,0 +1,225 @@
+{
+  "docId": "d0d31d0c-39b4-4e1a-996c-067c53ffe8ab",
+  "cycle": 4,
+  "harvestedAt": "2026-10-20T04:25:22.954434+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home — all Harvest projects",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/",
+      "url": "https://harvest-dashboard.netlify.app/",
+      "title": "Home",
+      "h1": "All projects",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-02-project-dashboard",
+      "pageId": "review",
+      "frameTitle": "02-project-dashboard · /p/harvest-playground/ · Project dashboard (Harvest Playground)",
+      "stepKey": "02-project-dashboard",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/",
+      "title": "Project dashboard",
+      "h1": "Harvest Playground",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "vlYEGMn2hDi-",
+          "kind": "sticky",
+          "text": "I want to merge the dashboard page and the cycle page. This can be done by revising the UI as I've included in this  wireframe. Add a left column navigation that displays each cycle - from most recent at top (and currently selected) with oldest last. Selecting a cycle will instantly display the Lucidchart documents associated with that cycle. Simplify the cards for Lucidchart documents and apply the animated stack to Lucidchart documents instead of the cycles which will be in the left menu now. \n\nThe visualization will get an indicator that shows the current ly selected cycle — the selected cycle will animate wider when it  is slected and will display the hover text and details inline with the visualization. \n\nThe Lucicchart documents will be the selected tab, with a second tab for the summary. All this should be visible in  what is more like a single page app instead of there being separate cycle, dashboard and summary page . \n\nA link to the live site is added at the top of the left column slightly separated from the Cycle navigation by a header \"cycles\"",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 2754.214,
+            "y": 334.101,
+            "w": 473.791,
+            "h": 473.791
+          },
+          "containment": {
+            "childrenIds": "frame-02-project-dashboard",
+            "via": null,
+            "bbox": "frame-02-project-dashboard",
+            "bestOverlap": {
+              "frameId": "frame-02-project-dashboard",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        },
+        {
+          "itemId": "lXPEDwkUx7~X",
+          "kind": "sticky",
+          "text": "Remove the text with instructions \"...leave a sticky on the current cycle's Lucid board\"\n\nThis should only be the project description",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 4348.0,
+            "y": 513.333,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-02-project-dashboard",
+            "via": "shot-02-project-dashboard",
+            "bbox": "frame-02-project-dashboard",
+            "bestOverlap": {
+              "frameId": "frame-02-project-dashboard",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-03-cycle",
+      "pageId": "review",
+      "frameTitle": "03-cycle · /p/harvest-dashboard/cycle.html?c=4 · Cycle page (Harvest Dashboard · Cycle 4)",
+      "stepKey": "03-cycle",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=4",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=4",
+      "title": "Cycle page",
+      "h1": "Harvest Dashboard · Cycle 4",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "avXDpqKj3yD1",
+          "kind": "sticky",
+          "text": "This page will be integrated into the project dashboard under the selected cycle.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 5574.531,
+            "y": 579.81,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-03-cycle",
+            "via": null,
+            "bbox": "frame-03-cycle",
+            "bestOverlap": {
+              "frameId": "frame-03-cycle",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-04-run-harvest-modal",
+      "pageId": "review",
+      "frameTitle": "04-run-harvest-modal · /p/harvest-dashboard/cycle.html?c=4 · Run harvest modal",
+      "stepKey": "04-run-harvest-modal",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-dashboard/cycle.html?c=4",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=4",
+      "title": "Run harvest modal",
+      "h1": "Run harvest",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    },
+    {
+      "frameId": "frame-05-summary",
+      "pageId": "review",
+      "frameTitle": "05-summary · /p/harvest-playground/summary.html · Summary (all cycles of a project)",
+      "stepKey": "05-summary",
+      "matchedBy": "frame-id",
+      "flow": "review",
+      "route": "/p/harvest-playground/summary.html",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/summary.html",
+      "title": "Summary",
+      "h1": "Summary",
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": [
+        {
+          "itemId": "WFYEkrNz2BW.",
+          "kind": "sticky",
+          "text": "Summary is integrated into consolidated dashboard — user can see this content when they click the \"summary\" tab from a selected cycle's page on the dashboard. ",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 10933.787,
+            "y": 859.668,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-05-summary",
+            "via": null,
+            "bbox": "frame-05-summary",
+            "bestOverlap": {
+              "frameId": "frame-05-summary",
+              "ratio": 1.0
+            }
+          },
+          "author": "John Dilworth"
+        }
+      ]
+    },
+    {
+      "frameId": "yxYEnmfpNR5b",
+      "pageId": "review",
+      "frameTitle": "Wireframe",
+      "stepKey": null,
+      "matchedBy": "unmatched",
+      "flow": null,
+      "route": null,
+      "url": null,
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": null,
+      "screenshot": null,
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

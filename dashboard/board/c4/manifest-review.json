@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "stepKey": "01-home",
+      "flow": "review",
+      "cycle": 4,
+      "route": "/",
+      "url": "https://harvest-dashboard.netlify.app/",
+      "h1": "All projects",
+      "title": "Home"
+    },
+    {
+      "stepKey": "02-project-dashboard",
+      "flow": "review",
+      "cycle": 4,
+      "route": "/p/harvest-playground/",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/",
+      "h1": "Harvest Playground",
+      "title": "Project dashboard"
+    },
+    {
+      "stepKey": "03-cycle",
+      "flow": "review",
+      "cycle": 4,
+      "route": "/p/harvest-dashboard/cycle.html?c=4",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=4",
+      "h1": "Harvest Dashboard \u00b7 Cycle 4",
+      "title": "Cycle page"
+    },
+    {
+      "stepKey": "04-run-harvest-modal",
+      "flow": "review",
+      "cycle": 4,
+      "route": "/p/harvest-dashboard/cycle.html?c=4",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-dashboard/cycle.html?c=4",
+      "h1": "Run harvest",
+      "title": "Run harvest modal"
+    },
+    {
+      "stepKey": "05-summary",
+      "flow": "review",
+      "cycle": 4,
+      "route": "/p/harvest-playground/summary.html",
+      "url": "https://harvest-dashboard.netlify.app/p/harvest-playground/summary.html",
+      "h1": "Summary",
+      "title": "Summary"
+    }
+  ]
+}

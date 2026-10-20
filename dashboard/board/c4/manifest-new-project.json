@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "stepKey": "np-home",
+      "flow": "New project",
+      "cycle": 4,
+      "route": "/new.html",
+      "url": "https://harvest-dashboard.netlify.app/new.html",
+      "h1": "New project",
+      "title": "New project"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
     "slug": "harvest-dashboard",
     "harvestMode": "manual",
     "trigger": true,
-    "description": "This dashboard itself. Leave stickies on its Lucidchart review board; a manual harvest applies the safe ones to dashboard/, deploys, and publishes the next cycle.",
+    "description": "This dashboard itself: the Harvest home page, project dashboards and meeting pages.",
     "repo": "https://github.com/johndilworth/harvest-playground/tree/main/dashboard",
     "site": "https://harvest-dashboard.netlify.app",
     "historyBoard": null,

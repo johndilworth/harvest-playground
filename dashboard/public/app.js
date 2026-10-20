@@ -33,21 +33,100 @@ const statusLabel = (s) => s === "current" ? "Current" : "Archived";
 // Strip leading "Cycle N — "/"Cycle N - " from cycle titles used as descriptions.
 const cycleDesc = (c) => String(c.title || "").replace(/^\s*Cycle\s*\d+\s*[—–-]\s*/i, "").trim() || String(c.title || "");
 
-async function dashboard() {
-  const d = await load(), p = d.project, cs = d.cycles, cur = cs.find((c) => c.status === "current");
-  const applied = cs.reduce((n, c) => n + c.changes.applied.length, 0), skipped = cs.reduce((n, c) => n + c.changes.skipped.length, 0);
+// ---- Project app (cycle 5 stickies): dashboard, cycle page and summary merged into one single-page view ----
+// Layout from the cycle-4 wireframe: project name + description, full-width contributions chart, left column
+// (Live site link, then "Cycles" newest first), main panel with the selected cycle, Run harvest, and two tabs:
+// Lucidchart docs (animated card stack + changes) and Summary (all cycles). /p/<slug>/cycle.html?c=N and
+// /p/<slug>/summary.html still work and open the same view.
+const projUrl = (n, tab) => `${B}?c=${n}${tab === "summary" ? "&tab=summary" : ""}`;
+const shortDocTitle = (t) => { const m = String(t || "").match(/^[^:]+:(.+):C\d+$/); return m ? m[1] : String(t || ""); };
+let APP = null; // { d, sel, tab }
+
+async function projectApp(initialTab) {
+  const d = await load(), cs = d.cycles, q = new URLSearchParams(location.search);
+  const cur = cs.find((c) => c.status === "current") || ordered(cs)[0];
+  const want = q.has("c") ? +q.get("c") : NaN, sel = cs.find((c) => c.number === want) || cur;
+  const tab = (q.get("tab") || initialTab) === "summary" ? "summary" : "docs";
+  APP = { d, sel: sel.number, tab };
   document.body.insertAdjacentHTML("afterbegin", nav());
-  $("main").innerHTML = `${titleRow(esc(p.name), p, "dash")}<p class="muted">${esc(p.description)}</p>
-  ${histogram(cs)}
-  <div class="chips"><span class="chip"><b>${cs.length}</b> cycles</span><span class="chip"><b>${d.stats.pullRequests}</b> PRs</span><span class="chip"><b>${applied}</b> stickies applied</span><span class="chip"><b>${isNightly(p) ? d.stats.nightlyHarvests : d.stats.manualHarvests ?? 0}</b> ${isNightly(p) ? "nightly" : "manual"} harvests</span></div>
-  <h2>Cycles</h2><div class="stack" id="cycle-stack" role="list" aria-label="Cycles, newest first on top">${ordered(cs).map((c) => `<a role="listitem" class="card cycle-card stack-card ${c.status}" href="${B}cycle.html?c=${c.number}" data-cycle="${c.number}">
-   ${c.screenshot ? `<img class="stack-shot" src="${esc(c.screenshot)}" alt="" loading="lazy">` : `<div class="stack-shot" aria-hidden="true"></div>`}
-   <div class="stack-body"><h3>Cycle ${c.number}${statusTag(c.status)}</h3>
-   <div class="stack-date muted">${esc(fmt(c.createdAt))}</div>
-   <p class="stack-desc">${esc(cycleDesc(c))}</p></div></a>`).join("")}</div>
-  <p class="muted">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)}${p.rules ? ` · <a href="${p.rules}">Project rules ↗</a>` : ""} · ${skipped} skipped overall</p>`;
-  setupHistogram();
-  setupStack();
+  document.body.classList.add("project-app");
+  const p = d.project;
+  $("main").innerHTML = `<div class="app-head"><h1>${esc(p.name)}</h1>${p.description ? `<p class="muted app-desc">${esc(p.description)}</p>` : ""}</div>
+  ${vizHtml(cs, sel.number)}
+  <div class="app-body">
+    <aside class="app-side" aria-label="Cycles">
+      ${p.site ? `<a class="live-link" href="${esc(p.site)}" target="_blank" rel="noopener">Live site ↗</a>` : ""}
+      <h2 class="side-h">Cycles</h2>
+      <nav class="cycle-list">${[...cs].sort((a, b) => b.number - a.number).map((c) => `<a href="${projUrl(c.number)}" data-c="${c.number}"${c.number === sel.number ? ' class="selected" aria-current="page"' : ""}>Cycle ${c.number}${c.status === "current" ? '<span class="tag current">Current</span>' : ""}</a>`).join("")}</nav>
+    </aside>
+    <section class="app-main" id="app-main" aria-live="polite"></section>
+  </div>
+  <p class="muted app-foot">Data: <a href="/data/${SLUG}.json">${SLUG}.json</a> · updated ${fmt(d.updatedAt)}${p.rules ? ` · <a href="${p.rules}">Project rules ↗</a>` : ""}</p>`;
+  history.replaceState({ c: sel.number, tab }, "", projUrl(sel.number, tab));
+  document.querySelectorAll(".cycle-list a").forEach((a) => a.addEventListener("click", (e) => { if (e.metaKey || e.ctrlKey || e.shiftKey) return; e.preventDefault(); selectCycle(+a.dataset.c); }));
+  setupViz();
+  renderMain();
+  window.addEventListener("popstate", (e) => { const s = e.state || {}; if (s.c != null) { APP.tab = s.tab || "docs"; selectCycle(s.c, true); } });
+}
+// Kept as entry points for the old page templates.
+function dashboard() { return projectApp("docs"); }
+function cycle() { return projectApp("docs"); }
+function summary() { return projectApp("summary"); }
+
+function selectCycle(n, fromHistory) {
+  const c = APP.d.cycles.find((x) => x.number === n); if (!c) return;
+  APP.sel = n;
+  if (!fromHistory) history.pushState({ c: n, tab: APP.tab }, "", projUrl(n, APP.tab));
+  document.querySelectorAll(".cycle-list a").forEach((a) => { const on = +a.dataset.c === n; a.classList.toggle("selected", on); on ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"); });
+  document.querySelectorAll(".vbar").forEach((b) => { const on = +b.dataset.c === n; b.classList.toggle("selected", on); b.setAttribute("aria-pressed", String(on)); });
+  const det = $("#viz-detail"); if (det) det.innerHTML = vizDetail(c);
+  renderMain();
+}
+function setTab(tab) {
+  APP.tab = tab; history.replaceState({ c: APP.sel, tab }, "", projUrl(APP.sel, tab)); renderMain();
+}
+function renderMain() {
+  const d = APP.d, p = d.project, c = d.cycles.find((x) => x.number === APP.sel), curC = d.cycles.find((x) => x.status === "current");
+  document.title = `${p.name} · Cycle ${c.number}`;
+  const meta = `${esc(fmt(c.createdAt))}${c.harvestedFrom != null ? ` · harvested from Cycle ${c.harvestedFrom}` : ""}${c.pullRequest ? ` · <a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""}${c.commit ? ` · commit <code>${esc(c.commit)}</code>` : ""}${c.previewUrl ? ` · <a class="preview" href="${c.previewUrl}" target="_blank" rel="noopener">Preview ↗</a>` : ""}`;
+  const canRun = c.status === "current" && p.trigger;
+  const tabs = [["docs", "Lucidchart docs"], ["summary", "Summary"]];
+  $("#app-main").innerHTML = `<div class="sel-head"><div><h2 class="sel-title">Cycle ${c.number}${statusTag(c.status)}${c.status !== "current" && curC ? ` <a class="small go-current" href="${projUrl(curC.number)}" data-c="${curC.number}">Go to current cycle →</a>` : ""}</h2>
+     <p class="muted sel-meta">${esc(cycleDesc(c))}<br>${meta}</p></div>${canRun ? `<div id="trig" class="sel-run"><button disabled>Checking…</button></div>` : ""}</div>
+   <div class="tabs" role="tablist">${tabs.map(([k, l]) => `<button type="button" role="tab" class="tab${APP.tab === k ? " on" : ""}" aria-selected="${APP.tab === k}" data-tab="${k}">${l}</button>`).join("")}</div>
+   <div class="tab-panel" role="tabpanel">${APP.tab === "summary" ? summaryTable(d, c.number) : docsPanel(d, c)}</div>`;
+  document.querySelectorAll(".tabs .tab").forEach((b) => (b.onclick = () => setTab(b.dataset.tab)));
+  const gc = $(".go-current"); if (gc) gc.onclick = (e) => { e.preventDefault(); selectCycle(+gc.dataset.c); };
+  document.querySelectorAll(".sum-pick").forEach((a) => (a.onclick = (e) => { e.preventDefault(); APP.tab = "docs"; selectCycle(+a.dataset.c); }));
+  if (APP.tab === "docs") setupStack("doc-stack", { width: 240, height: 344 });
+  if (canRun) setupTrigger(c);
+  if (APP.tab === "docs") loadProposals(c.number).then((pr) => { const s = $("#approval-slot"); if (pr && s && APP.sel === c.number) s.innerHTML = proposalsHtml(pr); });
+}
+function docsPanel(d, c) {
+  const docs = c.documents || [];
+  const stack = docs.length ? `${c.status === "current" ? `<p class="muted small-note">Sign in to Lucid with your company account to comment; your name appears on your stickies.</p>` : ""}
+   <div class="stack doc-stack" id="doc-stack" role="list" aria-label="Lucidchart documents for Cycle ${c.number}">${docs.map((x) => {
+     const href = x.commentUrl || x.url || "#", shot = x.thumbnail || c.screenshot;
+     return `<a role="listitem" class="card stack-card doc-card" href="${esc(href)}" target="_blank" rel="noopener" title="${esc(x.title)}">
+       ${shot ? `<img class="stack-shot" src="${esc(shot)}" alt="" loading="lazy">` : `<div class="stack-shot ph"><img src="/lucidchart-logo.svg" alt="" width="134" height="22"></div>`}
+       <div class="stack-body"><h3>${esc(shortDocTitle(x.title))}</h3><p class="stack-desc">${esc(x.description || "")}</p>
+       <span class="doc-open">${c.status === "current" ? "Open to comment ↗" : "Open board ↗"}</span></div></a>`; }).join("")}</div>` : `<p class="muted">No Lucidchart documents for this cycle.</p>`;
+  const r = runs(d.project, c);
+  return `${stack}<div id="approval-slot"></div>
+   ${changesHtml(c.changes).replace("Changes made in this cycle", "Changes made this cycle") || `<h2>Changes made this cycle</h2><p class="muted">${c.status === "current" ? "Nothing yet. Changes show here after this cycle's boards are harvested." : "None."}</p>`}
+   ${authorsSection(c)}
+   <h2>${runsLabel(d.project)}</h2>${r.length ? `<ul class="runs">${r.map((h) => `<li>${esc(h.date)}: ${h.stickies} stickies (${esc(h.outcome)})</li>`).join("")}</ul>` : `<p class="muted">None yet${isNightly(d.project) ? "; next harvest at 5 pm MT" : c.status === "current" ? "; harvested manually when requested" : ""}.</p>`}`;
+}
+function summaryTable(d, selN) {
+  const li = (a, f) => a.length ? `<ul>${a.map(f).join("")}</ul>` : "<span class='muted'>none</span>";
+  return `<p class="muted">Every cycle and the changes it shipped.</p>
+  <table class="summary-table"><tr><th>Cycle</th><th>Screenshot</th><th>Date</th><th>Status</th><th>Applied</th><th>Skipped (reason)</th><th>Conflicts</th></tr>
+  ${[...d.cycles].sort((a, b) => b.number - a.number).map((c) => `<tr${c.number === selN ? ' class="sel-row"' : ""}><td><a class="sum-pick" href="${projUrl(c.number)}" data-c="${c.number}">Cycle ${c.number}</a>${c.pullRequest ? `<br><a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""}</td>
+   <td class="sum-shot">${c.screenshot ? `<a class="sum-pick" href="${projUrl(c.number)}" data-c="${c.number}" aria-label="Open Cycle ${c.number}"><img src="${esc(c.screenshot)}" alt="Cycle ${c.number} screenshot" loading="lazy"></a>` : ""}</td>
+   <td style="white-space:nowrap">${fmt(c.createdAt)}</td><td>${esc(statusLabel(c.status))}</td>
+   <td>${c.changes.note ? esc(c.changes.note) : ""}${c.changes.applied.length || !c.changes.note ? li(c.changes.applied, (a) => `<li><b>${esc(a.priority)}</b> · ${esc(a.text)}${a.author ? ` · by ${esc(a.author)}` : ""}</li>`) : ""}</td>
+   <td>${li(c.changes.skipped, (s) => `<li>${esc(s.text)}: <i>${esc(s.reason)}</i>${s.author ? ` · by ${esc(s.author)}` : ""}</li>`)}</td>
+   <td>${li(c.changes.conflicts, (s) => `<li>${esc(s)}</li>`)}</td></tr>`).join("")}</table>`;
 }
 
 function docIdFromUrl(url) {
@@ -93,36 +172,6 @@ function authorsSection(c) {
   return `<h2>Sticky authors</h2><div class="card">${authorsHtml(c)}</div>`;
 }
 
-async function cycle() {
-  const d = await load(), n = +new URLSearchParams(location.search).get("c"), c = d.cycles.find((x) => x.number === n) || ordered(d.cycles)[0];
-  document.body.insertAdjacentHTML("afterbegin", nav()); document.title = `Cycle ${c.number} · ${d.project.name}`;
-  const ch = c.changes;
-  const curC = d.cycles.find((x) => x.status === "current");
-  const cycleTitle = `<a href="${B}">${esc(d.project.name)}</a> · Cycle ${c.number}${statusTag(c.status)}${c.status !== "current" && curC ? ` <a class="small" style="font-size:14px;font-weight:normal" href="${B}cycle.html?c=${curC.number}">Go to current cycle (Cycle ${curC.number}) →</a>` : ""}`;
-  $("main").innerHTML = `${titleRow(cycleTitle, d.project, "cycle")}
-  <p class="muted">${esc(c.title)} · created ${fmt(c.createdAt)}${c.harvestedFrom != null ? ` · harvested from Cycle ${c.harvestedFrom}` : ""}${c.pullRequest ? ` · <a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""} · commit <code>${esc(c.commit)}</code>${c.previewUrl ? ` · <a class="preview" href="${c.previewUrl}">Preview ↗</a>` : ""}</p>
-  <h2>Lucid documents</h2>${docsHtml(c.documents, c.status, c.screenshot)}
-  <div id="approval-slot"></div>
-  ${changesHtml(ch)}
-  ${authorsSection(c)}
-  <h2 id="nightly">${runsLabel(d.project)}</h2><div class="card">${c.status === "current" && d.project.trigger ? `<p class="muted">Harvests this cycle's boards immediately and creates Cycle ${c.number + 1}.${isNightly(d.project) ? " Normally runs at 5 pm MT." : " This project has no nightly routine; harvests run only when triggered."}</p><div id="trig"><button disabled>Checking…</button></div>` : ""}${runs(d.project, c).length ? `<ul>${runs(d.project, c).map((h) => `<li>${esc(h.date)} — ${h.stickies} stickies (${esc(h.outcome)})</li>`).join("")}</ul>` : `<p class='muted'>None yet${isNightly(d.project) ? " — next harvest at 5 pm MT" : c.status === "current" ? " — harvested manually when requested" : ""}.</p>`}</div>
-  ${cycleNav(d.cycles, c)}`;
-  if (c.status === "current" && d.project.trigger) setupTrigger(c);
-  loadProposals(c.number).then((p) => { if (p) $("#approval-slot").innerHTML = proposalsHtml(p); });
-}
-
-async function summary() {
-  const d = await load(); document.body.insertAdjacentHTML("afterbegin", nav());
-  const li = (a, f) => a.length ? `<ul>${a.map(f).join("")}</ul>` : "<span class='muted'>none</span>";
-  $("main").innerHTML = `${titleRow(`<a href="${B}">${esc(d.project.name)}</a> · Summary`, d.project, "summary")}<p class="muted">Every cycle and the changes it shipped.</p>
-  <table class="summary-table"><tr><th>Cycle</th><th>Screenshot</th><th>Date</th><th>Status</th><th>Applied</th><th>Skipped (reason)</th><th>Conflicts</th></tr>
-  ${[...d.cycles].sort((a, b) => b.number - a.number).map((c) => `<tr><td><a href="${B}cycle.html?c=${c.number}">Cycle ${c.number}</a>${c.pullRequest ? `<br><a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""}</td>
-   <td class="sum-shot">${c.screenshot ? `<a href="${B}cycle.html?c=${c.number}" aria-label="Open Cycle ${c.number}"><img src="${esc(c.screenshot)}" alt="Cycle ${c.number} screenshot" loading="lazy"></a>` : ""}</td>
-   <td style="white-space:nowrap">${fmt(c.createdAt)}</td><td>${esc(statusLabel(c.status))}</td>
-   <td>${c.changes.note ? esc(c.changes.note) : ""}${c.changes.applied.length || !c.changes.note ? li(c.changes.applied, (a) => `<li><b>${esc(a.priority)}</b> · ${esc(a.text)}${a.author ? ` · by ${esc(a.author)}` : ""}</li>`) : ""}</td>
-   <td>${li(c.changes.skipped, (s) => `<li>${esc(s.text)} — <i>${esc(s.reason)}</i>${s.author ? ` · by ${esc(s.author)}` : ""}</li>`)}</td>
-   <td>${li(c.changes.conflicts, (s) => `<li>${esc(s)}</li>`)}</td></tr>`).join("")}</table>`;
-}
 
 const authorsTotal = (c) => (c.authors || []).reduce((n, a) => n + a.stickies, 0);
 const authorsCount = (c) => (c.authors || []).length;
@@ -132,38 +181,39 @@ function authorsHtml(c) {
   if (!a.length) return `<p class='muted'>${esc(c.authorsNote || "No stickies harvested from these boards yet.")}</p>`;
   return `<table class="authors"><tr><th>Author</th><th>Stickies</th></tr>${a.map((x) => `<tr><td>${esc(x.name)}</td><td>${x.stickies}</td></tr>`).join("")}</table><p class="muted">“anonymous” = the sticky had no author attribution.</p>`;
 }
-function cycleNav(cs, c) {
-  const prev = cs.find((x) => x.number === c.number - 1), next = cs.find((x) => x.number === c.number + 1);
-  if (!prev && !next) return "";
-  return `<nav class="cyclenav">${prev ? `<a href="${B}cycle.html?c=${prev.number}">← Cycle ${prev.number}</a>` : "<span></span>"}${next ? `<a href="${B}cycle.html?c=${next.number}">Cycle ${next.number} →</a>` : "<span></span>"}</nav>`;
-}
+let TRIG_STATUS = null;
 async function setupTrigger(c) {
-  let s;
-  try { s = await (await fetch("/api/trigger", { cache: "no-store" })).json(); }
-  catch { $("#trig").innerHTML = `<button disabled>Run harvest now</button> <span class="muted">Trigger endpoint unavailable.</span>`; return; }
-  if (!s.configured) { $("#trig").innerHTML = `<button disabled>Run harvest now</button> <span class="muted">Not configured — manual trigger is disabled (env vars not set).</span>`; return; }
-  $("#trig").innerHTML = `<button id="open-run">Run harvest now</button>`;
-  document.body.insertAdjacentHTML("beforeend", `<div id="run-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="run-title"><div class="modal-box">
-   <h2 id="run-title">Run harvest now — Cycle ${c.number}</h2><p class="muted">Harvests the Cycle ${c.number} boards now and creates Cycle ${c.number + 1}.</p>
-   <label>Passphrase<br><input id="sec" type="password" autocomplete="off"></label>
-   <p id="trigmsg" class="msg" aria-live="polite"></p><div class="actions"><button id="cancel" class="secondary">Cancel</button><button id="go" disabled>Run harvest</button></div></div></div>`);
-  const m = $("#run-modal"), msg = $("#trigmsg"), close = () => { m.hidden = true; };
-  const valid = () => { $("#go").disabled = !$("#sec").value; };
-  $("#open-run").onclick = () => { m.hidden = false; msg.textContent = ""; msg.className = "msg"; $("#sec").focus(); };
-  $("#cancel").onclick = close; m.onclick = (e) => { if (e.target === m) close(); };
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
-  $("#sec").oninput = valid;
-  $("#go").onclick = async () => {
-    $("#go").disabled = true; msg.className = "msg"; msg.textContent = "Sending…";
-    try {
-      // Server still expects confirm:"RUN"; UI no longer asks the user to type it.
-      const r = await fetch("/api/trigger", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ project: SLUG, secret: $("#sec").value, confirm: "RUN" }) });
-      const j = await r.json().catch(() => ({}));
-      msg.className = "msg " + (r.ok ? "ok" : "err");
-      msg.textContent = r.ok ? (j.message || "Harvest started — the new cycle will appear here when done.") : `Failed: ${j.error || "HTTP " + r.status}`;
-    } catch (e) { msg.className = "msg err"; msg.textContent = "Failed: network error"; }
-    valid();
-  };
+  if (TRIG_STATUS == null) {
+    try { TRIG_STATUS = await (await fetch("/api/trigger", { cache: "no-store" })).json(); }
+    catch { TRIG_STATUS = { unavailable: true }; }
+  }
+  const t = $("#trig"); if (!t) return;
+  if (TRIG_STATUS.unavailable) { t.innerHTML = `<button disabled>Run harvest</button> <span class="muted small">Trigger endpoint unavailable.</span>`; return; }
+  if (!TRIG_STATUS.configured) { t.innerHTML = `<button disabled>Run harvest</button> <span class="muted small">Not configured (env vars not set).</span>`; return; }
+  t.innerHTML = `<button id="open-run">Run harvest</button>`;
+  if (!$("#run-modal")) {
+    document.body.insertAdjacentHTML("beforeend", `<div id="run-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="run-title"><div class="modal-box">
+     <h2 id="run-title">Run harvest now · Cycle ${c.number}</h2><p class="muted">Harvests the Cycle ${c.number} boards now and creates Cycle ${c.number + 1}.</p>
+     <label>Passphrase<br><input id="sec" type="password" autocomplete="off"></label>
+     <p id="trigmsg" class="msg" aria-live="polite"></p><div class="actions"><button id="cancel" class="secondary">Cancel</button><button id="go" disabled>Run harvest</button></div></div></div>`);
+    const m = $("#run-modal"), msg = $("#trigmsg"), close = () => { m.hidden = true; };
+    const valid = () => { $("#go").disabled = !$("#sec").value; };
+    $("#cancel").onclick = close; m.onclick = (e) => { if (e.target === m) close(); };
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+    $("#sec").oninput = valid;
+    $("#go").onclick = async () => {
+      $("#go").disabled = true; msg.className = "msg"; msg.textContent = "Sending…";
+      try {
+        // Server still expects confirm:"RUN"; UI no longer asks the user to type it.
+        const r = await fetch("/api/trigger", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ project: SLUG, secret: $("#sec").value, confirm: "RUN" }) });
+        const j = await r.json().catch(() => ({}));
+        msg.className = "msg " + (r.ok ? "ok" : "err");
+        msg.textContent = r.ok ? (j.message || "Harvest started — the new cycle will appear here when done.") : `Failed: ${j.error || "HTTP " + r.status}`;
+      } catch (e) { msg.className = "msg err"; msg.textContent = "Failed: network error"; }
+      valid();
+    };
+  }
+  $("#open-run").onclick = () => { const m = $("#run-modal"), msg = $("#trigmsg"); m.hidden = false; msg.textContent = ""; msg.className = "msg"; $("#sec").focus(); };
 }
 
 // ---- Contributions histogram (one stacked bar per cycle, compressed sqrt scale) ----
@@ -177,25 +227,39 @@ function contrib(c) {
   return k;
 }
 const fmtMT = (d) => new Date(d).toLocaleString("en-US", { year: "numeric", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Denver" }) + " MT";
-function histogram(cs, opts = {}) {
-  // Compact chart (cycle-3 sticky): no padding/margins, no axis labels, bars side by side with no gaps,
-  // newest cycle on the left. Hover/focus tooltip shows the date and colour key; click opens the cycle.
+function vizDetail(c) {
+  const k = contrib(c), t = TYPES.reduce((n, [x]) => n + k[x], 0);
+  return `<b>Cycle ${c.number}</b><span class="muted">${esc(fmtMT(c.createdAt))}</span><span><b>${t}</b> contributions</span>${TYPES.map(([x, l, col]) => `<span><i style="background:${col}"></i>${l}: ${k[x]}</span>`).join("")}`;
+}
+function vizHtml(cs, selN) {
+  // Compact chart (cycle-3/4 stickies: no labels, no gaps, newest on the left). Cycle 5: the selected cycle's bar
+  // animates wider with an indicator, and its details (formerly hover-only) show inline next to the chart.
   const H = 96, list = [...cs].sort((a, b) => b.number - a.number);
   const rows = list.map((c) => { const k = contrib(c); return { c, k, t: TYPES.reduce((n, [t]) => n + k[t], 0) }; });
   const max = Math.max(1, ...rows.map((r) => r.t));
   const h = (n) => (n <= 0 ? 0 : Math.max(4, Math.round((Math.sqrt(n) / Math.sqrt(max)) * H)));
-  const bw = 32, W = rows.length * bw;
-  const bars = rows.map((r, i) => {
-    const x = i * bw, total = h(r.t);
-    let y = H, segs = "";
-    TYPES.forEach(([t, , col]) => { if (!r.k[t]) return; const sh = Math.max(1, Math.round(total * r.k[t] / r.t)); y -= sh; segs += `<rect x="${x}" y="${y}" width="${bw}" height="${sh}" fill="${col}"/>`; });
+  const bars = rows.map((r) => {
+    const total = h(r.t); let segs = "";
+    TYPES.forEach(([t, , col]) => { if (!r.k[t]) return; const sh = Math.max(1, Math.round(total * r.k[t] / r.t)); segs = `<span class="seg" style="height:${sh}px;background:${col}"></span>` + segs; });
     const per = TYPES.map(([t, l]) => `${r.k[t]} ${l}`).join(", ");
     const tip = `<b>Cycle ${r.c.number}</b><br>${esc(fmtMT(r.c.createdAt))}<br><b>${r.t}</b> contributions${TYPES.map(([t, l, col]) => `<br><i style="background:${col}"></i>${l}: ${r.k[t]}`).join("")}`;
-    return `<g class="bar" tabindex="0" role="link" data-href="${B}cycle.html?c=${r.c.number}" style="cursor:pointer" aria-label="Open Cycle ${r.c.number}, harvested ${esc(fmtMT(r.c.createdAt))}: ${r.t} contributions (${per})" data-tip="${esc(tip)}">
-      <rect class="hit" x="${x}" y="0" width="${bw}" height="${H}" fill="transparent"/>${r.t ? "" : `<rect class="empty" x="${x}" y="${H - 2}" width="${bw}" height="2"/>`}${segs}</g>`;
+    const on = r.c.number === selN;
+    return `<button type="button" class="vbar${on ? " selected" : ""}" data-c="${r.c.number}" aria-pressed="${on}" aria-label="Cycle ${r.c.number}, ${esc(fmtMT(r.c.createdAt))}: ${r.t} contributions (${per})" data-tip="${esc(tip)}"><span class="segs">${r.t ? segs : '<span class="seg empty"></span>'}</span></button>`;
   }).join("");
-  return `<div class="histo compact">
-   <div class="histo-wrap"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="group" aria-label="Stickies per cycle, stacked by type, newest cycle first (compressed square-root scale)">${bars}</svg><div id="tip" class="tip" role="tooltip" hidden></div></div></div>`;
+  const sel = cs.find((c) => c.number === selN);
+  return `<div class="viz"><div class="viz-bars" role="group" aria-label="Stickies per cycle, stacked by type, newest first. Select a bar to open that cycle." style="height:${H}px">${bars}</div>
+   <div class="viz-detail" id="viz-detail">${sel ? vizDetail(sel) : ""}</div><div id="tip" class="tip" role="tooltip" hidden></div></div>`;
+}
+function setupViz() {
+  const tip = $("#tip"), wrap = $(".viz");
+  const show = (b) => { if (b.classList.contains("selected")) { tip.hidden = true; return; } tip.innerHTML = b.dataset.tip; tip.hidden = false;
+    const r = b.getBoundingClientRect(), w = wrap.getBoundingClientRect(); let left = r.right - w.left + 4;
+    if (left + tip.offsetWidth > w.width) left = r.left - w.left - tip.offsetWidth - 4; tip.style.left = Math.max(0, left) + "px"; tip.style.top = "2px"; };
+  document.querySelectorAll(".vbar").forEach((b) => {
+    b.addEventListener("mouseenter", () => show(b)); b.addEventListener("focus", () => show(b));
+    b.addEventListener("mouseleave", () => (tip.hidden = true)); b.addEventListener("blur", () => (tip.hidden = true));
+    b.addEventListener("click", () => { tip.hidden = true; selectCycle(+b.dataset.c); });
+  });
 }
 function setupHistogram() {
   const tip = $("#tip"), wrap = $(".histo-wrap"); if (!tip) return;
@@ -240,15 +304,15 @@ function spark(cs) {
 }
 
 // ---- Cycle card stack (faithful port of ProductTile / framer-motion spring) ----
-function setupStack(rootId = "cycle-stack") {
+function setupStack(rootId = "cycle-stack", opts = {}) {
   const stack = document.getElementById(rootId);
   if (!stack) return;
   const cards = [...stack.querySelectorAll(".stack-card")];
   if (!cards.length) return;
 
   // Newest (index 0) leftmost + highest z; older tuck under to the right.
-  const CARD_WIDTH = 200;
-  const CARD_HEIGHT = 292; // square thumb (full width) + title/date/desc
+  const CARD_WIDTH = opts.width || 200;
+  const CARD_HEIGHT = opts.height || 292; // square thumb (full width) + title/date/desc
   const STACK_OFFSET = Math.floor(CARD_WIDTH * 0.5);
   const REVEAL_OVERLAP = 90;
   const STIFFNESS = 300, DAMPING = 30, MASS = 1;

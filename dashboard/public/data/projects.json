@@ -34,7 +34,7 @@
       "harvestMode": "manual",
       "lucidFolderId": 452808972,
       "approval": {
-        "mode": "auto",
+        "mode": "required",
         "reviewer": "John Dilworth",
         "auto_approve_low_risk": false
       }

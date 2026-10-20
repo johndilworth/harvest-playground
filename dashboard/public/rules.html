@@ -16,7 +16,8 @@ new project). Project-specific procedures (paths, page structure, routines) live
 <li><strong>Build Lucidchart review boards</strong> from the captures (one review frame per screen, see § 3).</li>
 <li><strong>Reviewers leave stickies</strong> (and comments) on the boards, signed in so each sticky carries their name.</li>
 <li><strong>Harvest</strong>: read every <code>harvest: true</code> board of the current cycle (Lucid <code>fetch</code> per page + threads/comments), classify
-   each sticky (priority, author, frame/screen) — read-only, never recolour/move/delete stickies in Lucid.</li>
+   each sticky (priority, author, frame/screen) — read-only, never recolour/move/delete stickies in Lucid (the only
+   board edit is the status-label write-back, § 11). In approval mode <code>required</code> the harvest stops here with a proposal (§ 11).</li>
 <li><strong>Apply</strong> every safe item to the project's code (§ 5), log applied/skipped/conflicts, merge per the project's merge
    policy (§ 6), deploy.</li>
 <li><strong>New cycle</strong>: capture the new build, build cycle N+1 boards, create an org-wide comment share link per board
@@ -147,7 +148,9 @@ validates it and posts <code>{action:"create-project", project, setup:{…}}</co
 </ul>
 <h2 id="10-dashboard-data-schema">10. Dashboard data schema</h2>
 <ul>
-<li><code>dashboard/public/data/projects.json</code> — index: <code>[{slug, name, file, harvestMode}]</code>.</li>
+<li><code>dashboard/public/data/projects.json</code> — index: <code>[{slug, name, file, harvestMode, lucidFolderId, approval}]</code> (<code>approval</code> § 11).</li>
+<li><code>dashboard/public/data/proposals/&lt;slug&gt;-c&lt;N&gt;.json</code> — optional copy of <code>journey/cycles/&lt;N&gt;/proposals.json</code>; the cycle page shows
+  an <strong>Approval</strong> section (Waiting for approval / Decided, each item's status pill, risk and final instruction) when it exists.</li>
 <li><code>dashboard/public/data/&lt;slug&gt;.json</code> — <strong>schemaVersion 3</strong>:</li>
 </ul>
 <pre><code>{
@@ -174,6 +177,39 @@ validates it and posts <code>{action:"create-project", project, setup:{…}}</co
 <li>Every harvest that creates a new cycle marks the old one archived (<code>superseded</code>), appends the new one as <code>current</code>, writes
   <code>contributions</code>, <code>authors</code> and the run entry, bumps stats and <code>updatedAt</code>. No <code>hub</code> document role.</li>
 <li>Pages: <code>/</code> all projects, <code>/p/&lt;slug&gt;/</code> project, <code>/p/&lt;slug&gt;/cycle.html?c=N</code> cycle, <code>/p/&lt;slug&gt;/summary.html</code>, <code>/new.html</code>, <code>/rules.html</code>.</li>
+</ul>
+<h2 id="11-approval-mode-phase-1-from-2026-10-19">11. Approval mode (Phase 1, from 2026-10-19)</h2>
+<p>Each project chooses how harvested stickies become changes, in <code>dashboard/public/data/projects.json</code>:
+<code>"approval": {"mode": "auto"|"required", "reviewer": "John Dilworth", "auto_approve_low_risk": false}</code>
+(missing = <code>auto</code>; all projects are <code>auto</code> today). Check with <code>python3 journey/harvest/proposals.py mode --project &lt;slug&gt;</code>.</p>
+<ul>
+<li><strong><code>auto</code></strong> — unchanged: the harvest applies every safe item (§ 5) and merges per the merge policy (§ 6).</li>
+<li><strong><code>required</code></strong> — the harvest is split into <strong>propose</strong> and <strong>apply</strong>:</li>
+<li><strong>Propose</strong> (read-only): read the boards and classify with <code>harvest.py</code> as usual, then
+     <code>proposals.py propose --project &lt;slug&gt; --cycle &lt;N&gt; --feedback &lt;feedback.json&gt; [--carry &lt;cycle N-1 proposals.json&gt;]
+     --out journey/cycles/&lt;N&gt;/proposals.json --dashboard-copy dashboard/public/data/proposals/&lt;slug&gt;-c&lt;N&gt;.json</code>.
+     Each item: <code>id</code>, <code>stickyText</code>, <code>author</code>, <code>lucidItemId</code>, <code>docId</code>, <code>interpretation</code>, <code>proposedChange</code>, <code>risk</code>
+     (low/med/high), <code>status: "pending"</code>. Refine interpretation/proposedChange/risk by hand where the heuristic is weak;
+     unsafe stickies (§ 5) are still listed, with "None recommended … suggest reject". <strong>No code changes, commits to the
+     product, merges, PRs, captures or new cycle</strong> — only the proposals file, its dashboard copy and a dashboard deploy
+     (the cycle page then shows <strong>Waiting for approval</strong>).</li>
+<li><strong>Ask</strong> in Grok Bot chat: post <code>proposals.py summary</code> (numbered list) to the reviewer and stop.</li>
+<li><strong>Decide</strong>: the reviewer answers per item (<code>1 approve, 2 reject, 3 defer, 4 approve: &lt;edited instruction&gt;</code>, or <code>all approve</code>);
+     record with <code>proposals.py decide --proposals &lt;P&gt; --dashboard-copy &lt;D&gt; 1=approve 2=reject 3=defer "4=approve:&lt;text&gt;"</code>.
+     If <code>auto_approve_low_risk</code> is true, low-risk product items start as approved (<code>by: "auto (low risk)"</code>).</li>
+<li><strong>Apply</strong>: <code>proposals.py apply --proposals &lt;P&gt; --plan journey/cycles/&lt;N&gt;/apply-plan.json</code> lists <strong>only approved</strong>
+     items (with the edited instruction when given). Implement exactly those with the normal merge policy (auto-merge or
+     PR), then <code>proposals.py mark-applied --proposals &lt;P&gt; --dashboard-copy &lt;D&gt; --commit &lt;sha&gt;</code>, and build cycle N+1 as usual.
+     Rejected items are logged as skipped (<code>rejected by reviewer</code>); deferred and unreviewed (pending) items are <strong>carried
+     over</strong>: pass <code>--carry journey/cycles/&lt;N&gt;/proposals.json</code> when proposing cycle N+1 (they come back as pending, marked
+     "carried from C<N>").</li>
+<li><strong>Lucid write-back</strong> (both modes): after decide/apply, label each harvested sticky with a small status tag above it —
+  Pending (grey #6E7781), Approved (green #1A7F37), Applied (blue #0969DA), Rejected (red #CF222E), Deferred (amber
+  #9A6700), Skipped (grey #57606A); white 7 pt text, sticky-wide, 26 px tall. Generate the script with
+  <code>proposals.py writeback-js --proposals &lt;P&gt; --doc-id &lt;DOC&gt;</code> (auto mode: <code>writeback-js --feedback &lt;feedback.json&gt;
+  --auto-applied &lt;itemId,…&gt;</code> → Applied/Skipped) and run it with Lucid <code>lucid_run_script</code> on that board. It is idempotent
+  (re-runs replace earlier <code>Harvest: …</code> labels) and never moves or edits the sticky; <code>harvest.py</code> ignores the labels.
+  Template: <code>journey/harvest/lucid-writeback.example.js</code>. This is the one sanctioned edit a harvest makes on a board.</li>
 </ul>
 <h2 id="lucid-naming-and-folders-from-2026-10-19">Lucid naming and folders (from 2026-10-19)</h2>
 <ul>

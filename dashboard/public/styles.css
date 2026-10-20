@@ -115,3 +115,9 @@ header.top .theme-toggle:hover{background:var(--hover)}header.top .theme-toggle:
 .histo.compact .bar:hover .hit,.histo.compact .bar:focus .hit{fill:var(--hover)}
 /* Summary table screenshot (same image as the cycle cards; square, object-fit cover) */
 .summary-table .sum-shot{width:112px}.summary-table .sum-shot img{display:block;width:96px;height:96px;object-fit:cover;object-position:top;border:1px solid var(--border);background:var(--surface-2)}
+
+/* Approval mode (Phase 1) */
+.tag.waiting{background:#9a6700;color:#fff;border-color:#9a6700}
+.proposals{padding-left:22px}.proposals li{margin:6px 0}
+.pill{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;color:#fff;background:#6e7781;text-transform:capitalize}
+.pill.st-approved{background:#1a7f37}.pill.st-applied{background:#0969da}.pill.st-rejected{background:#cf222e}.pill.st-deferred{background:#9a6700}.pill.st-skipped{background:#57606a}

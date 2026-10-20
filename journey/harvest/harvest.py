@@ -209,6 +209,8 @@ def main():
     for n in items.values():
         if n['blockClass'] not in FEEDBACK_CLASSES or (n['id'] or '').startswith(GENERATED_PREFIXES):
             continue
+        if (n['text'] or '').startswith('Harvest: '):   # write-back status label (proposals.py writeback-js), not feedback
+            continue
         by_child, via = frame_ancestor(n['id'])
         ratios = {fid: overlap_ratio(n['bbox'], fi['bbox']) for fid, fi in frame_info.items()
                   if n['bbox'] and fi['bbox'] and fi['pageId'] == n['pageId']}  # pages share a coordinate space

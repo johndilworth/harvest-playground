@@ -56,6 +56,8 @@ Every item that isn't applied is logged in CHANGELOG.md (that night's publish no
 - Bump the footer: `<span id="cycle">Cycle N</span>`.
 
 ## Nightly procedure (for the routine)
+0. Check the approval mode: `python3 journey/harvest/proposals.py mode --project harvest-playground`. If `required`,
+   follow § Approval mode instead of steps 3–8.
 1. Read `journey/cycles/<N>/lucid-doc.json`; for every board with `"harvest": true`:
    Lucid `fetch(id, metadata_only)`, `fetch(id, page_index)` per page, `list_document_threads` + comments. Save raw
    responses under `journey/out/c<N>/raw/`.
@@ -77,6 +79,29 @@ Every item that isn't applied is logged in CHANGELOG.md (that night's publish no
    `journey/cycles/<N+1>/` (`lucid-doc.json` with `boards[]` only, specs, manifest).
 8. Update the dashboard (§ Dashboard, nightly step 8) — it is the hub: every board of the new cycle goes into that
    cycle's `documents`, plus `previewUrl` and `authors`.
+
+## Approval mode (required) — chat approval, Phase 1
+Setting: `approval` on this project in `dashboard/public/data/projects.json` (generic rules: HARVEST-RULES § 11). Harvest
+Playground is **`auto`** (the procedure above runs unchanged). When it is `required`, the nightly/manual run does this instead:
+1. Steps 1–2 of the nightly procedure (fetch + `harvest.py`), then
+   `python3 journey/harvest/proposals.py propose --project harvest-playground --cycle <N> --feedback journey/cycles/<N>/feedback.json --carry journey/cycles/<N-1>/proposals.json --out journey/cycles/<N>/proposals.json --dashboard-copy dashboard/public/data/proposals/harvest-playground-c<N>.json`
+   (omit `--carry` if that file doesn't exist). Refine interpretations/risk in the JSON if needed. Write back Pending labels
+   (`proposals.py writeback-js --proposals … --doc-id <DOC>` → `lucid_run_script`), commit the proposals + dashboard copy
+   (message `Harvest <date> cycle <N>: proposals (waiting for approval)`), deploy the dashboard. **Do not touch `site/`, open
+   PRs, merge, capture or build cycle N+1.** Log the run as `outcome: "waiting_approval"` in `nightlyHarvests`.
+2. Report to John in Grok Bot chat: the output of `proposals.py summary --proposals journey/cycles/<N>/proposals.json`
+   (numbered, with risk, author and proposed change, plus the dashboard cycle link) and wait. Nothing else happens until he replies.
+3. John replies per item, e.g. `1 approve, 2 reject, 3 defer, 4 approve: make it 20% larger`. Record it:
+   `proposals.py decide --proposals … --dashboard-copy … 1=approve 2=reject 3=defer "4=approve:make it 20% larger"`.
+   Items he didn't mention stay pending (ask once more, or carry them over).
+4. Apply: `proposals.py apply --proposals … --plan journey/cycles/<N>/apply-plan.json` and implement **only** the items in the
+   plan, following steps 3–8 of the nightly procedure (safety rules still apply; rejected → skipped `rejected by reviewer`,
+   deferred → listed in CHANGELOG as deferred). After the merge: `proposals.py mark-applied --proposals … --dashboard-copy … --commit <sha>`,
+   write back Approved→Applied/Rejected/Deferred labels on the cycle N board, commit, deploy.
+5. The next cycle's propose uses `--carry journey/cycles/<N>/proposals.json` so deferred and unreviewed items come back.
+In `auto` mode the run may also write back Applied/Skipped labels after the merge:
+`proposals.py writeback-js --feedback journey/cycles/<N>/feedback.json --auto-applied <itemId,…>` → `lucid_run_script` on the board.
+Helper docs: `journey/harvest/README.md`. Dry run (fake stickies, scratch board): `journey/harvest/dryrun/`.
 
 ## Board rules (review boards)
 - **Always Lucidchart:** create every harvest review board with `product: "lucidchart"` (Standard Import / MCP create

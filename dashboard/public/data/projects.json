@@ -8,28 +8,48 @@
       "name": "Harvest Playground",
       "file": "/data/harvest-playground.json",
       "harvestMode": "nightly",
-      "lucidFolderId": 452808969
+      "lucidFolderId": 452808969,
+      "approval": {
+        "mode": "auto",
+        "reviewer": "John Dilworth",
+        "auto_approve_low_risk": false
+      }
     },
     {
       "slug": "design-loop",
       "name": "Design Loop",
       "file": "/data/design-loop.json",
       "harvestMode": "manual",
-      "lucidFolderId": 452808976
+      "lucidFolderId": 452808976,
+      "approval": {
+        "mode": "auto",
+        "reviewer": "John Dilworth",
+        "auto_approve_low_risk": false
+      }
     },
     {
       "slug": "harvest-site",
       "name": "Harvest Site",
       "file": "/data/harvest-site.json",
       "harvestMode": "manual",
-      "lucidFolderId": 452808972
+      "lucidFolderId": 452808972,
+      "approval": {
+        "mode": "auto",
+        "reviewer": "John Dilworth",
+        "auto_approve_low_risk": false
+      }
     },
     {
       "slug": "harvest-dashboard",
       "name": "Harvest Dashboard",
       "file": "/data/harvest-dashboard.json",
       "harvestMode": "manual",
-      "lucidFolderId": 452808970
+      "lucidFolderId": 452808970,
+      "approval": {
+        "mode": "auto",
+        "reviewer": "John Dilworth",
+        "auto_approve_low_risk": false
+      }
     }
   ],
   "lucidFolders": {
@@ -42,5 +62,6 @@
       "url": "https://lucid.app/documents#/documents?folder_id=452808977"
     },
     "naming": "[Project name]:[flow]:C[n]; history board [Project name]:History; current cycle docs in the project folder, archived cycles in C[n] subfolders"
-  }
+  },
+  "approvalModes": "approval.mode: auto = harvest applies safe items directly (default); required = harvest only writes proposals (journey/cycles/<n>/proposals.json + /data/proposals/<slug>-c<n>.json) and waits for decisions in Grok Bot chat"
 }

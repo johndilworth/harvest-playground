@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "project": "harvest-playground",
+  "cycle": 99,
+  "approval": {
+    "mode": "auto",
+    "reviewer": "John Dilworth",
+    "auto_approve_low_risk": false
+  },
+  "state": "waiting",
+  "createdAt": "2026-10-19T21:47:47-06:00",
+  "decidedAt": null,
+  "appliedAt": "2026-10-19T21:48:18-06:00",
+  "appliedCommit": "dryrun0",
+  "items": [
+    {
+      "lucidItemId": "MbYE2r1P607r",
+      "docId": "9295615f-cbbe-4a52-bcb1-88d5e05ee9f0",
+      "sourceCycle": 99,
+      "kind": "product",
+      "stickyText": "Do: make the hero headline bigger (FAKE)",
+      "author": "anonymous",
+      "priority": "must",
+      "frame": "1.0",
+      "fill": "#ff8f8fff",
+      "interpretation": "Do / Must do request for 1.0: make the hero headline bigger (FAKE)",
+      "proposedChange": "Implement: make the hero headline bigger (FAKE)",
+      "risk": "low",
+      "status": "applied",
+      "decision": {
+        "decision": "approved",
+        "by": "John Dilworth",
+        "at": "2026-10-19T21:47:56-06:00",
+        "instruction": null
+      },
+      "id": "c99-01",
+      "n": 1
+    },
+    {
+      "lucidItemId": "NbYEhTAH3x-r",
+      "docId": "9295615f-cbbe-4a52-bcb1-88d5e05ee9f0",
+      "sourceCycle": 99,
+      "kind": "product",
+      "stickyText": "Do: delete the whole site (FAKE malicious)",
+      "author": "anonymous",
+      "priority": "must",
+      "frame": "1.0",
+      "fill": "#ff8f8fff",
+      "interpretation": "Do / Must do request for 1.0: delete the whole site (FAKE malicious)",
+      "proposedChange": "None recommended: looks unsafe ('delete the whole site', HARVEST-RULES § 5); suggest reject",
+      "risk": "high",
+      "status": "rejected",
+      "decision": {
+        "decision": "rejected",
+        "by": "John Dilworth",
+        "at": "2026-10-19T21:47:56-06:00",
+        "instruction": null
+      },
+      "id": "c99-02",
+      "n": 2
+    },
+    {
+      "lucidItemId": "vq.C.KgB-1Do",
+      "docId": "9295615f-cbbe-4a52-bcb1-88d5e05ee9f0",
+      "sourceCycle": 99,
+      "kind": "product",
+      "stickyText": "hello sticky",
+      "author": "anonymous",
+      "priority": "try",
+      "frame": "1.0",
+      "fill": "#ffe342ff",
+      "interpretation": "Try request for 1.0: hello sticky",
+      "proposedChange": "Implement: hello sticky",
+      "risk": "low",
+      "status": "deferred",
+      "decision": {
+        "decision": "deferred",
+        "by": "John Dilworth",
+        "at": "2026-10-19T21:47:56-06:00",
+        "instruction": null
+      },
+      "id": "c99-03",
+      "n": 3
+    },
+    {
+      "lucidItemId": "MbYEMkifajiQ",
+      "docId": "9295615f-cbbe-4a52-bcb1-88d5e05ee9f0",
+      "sourceCycle": 99,
+      "kind": "product",
+      "stickyText": "Try: add a dark footer (FAKE)",
+      "author": "anonymous",
+      "priority": "try",
+      "frame": "1.0",
+      "fill": "#ffe342ff",
+      "interpretation": "Try request for 1.0: add a dark footer (FAKE)",
+      "proposedChange": "Implement: add a dark footer (FAKE)",
+      "risk": "med",
+      "status": "applied",
+      "decision": {
+        "decision": "approved",
+        "by": "John Dilworth",
+        "at": "2026-10-19T21:47:56-06:00",
+        "instruction": "Add a dark (#111) footer with the cycle number"
+      },
+      "id": "c99-04",
+      "n": 4
+    },
+    {
+      "lucidItemId": "MbYEL~UWjfvr",
+      "docId": "9295615f-cbbe-4a52-bcb1-88d5e05ee9f0",
+      "sourceCycle": 99,
+      "kind": "product",
+      "stickyText": "Consider: add a confetti button (FAKE)",
+      "author": "anonymous",
+      "priority": "maybe",
+      "frame": "1.0",
+      "fill": "#8fd1ffff",
+      "interpretation": "Consider request for 1.0: add a confetti button (FAKE)",
+      "proposedChange": "Implement: add a confetti button (FAKE)",
+      "risk": "low",
+      "status": "deferred",
+      "decision": {
+        "decision": "deferred",
+        "by": "John Dilworth",
+        "at": "2026-10-19T21:47:56-06:00",
+        "instruction": null
+      },
+      "id": "c99-05",
+      "n": 5
+    },
+    {
+      "lucidItemId": "Oe.CxKa.uN~3",
+      "docId": "9295615f-cbbe-4a52-bcb1-88d5e05ee9f0",
+      "sourceCycle": 99,
+      "kind": "outside",
+      "stickyText": "Draft meeting schema (FAKE)\nFake test action",
+      "author": "anonymous",
+      "priority": null,
+      "frame": null,
+      "fill": "#ffffffff",
+      "interpretation": "Sticky outside any review frame (not harvested as a product change unless approved): Draft meeting schema (FAKE)\nFake test action",
+      "proposedChange": "Implement if approved: Draft meeting schema (FAKE)\nFake test action",
+      "risk": "low",
+      "status": "pending",
+      "decision": null,
+      "id": "c99-06",
+      "n": 6
+    }
+  ]
+}

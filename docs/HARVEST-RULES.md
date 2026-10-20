@@ -13,7 +13,8 @@ Dashboard (the hub): https://harvest-dashboard.netlify.app · Rules page: https:
 2. **Build Lucidchart review boards** from the captures (one review frame per screen, see § 3).
 3. **Reviewers leave stickies** (and comments) on the boards, signed in so each sticky carries their name.
 4. **Harvest**: read every `harvest: true` board of the current cycle (Lucid `fetch` per page + threads/comments), classify
-   each sticky (priority, author, frame/screen) — read-only, never recolour/move/delete stickies in Lucid.
+   each sticky (priority, author, frame/screen) — read-only, never recolour/move/delete stickies in Lucid (the only
+   board edit is the status-label write-back, § 11). In approval mode `required` the harvest stops here with a proposal (§ 11).
 5. **Apply** every safe item to the project's code (§ 5), log applied/skipped/conflicts, merge per the project's merge
    policy (§ 6), deploy.
 6. **New cycle**: capture the new build, build cycle N+1 boards, create an org-wide comment share link per board
@@ -113,7 +114,9 @@ validates it and posts `{action:"create-project", project, setup:{…}}` to the 
 - Deploy: `cd dashboard && netlify deploy --prod --dir=public --functions=netlify/functions --site 6f658653-21cc-4b1a-8094-b890bd04ef18`.
 
 ## 10. Dashboard data schema
-- `dashboard/public/data/projects.json` — index: `[{slug, name, file, harvestMode}]`.
+- `dashboard/public/data/projects.json` — index: `[{slug, name, file, harvestMode, lucidFolderId, approval}]` (`approval` § 11).
+- `dashboard/public/data/proposals/<slug>-c<N>.json` — optional copy of `journey/cycles/<N>/proposals.json`; the cycle page shows
+  an **Approval** section (Waiting for approval / Decided, each item's status pill, risk and final instruction) when it exists.
 - `dashboard/public/data/<slug>.json` — **schemaVersion 3**:
 ```
 {
@@ -139,6 +142,39 @@ validates it and posts `{action:"create-project", project, setup:{…}}` to the 
 - Every harvest that creates a new cycle marks the old one archived (`superseded`), appends the new one as `current`, writes
   `contributions`, `authors` and the run entry, bumps stats and `updatedAt`. No `hub` document role.
 - Pages: `/` all projects, `/p/<slug>/` project, `/p/<slug>/cycle.html?c=N` cycle, `/p/<slug>/summary.html`, `/new.html`, `/rules.html`.
+
+## 11. Approval mode (Phase 1, from 2026-10-19)
+Each project chooses how harvested stickies become changes, in `dashboard/public/data/projects.json`:
+`"approval": {"mode": "auto"|"required", "reviewer": "John Dilworth", "auto_approve_low_risk": false}`
+(missing = `auto`; all projects are `auto` today). Check with `python3 journey/harvest/proposals.py mode --project <slug>`.
+
+- **`auto`** — unchanged: the harvest applies every safe item (§ 5) and merges per the merge policy (§ 6).
+- **`required`** — the harvest is split into **propose** and **apply**:
+  1. **Propose** (read-only): read the boards and classify with `harvest.py` as usual, then
+     `proposals.py propose --project <slug> --cycle <N> --feedback <feedback.json> [--carry <cycle N-1 proposals.json>]
+     --out journey/cycles/<N>/proposals.json --dashboard-copy dashboard/public/data/proposals/<slug>-c<N>.json`.
+     Each item: `id`, `stickyText`, `author`, `lucidItemId`, `docId`, `interpretation`, `proposedChange`, `risk`
+     (low/med/high), `status: "pending"`. Refine interpretation/proposedChange/risk by hand where the heuristic is weak;
+     unsafe stickies (§ 5) are still listed, with "None recommended … suggest reject". **No code changes, commits to the
+     product, merges, PRs, captures or new cycle** — only the proposals file, its dashboard copy and a dashboard deploy
+     (the cycle page then shows **Waiting for approval**).
+  2. **Ask** in Grok Bot chat: post `proposals.py summary` (numbered list) to the reviewer and stop.
+  3. **Decide**: the reviewer answers per item (`1 approve, 2 reject, 3 defer, 4 approve: <edited instruction>`, or `all approve`);
+     record with `proposals.py decide --proposals <P> --dashboard-copy <D> 1=approve 2=reject 3=defer "4=approve:<text>"`.
+     If `auto_approve_low_risk` is true, low-risk product items start as approved (`by: "auto (low risk)"`).
+  4. **Apply**: `proposals.py apply --proposals <P> --plan journey/cycles/<N>/apply-plan.json` lists **only approved**
+     items (with the edited instruction when given). Implement exactly those with the normal merge policy (auto-merge or
+     PR), then `proposals.py mark-applied --proposals <P> --dashboard-copy <D> --commit <sha>`, and build cycle N+1 as usual.
+     Rejected items are logged as skipped (`rejected by reviewer`); deferred and unreviewed (pending) items are **carried
+     over**: pass `--carry journey/cycles/<N>/proposals.json` when proposing cycle N+1 (they come back as pending, marked
+     "carried from C<N>").
+- **Lucid write-back** (both modes): after decide/apply, label each harvested sticky with a small status tag above it —
+  Pending (grey #6E7781), Approved (green #1A7F37), Applied (blue #0969DA), Rejected (red #CF222E), Deferred (amber
+  #9A6700), Skipped (grey #57606A); white 7 pt text, sticky-wide, 26 px tall. Generate the script with
+  `proposals.py writeback-js --proposals <P> --doc-id <DOC>` (auto mode: `writeback-js --feedback <feedback.json>
+  --auto-applied <itemId,…>` → Applied/Skipped) and run it with Lucid `lucid_run_script` on that board. It is idempotent
+  (re-runs replace earlier `Harvest: …` labels) and never moves or edits the sticky; `harvest.py` ignores the labels.
+  Template: `journey/harvest/lucid-writeback.example.js`. This is the one sanctioned edit a harvest makes on a board.
 
 ## Lucid naming and folders (from 2026-10-19)
 

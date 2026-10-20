@@ -77,6 +77,17 @@ function changesHtml(ch) {
    ${ch.skipped.length ? `<p><b>Skipped</b></p><ul>${ch.skipped.map((s) => `<li>${esc(s.text)} — <i>${esc(s.reason)}</i>${s.author ? ` · by ${esc(s.author)}` : ""}</li>`).join("")}</ul>` : ch.applied.length ? "" : "<p class='muted'>Skipped: none</p>"}
    ${ch.conflicts.length ? `<p><b>Conflicts</b></p><ul>${ch.conflicts.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}</div>`;
 }
+// Approval mode (Phase 1): optional /data/proposals/<slug>-c<N>.json written by journey/harvest/proposals.py.
+async function loadProposals(n) { try { const r = await fetch(`/data/proposals/${SLUG}-c${n}.json`, { cache: "no-store" }); return r.ok ? r.json() : null; } catch { return null; } }
+function proposalsHtml(p) {
+  if (!p || !(p.items || []).length) return "";
+  const cnt = (s) => p.items.filter((i) => i.status === s).length, waiting = p.state === "waiting";
+  const head = waiting ? `<span class="tag waiting">Waiting for approval</span>` : `<span class="tag">Decided</span>`;
+  return `<h2 id="approval">Approval ${head}</h2><div class="card">
+   <p class="muted">${waiting ? `${cnt("pending")} of ${p.items.length} proposals waiting for ${esc(p.approval?.reviewer || "the reviewer")} (in Grok Bot chat). Nothing is applied until decided.` : `Decided${p.decidedAt ? " " + esc(fmt(p.decidedAt)) : ""}.`}${p.appliedCommit ? ` Applied in <code>${esc(p.appliedCommit)}</code>.` : ""}</p>
+   <ol class="proposals">${p.items.map((i) => `<li><span class="pill st-${esc(i.status)}">${esc(i.status)}</span> <span class="tag">risk ${esc(i.risk)}</span> “${esc(i.stickyText || "(empty)")}” · by ${esc(i.author)}${i.carriedFrom != null ? ` <span class="muted">(carried from C${esc(i.carriedFrom)})</span>` : ""}
+     <div class="muted">→ ${esc(i.decision?.instruction || i.proposedChange)}</div></li>`).join("")}</ol></div>`;
+}
 function authorsSection(c) {
   if (!(c.authors || []).length) return "";
   return `<h2>Sticky authors</h2><div class="card">${authorsHtml(c)}</div>`;
@@ -91,11 +102,13 @@ async function cycle() {
   $("main").innerHTML = `${titleRow(cycleTitle, d.project, "cycle")}
   <p class="muted">${esc(c.title)} · created ${fmt(c.createdAt)}${c.harvestedFrom != null ? ` · harvested from Cycle ${c.harvestedFrom}` : ""}${c.pullRequest ? ` · <a href="${c.pullRequest}">PR #${c.pullRequest.split("/").pop()}</a>` : ""} · commit <code>${esc(c.commit)}</code>${c.previewUrl ? ` · <a class="preview" href="${c.previewUrl}">Preview ↗</a>` : ""}</p>
   <h2>Lucid documents</h2>${docsHtml(c.documents, c.status, c.screenshot)}
+  <div id="approval-slot"></div>
   ${changesHtml(ch)}
   ${authorsSection(c)}
   <h2 id="nightly">${runsLabel(d.project)}</h2><div class="card">${c.status === "current" && d.project.trigger ? `<p class="muted">Harvests this cycle's boards immediately and creates Cycle ${c.number + 1}.${isNightly(d.project) ? " Normally runs at 5 pm MT." : " This project has no nightly routine; harvests run only when triggered."}</p><div id="trig"><button disabled>Checking…</button></div>` : ""}${runs(d.project, c).length ? `<ul>${runs(d.project, c).map((h) => `<li>${esc(h.date)} — ${h.stickies} stickies (${esc(h.outcome)})</li>`).join("")}</ul>` : `<p class='muted'>None yet${isNightly(d.project) ? " — next harvest at 5 pm MT" : c.status === "current" ? " — harvested manually when requested" : ""}.</p>`}</div>
   ${cycleNav(d.cycles, c)}`;
   if (c.status === "current" && d.project.trigger) setupTrigger(c);
+  loadProposals(c.number).then((p) => { if (p) $("#approval-slot").innerHTML = proposalsHtml(p); });
 }
 
 async function summary() {

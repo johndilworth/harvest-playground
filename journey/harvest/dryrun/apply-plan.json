@@ -1,0 +1,42 @@
+{
+  "project": "harvest-playground",
+  "cycle": 99,
+  "items": [
+    {
+      "id": "c99-01",
+      "lucidItemId": "MbYE2r1P607r",
+      "kind": "product",
+      "priority": "must",
+      "author": "anonymous",
+      "stickyText": "Do: make the hero headline bigger (FAKE)",
+      "instruction": "Implement: make the hero headline bigger (FAKE)"
+    },
+    {
+      "id": "c99-04",
+      "lucidItemId": "MbYEMkifajiQ",
+      "kind": "product",
+      "priority": "try",
+      "author": "anonymous",
+      "stickyText": "Try: add a dark footer (FAKE)",
+      "instruction": "Add a dark (#111) footer with the cycle number"
+    }
+  ],
+  "notApplied": [
+    {
+      "id": "c99-02",
+      "status": "rejected"
+    },
+    {
+      "id": "c99-03",
+      "status": "deferred"
+    },
+    {
+      "id": "c99-05",
+      "status": "deferred"
+    },
+    {
+      "id": "c99-06",
+      "status": "pending"
+    }
+  ]
+}

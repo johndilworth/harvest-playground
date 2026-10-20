@@ -24,9 +24,9 @@
     "pullRequests": 1,
     "pullRequestsSource": "GitHub API state=all 2026-10-12: PR #1 OPEN",
     "nightlyHarvests": 0,
-    "manualHarvests": 2
+    "manualHarvests": 3
   },
-  "updatedAt": "2026-10-13T10:40:00-06:00",
+  "updatedAt": "2026-10-19T22:58:00-06:00",
   "cycles": [
     {
       "number": 1,
@@ -230,10 +230,23 @@
           "harvest": true
         }
       ],
-      "authors": [],
-      "authorsNote": "No harvest of the Cycle 3 boards yet.",
+      "authors": [
+        {
+          "name": "John Dilworth",
+          "stickies": 6
+        }
+      ],
+      "authorsNote": "Harvested 2026-10-19 (approval mode): 6 stickies on Home story, 0 on Home proof and Home close.",
       "nightlyHarvests": [],
-      "manualHarvests": [],
+      "manualHarvests": [
+        {
+          "date": "2026-10-19",
+          "stickies": 6,
+          "outcome": "waiting_approval",
+          "proposals": "/data/proposals/harvest-site-c3.json",
+          "note": "Approval mode: 6 proposals (all Home story board) waiting for John Dilworth; nothing applied yet."
+        }
+      ],
       "screens": 11,
       "changes": {
         "applied": [

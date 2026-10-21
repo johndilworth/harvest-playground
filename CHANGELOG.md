@@ -2,6 +2,27 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 9 (2026-10-21) · nightly harvest
+Nightly 5 pm MT harvest of the Cycle 8 review board `d0c055a3-adba-4f7d-9ade-84534dc3e5e7` (`Harvest Playground:All pages:C8` — Home · Dino Town · Totally Random) —
+**2 stickies, 0 comment threads** (Home 2). No priority keywords, so the yellow fill made each **try**. Neither had a Lucid
+author attribution line → **anonymous**.
+
+### Applied (2)
+- **try** · Home · “Make this a carousel in stead of separate cards like this.” (on the Turkey 2026 photo cards) → the five Turkey photos are now a one-at-a-time carousel (◀ PREV / NEXT ▶, dots, arrow keys, click to advance), reusing the existing SPIRAL gallery script; no new JavaScript. · by anonymous
+- **try** · Home · “change this photo to a parrot” (on the TURTLE.EXE tortoise photo) → the tortoise photo is now a blue-and-yellow macaw in flight (`site/assets/c9/parrot-macaw.jpg`, Luc Viatour, CC BY 2.0, Wikimedia Commons), with caption and alt text updated. · by anonymous
+
+### Skipped
+None (no malicious, illegal or offensive items).
+
+### Conflicts
+None.
+
+### Board feedback
+None.
+
+### Authors
+anonymous 2
+
 ## 2026-10-20 harvest (no Cycle 9)
 Harvested the Cycle 8 review board `d0c055a3-adba-4f7d-9ade-84534dc3e5e7` (`Harvest Playground:All pages:C8` — Home · Dino Town · Totally Random) at ~5:06 pm MT —
 **0 stickies, 0 comment threads**. Hub stray: none (no hub; dashboard is the hub).

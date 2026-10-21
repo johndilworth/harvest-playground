@@ -393,3 +393,9 @@ body > canvas#c8-shader-bg.shader-bg{position:fixed;inset:0;width:100vw;height:1
 .page-random .terminal-grid > *{order:0}
 .page-random .rz-mcluhan{order:0}
 .log-order-note{color:#7dffa8;margin:0 !important;font-size:.95rem}
+
+/* Cycle 9: Turkey photos as a carousel (reuses the SPIRAL gallery script) */
+.turkey-feature .turkey-carousel{max-width:760px;margin:16px 0}
+.turkey-feature .turkey-carousel .gallery-slide{max-width:none;margin:0}
+.turkey-feature .turkey-carousel .gallery-slide img{width:100%;height:460px;object-fit:cover;background:#000;cursor:pointer;display:block}
+.turkey-feature .turkey-carousel figcaption{margin-top:6px}

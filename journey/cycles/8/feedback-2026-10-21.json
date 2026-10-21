@@ -1,0 +1,121 @@
+{
+  "docId": "d0c055a3-adba-4f7d-9ade-84534dc3e5e7",
+  "cycle": 8,
+  "harvestedAt": "2026-10-21T23:08:17.501287+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8/02-home-full.png",
+      "feedback": [
+        {
+          "itemId": "8erFtqdaBmz0",
+          "kind": "sticky",
+          "text": "Make this a carousel in stead of separate cards like this.",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 371.907,
+            "y": 1525.491,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        },
+        {
+          "itemId": "fgrFbQanC8O8",
+          "kind": "sticky",
+          "text": "change this photo to a parrot",
+          "priority": "try",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "try",
+          "priorityConflict": false,
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1430.705,
+            "y": 2192.965,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": null
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-dinosaur",
+      "pageId": "review",
+      "frameTitle": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
+      "stepKey": "02-dinosaur",
+      "matchedBy": "frame-id",
+      "flow": "dinosaur",
+      "route": "/dinosaur.html",
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8/02-dinosaur-full.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-03-random",
+      "pageId": "review",
+      "frameTitle": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
+      "stepKey": "03-random",
+      "matchedBy": "frame-id",
+      "flow": "random",
+      "route": "/random.html",
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "54eaa9136e099423449dc3131b3c67ca5fbc4651",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8/02-random-full.png",
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

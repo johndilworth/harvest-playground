@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "type": "meeting",
-  "updatedAt": "2026-10-14T16:24:34-06:00",
+  "updatedAt": "2026-10-21T10:24:29-06:00",
   "series": {
     "slug": "team-meeting",
     "name": "Team Meeting",
@@ -46,6 +46,12 @@
         "name": "Taylor Lykins",
         "email": null,
         "addedFrom": "2026-10-27 board (row added in Areas of focus)"
+      },
+      {
+        "handle": "@shanna",
+        "name": "Shanna",
+        "email": null,
+        "addedFrom": "2026-11-03 board (row added in Areas of focus)"
       }
     ],
     "attendeesSource": "setup",
@@ -68,17 +74,48 @@
       "archiveFolders": {
         "2026-10-13": 452809033,
         "2026-10-20": 452809036,
-        "2026-10-27": 452809038
+        "2026-10-27": 452809038,
+        "2026-11-03": 452991635
       }
     }
   },
-  "currentMeetingId": "2026-11-03",
+  "currentMeetingId": "2026-11-10",
   "meetings": [
+    {
+      "id": "2026-11-10",
+      "title": "Team Meeting Nov 10, 2026",
+      "date": "2026-11-10",
+      "status": "current",
+      "createdAt": "2026-10-21T10:24:29-06:00",
+      "harvestedFrom": "2026-11-03",
+      "board": {
+        "documentId": "feb5e94e-d935-4bc6-bcfe-47eeae44349e",
+        "url": "https://lucid.app/lucidchart/feb5e94e-d935-4bc6-bcfe-47eeae44349e/edit",
+        "commentUrl": "https://lucid.app/lucidchart/feb5e94e-d935-4bc6-bcfe-47eeae44349e/edit?invitationId=inv_38562f36-8395-41a5-9f21-d5ff8981e6fb",
+        "screenshot": "/captures/meetings/team-meeting-2026-11-10.png",
+        "flow": "meeting",
+        "narrativeBlockId": "vtoFBw-SOIhf"
+      },
+      "carriedIn": {
+        "actions": [
+          "a-vendor-shortlist",
+          "a-casey-concept-feedback",
+          "a-take-out-trash"
+        ],
+        "openItems": [
+          "o-analytics-owner"
+        ]
+      },
+      "activity": {
+        "boardObjects": 1,
+        "actionItems": 3
+      }
+    },
     {
       "id": "2026-11-03",
       "title": "Team Meeting Nov 3, 2026",
       "date": "2026-11-03",
-      "status": "current",
+      "status": "harvested",
       "createdAt": "2026-10-14T16:24:34-06:00",
       "harvestedFrom": "2026-10-27",
       "board": {
@@ -99,8 +136,117 @@
         ]
       },
       "activity": {
-        "boardObjects": 1,
-        "actionItems": 2
+        "boardObjects": 6,
+        "actionItems": 3
+      },
+      "harvestedAt": "2026-10-21T10:24:29-06:00",
+      "stickiesRead": 6,
+      "summary": {
+        "narrative": "A short board, all written by John. The deck is almost finished, but John also wrote that he's going insane. His focus is getting the design output finished, and Shanna joined the Areas of focus table. Discussion had one topic (when Ghost will release a new album) with no outcome recorded, and Quick Hits was empty. The one new action, take out the trash, has no owner or date. Nothing closed: alice's vendor shortlist and Casey's Harvest concept feedback carry forward, and the analytics dashboard still has no owner.",
+        "decisions": [],
+        "actions": [
+          {
+            "id": "a-vendor-shortlist",
+            "task": "Send vendor shortlist (still waiting on 2 quotes)",
+            "owner": "@alice",
+            "due": null,
+            "status": "In Progress",
+            "source": "From last time",
+            "quote": "Card status: In Progress",
+            "flags": [
+              "no due date"
+            ]
+          },
+          {
+            "id": "a-casey-concept-feedback",
+            "task": "Give feedback on the Harvest concept",
+            "owner": "@casey",
+            "due": null,
+            "status": "To Do",
+            "source": "From last time",
+            "quote": "Card status: To Do",
+            "flags": [
+              "no due date"
+            ]
+          },
+          {
+            "id": "a-take-out-trash",
+            "task": "Take out the trash",
+            "owner": null,
+            "due": null,
+            "status": "To Do",
+            "source": "Action Items",
+            "quote": "Take out the trash",
+            "flags": [
+              "needs owner",
+              "no due date"
+            ]
+          }
+        ],
+        "openItems": [
+          {
+            "id": "o-analytics-owner",
+            "text": "Who owns the analytics dashboard now that Dana left?",
+            "source": "From last time",
+            "flags": [
+              "needs owner"
+            ]
+          }
+        ],
+        "notes": [
+          {
+            "text": "Discussion topic: when Ghost will have a new album (no outcome recorded).",
+            "source": "Discussion"
+          },
+          {
+            "text": "Quick Hits was empty.",
+            "source": "Quick Hits"
+          }
+        ],
+        "wins": [
+          "Deck almost finished (John)"
+        ],
+        "concerns": [
+          "I'm going insane (John)"
+        ],
+        "focus": [
+          {
+            "attendee": "John",
+            "items": [
+              "Getting the design output finished"
+            ]
+          },
+          {
+            "attendee": "Shanna",
+            "items": []
+          }
+        ],
+        "flags": [
+          "New action 'Take out the trash' has no owner or due date (sticky written by John; carried as '[needs owner]').",
+          "Action 'Send vendor shortlist' (alice) still has no due date and has carried since 10/13.",
+          "Action 'Give feedback on the Harvest concept' (Casey) is still To Do with no due date (carried since 10/27).",
+          "Open question 'Who owns the analytics dashboard?' still needs an owner (carried since 10/13).",
+          "Shanna was added to the Areas of focus table on the board (no focus stickies yet); carried to the next board and added to attendees.",
+          "Only John's row in Areas of focus had a sticky; the other attendees left theirs empty.",
+          "Authors come from Lucid sticky attribution; all six stickies were by John Dilworth.",
+          "No transcript was read, so the Discussion topic has no recorded outcome."
+        ],
+        "closed": [],
+        "carriedForward": [
+          "a-vendor-shortlist",
+          "a-casey-concept-feedback",
+          "a-take-out-trash",
+          "o-analytics-owner"
+        ],
+        "skipped": [],
+        "authors": {
+          "Gettting output of design finished": "John Dilworth",
+          "Let's talk about when Ghost will have a new album": "John Dilworth",
+          "Take out the trash": "John Dilworth",
+          "Im going insane": "John Dilworth",
+          "Deck almost finished": "John Dilworth",
+          "Open (since 10/13): who owns the analytics dashboard now that Dana left?": "John Dilworth"
+        }
       }
     },
     {
@@ -668,8 +814,8 @@
   "cards": [
     {
       "actionId": "a-vendor-shortlist",
-      "boardId": "4ed558d0-6d8e-438f-8ca7-51cc7e5c2400",
-      "cardId": "LAmDRDcqz_AX",
+      "boardId": "feb5e94e-d935-4bc6-bcfe-47eeae44349e",
+      "cardId": "ktoFJsZd7Wdn",
       "title": "Send vendor shortlist (still waiting on 2 quotes)",
       "assignee": "alice@example.com",
       "endTime": null,
@@ -678,14 +824,24 @@
     },
     {
       "actionId": "a-casey-concept-feedback",
-      "boardId": "4ed558d0-6d8e-438f-8ca7-51cc7e5c2400",
-      "cardId": "LAmDY-s.jP9O",
+      "boardId": "feb5e94e-d935-4bc6-bcfe-47eeae44349e",
+      "cardId": "ktoFMx74DiX1",
       "title": "Give feedback on the Harvest concept",
       "assignee": "Casey Robinson",
       "endTime": null,
       "status": "To Do",
       "sourceMeeting": "Team Meeting 2026-10-27"
+    },
+    {
+      "actionId": "a-take-out-trash",
+      "boardId": "feb5e94e-d935-4bc6-bcfe-47eeae44349e",
+      "cardId": "ktoFsAOwIV.j",
+      "title": "[needs owner] Take out the trash",
+      "assignee": null,
+      "endTime": null,
+      "status": "To Do",
+      "sourceMeeting": "Team Meeting 2026-11-03"
     }
   ],
-  "cardsReadAt": "2026-10-14T10:08:19-06:00"
+  "cardsReadAt": "2026-10-21T10:24:29-06:00"
 }

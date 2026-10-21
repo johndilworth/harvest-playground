@@ -102,6 +102,13 @@
       "date": "2026-10-20",
       "stickies": 0,
       "outcome": "no_stickies"
+    },
+    {
+      "date": "2026-10-21",
+      "stickies": 2,
+      "outcome": "applied"
     }
-  ]
+  ],
+  "status": "superseded",
+  "lucidFolderId": 453022221
 }

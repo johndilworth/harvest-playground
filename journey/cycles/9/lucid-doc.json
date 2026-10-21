@@ -1,0 +1,87 @@
+{
+  "project": "harvest-playground",
+  "cycle": 9,
+  "createdAt": "2026-10-21T17:15:00-06:00",
+  "repo": "https://github.com/johndilworth/harvest-playground",
+  "commit": "13c20db572a12ffaf3992977115fb72a234bdf1b",
+  "pullRequest": null,
+  "site": {
+    "url": "https://harvest-playground.netlify.app",
+    "netlifySiteId": "4702dcbf-e724-4e32-b35c-739e1fdf7ae5",
+    "productionBranch": "main",
+    "continuousDeploy": true,
+    "publishDir": "site",
+    "deployId": "6ad94668c343eeabb3405a8f",
+    "deployState": "ready",
+    "liveFooter": "Cycle 9"
+  },
+  "harvestSchedule": "daily 17:00 America/Denver",
+  "harvestedFrom": 8,
+  "harvestSource": "nightly",
+  "boardRules": "2026-10-12: Lucidchart only, no hub; one review board unless a section has >5 flows/screens (3 screens -> 1 board); page background #E8EAED; frames #F2F3F5, no border, 400 px padding; legend says stickies show your name; org-wide comment link",
+  "historyBoard": {
+    "docId": "e983d07c-47f1-4d0f-bfe6-81087a3b8ddd",
+    "editUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+    "role": "history",
+    "harvest": false,
+    "updatedInPlace": "2026-10-21 nightly: added Cycle 9 tile (frame s.tFfrzCf4_w at x38080, shot s.tFK752B~yg, caption s.tFAdDAZGdl); Cycle 8 frame no longer says live now; title totals 10 cycles / 52 applied / 1 skipped / 20 nightly harvests"
+  },
+  "boards": [
+    {
+      "docId": "aed962a7-a1c0-4db9-bd0a-1b76152a96f8",
+      "title": "Harvest Playground:All pages:C9",
+      "product": "lucidchart",
+      "editUrl": "https://lucid.app/lucidchart/aed962a7-a1c0-4db9-bd0a-1b76152a96f8/edit",
+      "viewUrl": "https://lucid.app/lucidchart/aed962a7-a1c0-4db9-bd0a-1b76152a96f8/view",
+      "commentUrl": "https://lucid.app/lucidchart/aed962a7-a1c0-4db9-bd0a-1b76152a96f8/edit?invitationId=inv_8aedd300-f2dd-47e8-9895-d57e1b4c5e82",
+      "role": "flow",
+      "flow": "review",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random"
+      ],
+      "harvest": true,
+      "spec": "journey/cycles/9/lucid-spec-review.json",
+      "pages": 1,
+      "pageBackground": "#E8EAED",
+      "frames": [
+        {
+          "id": "frame-01-home",
+          "stepKey": "01-home",
+          "route": "/",
+          "imageUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-home/02-home-full.png",
+          "thumbUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-home/01-home.png",
+          "beforeUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png"
+        },
+        {
+          "id": "frame-02-dinosaur",
+          "stepKey": "02-dinosaur",
+          "route": "/dinosaur.html",
+          "imageUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-dinosaur/02-dinosaur-full.png",
+          "thumbUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-dinosaur/01-dinosaur.png",
+          "beforeUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-dinosaur/01-dinosaur.png"
+        },
+        {
+          "id": "frame-03-random",
+          "stepKey": "03-random",
+          "route": "/random.html",
+          "imageUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-random/02-random-full.png",
+          "thumbUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-random/01-random.png",
+          "beforeUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-random/01-random.png"
+        }
+      ],
+      "renderCheck": "exported 2026-10-21 (Home frame 0-2400 and Dino/Random frames 0-1600): all three Cycle 9 screenshots render incl. the Turkey carousel; page background #E8EAED set via skills.pages.setBackgroundColor; Home caption arrows replaced with words after import (preflight emoji warning)",
+      "lucidFolderId": 452808969
+    }
+  ],
+  "manifest": "journey/cycles/9/manifest.json",
+  "boardConfig": "journey/cycles/9/board-config.json",
+  "generator": "journey/build_specs.py (combined mode)",
+  "capture": "journey/capture-pages.mjs -> dashboard/public/captures/harvest-playground/c9-*",
+  "appliedCount": 2,
+  "skippedCount": 0,
+  "conflicts": 0,
+  "boardFeedback": 0,
+  "nightlyHarvests": []
+}

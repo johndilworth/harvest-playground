@@ -1,0 +1,81 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 9,
+ "date": "Wed 2026-10-21",
+ "commit": "13c20db572a12ffaf3992977115fb72a234bdf1b",
+ "pullRequest": null,
+ "prNumber": null,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home \u00b7 Dino Town \u00b7 Totally Random on one board (3 screens \u2264 5, no split)",
+  "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "product_lucid": "lucidchart",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "Turkey carousel + parrot photo",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 4820,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-home/02-home-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png",
+     "caption": "Full page. The Turkey 2026 photo cards are now a carousel (\u25c0 PREV / NEXT \u25b6, dots, arrow keys), and TURTLE.EXE shows a blue-and-yellow macaw instead of the tortoise. Footer Cycle 9.",
+     "changes": [
+      "Turkey photos: separate cards replaced with a one-at-a-time carousel (sticky: Make this a carousel in stead of separate cards like this. \u00b7 anonymous)",
+      "TURTLE.EXE photo: tortoise swapped for a parrot (blue-and-yellow macaw) (sticky: change this photo to a parrot \u00b7 anonymous)"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "No changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 5055,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-dinosaur/02-dinosaur-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-dinosaur/01-dinosaur.png",
+     "caption": "Full page. No changes this cycle. Footer Cycle 9.",
+     "changes": [
+      "No changes this cycle"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "No changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 3081,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-random/02-random-full.png",
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-random/01-random.png",
+     "caption": "Full page. No changes this cycle. Footer Cycle 9.",
+     "changes": [
+      "No changes this cycle"
+     ]
+    }
+   ]
+  }
+ ]
+}

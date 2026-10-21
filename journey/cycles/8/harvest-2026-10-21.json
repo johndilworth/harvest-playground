@@ -1,0 +1,68 @@
+{
+  "cycle": 8,
+  "harvestedAt": "2026-10-21T17:08:00-06:00",
+  "outcome": "applied",
+  "cycle9Created": true,
+  "boards": {
+    "review": {
+      "docId": "d0c055a3-adba-4f7d-9ade-84534dc3e5e7",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random"
+      ],
+      "stickies": 2,
+      "threads": 0
+    }
+  },
+  "counts": {
+    "must": 0,
+    "try": 2,
+    "maybe": 0,
+    "total": 2,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 0,
+    "conflicts": 0
+  },
+  "applied": [
+    {
+      "itemId": "8erFtqdaBmz0",
+      "flow": "home",
+      "priority": "try",
+      "text": "Make this a carousel in stead of separate cards like this.",
+      "author": "anonymous",
+      "change": "Turkey 2026 photo cards turned into a one-at-a-time carousel (reuses the SPIRAL gallery script)"
+    },
+    {
+      "itemId": "fgrFbQanC8O8",
+      "flow": "home",
+      "priority": "try",
+      "text": "change this photo to a parrot",
+      "author": "anonymous",
+      "change": "TURTLE.EXE tortoise photo replaced with a blue-and-yellow macaw (Luc Viatour, CC BY 2.0)"
+    }
+  ],
+  "skipped": [],
+  "conflicts": [],
+  "boardFeedback": [],
+  "contributors": [
+    {
+      "name": "anonymous",
+      "stickies": 2
+    }
+  ],
+  "commit": "13c20db572a12ffaf3992977115fb72a234bdf1b",
+  "deployId": "6ad94668c343eeabb3405a8f",
+  "previewUrl": "https://6ad94668c343eeabb3405a8f--harvest-playground.netlify.app",
+  "newBoard": {
+    "docId": "aed962a7-a1c0-4db9-bd0a-1b76152a96f8",
+    "title": "Harvest Playground:All pages:C9",
+    "commentUrl": "https://lucid.app/lucidchart/aed962a7-a1c0-4db9-bd0a-1b76152a96f8/edit?invitationId=inv_8aedd300-f2dd-47e8-9895-d57e1b4c5e82"
+  },
+  "writeback": "Applied badges set on both stickies of the Cycle 8 board (writeback-js --auto-applied)",
+  "feedback": "journey/cycles/8/feedback-2026-10-21.json",
+  "raw": "journey/out/c8/raw/2026-10-21/ (gitignored)"
+}

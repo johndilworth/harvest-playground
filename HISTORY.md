@@ -6,9 +6,9 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 8**) |
-| **Add a sticky** | [Cycle 8 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/d0c055a3-adba-4f7d-9ade-84534dc3e5e7/edit?invitationId=inv_23e61252-e2f3-4e7e-b91a-1eaf698663b9) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 8 tile added 2026-10-16) |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 9**) |
+| **Add a sticky** | [Cycle 9 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/aed962a7-a1c0-4db9-bd0a-1b76152a96f8/edit?invitationId=inv_8aedd300-f2dd-47e8-9895-d57e1b4c5e82) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 9 tile added 2026-10-21) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 
@@ -36,6 +36,7 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Wed 2026-10-21 | Cycle 8 board (nightly) | 2 | 2 | 0 | **Cycle 9 shipped** — Turkey 2026 photos as a carousel, parrot (blue-and-yellow macaw) instead of the tortoise photo · authors: anonymous 2 | [Cycle 9](https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-home/01-home.png) |
 | Tue 2026-10-20 | Cycle 8 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 8 | [Cycle 8](https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png) |
 | Mon 2026-10-19 | Cycle 8 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 8 | [Cycle 8](https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png) |
 | Sun 2026-10-18 | Cycle 8 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 8 | [Cycle 8](https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png) |
@@ -58,10 +59,20 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 9 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8) · 19 nightly harvests · 50 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 8 remains current after the **5pm MT quiet-night harvest** on Tue 2026-10-20 (0 stickies).
+**Totals so far:** 10 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9) · 20 nightly harvests · 52 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 9 is current after the **5pm MT harvest** on Wed 2026-10-21 (2 stickies applied).
 
 ## Day by day
+
+### Wed 2026-10-21 — Cycle 8 harvest · **Cycle 9 shipped** · nightly
+- **Harvested:** Cycle 8 review board (`Harvest Playground:All pages:C8` — Home · Dino Town · Totally Random) at ~5:08 pm MT — **2 stickies, 0 comment threads**
+- **Applied:** 2 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Malicious/illegal/offensive:** none
+- **Contributors:** anonymous × 2 (no Lucid author lines on the stickies)
+- **Cycle 9 created:** yes — the Turkey 2026 photo cards are now a carousel (PREV / NEXT, dots, arrow keys); TURTLE.EXE shows a blue-and-yellow macaw instead of the tortoise
+- **Commit:** `13c20db` on `main` (pushed directly; no PR) · preview https://6ad94668c343eeabb3405a8f--harvest-playground.netlify.app
+- **Live:** https://harvest-playground.netlify.app (Cycle 9)
+- **Board:** [Harvest Playground:All pages:C9 (Lucidchart)](https://lucid.app/lucidchart/aed962a7-a1c0-4db9-bd0a-1b76152a96f8/edit?invitationId=inv_8aedd300-f2dd-47e8-9895-d57e1b4c5e82) · Cycle 8 board moved to Lucid folder `C8`, its stickies marked Applied
+- **Record:** `journey/cycles/8/harvest-2026-10-21.json`
 
 ### Tue 2026-10-20 — Cycle 8 harvest · no stickies · nightly
 - **Harvested:** Cycle 8 review board (`Harvest Playground:All pages:C8` — Home · Dino Town · Totally Random) at ~5:06 pm MT — **0 stickies, 0 comment threads**

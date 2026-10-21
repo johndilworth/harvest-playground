@@ -1,0 +1,30 @@
+{
+  "cycle": 9,
+  "capturedAt": "2026-10-21T23:10:50.067Z",
+  "site": "https://harvest-playground.netlify.app",
+  "commit": "13c20db572a12ffaf3992977115fb72a234bdf1b",
+  "pages": [
+    {
+      "slug": "home",
+      "route": "/",
+      "viewport": "01-home.png",
+      "full": "02-home-full.png",
+      "h": 4820
+    },
+    {
+      "slug": "dinosaur",
+      "route": "/dinosaur.html",
+      "viewport": "01-dinosaur.png",
+      "full": "02-dinosaur-full.png",
+      "h": 5055
+    },
+    {
+      "slug": "random",
+      "route": "/random.html",
+      "viewport": "01-random.png",
+      "full": "02-random-full.png",
+      "h": 3081
+    }
+  ],
+  "assetsBase": "https://harvest-dashboard.netlify.app/captures/harvest-playground"
+}

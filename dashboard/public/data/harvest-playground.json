@@ -24,16 +24,17 @@
         "C5": 452808996,
         "C6": 452808997,
         "C7": 452809000,
-        "C8": 453022221
+        "C8": 453022221,
+        "C9": 453119112
       }
     }
   },
   "stats": {
     "pullRequests": 2,
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
-    "nightlyHarvests": 20
+    "nightlyHarvests": 21
   },
-  "updatedAt": "2026-10-21T17:15:00-06:00",
+  "updatedAt": "2026-10-22T17:15:00-06:00",
   "cycles": [
     {
       "number": 0,
@@ -854,7 +855,7 @@
       "number": 9,
       "title": "Cycle 9 — Turkey photo carousel, parrot photo",
       "createdAt": "2026-10-21T17:15:00-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 8,
       "pullRequest": null,
       "commit": "13c20db",
@@ -872,8 +873,19 @@
           "harvest": true
         }
       ],
-      "authors": [],
-      "nightlyHarvests": [],
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 3
+        }
+      ],
+      "nightlyHarvests": [
+        {
+          "date": "2026-10-22",
+          "stickies": 3,
+          "outcome": "applied"
+        }
+      ],
       "changes": {
         "applied": [
           {
@@ -894,6 +906,60 @@
       "contributions": {
         "red": 0,
         "yellow": 2,
+        "blue": 0,
+        "purple": 0
+      },
+      "lucidFolderId": 453119112
+    },
+    {
+      "number": 10,
+      "title": "Cycle 10 — parrot page, Dino Map pins, Vernal-style Dino Town",
+      "createdAt": "2026-10-22T17:15:00-06:00",
+      "status": "current",
+      "harvestedFrom": 9,
+      "pullRequest": null,
+      "commit": "26558b0",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png",
+      "previewUrl": "https://6ada97492e039ed961ffda88--harvest-playground.netlify.app",
+      "documents": [
+        {
+          "title": "Harvest Playground:All pages:C10",
+          "role": "flow",
+          "flow": "review",
+          "docId": "7f58b19f-e57a-490d-a675-00d537968fb2",
+          "url": "https://lucid.app/lucidchart/7f58b19f-e57a-490d-a675-00d537968fb2/edit",
+          "commentUrl": "https://lucid.app/lucidchart/7f58b19f-e57a-490d-a675-00d537968fb2/edit?invitationId=inv_00462898-eefc-47ff-b9b7-8132e3f984de",
+          "description": "Home · Dino Town · Totally Random · Parrots on one board (4 screens)",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "nightlyHarvests": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Make this story about Parrots now. and expand with a new page all about parrots."
+          },
+          {
+            "priority": "try",
+            "flow": "dinosaur",
+            "text": "Add google map pins that would take people to where these dino icons are on the map"
+          },
+          {
+            "priority": "try",
+            "flow": "dinosaur",
+            "text": "Make the theme of this dinosaur page feel more like the vernal city website (see this image) - add more more dino skeletons"
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "The Home story is now about parrots with a new PARROTS.LOG page; Dino Town got a Vernal City-style look with more skeleton drawings and a Dino Map whose pins open each roadside dinosaur in Google Maps (plain links, no embedded map)."
+      },
+      "contributions": {
+        "red": 0,
+        "yellow": 3,
         "blue": 0,
         "purple": 0
       },

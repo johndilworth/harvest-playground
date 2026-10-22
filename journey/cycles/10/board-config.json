@@ -1,0 +1,100 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 10,
+ "date": "Thu 2026-10-22",
+ "commit": "26558b0f6496cc80be1583b52d0c9b536a2d0234",
+ "pullRequest": null,
+ "prNumber": null,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home \u00b7 Dino Town \u00b7 Totally Random \u00b7 Parrots on one board (4 screens \u2264 5, no split)",
+  "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "product_lucid": "lucidchart",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "Parrot story + PARROTS.LOG link",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 4844,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/02-home-full.png",
+     "caption": "Full page. TURTLE.EXE is now PARROT.EXE, a story about parrots with a link to the new Parrots page; PARROTS.LOG added to the nav. Footer Cycle 10.",
+     "changes": [
+      "TURTLE.EXE story rewritten as PARROT.EXE with a link to a new Parrots page (sticky: Make this story about Parrots now. and expand with a new page all about parrots. \u00b7 anonymous)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-home/01-home.png"
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "Vernal-style theme, skeletons, Dino Map",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 6500,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-dinosaur/02-dinosaur-full.png",
+     "caption": "Full page. New Vernal City-style look (cream and olive green, dusk hero with white dino skeletons, round icon tiles), a Dino Map with Google Maps pins, MAP PIN buttons on each card, and a Boneyard of skeleton drawings. Footer Cycle 10.",
+     "changes": [
+      "Vernal City-style theme plus more dino skeletons in the hero and a new Boneyard section (sticky: Make the theme of this dinosaur page feel more like the vernal city website (see this image) - add more more dino skeletons \u00b7 anonymous)",
+      "Dino Map with numbered pins that open each dinosaur's location in Google Maps, plus a MAP PIN button on each card (sticky: Add google map pins that would take people to where these dino icons are on the map \u00b7 anonymous)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-dinosaur/01-dinosaur.png"
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "No changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 3081,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-random/02-random-full.png",
+     "caption": "Full page. No changes this cycle apart from the PARROTS.LOG nav link. Footer Cycle 10.",
+     "changes": [
+      "No changes this cycle (nav link to the new Parrots page only)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-random/01-random.png"
+    }
+   ]
+  },
+  {
+   "slug": "parrots",
+   "name": "Parrots",
+   "route": "/parrots.html",
+   "blurb": "New page",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-parrots/01-parrots.png",
+   "screens": [
+    {
+     "route": "/parrots.html",
+     "title": "Parrots",
+     "h": 2408,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-parrots/02-parrots-full.png",
+     "caption": "Full page. New this cycle: PARROTS.LOG, all about parrots (what makes a parrot, African grey, kea, kakapo, adoption tips). Footer Cycle 10.",
+     "changes": [
+      "New page all about parrots (sticky on the Home board: ...expand with a new page all about parrots. \u00b7 anonymous)"
+     ]
+    }
+   ]
+  }
+ ]
+}

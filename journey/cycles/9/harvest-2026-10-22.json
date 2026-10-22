@@ -1,0 +1,81 @@
+{
+  "cycle": 9,
+  "harvestedAt": "2026-10-22T17:02:00-06:00",
+  "outcome": "applied",
+  "cycle10Created": true,
+  "boards": {
+    "review": {
+      "docId": "aed962a7-a1c0-4db9-bd0a-1b76152a96f8",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random"
+      ],
+      "stickies": 3,
+      "threads": 0
+    }
+  },
+  "counts": {
+    "must": 0,
+    "try": 3,
+    "maybe": 0,
+    "total": 3,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 0,
+    "conflicts": 0
+  },
+  "applied": [
+    {
+      "itemId": "rDLFptfp~pTq",
+      "flow": "home",
+      "priority": "try",
+      "text": "Make this story about Parrots now. and expand with a new page all about parrots.",
+      "author": "anonymous",
+      "change": "TURTLE.EXE rewritten as PARROT.EXE with a link to the new parrots.html page (PARROTS.LOG) and nav links on every page"
+    },
+    {
+      "itemId": "BHMF7Ok~6.Q7",
+      "flow": "dinosaur",
+      "priority": "try",
+      "text": "Add google map pins that would take people to where these dino icons are on the map",
+      "author": "anonymous",
+      "change": "Dino Map section with numbered pins that open each roadside dinosaur in Google Maps, plus a MAP PIN button on each card (plain links, no embedded map)"
+    },
+    {
+      "itemId": "WEMFSYDOKKUn",
+      "flow": "dinosaur",
+      "priority": "try",
+      "text": "Make the theme of this dinosaur page feel more like the vernal city website (see this image) - add more more dino skeletons",
+      "author": "anonymous",
+      "change": "Vernal City-style theme for Dino Town (cream, olive green, dusk hero, round icon tiles) with white skeleton drawings in the hero and a new Boneyard section"
+    }
+  ],
+  "skipped": [],
+  "conflicts": [],
+  "boardFeedback": [],
+  "contributors": [
+    {
+      "name": "anonymous",
+      "stickies": 3
+    }
+  ],
+  "notes": [
+    "Map pins are plain outbound Google Maps links; an embedded Google Map was not used because it would load third-party code (safety rule 2).",
+    "The Vernal City reference image pasted on the board was used only for the look; no artwork or logos copied."
+  ],
+  "commit": "26558b0f6496cc80be1583b52d0c9b536a2d0234",
+  "deployId": "6ada97492e039ed961ffda88",
+  "previewUrl": "https://6ada97492e039ed961ffda88--harvest-playground.netlify.app",
+  "newBoard": {
+    "docId": "7f58b19f-e57a-490d-a675-00d537968fb2",
+    "title": "Harvest Playground:All pages:C10",
+    "commentUrl": "https://lucid.app/lucidchart/7f58b19f-e57a-490d-a675-00d537968fb2/edit?invitationId=inv_00462898-eefc-47ff-b9b7-8132e3f984de"
+  },
+  "writeback": "Applied badges set on all three stickies of the Cycle 9 board (writeback-js --auto-applied)",
+  "historyBoard": "Cycle 10 tile added (frame QYNFUSYMHC4I at x40800, shot QYNFpRSVO6XY, caption QYNFWbpb89t1); Cycle 9 frame no longer says live now; title totals 11 cycles / 55 applied / 1 skipped / 21 nightly harvests",
+  "feedback": "journey/cycles/9/feedback-2026-10-22.json",
+  "raw": "journey/out/c9/raw/2026-10-22/ (gitignored)"
+}

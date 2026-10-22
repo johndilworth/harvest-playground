@@ -8,7 +8,7 @@ import path from 'node:path'
 const cycle = Number(process.argv[2])
 const base = (process.argv[3] || 'https://harvest-playground.netlify.app').replace(/\/$/, '')
 const root = path.resolve(process.argv[4] || '../dashboard/public/captures/harvest-playground')
-const pages = [['home', '/'], ['dinosaur', '/dinosaur.html'], ['random', '/random.html']]
+const pages = [['home', '/'], ['dinosaur', '/dinosaur.html'], ['random', '/random.html'], ['parrots', '/parrots.html']]
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 1440, height: 1024 }, deviceScaleFactor: 1 })
 const errors = []; page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()) })

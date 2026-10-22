@@ -2,6 +2,28 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 10 (2026-10-22) · nightly harvest
+Nightly 5 pm MT harvest of the Cycle 9 review board `aed962a7-a1c0-4db9-bd0a-1b76152a96f8` (`Harvest Playground:All pages:C9` — Home · Dino Town · Totally Random) —
+**3 stickies, 0 comment threads** (Home 1, Dino Town 2). No priority keywords, so the yellow fill made each **try**. None had a Lucid
+author attribution line → **anonymous**. One sticky came with a pasted reference image (a screenshot of the Vernal City, Utah website).
+
+### Applied (3)
+- **try** · Home · “Make this story about Parrots now. and expand with a new page all about parrots.” (on TURTLE.EXE) → the story is now **PARROT.EXE — long-uptime talkers** (macaw photo kept), with a link to a new page **`parrots.html` (PARROTS.LOG)**: what makes a parrot a parrot, African grey, kea, kākāpō and adoption tips, with three new Wikimedia Commons photos (`site/assets/c10/`, credits on the page). `[ PARROTS.LOG ]` added to the nav on every page. · by anonymous
+- **try** · Dino Town · “Add google map pins that would take people to where these dino icons are on the map” → new **Dino Map** section: a drawn map of the lower 48 with numbered pins for all eight roadside dinosaurs plus Dinosaur, CO; each pin, legend entry and a new “📍 MAP PIN” button on each card opens that place in Google Maps. Done with plain outbound links, because an embedded Google Map would load third-party code (safety rule 2). · by anonymous
+- **try** · Dino Town · “Make the theme of this dinosaur page feel more like the vernal city website (see this image) - add more more dino skeletons” → Dino Town gets a Vernal City-style look: cream background, olive-green and white header with orange underlines, a dusk hero banner with a white “DINO TOWN” wordmark card, round olive icon tiles linking to each section, serif small-caps headings and dino-track marks. More skeletons: white T. rex and sauropod skeleton drawings in the hero plus a new **Boneyard** section with three skeletons (own SVG drawings, no artwork copied from the city site). · by anonymous
+
+### Skipped
+None (no malicious, illegal or offensive items).
+
+### Conflicts
+None.
+
+### Board feedback
+None.
+
+### Authors
+anonymous 3
+
 ## Cycle 9 (2026-10-21) · nightly harvest
 Nightly 5 pm MT harvest of the Cycle 8 review board `d0c055a3-adba-4f7d-9ade-84534dc3e5e7` (`Harvest Playground:All pages:C8` — Home · Dino Town · Totally Random) —
 **2 stickies, 0 comment threads** (Home 2). No priority keywords, so the yellow fill made each **try**. Neither had a Lucid

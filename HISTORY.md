@@ -36,6 +36,7 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Fri 2026-10-23 | Cycle 10 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 10 | [Cycle 10](https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png) |
 | Thu 2026-10-22 | Cycle 9 board (nightly) | 3 | 3 | 0 | **Cycle 10 shipped** — parrot story + new PARROTS.LOG page, Dino Map with Google Maps pins, Vernal City-style Dino Town with more skeletons · authors: anonymous 3 | [Cycle 10](https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png) |
 | Wed 2026-10-21 | Cycle 8 board (nightly) | 2 | 2 | 0 | **Cycle 9 shipped** — Turkey 2026 photos as a carousel, parrot (blue-and-yellow macaw) instead of the tortoise photo · authors: anonymous 2 | [Cycle 9](https://harvest-dashboard.netlify.app/captures/harvest-playground/c9-home/01-home.png) |
 | Tue 2026-10-20 | Cycle 8 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 8 | [Cycle 8](https://harvest-dashboard.netlify.app/captures/harvest-playground/c8-home/01-home.png) |
@@ -60,10 +61,19 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 11 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10) · 21 nightly harvests · 55 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 10 is current after the **5pm MT harvest** on Thu 2026-10-22 (3 stickies applied).
+**Totals so far:** 11 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10) · 22 nightly harvests · 55 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 10 remains current after the **5pm MT quiet-night harvest** on Fri 2026-10-23 (0 stickies).
 
 ## Day by day
+
+### Fri 2026-10-23 — Cycle 10 harvest · no stickies · nightly
+- **Harvested:** Cycle 10 review board (`Harvest Playground:All pages:C10` — Home · Dino Town · Totally Random · Parrots) at ~5:10 pm MT — **0 stickies, 0 comment threads**
+- **Applied:** 0 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Hub stray stickies:** 0
+- **Contributors:** none
+- **Cycle 11 created:** no (nothing to apply, per HARVEST.md). The Cycle 10 board stays open for stickies.
+- **Live:** https://harvest-playground.netlify.app (Cycle 10)
+- **Screenshot (unchanged):** https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png
+- **Record:** `journey/cycles/10/harvest-2026-10-23.json`
 
 ### Thu 2026-10-22 — Cycle 9 harvest · **Cycle 10 shipped** · nightly
 - **Harvested:** Cycle 9 review board (`Harvest Playground:All pages:C9` — Home · Dino Town · Totally Random) at ~5:02 pm MT — **3 stickies, 0 comment threads**

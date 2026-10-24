@@ -1,13 +1,13 @@
 {
   "docId": "7f58b19f-e57a-490d-a675-00d537968fb2",
   "cycle": 10,
-  "harvestedAt": "2026-10-23T23:10:23.687591+00:00",
+  "harvestedAt": "2026-10-24T23:09:31.659497+00:00",
   "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
   "frames": [
     {
       "frameId": "frame-01-home",
       "pageId": "review",
-      "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
+      "frameTitle": "01-home \u00b7 / \u00b7 Home \u00b7 Leave stickies anywhere in this frame",
       "stepKey": "01-home",
       "matchedBy": "frame-id",
       "flow": "home",
@@ -23,7 +23,7 @@
     {
       "frameId": "frame-02-dinosaur",
       "pageId": "review",
-      "frameTitle": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
+      "frameTitle": "02-dinosaur \u00b7 /dinosaur.html \u00b7 Dino Town \u00b7 Leave stickies anywhere in this frame",
       "stepKey": "02-dinosaur",
       "matchedBy": "frame-id",
       "flow": "dinosaur",
@@ -39,7 +39,7 @@
     {
       "frameId": "frame-03-random",
       "pageId": "review",
-      "frameTitle": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
+      "frameTitle": "03-random \u00b7 /random.html \u00b7 Totally Random \u00b7 Leave stickies anywhere in this frame",
       "stepKey": "03-random",
       "matchedBy": "frame-id",
       "flow": "random",
@@ -55,7 +55,7 @@
     {
       "frameId": "frame-04-parrots",
       "pageId": "review",
-      "frameTitle": "04-parrots · /parrots.html · Parrots · Leave stickies anywhere in this frame",
+      "frameTitle": "04-parrots \u00b7 /parrots.html \u00b7 Parrots \u00b7 Leave stickies anywhere in this frame",
       "stepKey": "04-parrots",
       "matchedBy": "frame-id",
       "flow": "parrots",

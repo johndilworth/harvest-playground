@@ -1,0 +1,82 @@
+{
+  "docId": "7f58b19f-e57a-490d-a675-00d537968fb2",
+  "cycle": 10,
+  "harvestedAt": "2026-10-24T23:09:31.659497+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home \u00b7 / \u00b7 Home \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "26558b0f6496cc80be1583b52d0c9b536a2d0234",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10/02-home-full.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-02-dinosaur",
+      "pageId": "review",
+      "frameTitle": "02-dinosaur \u00b7 /dinosaur.html \u00b7 Dino Town \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": "02-dinosaur",
+      "matchedBy": "frame-id",
+      "flow": "dinosaur",
+      "route": "/dinosaur.html",
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "26558b0f6496cc80be1583b52d0c9b536a2d0234",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10/02-dinosaur-full.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-03-random",
+      "pageId": "review",
+      "frameTitle": "03-random \u00b7 /random.html \u00b7 Totally Random \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": "03-random",
+      "matchedBy": "frame-id",
+      "flow": "random",
+      "route": "/random.html",
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "26558b0f6496cc80be1583b52d0c9b536a2d0234",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10/02-random-full.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-04-parrots",
+      "pageId": "review",
+      "frameTitle": "04-parrots \u00b7 /parrots.html \u00b7 Parrots \u00b7 Leave stickies anywhere in this frame",
+      "stepKey": "04-parrots",
+      "matchedBy": "frame-id",
+      "flow": "parrots",
+      "route": "/parrots.html",
+      "url": "https://harvest-playground.netlify.app/parrots.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "26558b0f6496cc80be1583b52d0c9b536a2d0234",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10/02-parrots-full.png",
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

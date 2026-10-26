@@ -2,6 +2,26 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 11 (2026-10-26) · nightly harvest
+Nightly 5 pm MT harvest of the Cycle 10 review board `7f58b19f-e57a-490d-a675-00d537968fb2` (`Harvest Playground:All pages:C10` — Home · Dino Town · Totally Random · Parrots) at ~5:07 pm MT —
+**1 sticky, 0 comment threads** (Home 1). No priority keyword, so the red fill made it **must**. It had no Lucid author
+attribution line → **anonymous**. Hub stray: none (no hub; dashboard is the hub).
+
+### Applied (1)
+- **must** · Home · “Make a new feature here with something about User research and how it's really important.” (placed just under the tagline, above the Turkey feature) → new **NEW FEATURE — USER_RESEARCH.EXE** section at the top of the home page: why user research matters, four terminal-style cards (Listen · Watch · Measure · Loop), an ASCII `research --why` readout, and a call to leave a sticky. Plain HTML/CSS, no new assets or scripts. Footer bumped to Cycle 11 on every page. · by anonymous
+
+### Skipped
+None (no malicious, illegal or offensive items).
+
+### Conflicts
+None.
+
+### Board feedback
+None.
+
+### Authors
+anonymous 1
+
 ## 2026-10-25 harvest (no Cycle 11)
 Harvested the Cycle 10 review board `7f58b19f-e57a-490d-a675-00d537968fb2` (`Harvest Playground:All pages:C10` — Home · Dino Town · Totally Random · Parrots) at ~5:07 pm MT —
 **0 stickies, 0 comment threads**. Hub stray: none (no hub; dashboard is the hub).

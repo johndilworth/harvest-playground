@@ -1,0 +1,100 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 11,
+ "date": "Mon 2026-10-26",
+ "commit": "2be92bbf1e5920846df3d00126b71c388d7e2dbc",
+ "pullRequest": null,
+ "prNumber": null,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home \u00b7 Dino Town \u00b7 Totally Random \u00b7 Parrots on one board (4 screens \u2264 5, no split)",
+  "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "product_lucid": "lucidchart",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "New User research feature",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 5443,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/02-home-full.png",
+     "caption": "Full page. New NEW FEATURE \u2014 USER_RESEARCH.EXE section at the top of the page (why user research matters, Listen \u00b7 Watch \u00b7 Measure \u00b7 Loop cards, research --why readout). Footer Cycle 11.",
+     "changes": [
+      "New USER_RESEARCH.EXE feature section at the top of the home page (sticky: Make a new feature here with something about User research and how it's really important. \u00b7 anonymous)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png"
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "No changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 6500,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-dinosaur/02-dinosaur-full.png",
+     "caption": "Full page. No changes this cycle. Footer Cycle 11.",
+     "changes": [
+      "No changes this cycle (footer bumped to Cycle 11)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-dinosaur/01-dinosaur.png"
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "No changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 3081,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-random/02-random-full.png",
+     "caption": "Full page. No changes this cycle. Footer Cycle 11.",
+     "changes": [
+      "No changes this cycle (footer bumped to Cycle 11)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-random/01-random.png"
+    }
+   ]
+  },
+  {
+   "slug": "parrots",
+   "name": "Parrots",
+   "route": "/parrots.html",
+   "blurb": "No changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-parrots/01-parrots.png",
+   "screens": [
+    {
+     "route": "/parrots.html",
+     "title": "Parrots",
+     "h": 2408,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-parrots/02-parrots-full.png",
+     "caption": "Full page. No changes this cycle. Footer Cycle 11.",
+     "changes": [
+      "No changes this cycle (footer bumped to Cycle 11)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-parrots/01-parrots.png"
+    }
+   ]
+  }
+ ]
+}

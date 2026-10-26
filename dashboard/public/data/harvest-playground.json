@@ -25,16 +25,17 @@
         "C6": 452808997,
         "C7": 452809000,
         "C8": 453022221,
-        "C9": 453119112
+        "C9": 453119112,
+        "C10": 453341737
       }
     }
   },
   "stats": {
     "pullRequests": 2,
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
-    "nightlyHarvests": 24
+    "nightlyHarvests": 25
   },
-  "updatedAt": "2026-10-25T17:07:00-06:00",
+  "updatedAt": "2026-10-26T17:15:00-06:00",
   "cycles": [
     {
       "number": 0,
@@ -915,7 +916,7 @@
       "number": 10,
       "title": "Cycle 10 — parrot page, Dino Map pins, Vernal-style Dino Town",
       "createdAt": "2026-10-22T17:15:00-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 9,
       "pullRequest": null,
       "commit": "26558b0",
@@ -933,7 +934,12 @@
           "harvest": true
         }
       ],
-      "authors": [],
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 1
+        }
+      ],
       "nightlyHarvests": [
         {
           "date": "2026-10-23",
@@ -949,6 +955,11 @@
           "date": "2026-10-25",
           "stickies": 0,
           "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-10-26",
+          "stickies": 1,
+          "outcome": "applied"
         }
       ],
       "changes": {
@@ -976,6 +987,50 @@
       "contributions": {
         "red": 0,
         "yellow": 3,
+        "blue": 0,
+        "purple": 0
+      },
+      "lucidFolderId": 453341737
+    },
+    {
+      "number": 11,
+      "title": "Cycle 11 — User research feature",
+      "createdAt": "2026-10-26T17:15:00-06:00",
+      "status": "current",
+      "harvestedFrom": 10,
+      "pullRequest": null,
+      "commit": "2be92bb",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/01-home.png",
+      "previewUrl": "https://6adfdd8a8804c62253953b99--harvest-playground.netlify.app",
+      "documents": [
+        {
+          "title": "Harvest Playground:All pages:C11",
+          "role": "flow",
+          "flow": "review",
+          "docId": "4e96482e-269e-4464-82fc-bf9cb82d57e3",
+          "url": "https://lucid.app/lucidchart/4e96482e-269e-4464-82fc-bf9cb82d57e3/edit",
+          "commentUrl": "https://lucid.app/lucidchart/4e96482e-269e-4464-82fc-bf9cb82d57e3/edit?invitationId=inv_a9c41e06-176f-4d61-ab1a-5f42b067cdb1",
+          "description": "Home · Dino Town · Totally Random · Parrots on one board (4 screens)",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "nightlyHarvests": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Make a new feature here with something about User research and how it's really important."
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "New USER_RESEARCH.EXE feature at the top of the home page: why user research matters, Listen · Watch · Measure · Loop cards and a research --why readout (plain HTML/CSS)."
+      },
+      "contributions": {
+        "red": 1,
+        "yellow": 0,
         "blue": 0,
         "purple": 0
       },

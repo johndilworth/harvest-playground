@@ -1,0 +1,69 @@
+{
+  "cycle": 10,
+  "harvestedAt": "2026-10-26T17:07:00-06:00",
+  "outcome": "applied",
+  "cycle11Created": true,
+  "boards": {
+    "review": {
+      "docId": "7f58b19f-e57a-490d-a675-00d537968fb2",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random",
+        "parrots"
+      ],
+      "stickies": 1,
+      "threads": 0
+    }
+  },
+  "counts": {
+    "must": 1,
+    "try": 0,
+    "maybe": 0,
+    "total": 1,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 0,
+    "conflicts": 0
+  },
+  "applied": [
+    {
+      "itemId": "mXYGRKieMj7z",
+      "flow": "home",
+      "priority": "must",
+      "text": "Make a new feature here with something about User research and how it's really important.",
+      "author": "anonymous",
+      "change": "New USER_RESEARCH.EXE feature section at the top of the home page (why user research matters, Listen/Watch/Measure/Loop cards, research --why readout); footer Cycle 11 on every page"
+    }
+  ],
+  "skipped": [],
+  "conflicts": [],
+  "boardFeedback": [],
+  "contributors": [
+    {
+      "name": "anonymous",
+      "stickies": 1
+    }
+  ],
+  "notes": [
+    "Red fill, no priority keyword -> must (colour counts). No Lucid attribution line -> anonymous.",
+    "Placed at the top of <main> because the sticky sat just under the tagline, above the Turkey feature (\"here\")."
+  ],
+  "commit": "2be92bbf1e5920846df3d00126b71c388d7e2dbc",
+  "deployId": "6adfdd8a8804c62253953b99",
+  "previewUrl": "https://6adfdd8a8804c62253953b99--harvest-playground.netlify.app",
+  "newBoard": {
+    "docId": "4e96482e-269e-4464-82fc-bf9cb82d57e3",
+    "title": "Harvest Playground:All pages:C11",
+    "commentUrl": "https://lucid.app/lucidchart/4e96482e-269e-4464-82fc-bf9cb82d57e3/edit?invitationId=inv_a9c41e06-176f-4d61-ab1a-5f42b067cdb1"
+  },
+  "writeback": "Applied badge set on sticky mXYGRKieMj7z of the Cycle 10 board (writeback-js --auto-applied)",
+  "historyBoard": "Cycle 11 tile added (frame Kh1G41E_o0vo at x43520, shot Kh1GIXoAcOhE, caption Kh1G.9a.hoTx); Cycle 10 frame no longer says live now; title totals 12 cycles / 56 applied / 1 skipped / 25 nightly harvests",
+  "lucidFolders": {
+    "C10": 453341737
+  },
+  "feedback": "journey/cycles/10/feedback-2026-10-26.json",
+  "raw": "journey/out/c10/raw/ (gitignored)"
+}

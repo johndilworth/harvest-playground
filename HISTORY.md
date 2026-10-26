@@ -6,9 +6,9 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 9**) |
-| **Add a sticky** | [Cycle 9 review board (Home · Dino Town · Totally Random)](https://lucid.app/lucidchart/aed962a7-a1c0-4db9-bd0a-1b76152a96f8/edit?invitationId=inv_8aedd300-f2dd-47e8-9895-d57e1b4c5e82) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 9 tile added 2026-10-21) |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 11**) |
+| **Add a sticky** | [Cycle 11 review board (Home · Dino Town · Totally Random · Parrots)](https://lucid.app/lucidchart/4e96482e-269e-4464-82fc-bf9cb82d57e3/edit?invitationId=inv_a9c41e06-176f-4d61-ab1a-5f42b067cdb1) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 11 tile added 2026-10-26) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 
@@ -36,6 +36,7 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Mon 2026-10-26 | Cycle 10 board (nightly) | 1 | 1 | 0 | **Cycle 11 shipped** — new USER_RESEARCH.EXE feature on the home page (why user research matters) · authors: anonymous 1 | [Cycle 11](https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/01-home.png) |
 | Sun 2026-10-25 | Cycle 10 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 10 | [Cycle 10](https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png) |
 | Sat 2026-10-24 | Cycle 10 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 10 | [Cycle 10](https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png) |
 | Fri 2026-10-23 | Cycle 10 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 10 | [Cycle 10](https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png) |
@@ -63,10 +64,20 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 11 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10) · 24 nightly harvests · 55 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 10 remains current after the **5pm MT quiet-night harvest** on Sun 2026-10-25 (0 stickies).
+**Totals so far:** 12 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10 → 11) · 25 nightly harvests · 56 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 11 is current after the **5pm MT nightly harvest** on Mon 2026-10-26 (1 sticky applied).
 
 ## Day by day
+
+### Mon 2026-10-26 — Cycle 10 harvest · **Cycle 11 shipped** · nightly
+- **Harvested:** Cycle 10 review board (`Harvest Playground:All pages:C10` — Home · Dino Town · Totally Random · Parrots) at ~5:07 pm MT — **1 sticky, 0 comment threads** (after three quiet nights)
+- **Applied:** 1 (must) · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Malicious/illegal/offensive:** none
+- **Contributors:** anonymous × 1 (no Lucid author line on the sticky)
+- **Cycle 11 created:** yes — new **USER_RESEARCH.EXE** feature at the top of the home page: why user research matters, Listen · Watch · Measure · Loop cards and a `research --why` readout
+- **Commit:** `2be92bb` on `main` (pushed directly; no PR) · preview https://6adfdd8a8804c62253953b99--harvest-playground.netlify.app
+- **Live:** https://harvest-playground.netlify.app (Cycle 11)
+- **Board:** [Harvest Playground:All pages:C11 (Lucidchart)](https://lucid.app/lucidchart/4e96482e-269e-4464-82fc-bf9cb82d57e3/edit?invitationId=inv_a9c41e06-176f-4d61-ab1a-5f42b067cdb1) · Cycle 10 board moved to Lucid folder `C10`, its sticky marked Applied
+- **Record:** `journey/cycles/10/harvest-2026-10-26.json`
 
 ### Sun 2026-10-25 — Cycle 10 harvest · no stickies · nightly
 - **Harvested:** Cycle 10 review board (`Harvest Playground:All pages:C10` — Home · Dino Town · Totally Random · Parrots) at ~5:07 pm MT — **0 stickies, 0 comment threads**

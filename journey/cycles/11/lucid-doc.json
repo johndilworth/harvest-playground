@@ -1,0 +1,96 @@
+{
+  "project": "harvest-playground",
+  "cycle": 11,
+  "createdAt": "2026-10-26T17:15:00-06:00",
+  "repo": "https://github.com/johndilworth/harvest-playground",
+  "commit": "2be92bbf1e5920846df3d00126b71c388d7e2dbc",
+  "pullRequest": null,
+  "site": {
+    "url": "https://harvest-playground.netlify.app",
+    "netlifySiteId": "4702dcbf-e724-4e32-b35c-739e1fdf7ae5",
+    "productionBranch": "main",
+    "continuousDeploy": true,
+    "publishDir": "site",
+    "deployId": "6adfdd8a8804c62253953b99",
+    "deployState": "ready",
+    "liveFooter": "Cycle 11"
+  },
+  "harvestSchedule": "daily 17:00 America/Denver",
+  "harvestedFrom": 10,
+  "harvestSource": "nightly",
+  "boardRules": "2026-10-12: Lucidchart only, no hub; one review board unless a section has >5 flows/screens (4 screens -> 1 board); page background #E8EAED; frames #F2F3F5, no border, 400 px padding; legend says stickies show your name; org-wide comment link",
+  "historyBoard": {
+    "docId": "e983d07c-47f1-4d0f-bfe6-81087a3b8ddd",
+    "editUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+    "role": "history",
+    "harvest": false,
+    "updatedInPlace": "Cycle 11 tile added (frame Kh1G41E_o0vo at x43520, shot Kh1GIXoAcOhE, caption Kh1G.9a.hoTx); Cycle 10 frame no longer says live now; title totals 12 cycles / 56 applied / 1 skipped / 25 nightly harvests"
+  },
+  "boards": [
+    {
+      "docId": "4e96482e-269e-4464-82fc-bf9cb82d57e3",
+      "title": "Harvest Playground:All pages:C11",
+      "product": "lucidchart",
+      "editUrl": "https://lucid.app/lucidchart/4e96482e-269e-4464-82fc-bf9cb82d57e3/edit",
+      "viewUrl": "https://lucid.app/lucidchart/4e96482e-269e-4464-82fc-bf9cb82d57e3/view",
+      "commentUrl": "https://lucid.app/lucidchart/4e96482e-269e-4464-82fc-bf9cb82d57e3/edit?invitationId=inv_a9c41e06-176f-4d61-ab1a-5f42b067cdb1",
+      "role": "flow",
+      "flow": "review",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random",
+        "parrots"
+      ],
+      "harvest": true,
+      "spec": "journey/cycles/11/lucid-spec-review.json",
+      "pages": 1,
+      "pageBackground": "#E8EAED",
+      "frames": [
+        {
+          "id": "frame-01-home",
+          "stepKey": "01-home",
+          "route": "/",
+          "imageUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/02-home-full.png",
+          "thumbUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/01-home.png",
+          "beforeUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png"
+        },
+        {
+          "id": "frame-02-dinosaur",
+          "stepKey": "02-dinosaur",
+          "route": "/dinosaur.html",
+          "imageUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-dinosaur/02-dinosaur-full.png",
+          "thumbUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-dinosaur/01-dinosaur.png",
+          "beforeUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-dinosaur/01-dinosaur.png"
+        },
+        {
+          "id": "frame-03-random",
+          "stepKey": "03-random",
+          "route": "/random.html",
+          "imageUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-random/02-random-full.png",
+          "thumbUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-random/01-random.png",
+          "beforeUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-random/01-random.png"
+        },
+        {
+          "id": "frame-04-parrots",
+          "stepKey": "04-parrots",
+          "route": "/parrots.html",
+          "imageUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-parrots/02-parrots-full.png",
+          "thumbUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-parrots/01-parrots.png",
+          "beforeUrl": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-parrots/01-parrots.png"
+        }
+      ],
+      "renderCheck": "exported 2026-10-26 (top + Home frame, Dino Town frame): screenshots render incl. the new USER_RESEARCH.EXE section; page background #E8EAED set via skills.pages.setBackgroundColor",
+      "lucidFolderId": 452808969
+    }
+  ],
+  "manifest": "journey/cycles/11/manifest.json",
+  "boardConfig": "journey/cycles/11/board-config.json",
+  "generator": "journey/build_specs.py (combined mode)",
+  "capture": "journey/capture-pages.mjs -> dashboard/public/captures/harvest-playground/c11-*",
+  "appliedCount": 1,
+  "skippedCount": 0,
+  "conflicts": 0,
+  "boardFeedback": 0,
+  "nightlyHarvests": []
+}

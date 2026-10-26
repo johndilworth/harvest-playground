@@ -80,7 +80,8 @@
         }
       ],
       "renderCheck": "exported 2026-10-22 (Dino Town frame and Parrots frame 0-1600): screenshots render incl. the Vernal-style Dino Town and the new Parrots page; page background #E8EAED set via skills.pages.setBackgroundColor",
-      "lucidFolderId": 452808969
+      "lucidFolderId": 453341737,
+      "archived": "moved to Lucid folder C10 (453341737) on 2026-10-26; sticky mXYGRKieMj7z marked Applied"
     }
   ],
   "manifest": "journey/cycles/10/manifest.json",
@@ -106,6 +107,11 @@
       "date": "2026-10-25",
       "stickies": 0,
       "outcome": "no_stickies"
+    },
+    {
+      "date": "2026-10-26",
+      "stickies": 1,
+      "outcome": "applied"
     }
   ]
 }

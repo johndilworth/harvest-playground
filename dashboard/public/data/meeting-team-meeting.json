@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "type": "meeting",
-  "updatedAt": "2026-10-21T10:24:29-06:00",
+  "updatedAt": "2026-10-26T14:21:00-06:00",
   "series": {
     "slug": "team-meeting",
     "name": "Team Meeting",
@@ -52,6 +52,12 @@
         "name": "Shanna",
         "email": null,
         "addedFrom": "2026-11-03 board (row added in Areas of focus)"
+      },
+      {
+        "handle": "@erin",
+        "name": "Erin",
+        "email": null,
+        "addedFrom": "2026-11-10 board (row added in Areas of focus)"
       }
     ],
     "attendeesSource": "setup",
@@ -75,17 +81,45 @@
         "2026-10-13": 452809033,
         "2026-10-20": 452809036,
         "2026-10-27": 452809038,
-        "2026-11-03": 452991635
+        "2026-11-03": 452991635,
+        "2026-11-10": 453331266
       }
     }
   },
-  "currentMeetingId": "2026-11-10",
+  "currentMeetingId": "2026-11-17",
   "meetings": [
+    {
+      "id": "2026-11-17",
+      "title": "Team Meeting Nov 17, 2026",
+      "date": "2026-11-17",
+      "status": "current",
+      "createdAt": "2026-10-26T14:21:00-06:00",
+      "harvestedFrom": "2026-11-10",
+      "board": {
+        "documentId": "75f79477-9366-4f3a-9afd-c56a2aad487f",
+        "url": "https://lucid.app/lucidchart/75f79477-9366-4f3a-9afd-c56a2aad487f/edit",
+        "commentUrl": "https://lucid.app/lucidchart/75f79477-9366-4f3a-9afd-c56a2aad487f/edit?invitationId=inv_f1d989d0-6169-4d9c-9e35-c4ff2ae355d3",
+        "screenshot": "/captures/meetings/team-meeting-2026-11-17.png",
+        "flow": "meeting",
+        "narrativeBlockId": "bWYGPXyAXmNT"
+      },
+      "carriedIn": {
+        "actions": [],
+        "openItems": [
+          "o-analytics-owner"
+        ]
+      },
+      "activity": {
+        "boardObjects": 1,
+        "actionItems": 0
+      },
+      "summary": null
+    },
     {
       "id": "2026-11-10",
       "title": "Team Meeting Nov 10, 2026",
       "date": "2026-11-10",
-      "status": "current",
+      "status": "harvested",
       "createdAt": "2026-10-21T10:24:29-06:00",
       "harvestedFrom": "2026-11-03",
       "board": {
@@ -107,9 +141,144 @@
         ]
       },
       "activity": {
-        "boardObjects": 1,
+        "boardObjects": 7,
         "actionItems": 3
-      }
+      },
+      "summary": {
+        "narrative": "An upbeat, light board. The Good side had four stickies (best meeting ever, we've solved Lucid, a great weekend without thinking about work, a birthday week) and Bad/Uncertain was empty. All three carried tasks were marked Done: alice's vendor shortlist, Casey's Harvest concept feedback and taking out the trash. John's focus is getting the Prism feedback completed, and he's taking Thursday and Friday off; Erin joined the Areas of focus table with AI as a focus. Discussion had one blank sticky, Quick Hits and Action Items were empty, and no decisions were recorded. Still open: who owns the analytics dashboard.",
+        "decisions": [],
+        "actions": [
+          {
+            "id": "a-vendor-shortlist",
+            "task": "Send vendor shortlist (still waiting on 2 quotes)",
+            "owner": "@alice",
+            "due": null,
+            "status": "Done",
+            "source": "From last time",
+            "quote": "Card status: Done",
+            "flags": [],
+            "closed": true
+          },
+          {
+            "id": "a-casey-concept-feedback",
+            "task": "Give feedback on the Harvest concept",
+            "owner": "@casey",
+            "due": null,
+            "status": "Done",
+            "source": "From last time",
+            "quote": "Card status: Done",
+            "flags": [],
+            "closed": true
+          },
+          {
+            "id": "a-take-out-trash",
+            "task": "Take out the trash",
+            "owner": null,
+            "due": null,
+            "status": "Done",
+            "source": "From last time",
+            "quote": "Card status: Done",
+            "flags": [
+              "closed without a named owner"
+            ],
+            "closed": true
+          }
+        ],
+        "openItems": [
+          {
+            "id": "o-analytics-owner",
+            "text": "Who owns the analytics dashboard now that Dana left?",
+            "source": "From last time",
+            "flags": [
+              "needs owner"
+            ]
+          }
+        ],
+        "notes": [
+          {
+            "text": "Discussion had one blank sticky and no topics.",
+            "source": "Discussion"
+          },
+          {
+            "text": "Quick Hits was empty.",
+            "source": "Quick Hits"
+          },
+          {
+            "text": "Action Items was empty; no new tasks.",
+            "source": "Action Items"
+          }
+        ],
+        "wins": [
+          "Best meeting ever",
+          "We've solved Lucid",
+          "Great weekend, didn't think about work at all",
+          "Birthday week"
+        ],
+        "concerns": [],
+        "focus": [
+          {
+            "attendee": "@alice",
+            "items": []
+          },
+          {
+            "attendee": "@bob",
+            "items": []
+          },
+          {
+            "attendee": "@chen",
+            "items": []
+          },
+          {
+            "attendee": "John",
+            "items": [
+              "Getting Prism feedback completed",
+              "Taking Thursday/Friday off"
+            ]
+          },
+          {
+            "attendee": "Tim",
+            "items": []
+          },
+          {
+            "attendee": "Casey",
+            "items": []
+          },
+          {
+            "attendee": "Taylor",
+            "items": []
+          },
+          {
+            "attendee": "Shanna",
+            "items": []
+          },
+          {
+            "attendee": "Erin",
+            "items": [
+              "AI"
+            ]
+          }
+        ],
+        "flags": [
+          "All three carried cards were set to Done on the board, so every action closed and none carry forward.",
+          "'Take out the trash' closed as Done without ever getting a named owner.",
+          "Open question 'Who owns the analytics dashboard?' still needs an owner (carried since 10/13).",
+          "Erin was added to the Areas of focus table on the board; carried to the next board and added to attendees.",
+          "A blank sticky in Discussion was read and ignored (no text).",
+          "Lucid returned no sticky attribution on this board, so authors are unknown; focus stickies are assigned by their table row.",
+          "No transcript was read, and no decisions or new actions were on the board."
+        ],
+        "closed": [
+          "a-vendor-shortlist",
+          "a-casey-concept-feedback",
+          "a-take-out-trash"
+        ],
+        "carriedForward": [
+          "o-analytics-owner"
+        ],
+        "skipped": []
+      },
+      "stickiesRead": 9,
+      "harvestedAt": "2026-10-26T14:21:00-06:00"
     },
     {
       "id": "2026-11-03",
@@ -811,37 +980,6 @@
       }
     }
   ],
-  "cards": [
-    {
-      "actionId": "a-vendor-shortlist",
-      "boardId": "feb5e94e-d935-4bc6-bcfe-47eeae44349e",
-      "cardId": "ktoFJsZd7Wdn",
-      "title": "Send vendor shortlist (still waiting on 2 quotes)",
-      "assignee": "alice@example.com",
-      "endTime": null,
-      "status": "In Progress",
-      "sourceMeeting": "Team Meeting 2026-10-13"
-    },
-    {
-      "actionId": "a-casey-concept-feedback",
-      "boardId": "feb5e94e-d935-4bc6-bcfe-47eeae44349e",
-      "cardId": "ktoFMx74DiX1",
-      "title": "Give feedback on the Harvest concept",
-      "assignee": "Casey Robinson",
-      "endTime": null,
-      "status": "To Do",
-      "sourceMeeting": "Team Meeting 2026-10-27"
-    },
-    {
-      "actionId": "a-take-out-trash",
-      "boardId": "feb5e94e-d935-4bc6-bcfe-47eeae44349e",
-      "cardId": "ktoFsAOwIV.j",
-      "title": "[needs owner] Take out the trash",
-      "assignee": null,
-      "endTime": null,
-      "status": "To Do",
-      "sourceMeeting": "Team Meeting 2026-11-03"
-    }
-  ],
-  "cardsReadAt": "2026-10-21T10:24:29-06:00"
+  "cards": [],
+  "cardsReadAt": "2026-10-26T14:21:00-06:00"
 }

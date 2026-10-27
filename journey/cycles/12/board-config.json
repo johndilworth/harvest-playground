@@ -1,0 +1,120 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 12,
+ "date": "Tue 2026-10-27",
+ "commit": "fa93cddcde04c7d373fdc9e3e20a735858f4925b",
+ "pullRequest": null,
+ "prNumber": null,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home \u00b7 Dino Town \u00b7 Totally Random \u00b7 Parrots \u00b7 Rivals on one board (5 screens \u2264 5, no split)",
+  "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "product_lucid": "lucidchart",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "Spiral section removed; Rivals teaser",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 4787,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/02-home-full.png",
+     "caption": "Full page. SPIRAL.\u03c6 golden-spiral gallery removed; new RIVALS.LOG teaser at the bottom and RIVALS.LOG in the nav. Footer Cycle 12.",
+     "changes": [
+      "Removed the SPIRAL.\u03c6 section (sticky: Time to delete the Sprial section from future pages and cycles. \u00b7 anonymous)",
+      "New RIVALS.LOG teaser + nav link to the new Leonardo vs. Michelangelo page"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/01-home.png"
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "No changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 6500,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-dinosaur/02-dinosaur-full.png",
+     "caption": "Full page. No changes this cycle (new RIVALS.LOG nav link). Footer Cycle 12.",
+     "changes": [
+      "No changes this cycle (nav link + footer Cycle 12)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-dinosaur/01-dinosaur.png"
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "No changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 3081,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-random/02-random-full.png",
+     "caption": "Full page. No changes this cycle (new RIVALS.LOG nav link). Footer Cycle 12.",
+     "changes": [
+      "No changes this cycle (nav link + footer Cycle 12)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-random/01-random.png"
+    }
+   ]
+  },
+  {
+   "slug": "parrots",
+   "name": "Parrots",
+   "route": "/parrots.html",
+   "blurb": "No changes",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-parrots/01-parrots.png",
+   "screens": [
+    {
+     "route": "/parrots.html",
+     "title": "Parrots",
+     "h": 2408,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-parrots/02-parrots-full.png",
+     "caption": "Full page. No changes this cycle (new RIVALS.LOG nav link). Footer Cycle 12.",
+     "changes": [
+      "No changes this cycle (nav link + footer Cycle 12)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-parrots/01-parrots.png"
+    }
+   ]
+  },
+  {
+   "slug": "rivals",
+   "name": "Rivals",
+   "route": "/rivals.html",
+   "blurb": "New page: Leonardo vs. Michelangelo",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-rivals/01-rivals.png",
+   "screens": [
+    {
+     "route": "/rivals.html",
+     "title": "Rivals",
+     "h": 2740,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-rivals/02-rivals-full.png",
+     "caption": "Full page. New minimalist page: both artists\u2019 upbringings, three works each, and their conflict. Footer Cycle 12.",
+     "changes": [
+      "New page rivals.html (sticky: We need a page about the conflict between Leonardo da Vinci and Michelangelo \u2026 very minimalistic \u00b7 anonymous)"
+     ]
+    }
+   ]
+  }
+ ]
+}

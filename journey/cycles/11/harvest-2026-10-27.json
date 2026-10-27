@@ -1,0 +1,78 @@
+{
+  "cycle": 11,
+  "harvestedAt": "2026-10-27T17:11:00-06:00",
+  "outcome": "applied",
+  "cycle12Created": true,
+  "boards": {
+    "review": {
+      "docId": "4e96482e-269e-4464-82fc-bf9cb82d57e3",
+      "flows": [
+        "home",
+        "dinosaur",
+        "random",
+        "parrots"
+      ],
+      "stickies": 2,
+      "threads": 0
+    }
+  },
+  "counts": {
+    "must": 2,
+    "try": 0,
+    "maybe": 0,
+    "total": 2,
+    "board": 0,
+    "needsIntent": 0,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 0,
+    "conflicts": 0
+  },
+  "applied": [
+    {
+      "itemId": "mudHEvfLKw.6",
+      "flow": "home",
+      "priority": "must",
+      "text": "Time to delete the Sprial section from future pages and cycles.",
+      "author": "anonymous",
+      "change": "Removed the SPIRAL.φ golden-spiral gallery section (#c1-spiral) from the home page and its footer credit line"
+    },
+    {
+      "itemId": "MudHb7I6uc8R",
+      "flow": "home",
+      "priority": "must",
+      "text": "We need a page about the conflict between Leonardo da Vinci and Michelangelo, and a little bit about both of their upbringings and famous pieces of art, maybe two or three per each, then highlighting with the conflict. And yeah, that's it. Make it in a style that's very minimalistic.We need a page about the conflict between Leonardo da Vinci and Michelangelo, and a little bit about both of their upbringings and famous pieces of art, maybe two or three per each, then highlighting with the conflict. And yeah, that's it. Make it in a style that's very minimalistic.",
+      "author": "anonymous",
+      "change": "New minimalist rivals.html page (Leonardo vs. Michelangelo: upbringings, three works each, the conflict), linked in every nav, a home teaser and the home footer; footer Cycle 12 on every page"
+    }
+  ],
+  "skipped": [],
+  "conflicts": [],
+  "boardFeedback": [],
+  "contributors": [
+    {
+      "name": "anonymous",
+      "stickies": 2
+    }
+  ],
+  "notes": [
+    "Red fill, no priority keyword -> must (colour counts). No Lucid attribution line -> anonymous.",
+    "The da Vinci/Michelangelo sticky text was pasted twice; treated as one request.",
+    "Removing one section on request is a normal edit, not a malicious 'delete the project' item."
+  ],
+  "commit": "fa93cddcde04c7d373fdc9e3e20a735858f4925b",
+  "deployId": "6ae1306bbd8ca018da8d4f65",
+  "previewUrl": "https://6ae1306bbd8ca018da8d4f65--harvest-playground.netlify.app",
+  "newBoard": {
+    "docId": "18c2dcc6-cc14-41d0-99a7-2ad8bce23138",
+    "title": "Harvest Playground:All pages:C12",
+    "commentUrl": "https://lucid.app/lucidchart/18c2dcc6-cc14-41d0-99a7-2ad8bce23138/edit?invitationId=inv_3b5a7aff-5ab1-4fcc-9ca5-1326c2ab95ed"
+  },
+  "writeback": "Applied badges set on stickies mudHEvfLKw.6 and MudHb7I6uc8R of the Cycle 11 board (writeback-js --auto-applied)",
+  "historyBoard": "Cycle 12 tile added (frame ZahHMp7tjF3M at x46240, shot ZahHdGV8QSEZ, caption ZahHnwjZ.q4s); Cycle 11 frame no longer says live now; title totals 13 cycles / 58 applied / 1 skipped / 26 nightly harvests",
+  "lucidFolders": {
+    "C11": 453431530
+  },
+  "feedback": "journey/cycles/11/feedback-2026-10-27.json",
+  "raw": "journey/out/c11/raw/ (gitignored)"
+}

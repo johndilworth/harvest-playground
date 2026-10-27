@@ -6,9 +6,9 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 11**) |
-| **Add a sticky** | [Cycle 11 review board (Home · Dino Town · Totally Random · Parrots)](https://lucid.app/lucidchart/4e96482e-269e-4464-82fc-bf9cb82d57e3/edit?invitationId=inv_a9c41e06-176f-4d61-ab1a-5f42b067cdb1) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
-| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 11 tile added 2026-10-26) |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 12**) |
+| **Add a sticky** | [Cycle 12 review board (Home · Dino Town · Totally Random · Parrots · Rivals)](https://lucid.app/lucidchart/18c2dcc6-cc14-41d0-99a7-2ad8bce23138/edit?invitationId=inv_3b5a7aff-5ab1-4fcc-9ca5-1326c2ab95ed) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
+| **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 12 tile added 2026-10-27) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
 
@@ -36,6 +36,7 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Tue 2026-10-27 | Cycle 11 board (nightly) | 2 | 2 | 0 | **Cycle 12 shipped** — SPIRAL.φ section removed from the home page, new minimalist RIVALS page (Leonardo vs. Michelangelo) · authors: anonymous 2 | [Cycle 12](https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png) |
 | Mon 2026-10-26 | Cycle 10 board (nightly) | 1 | 1 | 0 | **Cycle 11 shipped** — new USER_RESEARCH.EXE feature on the home page (why user research matters) · authors: anonymous 1 | [Cycle 11](https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/01-home.png) |
 | Sun 2026-10-25 | Cycle 10 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 10 | [Cycle 10](https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png) |
 | Sat 2026-10-24 | Cycle 10 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 10 | [Cycle 10](https://harvest-dashboard.netlify.app/captures/harvest-playground/c10-home/01-home.png) |
@@ -64,10 +65,20 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 12 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10 → 11) · 25 nightly harvests · 56 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 11 is current after the **5pm MT nightly harvest** on Mon 2026-10-26 (1 sticky applied).
+**Totals so far:** 13 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10 → 11 → 12) · 26 nightly harvests · 58 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 12 is current after the **5pm MT nightly harvest** on Tue 2026-10-27 (2 stickies applied).
 
 ## Day by day
+
+### Tue 2026-10-27 — Cycle 11 harvest · **Cycle 12 shipped** · nightly
+- **Harvested:** Cycle 11 review board (`Harvest Playground:All pages:C11` — Home · Dino Town · Totally Random · Parrots) at ~5:11 pm MT — **2 stickies, 0 comment threads**
+- **Applied:** 2 (must) · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Malicious/illegal/offensive:** none
+- **Contributors:** anonymous × 2 (no Lucid author line on either sticky)
+- **Cycle 12 created:** yes — the **SPIRAL.φ** golden-spiral gallery is gone from the home page, and a new very minimalist **RIVALS** page (`rivals.html`) covers Leonardo da Vinci vs. Michelangelo: their upbringings, three works each and the conflict; linked from every page
+- **Commit:** `fa93cdd` on `main` (pushed directly; no PR) · preview https://6ae1306bbd8ca018da8d4f65--harvest-playground.netlify.app
+- **Live:** https://harvest-playground.netlify.app (Cycle 12)
+- **Board:** [Harvest Playground:All pages:C12 (Lucidchart)](https://lucid.app/lucidchart/18c2dcc6-cc14-41d0-99a7-2ad8bce23138/edit?invitationId=inv_3b5a7aff-5ab1-4fcc-9ca5-1326c2ab95ed) · Cycle 11 board moved to Lucid folder `C11`, its stickies marked Applied
+- **Record:** `journey/cycles/11/harvest-2026-10-27.json`
 
 ### Mon 2026-10-26 — Cycle 10 harvest · **Cycle 11 shipped** · nightly
 - **Harvested:** Cycle 10 review board (`Harvest Playground:All pages:C10` — Home · Dino Town · Totally Random · Parrots) at ~5:07 pm MT — **1 sticky, 0 comment threads** (after three quiet nights)

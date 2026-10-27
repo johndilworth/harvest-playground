@@ -26,16 +26,17 @@
         "C7": 452809000,
         "C8": 453022221,
         "C9": 453119112,
-        "C10": 453341737
+        "C10": 453341737,
+        "C11": 453431530
       }
     }
   },
   "stats": {
     "pullRequests": 2,
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
-    "nightlyHarvests": 25
+    "nightlyHarvests": 26
   },
-  "updatedAt": "2026-10-26T17:15:00-06:00",
+  "updatedAt": "2026-10-27T17:20:00-06:00",
   "cycles": [
     {
       "number": 0,
@@ -996,7 +997,7 @@
       "number": 11,
       "title": "Cycle 11 — User research feature",
       "createdAt": "2026-10-26T17:15:00-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 10,
       "pullRequest": null,
       "commit": "2be92bb",
@@ -1014,8 +1015,19 @@
           "harvest": true
         }
       ],
-      "authors": [],
-      "nightlyHarvests": [],
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 2
+        }
+      ],
+      "nightlyHarvests": [
+        {
+          "date": "2026-10-27",
+          "stickies": 2,
+          "outcome": "applied"
+        }
+      ],
       "changes": {
         "applied": [
           {
@@ -1030,6 +1042,55 @@
       },
       "contributions": {
         "red": 1,
+        "yellow": 0,
+        "blue": 0,
+        "purple": 0
+      },
+      "lucidFolderId": 453431530
+    },
+    {
+      "number": 12,
+      "title": "Cycle 12 — Leonardo vs. Michelangelo",
+      "createdAt": "2026-10-27T17:20:00-06:00",
+      "status": "current",
+      "harvestedFrom": 11,
+      "pullRequest": null,
+      "commit": "fa93cdd",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png",
+      "previewUrl": "https://6ae1306bbd8ca018da8d4f65--harvest-playground.netlify.app",
+      "documents": [
+        {
+          "title": "Harvest Playground:All pages:C12",
+          "role": "flow",
+          "flow": "review",
+          "docId": "18c2dcc6-cc14-41d0-99a7-2ad8bce23138",
+          "url": "https://lucid.app/lucidchart/18c2dcc6-cc14-41d0-99a7-2ad8bce23138/edit",
+          "commentUrl": "https://lucid.app/lucidchart/18c2dcc6-cc14-41d0-99a7-2ad8bce23138/edit?invitationId=inv_3b5a7aff-5ab1-4fcc-9ca5-1326c2ab95ed",
+          "description": "Home · Dino Town · Totally Random · Parrots · Rivals on one board (5 screens)",
+          "harvest": true
+        }
+      ],
+      "authors": [],
+      "nightlyHarvests": [],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Time to delete the Sprial section from future pages and cycles."
+          },
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "We need a page about the conflict between Leonardo da Vinci and Michelangelo, and a little bit about both of their upbringings and famous pieces of art, maybe two or three per each, then highlighting with the conflict. And yeah, that's it. Make it in a style that's very minimalistic.We need a page about the conflict between Leonardo da Vinci and Michelangelo, and a little bit about both of their upbringings and famous pieces of art, maybe two or three per each, then highlighting with the conflict. And yeah, that's it. Make it in a style that's very minimalistic."
+          }
+        ],
+        "skipped": [],
+        "conflicts": [],
+        "note": "SPIRAL.φ section removed from the home page; new very minimalist rivals.html page about Leonardo da Vinci vs. Michelangelo (upbringings, three works each, the conflict), linked from every page."
+      },
+      "contributions": {
+        "red": 2,
         "yellow": 0,
         "blue": 0,
         "purple": 0

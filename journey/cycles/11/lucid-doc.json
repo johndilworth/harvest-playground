@@ -81,7 +81,7 @@
         }
       ],
       "renderCheck": "exported 2026-10-26 (top + Home frame, Dino Town frame): screenshots render incl. the new USER_RESEARCH.EXE section; page background #E8EAED set via skills.pages.setBackgroundColor",
-      "lucidFolderId": 452808969
+      "lucidFolderId": 453431530
     }
   ],
   "manifest": "journey/cycles/11/manifest.json",
@@ -92,5 +92,16 @@
   "skippedCount": 0,
   "conflicts": 0,
   "boardFeedback": 0,
-  "nightlyHarvests": []
+  "nightlyHarvests": [
+    {
+      "date": "2026-10-27",
+      "stickies": 2,
+      "outcome": "applied"
+    }
+  ],
+  "archived": {
+    "cycleFolder": "C11",
+    "lucidFolderId": 453431530,
+    "writeback": "Applied badges on mudHEvfLKw.6 and MudHb7I6uc8R"
+  }
 }

@@ -1,0 +1,137 @@
+{
+  "docId": "4e96482e-269e-4464-82fc-bf9cb82d57e3",
+  "cycle": 11,
+  "harvestedAt": "2026-10-27T23:11:08.927542+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-01-home",
+      "pageId": "review",
+      "frameTitle": "01-home · / · Home · Leave stickies anywhere in this frame",
+      "stepKey": "01-home",
+      "matchedBy": "frame-id",
+      "flow": "home",
+      "route": "/",
+      "url": "https://harvest-playground.netlify.app/",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "2be92bbf1e5920846df3d00126b71c388d7e2dbc",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11/02-home-full.png",
+      "feedback": [
+        {
+          "itemId": "mudHEvfLKw.6",
+          "kind": "sticky",
+          "text": "Time to delete the Sprial section from future pages and cycles.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 578.468,
+            "y": 4404.796,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "anonymous"
+        },
+        {
+          "itemId": "MudHb7I6uc8R",
+          "kind": "sticky",
+          "text": "We need a page about the conflict between Leonardo da Vinci and Michelangelo, and a little bit about both of their upbringings and famous pieces of art, maybe two or three per each, then highlighting with the conflict. And yeah, that's it. Make it in a style that's very minimalistic.We need a page about the conflict between Leonardo da Vinci and Michelangelo, and a little bit about both of their upbringings and famous pieces of art, maybe two or three per each, then highlighting with the conflict. And yeah, that's it. Make it in a style that's very minimalistic.",
+          "priority": "must",
+          "prioritySource": "color",
+          "textPriority": null,
+          "colorPriority": "must",
+          "priorityConflict": false,
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 145.0,
+            "y": 430.0,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-01-home",
+            "via": null,
+            "bbox": "frame-01-home",
+            "bestOverlap": {
+              "frameId": "frame-01-home",
+              "ratio": 1.0
+            }
+          },
+          "author": "anonymous"
+        }
+      ]
+    },
+    {
+      "frameId": "frame-02-dinosaur",
+      "pageId": "review",
+      "frameTitle": "02-dinosaur · /dinosaur.html · Dino Town · Leave stickies anywhere in this frame",
+      "stepKey": "02-dinosaur",
+      "matchedBy": "frame-id",
+      "flow": "dinosaur",
+      "route": "/dinosaur.html",
+      "url": "https://harvest-playground.netlify.app/dinosaur.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "2be92bbf1e5920846df3d00126b71c388d7e2dbc",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11/02-dinosaur-full.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-03-random",
+      "pageId": "review",
+      "frameTitle": "03-random · /random.html · Totally Random · Leave stickies anywhere in this frame",
+      "stepKey": "03-random",
+      "matchedBy": "frame-id",
+      "flow": "random",
+      "route": "/random.html",
+      "url": "https://harvest-playground.netlify.app/random.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "2be92bbf1e5920846df3d00126b71c388d7e2dbc",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11/02-random-full.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-04-parrots",
+      "pageId": "review",
+      "frameTitle": "04-parrots · /parrots.html · Parrots · Leave stickies anywhere in this frame",
+      "stepKey": "04-parrots",
+      "matchedBy": "frame-id",
+      "flow": "parrots",
+      "route": "/parrots.html",
+      "url": "https://harvest-playground.netlify.app/parrots.html",
+      "title": null,
+      "h1": null,
+      "clicked": null,
+      "commit": "2be92bbf1e5920846df3d00126b71c388d7e2dbc",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c11/02-parrots-full.png",
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "priorityRule": "start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour",
+  "priorityConflicts": [],
+  "boardFeedback": [],
+  "needsIntent": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

@@ -2,6 +2,27 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 12 (2026-10-27) · nightly harvest
+Nightly 5 pm MT harvest of the Cycle 11 review board `4e96482e-269e-4464-82fc-bf9cb82d57e3` (`Harvest Playground:All pages:C11` — Home · Dino Town · Totally Random · Parrots) at ~5:11 pm MT —
+**2 stickies, 0 comment threads** (Home 2). No priority keywords, so the red fill made both **must**. Neither had a Lucid
+author attribution line → **anonymous**. Hub stray: none (no hub; dashboard is the hub).
+
+### Applied (2)
+- **must** · Home · “Time to delete the Sprial section from future pages and cycles.” → removed the **SPIRAL.φ — classical recursion** golden-spiral gallery section (`#c1-spiral`) from the home page, plus the golden-spiral overlay line in the footer credits. The image files stay in `site/assets/` (unused) so older cycle previews still render. · by anonymous
+- **must** · Home · “We need a page about the conflict between Leonardo da Vinci and Michelangelo, and a little bit about both of their upbringings and famous pieces of art, maybe two or three per each, then highlighting with the conflict. … Make it in a style that's very minimalistic.” (the sticky text was pasted twice; treated as one request) → new very minimalist page **`rivals.html` — Leonardo vs. Michelangelo** (off-white, serif, no terminal styling): both artists’ upbringings, three works each (Mona Lisa, The Last Supper, Lady with an Ermine; David, The Creation of Adam, Pietà; Wikimedia Commons images, public domain or credited CC licences, resized to 700 px, all under 200 KB) and a “The conflict” section (the Dante insult, the David placement committee, the Anghiari vs. Cascina murals, their temperaments). Linked as **[ RIVALS.LOG ]** in every page’s nav, a new RIVALS.LOG teaser at the bottom of the home page, and the home footer. Footer bumped to Cycle 12 on every page. · by anonymous
+
+### Skipped
+None (no malicious, illegal or offensive items; removing one section on request is a normal edit, not “delete the project”).
+
+### Conflicts
+None.
+
+### Board feedback
+None.
+
+### Authors
+anonymous 2
+
 ## Cycle 11 (2026-10-26) · nightly harvest
 Nightly 5 pm MT harvest of the Cycle 10 review board `7f58b19f-e57a-490d-a675-00d537968fb2` (`Harvest Playground:All pages:C10` — Home · Dino Town · Totally Random · Parrots) at ~5:07 pm MT —
 **1 sticky, 0 comment threads** (Home 1). No priority keyword, so the red fill made it **must**. It had no Lucid author

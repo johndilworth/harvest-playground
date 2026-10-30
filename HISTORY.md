@@ -36,6 +36,7 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Fri 2026-10-30 | Cycle 12 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 12 | [Cycle 12](https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png) |
 | Wed 2026-10-28 | Cycle 12 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 12 | [Cycle 12](https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png) |
 | Tue 2026-10-27 | Cycle 11 board (nightly) | 2 | 2 | 0 | **Cycle 12 shipped** — SPIRAL.φ section removed from the home page, new minimalist RIVALS page (Leonardo vs. Michelangelo) · authors: anonymous 2 | [Cycle 12](https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png) |
 | Mon 2026-10-26 | Cycle 10 board (nightly) | 1 | 1 | 0 | **Cycle 11 shipped** — new USER_RESEARCH.EXE feature on the home page (why user research matters) · authors: anonymous 1 | [Cycle 11](https://harvest-dashboard.netlify.app/captures/harvest-playground/c11-home/01-home.png) |
@@ -66,10 +67,19 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 13 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10 → 11 → 12) · 27 nightly harvests · 58 stickies applied · 1 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 12 remains current after the **5pm MT quiet-night harvest** on Wed 2026-10-28 (0 stickies).
+**Totals so far:** 13 cycles shipped (0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10 → 11 → 12) · 28 nightly harvests · 58 stickies applied · 1 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 12 remains current after the **5pm MT quiet-night harvest** on Fri 2026-10-30 (0 stickies).
 
 ## Day by day
+
+### Fri 2026-10-30 — Cycle 12 harvest · no stickies · nightly
+- **Harvested:** Cycle 12 review board (`Harvest Playground:All pages:C12` — Home · Dino Town · Totally Random · Parrots · Rivals) at ~5:07 pm MT — **0 stickies, 0 comment threads**
+- **Applied:** 0 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Hub stray stickies:** 0
+- **Contributors:** none
+- **Cycle 13 created:** no (nothing to apply, per HARVEST.md). The Cycle 12 board stays open for stickies.
+- **Live:** https://harvest-playground.netlify.app (Cycle 12)
+- **Screenshot (unchanged):** https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png
+- **Record:** `journey/cycles/12/harvest-2026-10-30.json`
 
 ### Wed 2026-10-28 — Cycle 12 harvest · no stickies · nightly
 - **Harvested:** Cycle 12 review board (`Harvest Playground:All pages:C12` — Home · Dino Town · Totally Random · Parrots · Rivals) at ~5:07 pm MT — **0 stickies, 0 comment threads**

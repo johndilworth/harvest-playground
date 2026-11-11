@@ -2,6 +2,29 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## Cycle 13 (2026-11-10) · nightly harvest
+Nightly 5 pm MT harvest of the Cycle 12 review board `18c2dcc6-cc14-41d0-99a7-2ad8bce23138` (`Harvest Playground:All pages:C12`) at ~5:05 pm MT —
+**6 stickies, 0 comment threads** (Home 2, Dino Town 1, Totally Random 1, Parrots 1, Rivals 1 empty). Page 2 of the board carried the Miranda DESIGN.md notes. No Lucid author attribution on any → **anonymous**. Hub stray: none.
+
+### Applied (5)
+- **must** · Home · “Today's note is a big task — want to apply a redesign to the whole site … matches the DESIGN.md file found in the Miranda Design system.” → site-wide Miranda restyle: Parchment `#e2dedb` page, Bone Cream `#cdc6be` cards (11.52px radius, directional ink shadow), Ink Black `#1d1d1b` full-width display banners with oversize tightly-tracked serif headings, single Ember Orange `#c03f13` accent, flat borderless components, 3-column grid with 43px rhythm, header bar, text-link nav. Old terminal/neon/shader styling suppressed; no gradients or blur. Serif stacks (Playfair/Source Serif/Georgia fallbacks) stand in for the licensed Editorial New/Canopee fonts, no webfonts or external code; Google Fonts links and the WebGL shader script were removed. · by anonymous
+- **try** · Home · “Make appropriate copy changes to fit the style …” → removed terminal prompt text and `.exe`/`.log` jargon from nav, headings and taglines (content unchanged), page titles now plain (e.g. “Totally Random”, “Dino Town”). · by anonymous
+- **must** · Dino Town, Totally Random, Parrots, Rivals · “This page should also adopt the Miranda design style” (4 stickies) → same style on every page. · by anonymous
+Footer bumped to Cycle 13 on every page.
+
+### Skipped
+- Rivals · empty yellow sticky → `empty` (needs intent).
+No malicious, illegal or offensive items.
+
+### Conflicts
+None.
+
+### Board feedback
+None.
+
+### Authors
+anonymous 6.
+
 ## 2026-11-09 harvest (no Cycle 13)
 Harvested the Cycle 12 review board `18c2dcc6-cc14-41d0-99a7-2ad8bce23138` (`Harvest Playground:All pages:C12` — Home · Dino Town · Totally Random · Parrots · Rivals) at ~5:05 pm MT —
 **0 stickies, 0 comment threads**. Hub stray: none (no hub; dashboard is the hub).

@@ -1,0 +1,45 @@
+{
+  "cycle": 12,
+  "harvestedAt": "2026-11-10T17:12:00-07:00",
+  "outcome": "applied",
+  "boards": {
+    "review": {
+      "docId": "18c2dcc6-cc14-41d0-99a7-2ad8bce23138",
+      "stickies": 6,
+      "threads": 0
+    }
+  },
+  "counts": {
+    "must": 4,
+    "try": 1,
+    "maybe": 0,
+    "total": 6,
+    "board": 0,
+    "needsIntent": 1,
+    "outside": 0,
+    "hubStrays": 0,
+    "skipped": 1,
+    "conflicts": 0
+  },
+  "applied": [
+    "Home must: redesign whole site to Miranda DESIGN.md",
+    "Home try: copy tweaks to fit style",
+    "Dino/Random/Parrots/Rivals must: adopt Miranda style (one sticky each)"
+  ],
+  "skipped": [
+    {
+      "text": "(empty yellow sticky on Rivals frame)",
+      "reason": "empty (needs intent)"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "anonymous",
+      "stickies": 6
+    }
+  ],
+  "cycle13Created": true,
+  "cycle13Board": "e35676f5-a89a-46b0-8bcc-b5996f30431c",
+  "commit": "1239ccc0b0605f3bc2a16b03215d5028d4b25595",
+  "feedback": "journey/cycles/12/feedback-2026-11-10.json"
+}

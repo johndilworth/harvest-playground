@@ -1,0 +1,44 @@
+{
+  "cycle": 13,
+  "capturedAt": "2026-11-11T00:05:00Z",
+  "site": "https://harvest-playground.netlify.app",
+  "commit": "1239ccc0b0605f3bc2a16b03215d5028d4b25595",
+  "pages": [
+    {
+      "slug": "home",
+      "route": "/",
+      "viewport": "01-home.png",
+      "full": "02-home-full.png",
+      "h": 4270
+    },
+    {
+      "slug": "dinosaur",
+      "route": "/dinosaur.html",
+      "viewport": "01-dinosaur.png",
+      "full": "02-dinosaur-full.png",
+      "h": 6498
+    },
+    {
+      "slug": "random",
+      "route": "/random.html",
+      "viewport": "01-random.png",
+      "full": "02-random-full.png",
+      "h": 2242
+    },
+    {
+      "slug": "parrots",
+      "route": "/parrots.html",
+      "viewport": "01-parrots.png",
+      "full": "02-parrots-full.png",
+      "h": 2122
+    },
+    {
+      "slug": "rivals",
+      "route": "/rivals.html",
+      "viewport": "01-rivals.png",
+      "full": "02-rivals-full.png",
+      "h": 3428
+    }
+  ],
+  "assetsBase": "https://harvest-dashboard.netlify.app/captures/harvest-playground"
+}

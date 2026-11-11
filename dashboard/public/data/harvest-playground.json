@@ -27,16 +27,17 @@
         "C8": 453022221,
         "C9": 453119112,
         "C10": 453341737,
-        "C11": 453431530
+        "C11": 453431530,
+        "C12": 454417288
       }
     }
   },
   "stats": {
     "pullRequests": 2,
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
-    "nightlyHarvests": 38
+    "nightlyHarvests": 39
   },
-  "updatedAt": "2026-11-09T17:05:00-07:00",
+  "updatedAt": "2026-11-10T17:12:00-07:00",
   "cycles": [
     {
       "number": 0,
@@ -1052,7 +1053,7 @@
       "number": 12,
       "title": "Cycle 12 — Leonardo vs. Michelangelo",
       "createdAt": "2026-10-27T17:20:00-06:00",
-      "status": "current",
+      "status": "superseded",
       "harvestedFrom": 11,
       "pullRequest": null,
       "commit": "fa93cdd",
@@ -1070,7 +1071,12 @@
           "harvest": true
         }
       ],
-      "authors": [],
+      "authors": [
+        {
+          "name": "anonymous",
+          "stickies": 6
+        }
+      ],
       "nightlyHarvests": [
         {
           "date": "2026-10-28",
@@ -1131,6 +1137,11 @@
           "date": "2026-11-09",
           "stickies": 0,
           "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-11-10",
+          "stickies": 6,
+          "outcome": "applied"
         }
       ],
       "changes": {
@@ -1138,20 +1149,119 @@
           {
             "priority": "must",
             "flow": "home",
-            "text": "Time to delete the Sprial section from future pages and cycles."
+            "text": "Today's note is a big task — want to apply a redesign to the whole site that creates consistent high quality style that matches the DESIGN.md file found in the Miranda Design system."
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Make appropriate copy changes to fit the style, but the content should mostly remain the same."
           },
           {
             "priority": "must",
-            "flow": "home",
-            "text": "We need a page about the conflict between Leonardo da Vinci and Michelangelo, and a little bit about both of their upbringings and famous pieces of art, maybe two or three per each, then highlighting with the conflict. And yeah, that's it. Make it in a style that's very minimalistic.We need a page about the conflict between Leonardo da Vinci and Michelangelo, and a little bit about both of their upbringings and famous pieces of art, maybe two or three per each, then highlighting with the conflict. And yeah, that's it. Make it in a style that's very minimalistic."
+            "flow": "dinosaur",
+            "text": "This page should also adopt the Miranda design style"
+          },
+          {
+            "priority": "must",
+            "flow": "random",
+            "text": "This page should also adopt the Miranda design style"
+          },
+          {
+            "priority": "must",
+            "flow": "parrots",
+            "text": "This page should also adopt the Miranda design style"
+          },
+          {
+            "priority": "must",
+            "flow": "rivals",
+            "text": "This page should also adopt the Miranda design style"
           }
         ],
-        "skipped": [],
+        "skipped": [
+          {
+            "text": "(empty sticky)",
+            "reason": "empty"
+          }
+        ],
         "conflicts": [],
-        "note": "SPIRAL.φ section removed from the home page; new very minimalist rivals.html page about Leonardo da Vinci vs. Michelangelo (upbringings, three works each, the conflict), linked from every page."
+        "note": "Harvested 2026-11-10 5pm MT; applied in Cycle 13."
       },
       "contributions": {
-        "red": 2,
+        "red": 4,
+        "yellow": 2,
+        "blue": 0,
+        "purple": 0
+      },
+      "lucidFolderId": 454417288
+    },
+    {
+      "number": 13,
+      "title": "Cycle 13 — Miranda design system",
+      "createdAt": "2026-11-10T17:12:00-07:00",
+      "status": "current",
+      "harvestedFrom": 12,
+      "pullRequest": null,
+      "commit": "1239ccc",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png",
+      "previewUrl": "https://6af3b125a564cdd97c5b69fe--harvest-playground.netlify.app",
+      "authors": [],
+      "nightlyHarvests": [],
+      "documents": [
+        {
+          "title": "Harvest Playground:All pages:C13",
+          "role": "flow",
+          "flow": "review",
+          "docId": "e35676f5-a89a-46b0-8bcc-b5996f30431c",
+          "url": "https://lucid.app/lucidchart/e35676f5-a89a-46b0-8bcc-b5996f30431c/edit",
+          "commentUrl": "https://lucid.app/lucidchart/e35676f5-a89a-46b0-8bcc-b5996f30431c/edit?invitationId=inv_b1464505-6867-41a7-9206-7db725ecf676",
+          "description": "Home · Dino Town · Totally Random · Parrots · Rivals on one board (5 screens)",
+          "harvest": true
+        }
+      ],
+      "changes": {
+        "applied": [
+          {
+            "priority": "must",
+            "flow": "home",
+            "text": "Today's note is a big task — want to apply a redesign to the whole site that creates consistent high quality style that matches the DESIGN.md file found in the Miranda Design system."
+          },
+          {
+            "priority": "try",
+            "flow": "home",
+            "text": "Make appropriate copy changes to fit the style, but the content should mostly remain the same."
+          },
+          {
+            "priority": "must",
+            "flow": "dinosaur",
+            "text": "This page should also adopt the Miranda design style"
+          },
+          {
+            "priority": "must",
+            "flow": "random",
+            "text": "This page should also adopt the Miranda design style"
+          },
+          {
+            "priority": "must",
+            "flow": "parrots",
+            "text": "This page should also adopt the Miranda design style"
+          },
+          {
+            "priority": "must",
+            "flow": "rivals",
+            "text": "This page should also adopt the Miranda design style"
+          }
+        ],
+        "skipped": [
+          {
+            "text": "(empty sticky)",
+            "reason": "empty"
+          }
+        ],
+        "conflicts": [],
+        "note": "Whole site restyled to the Miranda design system (parchment, ink-black display banners, bone-cream cards, serif type, one ember-orange accent); copy lightly adapted."
+      },
+      "contributions": {
+        "red": 0,
         "yellow": 0,
         "blue": 0,
         "purple": 0

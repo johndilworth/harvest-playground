@@ -1,0 +1,122 @@
+{
+ "product": "Harvest Playground",
+ "cycle": 13,
+ "date": "Tue 2026-11-10",
+ "commit": "1239ccc0b0605f3bc2a16b03215d5028d4b25595",
+ "pullRequest": null,
+ "prNumber": null,
+ "site": "https://harvest-playground.netlify.app",
+ "historyUrl": "https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit",
+ "combined": {
+  "slug": "review",
+  "name": "All pages",
+  "blurb": "Home \u00b7 Dino Town \u00b7 Totally Random \u00b7 Parrots \u00b7 Rivals on one board (5 screens \u2264 5, no split)",
+  "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png"
+ },
+ "pageBackground": "#E8EAED",
+ "product_lucid": "lucidchart",
+ "flows": [
+  {
+   "slug": "home",
+   "name": "Home",
+   "route": "/",
+   "blurb": "Miranda redesign: parchment, ink-black display banner, bone-cream cards, ember-orange accent",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png",
+   "screens": [
+    {
+     "route": "/",
+     "title": "Home",
+     "h": 4270,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/02-home-full.png",
+     "caption": "Full page. Whole site restyled to the Miranda design system (parchment page, ink-black ENTROPY COLLECTIVE banner, bone-cream cards, serif type). Copy lightly adapted to the style; terminal/prompt text removed. Footer Cycle 13.",
+     "changes": [
+      "Applied the Miranda DESIGN.md style site-wide (sticky: Today's note is a big task \u2014 redesign the whole site to match DESIGN.md \u00b7 anonymous)",
+      "Copy tweaks to fit the style, content kept (sticky: Make appropriate copy changes \u2026 \u00b7 anonymous)",
+      "Skipped: one empty sticky (needs intent)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png"
+    }
+   ]
+  },
+  {
+   "slug": "dinosaur",
+   "name": "Dino Town",
+   "route": "/dinosaur.html",
+   "blurb": "Miranda style applied",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-dinosaur/01-dinosaur.png",
+   "screens": [
+    {
+     "route": "/dinosaur.html",
+     "title": "Dino Town",
+     "h": 6498,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-dinosaur/02-dinosaur-full.png",
+     "caption": "Full page. Restyled to Miranda: ink-black banner with the white skeleton line art, bone-cream cards. Footer Cycle 13.",
+     "changes": [
+      "Adopted the Miranda design style (sticky: This page should also adopt the Miranda design style \u00b7 anonymous)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-dinosaur/01-dinosaur.png"
+    }
+   ]
+  },
+  {
+   "slug": "random",
+   "name": "Totally Random",
+   "route": "/random.html",
+   "blurb": "Miranda style applied",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-random/01-random.png",
+   "screens": [
+    {
+     "route": "/random.html",
+     "title": "Totally Random",
+     "h": 2242,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-random/02-random-full.png",
+     "caption": "Full page. Restyled to Miranda. Footer Cycle 13.",
+     "changes": [
+      "Adopted the Miranda design style (sticky \u00b7 anonymous)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-random/01-random.png"
+    }
+   ]
+  },
+  {
+   "slug": "parrots",
+   "name": "Parrots",
+   "route": "/parrots.html",
+   "blurb": "Miranda style applied",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-parrots/01-parrots.png",
+   "screens": [
+    {
+     "route": "/parrots.html",
+     "title": "Parrots",
+     "h": 2122,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-parrots/02-parrots-full.png",
+     "caption": "Full page. Restyled to Miranda. Footer Cycle 13.",
+     "changes": [
+      "Adopted the Miranda design style (sticky \u00b7 anonymous)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-parrots/01-parrots.png"
+    }
+   ]
+  },
+  {
+   "slug": "rivals",
+   "name": "Rivals",
+   "route": "/rivals.html",
+   "blurb": "Miranda style applied",
+   "thumb": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-rivals/01-rivals.png",
+   "screens": [
+    {
+     "route": "/rivals.html",
+     "title": "Rivals",
+     "h": 3428,
+     "url": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-rivals/02-rivals-full.png",
+     "caption": "Full page. Restyled to Miranda: the page was already minimal; now ink banner, serif display type, ember \"vs.\". Footer Cycle 13.",
+     "changes": [
+      "Adopted the Miranda design style (sticky \u00b7 anonymous)"
+     ],
+     "before": "https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-rivals/01-rivals.png"
+    }
+   ]
+  }
+ ]
+}

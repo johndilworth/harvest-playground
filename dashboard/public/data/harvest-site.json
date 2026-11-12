@@ -17,7 +17,8 @@
       "cycleFolders": {
         "C1": 452809010,
         "C2": 452809012,
-        "C3": 452845244
+        "C3": 452845244,
+        "C4": 454561376
       }
     }
   },
@@ -27,7 +28,7 @@
     "nightlyHarvests": 0,
     "manualHarvests": 4
   },
-  "updatedAt": "2026-11-12T12:30:03-07:00",
+  "updatedAt": "2026-11-12T12:35:26-07:00",
   "cycles": [
     {
       "number": 1,
@@ -445,21 +446,52 @@
       "pullRequest": "https://github.com/johndilworth/harvest-for-lucid-site/pull/2",
       "branch": "https://github.com/johndilworth/harvest-for-lucid-site/tree/main",
       "commit": "e319500",
-      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c5-home/01-home-hero-dark.png",
+      "screenshot": "https://harvest-dashboard.netlify.app/captures/harvest-site/c5-home-story/01-home-01-hero.png",
       "previewUrl": "https://6af613795e82f7018220ef9f--harvest-for-lucid.netlify.app",
-      "documents": [],
+      "documents": [
+        {
+          "title": "Harvest Site:Home story:C5",
+          "role": "flow",
+          "flow": "home-story",
+          "docId": "3742062d-c682-4de6-8f4d-1525971272a8",
+          "url": "https://lucid.app/lucidchart/3742062d-c682-4de6-8f4d-1525971272a8/edit",
+          "commentUrl": "https://lucid.app/lucidchart/3742062d-c682-4de6-8f4d-1525971272a8/edit?invitationId=inv_85c9aabe-d916-4406-8c55-ffe9a8dccd64",
+          "description": "Hero, problem, loop, approval modes, benefits",
+          "harvest": true
+        },
+        {
+          "title": "Harvest Site:Home proof:C5",
+          "role": "flow",
+          "flow": "home-proof",
+          "docId": "933c1ed7-f75e-4bc5-b21f-e2883641d13b",
+          "url": "https://lucid.app/lucidchart/933c1ed7-f75e-4bc5-b21f-e2883641d13b/edit",
+          "commentUrl": "https://lucid.app/lucidchart/933c1ed7-f75e-4bc5-b21f-e2883641d13b/edit?invitationId=inv_9fe2b84b-bee0-4139-9232-da2c778d0a14",
+          "description": "Works with your agents, before/after, paper trail, results",
+          "harvest": true
+        },
+        {
+          "title": "Harvest Site:Home close:C5",
+          "role": "flow",
+          "flow": "home-close",
+          "docId": "ee301944-514e-42c9-aa42-df01343e1928",
+          "url": "https://lucid.app/lucidchart/ee301944-514e-42c9-aa42-df01343e1928/edit",
+          "commentUrl": "https://lucid.app/lucidchart/ee301944-514e-42c9-aa42-df01343e1928/edit?invitationId=inv_865254ac-f07d-405f-ad87-357ce57ec9b4",
+          "description": "Compare table, Lucidchart, closing band and footer",
+          "harvest": true
+        }
+      ],
       "authors": [
         {
           "name": "Unknown (plain square note, no attribution)",
           "stickies": 1
         }
       ],
-      "authorsNote": "Applied 2026-11-12 (approval mode): John Dilworth approved the 1 Cycle 4 note (a plain red square with Lucid brand tokens, so Lucid shows no author) with an edited instruction to use Inter from Google Fonts in place of Graphik. Home proof and Home close had no stickies. Cycle 5 review boards were not built in this apply run.",
+      "authorsNote": "Applied 2026-11-12 (approval mode): John Dilworth approved the 1 Cycle 4 note (a plain red square with Lucid brand tokens, so Lucid shows no author) with an edited instruction to use Inter from Google Fonts in place of Graphik. Home proof and Home close had no stickies. Cycle 5 review boards (Home story, Home proof, Home close) are ready for stickies.",
       "nightlyHarvests": [],
       "manualHarvests": [
         {
           "date": "2026-11-12",
-          "note": "Approval-mode apply of c4-01 (Lucid brand fonts and colors, Inter in place of Graphik). Merged via PR #2 (e319500). Cycle 5 review boards not yet captured or built.",
+          "note": "Approval-mode apply of c4-01 (Lucid brand fonts and colors, Inter in place of Graphik). Merged via PR #2 (e319500). Cycle 5 review boards built and listed on this cycle page.",
           "outcome": "applied",
           "proposals": "/data/proposals/harvest-site-c4.json",
           "stickies": 1,
@@ -467,7 +499,7 @@
           "pullRequest": "https://github.com/johndilworth/harvest-for-lucid-site/pull/2"
         }
       ],
-      "screens": 0,
+      "screens": 12,
       "changes": {
         "applied": [
           {
@@ -481,7 +513,7 @@
         "skipped": [],
         "conflicts": [],
         "deferred": [],
-        "note": "Approval mode: John Dilworth approved the 1 Cycle 4 proposal in Grok Bot chat (2026-11-12) with an edited instruction (Inter from Google Fonts instead of Graphik). Landed via PR #2, merged to main (e319500); Netlify production deploy 6af613795e82f7018220ef9f. On dark backgrounds, link/icon blue is a lighter tint of #1071E5 so small text meets WCAG AA. Cycle 5 review boards were not built in this run (hero screenshots in both themes are on the dashboard for verification)."
+        "note": "Approval mode: John Dilworth approved the 1 Cycle 4 proposal in Grok Bot chat (2026-11-12) with an edited instruction (Inter from Google Fonts instead of Graphik). Landed via PR #2, merged to main (e319500); Netlify production deploy 6af613795e82f7018220ef9f. On dark backgrounds, link/icon blue is a lighter tint of #1071E5 so small text meets WCAG AA. Cycle 5 review boards (Home story, Home proof, Home close) were captured from production and listed on this cycle page; Cycle 4 boards were archived into a C4 Lucid subfolder with their badges kept."
       },
       "contributions": {
         "red": 1,

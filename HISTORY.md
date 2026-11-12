@@ -6,8 +6,8 @@ and a new cycle board is ready by morning. Rules: [HARVEST.md](HARVEST.md) · it
 
 | | |
 |---|---|
-| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 12**) |
-| **Add a sticky** | [Cycle 12 review board (Home · Dino Town · Totally Random · Parrots · Rivals)](https://lucid.app/lucidchart/18c2dcc6-cc14-41d0-99a7-2ad8bce23138/edit?invitationId=inv_3b5a7aff-5ab1-4fcc-9ca5-1326c2ab95ed) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
+| **Live site** | https://harvest-playground.netlify.app (currently **Cycle 13**) |
+| **Add a sticky** | [Cycle 13 review board (Home · Dino Town · Totally Random · Parrots · Rivals)](https://lucid.app/lucidchart/e35676f5-a89a-46b0-8bcc-b5996f30431c/edit?invitationId=inv_b1464505-6867-41a7-9206-7db725ecf676) · listed on the [Harvest Dashboard](https://harvest-dashboard.netlify.app/p/harvest-playground/) (no hub) |
 | **History board** | [Harvest Playground — History](https://lucid.app/lucidspark/e983d07c-47f1-4d0f-bfe6-81087a3b8ddd/edit) (every cycle, left → right; Cycle 12 tile added 2026-10-27) |
 | **How to ask** | Put a sticky inside a grey frame on the review board. Start with `Do:`, `Try:` or `Consider:` (or use red / yellow / blue). Purple = feedback about the board itself. |
 
@@ -36,6 +36,7 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Wed 2026-11-11 | Cycle 13 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 13 | [Cycle 13](https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png) |
 | Tue 2026-11-10 | Cycle 12 board (nightly) | 6 | 5 | 1 | **Cycle 13 shipped** — Miranda design system across all pages | [Cycle 13](https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png) |
 | Mon 2026-11-09 | Cycle 12 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 12 | [Cycle 12](https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png) |
 | Sun 2026-11-08 | Cycle 12 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 12 | [Cycle 12](https://harvest-dashboard.netlify.app/captures/harvest-playground/c12-home/01-home.png) |
@@ -78,10 +79,19 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 14 cycles shipped (0 → 1 → … → 12 → 13) · 39 nightly harvests · 63 stickies applied · 2 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 13 is current after the **5pm MT harvest** on Tue 2026-11-10 (6 stickies).
+**Totals so far:** 14 cycles shipped (0 → 1 → … → 12 → 13) · 40 nightly harvests · 63 stickies applied · 2 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 13 remains current after the **5pm MT quiet-night harvest** on Wed 2026-11-11 (0 stickies).
 
 ## Day by day
+
+### Wed 2026-11-11 — Cycle 13 harvest · no stickies · nightly
+- **Harvested:** Cycle 13 review board (`Harvest Playground:All pages:C13` — Home · Dino Town · Totally Random · Parrots · Rivals) at ~5:05 pm MT — **0 stickies, 0 comment threads**
+- **Applied:** 0 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0 · **Hub stray stickies:** 0
+- **Contributors:** none
+- **Cycle 14 created:** no (nothing to apply, per HARVEST.md). The Cycle 13 board stays open for stickies.
+- **Live:** https://harvest-playground.netlify.app (Cycle 13)
+- **Screenshot (unchanged):** https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png
+- **Record:** `journey/cycles/13/harvest-2026-11-11.json`
 
 ### Tue 2026-11-10 — Cycle 12 harvest · Cycle 13 shipped · nightly
 - **Harvested:** Cycle 12 review board at ~5:05 pm MT — **6 stickies, 0 comment threads** (all anonymous)

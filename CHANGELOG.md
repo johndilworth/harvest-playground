@@ -2,6 +2,12 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## 2026-11-11 harvest (no Cycle 14)
+Harvested the Cycle 13 review board `e35676f5-a89a-46b0-8bcc-b5996f30431c` (`Harvest Playground:All pages:C13` — Home · Dino Town · Totally Random · Parrots · Rivals) at ~5:05 pm MT —
+**0 stickies, 0 comment threads**. Hub stray: none (no hub; dashboard is the hub).
+Quiet night: no site changes; Cycle 13 remains live. Applied: none. Skipped: none (no malicious, illegal or offensive items). Conflicts: none. Board feedback: none.
+Record: `journey/cycles/13/harvest-2026-11-11.json`.
+
 ## Cycle 13 (2026-11-10) · nightly harvest
 Nightly 5 pm MT harvest of the Cycle 12 review board `18c2dcc6-cc14-41d0-99a7-2ad8bce23138` (`Harvest Playground:All pages:C12`) at ~5:05 pm MT —
 **6 stickies, 0 comment threads** (Home 2, Dino Town 1, Totally Random 1, Parrots 1, Rivals 1 empty). Page 2 of the board carried the Miranda DESIGN.md notes. No Lucid author attribution on any → **anonymous**. Hub stray: none.

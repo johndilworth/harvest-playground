@@ -1,35 +1,40 @@
 {
- "schemaVersion": 1,
- "project": "harvest-site",
- "cycle": 4,
- "approval": {
-  "mode": "required",
-  "reviewer": "John Dilworth",
-  "auto_approve_low_risk": false
- },
- "state": "waiting",
- "createdAt": "2026-11-12T11:35:11-07:00",
- "decidedAt": null,
- "appliedAt": null,
- "appliedCommit": null,
- "items": [
-  {
-   "lucidItemId": "p63LcTvfSFpo",
-   "docId": "cdc99cb7-7617-4895-aa26-9355e84d7fcc",
-   "sourceCycle": 4,
-   "kind": "product",
-   "stickyText": "Update the fonts and colors used on the prototype to these:\n:root {\n  --cg-100: #282C33;\n  --cg-80:  #4C535D;\n  --cg-30:  #A9AFB8;\n  --cg-10:  #DFE3E8;\n  --cg-5:   #F2F3F5;\n  --white:  #FFFFFF;\n\n  --blue-60:   #1071E5; /* primary accent */\n  --indigo-60: #635DFF;\n  --pink-60:   #D916A8;\n\n  --font-primary:   \"Graphik\", system-ui, sans-serif;\n  --font-secondary: \"Graphik Wide\", \"Graphik\", system-ui, sans-serif;\n  --font-tertiary:  \"Self Modern\", Georgia, serif; /* italic, never all caps */\n}",
-   "author": "Unknown (plain square note, not a sticky, so Lucid shows no author)",
-   "priority": "must",
-   "frame": "home-01-hero",
-   "fill": "#ff8a80ff",
-   "interpretation": "Replace the site's fonts and colours with the attached Lucid brand tokens: cool greys #282C33 / #4C535D / #A9AFB8 / #DFE3E8 / #F2F3F5 plus white, blue #1071E5 as the primary accent, indigo #635DFF and pink #D916A8 as secondary accents, and Graphik / Graphik Wide / Self Modern (italic, never all caps) as the three typefaces. This reverses much of cycle 3's approved Design Loop look (JetBrains Mono, dark default).",
-   "proposedChange": "In site/assets/site.css, map the colour variables (and the dark-theme overrides) to these tokens with blue-60 as the main accent, and set --font / --font-wide plus a new tertiary italic serif to the Graphik / Graphik Wide / Self Modern stacks. Graphik and Self Modern are licensed fonts the site doesn't host, so visitors would see the system-ui and Georgia fallbacks unless font files are supplied. Open question: keep the dark default + toggle and ASCII hero from cycle 3, or go light?",
-   "risk": "med",
-   "status": "pending",
-   "decision": null,
-   "id": "c4-01",
-   "n": 1
-  }
- ]
+  "schemaVersion": 1,
+  "project": "harvest-site",
+  "cycle": 4,
+  "approval": {
+    "mode": "required",
+    "reviewer": "John Dilworth",
+    "auto_approve_low_risk": false
+  },
+  "state": "decided",
+  "createdAt": "2026-11-12T11:35:11-07:00",
+  "decidedAt": "2026-11-12T12:25:43-07:00",
+  "appliedAt": "2026-11-12T12:29:14-07:00",
+  "appliedCommit": "e319500",
+  "items": [
+    {
+      "lucidItemId": "p63LcTvfSFpo",
+      "docId": "cdc99cb7-7617-4895-aa26-9355e84d7fcc",
+      "sourceCycle": 4,
+      "kind": "product",
+      "stickyText": "Update the fonts and colors used on the prototype to these:\n:root {\n  --cg-100: #282C33;\n  --cg-80:  #4C535D;\n  --cg-30:  #A9AFB8;\n  --cg-10:  #DFE3E8;\n  --cg-5:   #F2F3F5;\n  --white:  #FFFFFF;\n\n  --blue-60:   #1071E5; /* primary accent */\n  --indigo-60: #635DFF;\n  --pink-60:   #D916A8;\n\n  --font-primary:   \"Graphik\", system-ui, sans-serif;\n  --font-secondary: \"Graphik Wide\", \"Graphik\", system-ui, sans-serif;\n  --font-tertiary:  \"Self Modern\", Georgia, serif; /* italic, never all caps */\n}",
+      "author": "Unknown (plain square note, not a sticky, so Lucid shows no author)",
+      "priority": "must",
+      "frame": "home-01-hero",
+      "fill": "#ff8a80ff",
+      "interpretation": "Replace the site's fonts and colours with the attached Lucid brand tokens: cool greys #282C33 / #4C535D / #A9AFB8 / #DFE3E8 / #F2F3F5 plus white, blue #1071E5 as the primary accent, indigo #635DFF and pink #D916A8 as secondary accents, and Graphik / Graphik Wide / Self Modern (italic, never all caps) as the three typefaces. This reverses much of cycle 3's approved Design Loop look (JetBrains Mono, dark default).",
+      "proposedChange": "In site/assets/site.css, map the colour variables (and the dark-theme overrides) to these tokens with blue-60 as the main accent, and set --font / --font-wide plus a new tertiary italic serif to the Graphik / Graphik Wide / Self Modern stacks. Graphik and Self Modern are licensed fonts the site doesn't host, so visitors would see the system-ui and Georgia fallbacks unless font files are supplied. Open question: keep the dark default + toggle and ASCII hero from cycle 3, or go light?",
+      "risk": "med",
+      "status": "applied",
+      "decision": {
+        "decision": "approved",
+        "by": "John Dilworth",
+        "at": "2026-11-12T12:25:43-07:00",
+        "instruction": "Instead of Graphik, use Inter from Google Fonts as the alternative. Use Inter everywhere Graphik and Graphik Wide would go; for the Wide display role, use Inter at a heavier weight with slightly wider letter-spacing. Self Modern is licensed and we have no files, so use a serif italic fallback stack (Georgia etc.) for its role: italic, and never all caps. Colors: greys #282C33, #4C535D, #A9AFB8, #DFE3E8, #F2F3F5 and white; blue #1071E5 as the main accent; indigo #635DFF and pink #D916A8 as secondary accents. Map them into both the light and dark theme variables. Keep the dark default, the theme toggle and the ASCII hero, recolored to the tokens. Only the look changes. Check contrast is readable in both themes."
+      },
+      "id": "c4-01",
+      "n": 1
+    }
+  ]
 }

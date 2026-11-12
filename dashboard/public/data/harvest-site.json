@@ -25,9 +25,9 @@
   "pullRequests": 1,
   "pullRequestsSource": "GitHub API state=all 2026-10-12: PR #1 OPEN",
   "nightlyHarvests": 0,
-  "manualHarvests": 3
+  "manualHarvests": 4
  },
- "updatedAt": "2026-10-19T23:10:00-06:00",
+ "updatedAt": "2026-11-12T11:45:00-07:00",
  "cycles": [
   {
    "number": 1,
@@ -363,10 +363,23 @@
      "harvest": true
     }
    ],
-   "authors": [],
-   "authorsNote": "No stickies yet on the Cycle 4 boards.",
+   "authors": [
+    {
+     "name": "Unknown (plain shape, no attribution)",
+     "stickies": 1
+    }
+   ],
+   "authorsNote": "Harvested 2026-11-12 (approval mode): 1 note on Home story (a plain red square with an attached code block of Lucid design tokens, so Lucid shows no author), 0 on Home proof and Home close.",
    "nightlyHarvests": [],
-   "manualHarvests": [],
+   "manualHarvests": [
+    {
+     "date": "2026-11-12",
+     "stickies": 1,
+     "outcome": "waiting_approval",
+     "proposals": "/data/proposals/harvest-site-c4.json",
+     "note": "Approval mode: 1 proposal (swap fonts and colours to the attached Lucid brand tokens) waiting for John Dilworth; nothing applied yet."
+    }
+   ],
    "screens": 12,
    "changes": {
     "applied": [

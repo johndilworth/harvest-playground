@@ -2,6 +2,11 @@
 
 One entry per Harvest cycle. Each entry lists applied items, skipped items (with reason), conflicts, and board feedback.
 
+## 2026-11-12 harvest (no Cycle 14)
+Harvested the Cycle 13 review board `e35676f5-a89a-46b0-8bcc-b5996f30431c` (`Harvest Playground:All pages:C13`) at ~5:05 pm MT —
+**0 stickies, 0 comment threads**. Quiet night: no site changes; Cycle 13 remains live. Applied: none. Skipped: none. Conflicts: none. Board feedback: none.
+Record: `journey/cycles/13/harvest-2026-11-12.json`.
+
 ## 2026-11-11 harvest (no Cycle 14)
 Harvested the Cycle 13 review board `e35676f5-a89a-46b0-8bcc-b5996f30431c` (`Harvest Playground:All pages:C13` — Home · Dino Town · Totally Random · Parrots · Rivals) at ~5:05 pm MT —
 **0 stickies, 0 comment threads**. Hub stray: none (no hub; dashboard is the hub).

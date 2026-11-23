@@ -35,9 +35,9 @@
   "stats": {
     "pullRequests": 2,
     "pullRequestsSource": "GitHub API, state=all, 2026-10-12",
-    "nightlyHarvests": 50
+    "nightlyHarvests": 51
   },
-  "updatedAt": "2026-11-21T17:10:00-07:00",
+  "updatedAt": "2026-11-22T17:10:00-07:00",
   "cycles": [
     {
       "number": 0,
@@ -1258,6 +1258,11 @@
         },
         {
           "date": "2026-11-21",
+          "stickies": 0,
+          "outcome": "no_stickies"
+        },
+        {
+          "date": "2026-11-22",
           "stickies": 0,
           "outcome": "no_stickies"
         }

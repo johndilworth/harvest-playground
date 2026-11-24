@@ -36,6 +36,7 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 
 | Date (MT) | Harvest | Stickies | Applied | Skipped | Result | Screenshot |
 |---|---|---:|---:|---:|---|---|
+| Mon 2026-11-23 | Cycle 13 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 13 | [Cycle 13](https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png) |
 | Sun 2026-11-22 | Cycle 13 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 13 | [Cycle 13](https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png) |
 | Sat 2026-11-21 | Cycle 13 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 13 | [Cycle 13](https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png) |
 | Fri 2026-11-20 | Cycle 13 board (nightly) | 0 | 0 | 0 | No new cycle — site stays on Cycle 13 | [Cycle 13](https://harvest-dashboard.netlify.app/captures/harvest-playground/c13-home/01-home.png) |
@@ -90,10 +91,16 @@ Live: https://harvest-for-lucid.netlify.app · Dashboard: https://harvest-dashbo
 | Fri 2026-10-02 | Cycle 0 board | 12 | 12 | 0 | **Cycle 1 shipped** — childish 90s redesign + 2 new pages | [Cycle 1](https://journey-assets-ai-xform.netlify.app/harvest-playground-c1-home/01-home.png) |
 | Fri 2026-10-02 | — | — | — | — | **Cycle 0 created** — nearly empty page | [Cycle 0](https://journey-assets-ai-xform.netlify.app/harvest-playground-c0-home/01-home.png) |
 
-**Totals so far:** 14 cycles shipped (0 → 1 → … → 12 → 13) · 51 nightly harvests · 63 stickies applied · 2 skipped (empty) · 4 conflicts ·
-0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 13 remains current after the **5pm MT quiet-night harvest** on Sun 2026-11-22 (0 stickies).
+**Totals so far:** 14 cycles shipped (0 → 1 → … → 12 → 13) · 52 nightly harvests · 63 stickies applied · 2 skipped (empty) · 4 conflicts ·
+0 board-format notes (3 stray stickies on hubs, not harvested). Cycle 13 remains current after the **5pm MT quiet-night harvest** on Mon 2026-11-23 (0 stickies).
 
 ## Day by day
+
+### Mon 2026-11-23 — Cycle 13 harvest · no stickies · nightly
+- **Harvested:** Cycle 13 review board (`Harvest Playground:All pages:C13`) at ~5:10 pm MT — **0 stickies, 0 comment threads**
+- **Applied:** 0 · **Skipped:** 0 · **Conflicts:** 0 · **Board feedback:** 0
+- **Cycle 14 created:** no. The Cycle 13 board stays open for stickies.
+- **Record:** `journey/cycles/13/harvest-2026-11-23.json`
 
 ### Sun 2026-11-22 — Cycle 13 harvest · no stickies · nightly
 - **Harvested:** Cycle 13 review board (`Harvest Playground:All pages:C13`) at ~5:10 pm MT — **0 stickies, 0 comment threads**
